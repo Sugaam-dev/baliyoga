@@ -302,7 +302,8 @@ export default function Home() {
 
 
             {/* Discover the Yoga Gallery Section */}
-            <section className="bg-[#e6d6c3] py-20 px-6">
+            {/* <section className="bg-[#e6d6c3] py-20 px-6"> */}
+              <section className="bg-[#ffffff] py-20 px-6">
               <div className="mx-auto max-w-7xl">
 
                 {/* Header Row */}
@@ -312,9 +313,9 @@ export default function Home() {
                     Discover the Yoga Gallery
                   </h2>
 
-                  <div className="text-sm md:text-base text-[#b4533c] font-medium">
+                  {/* <div className="text-sm md:text-base text-[#b4533c] font-medium">
                     @theyogabarn
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Gallery Grid */}
