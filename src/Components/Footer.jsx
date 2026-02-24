@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="mb-8 grid gap-8 md:grid-cols-3 md:items-start">
           {/* Left Section - Logo and Tagline */}
           <div className="flex flex-col items-start">
-            <h3 className="mb-2 text-xl font-bold tracking-wide">CMG LOGO</h3>
+            <h3 className="mb-2 text-xl font-bold tracking-wide">BALI YOGA</h3>
             <p className="text-sm font-light opacity-90">
               Strengthening Education Systems
             </p>
@@ -25,28 +25,28 @@ export default function Footer() {
                 href="/school"
                 className="transition-opacity hover:opacity-80"
               >
-                Schools
+                Course
               </a>
               <span className="text-white/50">|</span>
               <a
                 href="/College&University"
                 className="transition-opacity hover:opacity-80"
               >
-                Universities
+                Online
               </a>
               <span className="text-white/50">|</span>
               <a
                 href="/contact"
                 className="transition-opacity hover:opacity-80"
               >
-                Contact
+                Gallery
               </a>
             </nav>
           </div>
-
+{/* Home', 'About', 'Course', 'Online','Gallery' , 'Meditation' ,'Retreat','Contact */}
           {/* Right Section - Copyright and Social Icons */}
           <div className="flex flex-col items-start md:items-end">
-            <p className="mb-4 text-sm opacity-90">© College Mil Gaya</p>
+            <p className="mb-4 text-sm opacity-90">© BALIYOGA</p>
             <div className="flex gap-4">
               <a
                 href="https://linkedin.com"
