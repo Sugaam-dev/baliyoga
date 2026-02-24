@@ -1,0 +1,50 @@
+|-- .gitignore
+|-- eslint.config.js
+|-- index.html
+|-- package-lock.json
+|-- package.json
+|-- public
+    |-- vite.svg
+|-- README.md
+|-- src
+    |-- App.css
+    |-- App.jsx
+    |-- assets
+        |-- react.svg
+    |-- Components
+        |-- Footer.jsx
+        |-- Header.jsx
+        |-- Hero.jsx
+        |-- WhatsAppButton.jsx
+    |-- index.css
+    |-- layouts
+        |-- RootLayout.jsx
+    |-- main.jsx
+    |-- pages
+        |-- about
+            |-- About.jsx
+        |-- collegeuniversity
+            |-- Collegeanduniversitypage.jsx
+            |-- images
+                |-- graphimage.png
+                |-- tattvacampus.png
+        |-- contact
+            |-- Contact.jsx
+        |-- home
+            |-- Home.jsx
+            |-- images
+                |-- hero.png
+                |-- hero1.png
+                |-- hero2.png
+                |-- school-building.jpg
+                |-- students-parents.jpg
+                |-- teacher-faculty.jpg
+                |-- university-building.jpg
+        |-- schools
+            |-- images
+                |-- graphimage.png
+            |-- Schoolpage.jsx
+        |-- studentsandparents
+            |-- CenterCardForm.jsx
+            |-- StudentsAndParents.jsx
+|-- vite.config.js
