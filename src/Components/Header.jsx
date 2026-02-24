@@ -73,7 +73,7 @@ const Header = () => {
             max-[480px]:max-w-[260px]
             ${isMenuOpen ? 'max-[968px]:left-0' : 'max-[968px]:-left-full'}
           `}>
-            {['Home', 'About', 'Course', 'Online','Gallery' , 'Meditation' ,'Retreat','Contact'].map((item) => (
+            {[ 'About', 'Course', 'Online','Gallery' , 'Meditation' ,'Retreat','Contact'].map((item) => (
               <li key={item} className="relative w-full min-[969px]:w-auto">
                 <Link 
                   to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 

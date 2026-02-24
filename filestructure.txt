@@ -37,6 +37,9 @@
         |-- home
             |-- Home.jsx
             |-- images
+                |-- 4-Days-Yoga-Retreat-In-Canggu-Bali.jpg
+                |-- alchemyyoga.jpg
+                |-- bali-yoga-teacher-training-check-list-NAMASTSHAY.jpg
                 |-- bali1.jpg
                 |-- bali2.jpg
                 |-- bali3.jpg
@@ -44,16 +47,20 @@
                 |-- bali5.jpg
                 |-- bali6.jpg
                 |-- bali7.jpg
-                |-- hero.png
-                |-- hero1.png
-                |-- hero2.png
-                |-- school-building.jpg
-                |-- students-parents.jpg
-                |-- teacher-faculty.jpg
-                |-- university-building.jpg
+                |-- baligallery.jpg
+                |-- baliimage.jpg
+                |-- fivelements-2.jpg
+                |-- Prana-Yoga-Studio-Seminyak-Bali.jpg
+                |-- shutterstock_314587241.jpg
+                |-- the-istana-1.jpg
+                |-- Ubud-Yoga-Photography-3-1.jpg
+                |-- Yoga-Searcher-Uluwatu-Bali.jpg
+                |-- Yoga-session-at-the-Bali-Green-Retreat.jpg
+                |-- yoga-teacher-training-bali.jpg
                 |-- yoga.jpg
                 |-- yoga0.jpg
                 |-- yoga1.jpg
+                |-- yogagallery.jpg
         |-- schools
             |-- images
                 |-- graphimage.png
