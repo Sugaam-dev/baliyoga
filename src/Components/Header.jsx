@@ -1,6 +1,3 @@
-//about, course, online ,gallery ,contact, meditation ,retreat
-
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
