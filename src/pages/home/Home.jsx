@@ -221,7 +221,7 @@ export default function Home() {
       </div>
 
       <h2 className="relative text-4xl font-bold tracking-wide text-[#b4533c]">
-        RETREATS
+       OUR RETREATS
       </h2>
 
       <div className="mt-8 space-y-6">

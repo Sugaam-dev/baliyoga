@@ -2,7 +2,7 @@ import { FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0066FF] text-white">
+    <footer className="bg-[#e6d6c3] text-black">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="mb-8 grid gap-8 md:grid-cols-3 md:items-start">
@@ -20,26 +20,47 @@ export default function Footer() {
               <a href="/about" className="transition-opacity hover:opacity-80">
                 About
               </a>
-              <span className="text-white/50">|</span>
+              <span className="text-black/50">|</span>
               <a
                 href="/school"
                 className="transition-opacity hover:opacity-80"
               >
                 Course
               </a>
-              <span className="text-white/50">|</span>
+              <span className="text-black/50">|</span>
               <a
                 href="/College&University"
                 className="transition-opacity hover:opacity-80"
               >
                 Online
               </a>
-              <span className="text-white/50">|</span>
+              <span className="text-black/50">|</span>
               <a
                 href="/contact"
                 className="transition-opacity hover:opacity-80"
               >
                 Gallery
+              </a>
+              <span className="text-black/50">|</span>
+              <a
+                href="/contact"
+                className="transition-opacity hover:opacity-80"
+              >
+                Meditation
+              </a>
+              <span className="text-black/50">|</span>
+              <a
+                href="/contact"
+                className="transition-opacity hover:opacity-80"
+              >
+                Retreat
+              </a>
+              <span className="text-black/50">|</span>
+              <a
+                href="/contact"
+                className="transition-opacity hover:opacity-80"
+              >
+                Contact
               </a>
             </nav>
           </div>
@@ -74,14 +95,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Divider */}
-        <div className="border-t border-white/20"></div>
-        <p className="mt-4 text-center text-xs text-white/80">
+        <div className="border-t border-black/20"></div>
+        <p className="mt-4 text-center text-xs text-black/80">
           Developed by{" "}
           <a
             href="https://www.pmrgsolution.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium underline hover:text-white"
+            className="font-medium underline hover:text-black"
           >
             PMRG Solution
           </a>
