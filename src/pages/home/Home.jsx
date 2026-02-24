@@ -30,7 +30,7 @@ import gallery10 from "./images/baligallery.jpg";
 
 import retreatImg from "./images/bali1.jpg"; // or use your exact retreat image
 
-import HeroSection from "../../components/Hero";
+import HeroSection from "../../Components/Hero";
 
 const galleryImages = [
   {
