@@ -1,3 +1,6 @@
+//about, course, online ,gallery ,contact, meditation ,retreat
+
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
@@ -73,7 +76,7 @@ const Header = () => {
             max-[480px]:max-w-[260px]
             ${isMenuOpen ? 'max-[968px]:left-0' : 'max-[968px]:-left-full'}
           `}>
-            {['Home', 'About', 'School', 'Students&Parents','College&University','Contact'].map((item) => (
+            {['Home', 'About', 'Course', 'Online','Gallery' , 'Meditation' ,'Retreat','Contact'].map((item) => (
               <li key={item} className="relative w-full min-[969px]:w-auto">
                 <Link 
                   to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 

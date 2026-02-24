@@ -12,6 +12,9 @@
     |-- App.jsx
     |-- assets
         |-- react.svg
+        |-- yoga.jpg
+        |-- yoga0.jpg
+        |-- yoga1.jpg
     |-- Components
         |-- Footer.jsx
         |-- Header.jsx
@@ -34,6 +37,13 @@
         |-- home
             |-- Home.jsx
             |-- images
+                |-- bali1.jpg
+                |-- bali2.jpg
+                |-- bali3.jpg
+                |-- bali4.jpg
+                |-- bali5.jpg
+                |-- bali6.jpg
+                |-- bali7.jpg
                 |-- hero.png
                 |-- hero1.png
                 |-- hero2.png
@@ -41,6 +51,9 @@
                 |-- students-parents.jpg
                 |-- teacher-faculty.jpg
                 |-- university-building.jpg
+                |-- yoga.jpg
+                |-- yoga0.jpg
+                |-- yoga1.jpg
         |-- schools
             |-- images
                 |-- graphimage.png

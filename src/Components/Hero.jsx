@@ -109,26 +109,26 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
 // 🔽 LOCAL IMAGE IMPORTS (ONLY ADDITION)
-import hero from '../pages/home/images/hero.png';
-import hero1 from '../pages/home/images/hero1.png';
-import hero2 from '../pages/home/images/hero2.png';
+import yoga0 from '../pages/home/images/yoga0.jpg';
+import yoga1 from '../pages/home/images/yoga1.jpg';
+import yoga from '../pages/home/images/yoga.jpg';
 
 function HeroSection() {
   // 🔽 ONLY CHANGE: url → imported image
   const heroImages = [
-    {
-      url: hero,
-      alt: 'Financial Analysis'
-    },
-    {
-      url: hero1,
-      alt: 'Market Data Growth'
-    },
-    {
-      url: hero2,
-      alt: 'Professional Financial Consulting'
-    }
-  ];
+  {
+    url: yoga0,
+    alt: 'Students practicing yoga in a peaceful studio environment'
+  },
+  {
+    url: yoga1,
+    alt: 'Group yoga session focused on balance and mindfulness'
+  },
+  {
+    url: yoga,
+    alt: 'Professional yoga instructor guiding a meditation class'
+  }
+];
 
   return (
     <section className="relative w-full max-w-full h-screen m-0 p-0 overflow-hidden bg-black">
@@ -164,10 +164,10 @@ function HeroSection() {
       {/* Content Overlay */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center text-white max-w-[800px] w-[90%] px-5 pointer-events-none">
         <h1 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-bold mb-5 leading-[1.2] drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)] animate-[fadeInUp_1s_ease_0.3s_backwards] pointer-events-auto">
-           Welcome to CMG
+           Welcome to BALIYOGA
         </h1>
         <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-normal mb-[30px] leading-[1.6] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.7)] animate-[fadeInUp_1s_ease_0.5s_backwards] pointer-events-auto">
-          Empowering Students & Parents
+         Transform your body, calm your mind, and elevate your spirit through authentic yoga practices guided by experienced instructors.
         </p>
 
         <Link
