@@ -44,7 +44,7 @@ const Header = () => {
                        min-[1025px]:max-[1280px]:h-[70px] min-[969px]:max-[1024px]:h-[65px] max-[968px]:h-[60px] max-[480px]:h-20"
             onClick={closeMenu}
           >
-            <img 
+            {/* <img 
               src="https://via.placeholder.com/220x100" // Replace with {logo}
               alt="Company Logo" 
               className="h-[100px] w-auto max-w-[220px] object-contain block align-middle
@@ -52,7 +52,17 @@ const Header = () => {
                          min-[969px]:max-[1024px]:h-[85px] min-[969px]:max-[1024px]:max-w-[160px]
                          max-[968px]:h-[75px] max-[968px]:max-w-[170px]
                          max-[480px]:h-[80px] max-[480px]:max-w-[150px]"
-            />
+            /> */}
+            <img 
+                src="/logo.png"
+                alt="Company Logo" 
+                className="h-[100px] w-auto max-w-[220px] object-contain block align-middle
+                          min-[1025px]:max-[1280px]:h-[90px] min-[1025px]:max-[1280px]:max-w-[180px]
+                          min-[969px]:max-[1024px]:h-[85px] min-[969px]:max-[1024px]:max-w-[160px]
+                          max-[968px]:h-[75px] max-[968px]:max-w-[170px]
+                          max-[480px]:h-[80px] max-[480px]:max-w-[150px]"
+              />
+
           </Link>
 
           {/* Navigation Menu */}
