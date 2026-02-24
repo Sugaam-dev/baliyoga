@@ -4,6 +4,7 @@
 |-- package-lock.json
 |-- package.json
 |-- public
+    |-- logo.png
     |-- vite.svg
 |-- README.md
 |-- src
