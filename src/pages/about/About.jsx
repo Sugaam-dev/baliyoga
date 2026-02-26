@@ -1,7 +1,7 @@
 import React from "react";
 
 // Import images
-import storyImg from "./images/YogaBali.jpg";
+import storyImg from "./images/about.jpg";
 import philosophyImg from "./images/jbz00ii9peh5jqjjyna2.jpg";
 import teacherImg from "./images/FPO_BAL_980.jpg";
 import lifestyleImg from "./images/about.jpg";
