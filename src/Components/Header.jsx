@@ -19,13 +19,13 @@ const Header = () => {
   // Shared Link styles to keep code clean
   const navLinkStyles = (path) => `
     relative block py-3 px-5 text-[1.1rem] font-medium tracking-tight transition-colors duration-300 rounded-lg
-    text-gray-700 hover:text-[#0F4C81]
-    min-[969px]:after:content-[''] min-[969px]:after:absolute min-[969px]:after:bottom-2 min-[969px]:after:left-1/2 min-[969px]:after:-translate-x-1/2 min-[969px]:after:h-[2px] min-[969px]:after:bg-[#0F4C81] min-[969px]:after:transition-transform min-[969px]:after:duration-300 min-[969px]:after:origin-center
+    text-gray-700 hover:text-[#b4533c]
+    min-[969px]:after:content-[''] min-[969px]:after:absolute min-[969px]:after:bottom-2 min-[969px]:after:left-1/2 min-[969px]:after:-translate-x-1/2 min-[969px]:after:h-[2px] min-[969px]:after:bg-[#b4533c] min-[969px]:after:transition-transform min-[969px]:after:duration-300 min-[969px]:after:origin-center
     ${isActive(path) 
-      ? 'text-[#0F4C81] min-[969px]:after:w-[40%] min-[969px]:after:scale-x-100 max-[968px]:after:scale-x-100 font-semibold' 
+      ? 'text-[#b4533c] min-[969px]:after:w-[40%] min-[969px]:after:scale-x-100 max-[968px]:after:scale-x-100 font-semibold' 
       : 'min-[969px]:after:w-[40%] min-[969px]:after:scale-x-0 hover:after:scale-x-100 max-[968px]:after:scale-x-0'
     }
-    max-[968px]:w-full max-[968px]:px-4 max-[968px]:after:content-[''] max-[968px]:after:absolute max-[968px]:after:bottom-2 max-[968px]:after:left-4 max-[968px]:after:w-[35px] max-[968px]:after:h-[2px] max-[968px]:after:bg-[#0F4C81] max-[968px]:after:origin-left
+    max-[968px]:w-full max-[968px]:px-4 max-[968px]:after:content-[''] max-[968px]:after:absolute max-[968px]:after:bottom-2 max-[968px]:after:left-4 max-[968px]:after:w-[35px] max-[968px]:after:h-[2px] max-[968px]:after:bg-[#b4533c] max-[968px]:after:origin-left
   `;
 
   return (
@@ -87,13 +87,13 @@ const Header = () => {
 
             {/* Mobile Contact Section */}
             {/* <li className="hidden max-[968px]:block border-t border-gray-200 mt-8 pt-8 w-full">
-              <div className="flex items-center gap-[0.6rem] py-[0.9rem] px-4 text-gray-700 text-[0.95rem] font-medium mb-6 bg-[#0F4C81]/[0.06] rounded-lg border-l-4 border-[#0F4C81]">
-                <MapPin size={18} className="text-[#0F4C81] shrink-0" />
+              <div className="flex items-center gap-[0.6rem] py-[0.9rem] px-4 text-gray-700 text-[0.95rem] font-medium mb-6 bg-[#b4533c]/[0.06] rounded-lg border-l-4 border-[#b4533c]">
+                <MapPin size={18} className="text-[#b4533c] shrink-0" />
                 <span>Bengaluru, India</span>
               </div>
               <div className="flex gap-4 justify-center px-4 flex-wrap">
                 {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
-                  <a key={idx} href="#" className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 text-gray-700 border-2 border-gray-200 transition-all active:bg-[#0F4C81] active:text-white active:border-[#0F4C81] active:scale-95 sm:hover:bg-[#0F4C81] sm:hover:text-white sm:hover:border-[#0F4C81] sm:hover:scale-105 sm:hover:shadow-[0_4px_12px_rgba(15,76,129,0.3)]">
+                  <a key={idx} href="#" className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-50 text-gray-700 border-2 border-gray-200 transition-all active:bg-[#b4533c] active:text-white active:border-[#b4533c] active:scale-95 sm:hover:bg-[#b4533c] sm:hover:text-white sm:hover:border-[#b4533c] sm:hover:scale-105 sm:hover:shadow-[0_4px_12px_rgba(15,76,129,0.3)]">
                     <Icon size={18} />
                   </a>
                 ))}
@@ -104,12 +104,12 @@ const Header = () => {
           {/* Desktop Right Side */}
           {/* <div className="flex items-center gap-6 shrink-0 max-[968px]:hidden min-[969px]:max-[1024px]:gap-4">
             <div className="flex items-center gap-[0.4rem] text-gray-700 text-[0.9rem] font-medium">
-              <MapPin className="text-[#0F4C81]" size={18} />
+              <MapPin className="text-[#b4533c]" size={18} />
               <span className="whitespace-nowrap min-[969px]:max-[1024px]:hidden">Bengaluru, India</span>
             </div>
             <div className="flex gap-[0.6rem] items-center min-[969px]:max-[1024px]:gap-2">
               {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
-                <a key={idx} href="#" className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-gray-100 text-gray-700 transition-all duration-300 hover:bg-[#0F4C81] hover:text-white hover:-translate-y-[3px] hover:shadow-[0_4px_12px_rgba(15,76,129,0.3)] min-[969px]:max-[1024px]:w-[30px] min-[969px]:max-[1024px]:h-[30px] min-[1025px]:max-[1280px]:w-8 min-[1025px]:max-[1280px]:h-8">
+                <a key={idx} href="#" className="flex items-center justify-center w-[35px] h-[35px] rounded-full bg-gray-100 text-gray-700 transition-all duration-300 hover:bg-[#b4533c] hover:text-white hover:-translate-y-[3px] hover:shadow-[0_4px_12px_rgba(15,76,129,0.3)] min-[969px]:max-[1024px]:w-[30px] min-[969px]:max-[1024px]:h-[30px] min-[1025px]:max-[1280px]:w-8 min-[1025px]:max-[1280px]:h-8">
                   <Icon size={16} />
                 </a>
               ))}
@@ -122,9 +122,9 @@ const Header = () => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            <span className={`w-[26px] max-[480px]:w-6 h-[2.5px] bg-black rounded-full absolute transition-all duration-300 group-hover:bg-[#0F4C81] ${isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45 bg-[#0F4C81]' : 'top-3'}`}></span>
-            <span className={`w-[26px] max-[480px]:w-6 h-[2.5px] bg-black rounded-full absolute transition-all duration-300 group-hover:bg-[#0F4C81] ${isMenuOpen ? 'opacity-0 w-0' : 'top-1/2 -translate-y-1/2'}`}></span>
-            <span className={`w-[26px] max-[480px]:w-6 h-[2.5px] bg-black rounded-full absolute transition-all duration-300 group-hover:bg-[#0F4C81] ${isMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45 bg-[#0F4C81]' : 'bottom-3'}`}></span>
+            <span className={`w-[26px] max-[480px]:w-6 h-[2.5px] bg-black rounded-full absolute transition-all duration-300 group-hover:bg-[#b4533c] ${isMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45 bg-[#b4533c]' : 'top-3'}`}></span>
+            <span className={`w-[26px] max-[480px]:w-6 h-[2.5px] bg-black rounded-full absolute transition-all duration-300 group-hover:bg-[#b4533c] ${isMenuOpen ? 'opacity-0 w-0' : 'top-1/2 -translate-y-1/2'}`}></span>
+            <span className={`w-[26px] max-[480px]:w-6 h-[2.5px] bg-black rounded-full absolute transition-all duration-300 group-hover:bg-[#b4533c] ${isMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45 bg-[#b4533c]' : 'bottom-3'}`}></span>
           </button>
         </div>
       </nav>

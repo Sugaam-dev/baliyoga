@@ -115,12 +115,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl relative">
 
           {/* Left Arrow */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-2 md:-left-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg hover:bg-gray-100"
-          >
-            <ChevronLeft />
-          </button>
+<button
+  onClick={handlePrev}
+  className="absolute left-2 md:-left-6 top-1/2 z-10 -translate-y-1/2 
+  rounded-full bg-[#b4533c] p-3 shadow-lg 
+  hover:bg-[#9c3f2b] transition-all duration-300"
+>
+  <ChevronLeft className="text-white" />
+</button>
 
           {/* Slider Wrapper */}
           <div className="overflow-hidden">
@@ -164,13 +166,14 @@ export default function Home() {
           </div>
 
           {/* Right Arrow */}
-          <button
-            onClick={handleNext}
-            className="absolute right-2 md:-right-6 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-3 shadow-lg hover:bg-gray-100"
-          >
-            <ChevronRight />
-          </button>
-
+<button
+  onClick={handleNext}
+  className="absolute right-2 md:-right-6 top-1/2 z-10 -translate-y-1/2 
+  rounded-full bg-[#b4533c] p-3 shadow-lg 
+  hover:bg-[#9c3f2b] transition-all duration-300"
+>
+  <ChevronRight className="text-white" />
+</button>
         </div>
       </section>
 
@@ -182,7 +185,7 @@ export default function Home() {
                 <div className="mx-auto max-w-7xl">
                   {/* Section Heading */}
                   <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-semibold tracking-wide text-gray-800">                     
+                    <h2 className="text-4xl md:text-5xl font-semibold tracking-wide text-[#b4533c]">                    
                       WHAT’S HAPPENING AT THE BALI YOGA CENTRE
                     </h2>
                   </div>
@@ -235,7 +238,7 @@ export default function Home() {
                           {item.title}
                         </h3>
 
-                        <p className="mt-3 text-sm text-gray-600 max-w-md mx-auto">
+                        <p className="mt-3 text-base md:text-lg text-gray-600 max-w-md mx-auto">
                           {item.desc}
                         </p>
                       </div>
