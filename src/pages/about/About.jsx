@@ -1,154 +1,155 @@
+import React from "react";
 
-// export default function AboutPage() {
-//   return (
-//     <main className="min-h-screen bg-white">
-//       {/* Header Section */}
-//       <section className="border-b border-gray-200 py-12 md:py-16">
-//         <div className="container mx-auto px-4 text-center">
-//           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-//             Why CMG?
-//           </h1>
-//           <p className="text-xl text-gray-600">
-//             Owning Outcomes for a Smarter Future
-//           </p>
-//         </div>
-//       </section>
+// Import images
+import storyImg from "./images/YogaBali12.jpg";
+import philosophyImg from "./images/jbz00ii9peh5jqjjyna2.jpg";
+import teacherImg from "./images/FPO_BAL_980.jpg";
+import lifestyleImg from "./images/about.jpg";
+import testimonialImg from "./images/Radiantly-scaled.jpg";
+// import HeroSection from "../../Components/Hero";
 
-//       {/* The Silent Failure Section */}
-//       <section className="border-b border-gray-200 py-12 md:py-16">
-//         <div className="container mx-auto px-4">
-//           <h2 className="text-center text-gray-700 text-sm font-semibold tracking-widest mb-8">
-//             THE SILENT FAILURE OF EDUCATION
-//           </h2>
-          
-//           {/* Icons Flow */}
-//           <div className="flex justify-center items-center gap-4 mb-8 flex-wrap">
-//             <div className="text-4xl">📚</div>
-//             <div className="text-gray-400">→</div>
-//             <div className="text-4xl">✏️</div>
-//             <div className="text-gray-400">→</div>
-//             <div className="text-4xl">⚙️</div>
-//             <div className="text-gray-400">→</div>
-//             <div className="text-4xl">📊</div>
-//           </div>
+export default function About() {
+  return (
+    <div className="bg-[#f8f5f0] text-gray-800">
 
-//           {/* Description Text */}
-//           <div className="max-w-2xl mx-auto text-center mb-8">
-//             <p className="text-gray-700 text-lg leading-relaxed">
-//               Despite effort from students, teachers, and parents, most education systems remain fragmented and reactive.
-//             </p>
-//           </div>
+      {/* HERO SECTION */}
+      {/* <HeroSection/> */}
+      <section className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: `url(${storyImg})` }}>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <h1 className="relative text-white text-4xl md:text-6xl font-semibold tracking-wide">
+          About Bali Yoga Kendra
+        </h1>
+      </section>
 
-//           {/* Second Quote */}
-//           <div className="max-w-3xl mx-auto text-center border-t border-b border-gray-200 py-8">
-//             <p className="text-gray-700 text-lg">
-//               Marks, exams, careers, and institutions operate like isolated islands.
-//             </p>
-//           </div>
-//         </div>
-//       </section>
+      {/* OUR STORY */}
+      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+        <img src={storyImg} alt="Our Story" className="rounded-2xl shadow-lg" />
+        <div>
+          <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
+          <p className="leading-relaxed text-lg">
+            Bali Yoga Kendra was created as a sacred space where ancient yogic
+            wisdom meets the serene spiritual energy of Bali. What began as a
+            small community of dedicated seekers has evolved into a global
+            sanctuary for transformation, self-discovery, and authentic yoga
+            education.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            Here, yoga is not just a physical practice — it is a way of life.
+          </p>
+        </div>
+      </section>
 
-//       {/* Our Core Belief Section */}
-//       <section className="border-b border-gray-200 py-12 md:py-16">
-//         <div className="container mx-auto px-4">
-//           <h2 className="text-center text-gray-700 text-sm font-semibold tracking-widest mb-8">
-//             OUR CORE BELIEF
-//           </h2>
+      {/* PHILOSOPHY */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold mb-6">The Philosophy</h2>
+            <p className="leading-relaxed text-lg">
+              Our teachings are rooted in traditional Hatha Yoga,
+              breath awareness (Pranayama), meditation, and yogic lifestyle.
+              We believe in harmonizing body, mind, and soul through discipline,
+              devotion, and self-awareness.
+            </p>
+            <ul className="mt-6 space-y-3 text-gray-700">
+              <li>• Classical Hatha Yoga</li>
+              <li>• Pranayama & Meditation</li>
+              <li>• Yogic Ethics (Yamas & Niyamas)</li>
+              <li>• Holistic Lifestyle Living</li>
+            </ul>
+          </div>
+          <img src={philosophyImg} alt="Philosophy" className="rounded-2xl shadow-lg" />
+        </div>
+      </section>
 
-//           <div className="max-w-2xl mx-auto mb-6">
-//             <p className="text-center text-gray-700 text-lg mb-6">
-//               CMG is built on a simple, crucial belief:
-//             </p>
+      {/* MEET OUR TEACHERS */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          Meet Our Teachers
+        </h2>
 
-//             <div className="border-2 border-blue-600 bg-blue-50 p-8 rounded-lg">
-//               <p className="text-center text-gray-900 font-semibold text-lg mb-3">
-//                 Education does not fail due to lack of effort.
-//               </p>
-//               <p className="text-center text-gray-700">
-//                 It fails due to lack of <span className="font-semibold">integration</span>, <span className="font-semibold">visibility</span>, and decision <span className="font-semibold">intelligence</span>.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center">
+            <img
+              src={teacherImg}
+              alt="Teacher"
+              className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Master Anand</h3>
+            <p className="text-gray-600 mt-2">
+              15+ years of experience in Hatha & Meditation.
+            </p>
+          </div>
 
-//       {/* What We Don't Do Section */}
-//       <section className="border-b border-gray-200 py-12 md:py-16">
-//         <div className="container mx-auto px-4">
-//           <h2 className="text-center text-gray-700 text-sm font-semibold tracking-widest mb-8">
-//             WHAT WE DON'T DO
-//           </h2>
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center">
+            <img
+              src={teacherImg}
+              alt="Teacher"
+              className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Guru Meera</h3>
+            <p className="text-gray-600 mt-2">
+              Specialist in Pranayama & Yogic Philosophy.
+            </p>
+          </div>
 
-//           <p className="text-center text-gray-700 text-lg mb-12">
-//             CMG is built on a simple, crucial belief:
-//           </p>
+          <div className="bg-white rounded-2xl shadow-md p-6 text-center">
+            <img
+              src={teacherImg}
+              alt="Teacher"
+              className="w-40 h-40 object-cover rounded-full mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">Yogi Arjun</h3>
+            <p className="text-gray-600 mt-2">
+              Ashtanga practitioner & spiritual mentor.
+            </p>
+          </div>
+        </div>
+      </section>
 
-//           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-//             {/* Card 1 */}
-//             <div className="border-2 border-gray-300 rounded-lg p-8 text-center">
-//               <div className="text-5xl text-gray-400 mb-4">✕</div>
-//               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-//                 Shortcuts & noise
-//               </h3>
-//               <p className="text-gray-700">
-//                 We don't believe in pushing students into predefined career paths or quick-fix test prep.
-//               </p>
-//             </div>
+      {/* BALI YOGA LIFESTYLE */}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+          <img src={lifestyleImg} alt="Lifestyle" className="rounded-2xl shadow-lg" />
+          <div>
+            <h2 className="text-3xl font-semibold mb-6">
+              Bali Yoga Lifestyle
+            </h2>
+            <p className="leading-relaxed text-lg">
+              Life at Bali Yoga Kendra blends discipline with tranquility.
+              From sunrise meditation to nourishing vegetarian meals,
+              students immerse themselves in conscious living.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Yoga extends beyond the mat into daily habits, food,
+              thoughts, and relationships.
+            </p>
+          </div>
+        </div>
+      </section>
 
-//             {/* Card 2 */}
-//             <div className="border-2 border-gray-300 rounded-lg p-8 text-center">
-//               <div className="text-5xl text-gray-400 mb-4">✕</div>
-//               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-//                 Unbounded coaching
-//               </h3>
-//               <p className="text-gray-700">
-//                 We don't run external coaching. Our work is institution-owned.
-//               </p>
-//             </div>
+      {/* TESTIMONIALS */}
+      <section className="py-20 bg-[#f3eee7]">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-semibold mb-10">
+            Student Testimonials
+          </h2>
 
-//             {/* Card 3 */}
-//             <div className="border-2 border-gray-300 rounded-lg p-8 text-center">
-//               <div className="text-5xl text-gray-400 mb-4">✕</div>
-//               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-//                 One-size fits all
-//               </h3>
-//               <p className="text-gray-700">
-//                 We don't treat every student the same. Guidance is personalized, data-backed, and psychology-aware.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <img
+              src={testimonialImg}
+              alt="Students"
+              className="rounded-xl mb-6"
+            />
+            <p className="italic text-lg">
+              "Bali Yoga Kendra transformed not just my practice, but my life.
+              The teachers are deeply authentic and supportive."
+            </p>
+            <p className="mt-4 font-semibold">– Anna, Germany</p>
+          </div>
+        </div>
+      </section>
 
-//       {/* Our Approach Section */}
-//       <section className="py-12 md:py-16">
-//         <div className="container mx-auto px-4">
-//           <h2 className="text-center text-gray-700 text-sm font-semibold tracking-widest mb-8">
-//             OUR APPROACH
-//           </h2>
-
-//           <div className="flex justify-center items-center gap-4 mb-12 flex-wrap">
-//             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-//               Data-Backed
-//             </button>
-//             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-//               Psychology-Aware
-//             </button>
-//             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-//               Institution-Led
-//             </button>
-//             <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-//               Outcome-Focused
-//             </button>
-//           </div>
-
-//           <div className="max-w-3xl mx-auto text-center">
-//             <p className="text-gray-700 text-lg leading-relaxed">
-//               We design systems that connect academic, psychological, and career outcomes, while compounding value over time.
-//             </p>
-//           </div>
-//         </div>
-//       </section>
-//     </main>
-//   );
-// }
+    </div>
+  );
+}
