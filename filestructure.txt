@@ -33,8 +33,7 @@
                 |-- jbz00ii9peh5jqjjyna2.jpg
                 |-- OIP.jpg
                 |-- Radiantly-scaled.jpg
-                |-- YogaBali.JPG
-                |-- YogaBali12.JPG
+                |-- YogaBali.jpg
         |-- collegeuniversity
             |-- Collegeanduniversitypage.jsx
             |-- images
