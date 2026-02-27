@@ -1,7 +1,7 @@
 import RetreatsHero from "./retreatsHero.jsx";
-import RetreatSection from "./RetreatSection";
-import RetreatCard from "./RetreatCard";
-import GuestWorkshopSection from "./GuestWorkshopSection";
+import RetreatSection from "./retreatSection";
+import RetreatCard from "./retreatCard";
+import GuestWorkshopSection from "./guestWorkshopSection";
 
 // Bali images
 import bali1 from "../home/images/bali1.jpg";
