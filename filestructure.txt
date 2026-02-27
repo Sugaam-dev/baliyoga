@@ -76,6 +76,18 @@
                 |-- yoga0.jpg
                 |-- yoga1.jpg
                 |-- yogagallery.jpg
+        |-- online
+            |-- images
+                |-- aham-yoga-beginner-course.jpg
+                |-- booking.jpg
+                |-- Free-Online-Beginner’s-Yoga-Class.jpg
+                |-- online-beginner-yoga-classes.jpg
+                |-- online.jpg
+                |-- retreat.jpg
+                |-- schedule.jpg
+                |-- ttc.jpg
+                |-- workshop.jpg
+            |-- OnlinePage.jsx
         |-- schools
             |-- images
                 |-- graphimage.png
