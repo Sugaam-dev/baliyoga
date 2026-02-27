@@ -51,6 +51,11 @@
                 |-- tattvacampus.png
         |-- contact
             |-- Contact.jsx
+            |-- ContactHero.jsx
+            |-- ContactMethods.jsx
+            |-- InquiryForm.jsx
+            |-- LocationSection.jsx
+            |-- SocialLinksSection.jsx
         |-- course
             |-- course-card.jsx
             |-- course-section.jsx

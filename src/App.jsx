@@ -23,16 +23,14 @@ function App() {
 
                    {/* <Route path='course' element={<Course/>} />
                    <Route path='gallery' element={<Gallery/>} />
-                   <Route path='retreat'  element={<Retreat/>} /> */}
-                   {/* <Route path='school' element={<School/>} />
-                   <Route path='College&University' element={<Collegeanduniversitypage/>} />
-                    <Route path='students&parents' element={<StudentsAndParents/>} /> */}
+                   <Route path='retreat'  element={<Retreat/>} />
+                   
 
                     <Route path='online' element={<OnlinePage/>} />
                     <Route path='meditation' element={<MeditationPage/>} />
-                     {/*<Route path='students&parents' element={<StudentsAndParents/>} /> */}
+                     
 
-                    <Route path='contact' element={<Contact/>} />
+                    <Route path='contact' element={<Contact/>} /> */}
 
           </Route>
         </Routes>

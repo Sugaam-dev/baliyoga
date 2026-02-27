@@ -114,7 +114,7 @@
 import React from "react";
 
 /* ================= IMAGES ================= */
-import heroImg from "./images/online.jpg";
+import heroImg from "./images/schedule.jpg";
 
 import scheduleImg from "./images/schedule.jpg";
 import workshopImg from "./images/workshop.jpg";
@@ -131,7 +131,7 @@ export default function OnlinePage() {
     <div className="w-full overflow-x-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative py-32 text-white">
         
         {/* Background Image */}
         <img

@@ -13,7 +13,7 @@ export default function MeditationPage() {
     <div className="bg-[#f8f5f0] text-gray-800">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative py-32 text-white">
 
         {/* Background Image */}
         <img
