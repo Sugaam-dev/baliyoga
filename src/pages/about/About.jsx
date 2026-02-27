@@ -78,16 +78,29 @@ export default function About() {
 
   return (
     <div className="bg-[#f8f5f0] text-gray-800 overflow-hidden">
-
       {/* ================= HERO ================= */}
-      <section
-        className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${storyImg})` }}
-      >
-        <div className="absolute inset-0 bg-black/40"></div>
-        <h1 className="relative text-white text-4xl md:text-6xl font-semibold tracking-wide text-center px-4">
-          About Bali Yoga Kendra
-        </h1>
+      <section className="relative py-32 text-white">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <img
+            src={storyImg}
+            alt="About Bali Yoga Kendra"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative max-w-4xl mx-auto px-6 text-center space-y-6">
+          <h1 className="text-4xl md:text-5xl font-semibold">
+            About Bali Yoga Kendra
+          </h1>
+
+          <p className="text-lg text-stone-100">
+            Rooted in tradition and guided by mindful living, we offer authentic
+            yoga experiences that nurture body, mind, and spirit.
+          </p>
+        </div>
       </section>
 
       {/* ================= OUR STORY ================= */}
@@ -147,7 +160,10 @@ export default function About() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {teachers.map((teacher, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-md p-6 text-center">
+            <div
+              key={i}
+              className="bg-white rounded-2xl shadow-md p-6 text-center"
+            >
               <div className="overflow-hidden rounded-full w-40 h-40 mx-auto mb-4">
                 <img
                   src={teacher.image}
@@ -157,9 +173,7 @@ export default function About() {
               </div>
 
               <h3 className="text-xl font-semibold">{teacher.name}</h3>
-              <p className="text-gray-600 mt-2">
-                {teacher.description}
-              </p>
+              <p className="text-gray-600 mt-2">{teacher.description}</p>
             </div>
           ))}
         </div>
@@ -179,8 +193,8 @@ export default function About() {
           <div>
             <h2 className="text-3xl font-semibold mb-6">Bali Yoga Lifestyle</h2>
             <p className="leading-relaxed text-lg">
-              From sunrise meditation to nourishing vegetarian meals,
-              students immerse themselves in conscious living.
+              From sunrise meditation to nourishing vegetarian meals, students
+              immerse themselves in conscious living.
             </p>
           </div>
         </div>
@@ -201,10 +215,7 @@ export default function About() {
               }}
             >
               {testimonials.map((item, index) => (
-                <div
-                  key={index}
-                  className="px-4 w-full md:w-1/3 flex-shrink-0"
-                >
+                <div key={index} className="px-4 w-full md:w-1/3 flex-shrink-0">
                   <div className="bg-white rounded-2xl shadow-lg p-8 text-center h-full">
                     <div className="overflow-hidden rounded-xl">
                       <img
@@ -225,10 +236,8 @@ export default function About() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
-
     </div>
   );
 }

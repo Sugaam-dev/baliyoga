@@ -11,6 +11,8 @@
     |-- App.css
     |-- App.jsx
     |-- assets
+        |-- leaf.svg
+        |-- mandala.svg
         |-- react.svg
         |-- yoga.jpg
         |-- yoga0.jpg
@@ -41,7 +43,7 @@
                 |-- test4.jpeg
                 |-- test5.jpg
                 |-- Yoga-Teacher.jpg
-                |-- YogaBali.JPG
+                |-- YogaBali.jpg
         |-- collegeuniversity
             |-- Collegeanduniversitypage.jsx
             |-- images
@@ -49,6 +51,19 @@
                 |-- tattvacampus.png
         |-- contact
             |-- Contact.jsx
+        |-- course
+            |-- course-card.jsx
+            |-- course-section.jsx
+            |-- course.jsx
+            |-- cta-section.jsx
+            |-- hero-section.jsx
+        |-- gallery
+            |-- gallery.jsx
+            |-- galleryHero.jsx
+            |-- photoCard.jsx
+            |-- photoGallery.jsx
+            |-- videoCard.jsx
+            |-- videoGallery.jsx
         |-- home
             |-- Home.jsx
             |-- images
@@ -76,6 +91,12 @@
                 |-- yoga0.jpg
                 |-- yoga1.jpg
                 |-- yogagallery.jpg
+        |-- retreat
+            |-- guestWorkshopSection.jsx
+            |-- retreat.jsx
+            |-- retreatCard.jsx
+            |-- retreatSection.jsx
+            |-- retreatsHero.jsx
         |-- schools
             |-- images
                 |-- graphimage.png
