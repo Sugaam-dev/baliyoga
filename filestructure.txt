@@ -30,10 +30,18 @@
             |-- images
                 |-- about.jpg
                 |-- FPO_BAL_980.jpg
+                |-- home-hero.jpg
                 |-- jbz00ii9peh5jqjjyna2.jpg
                 |-- OIP.jpg
                 |-- Radiantly-scaled.jpg
-                |-- YogaBali.jpg
+                |-- test.jpg
+                |-- test1.jpg
+                |-- test2.jpg
+                |-- test3.jpg
+                |-- test4.jpeg
+                |-- test5.jpg
+                |-- Yoga-Teacher.jpg
+                |-- YogaBali.JPG
         |-- collegeuniversity
             |-- Collegeanduniversitypage.jsx
             |-- images
