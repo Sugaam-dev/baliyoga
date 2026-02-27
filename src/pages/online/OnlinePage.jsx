@@ -1,115 +1,110 @@
 import React from "react";
 
-// Schedule & Booking Images
+/* ================= IMAGES ================= */
+import heroImg from "./images/online.jpg";
+
 import scheduleImg from "./images/schedule.jpg";
 import workshopImg from "./images/workshop.jpg";
 import retreatImg from "./images/retreat.jpg";
 import ttcImg from "./images/ttc.jpg";
 import bookingImg from "./images/booking.jpg";
 
-// Online Learning Images
-import onlineClassImg from "./images/Free-Online-Beginner’s-Yoga-Class.jpg";
-import virtualTTCImg from "./images/online-beginner-yoga-classes.jpg";
-import libraryImg from "./images/online.jpg";
-import meditationImg from "./images/aham-yoga-beginner-course.jpg";
+import onlineClassImg from "./images/online-beginner-yoga-classes.jpg";
+import beginnerFreeImg from "./images/Free-Online-Beginner’s-Yoga-Class.jpg";
+import ahamCourseImg from "./images/aham-yoga-beginner-course.jpg";
 
 export default function OnlinePage() {
   return (
-    <div className="bg-[#f8f5f0] text-gray-800">
+    <div className="w-full overflow-x-hidden">
 
-      {/* HERO SECTION */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-r from-[#e6dfd5] to-[#f8f5f0]">
-        <h1 className="text-4xl md:text-6xl font-semibold tracking-wide text-center px-4">
-          Online Learning & Schedule
-        </h1>
-      </section>
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative w-full h-[85vh] md:h-screen">
+        <img
+          src={heroImg}
+          alt="Bali Yoga"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-      {/* ========================= */}
-      {/* SCHEDULE & BOOKING */}
-      {/* ========================= */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-          Schedule & Booking
-        </h2>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif mb-4">
+            Bali Yoga Kendra
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl mb-6">
+            Awaken Your Body • Calm Your Mind
+          </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          {/* Card Component */}
-          {[
-            { title: "Class Schedule", img: scheduleImg },
-            { title: "Workshop Calendar", img: workshopImg },
-            { title: "Retreat Dates", img: retreatImg },
-            { title: "Teacher Training Intake Dates", img: ttcImg },
-            { title: "Online Booking", img: bookingImg },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500"
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-3 text-gray-600 text-sm">
-                  Explore our {item.title.toLowerCase()} and plan your
-                  journey with Bali Yoga Kendra.
-                </p>
-              </div>
-            </div>
-          ))}
-
-        </div>
-      </section>
-
-      {/* ========================= */}
-      {/* ONLINE LEARNING */}
-      {/* ========================= */}
-
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-            Online Learning
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {[
-              { title: "Online Yoga Classes", img: onlineClassImg },
-              { title: "Virtual TTC Programs", img: virtualTTCImg },
-              { title: "Recorded Video Library", img: libraryImg },
-              { title: "Online Meditation Sessions", img: meditationImg },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group bg-[#f8f5f0] rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-500"
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-gray-600 text-sm">
-                    Join our {item.title.toLowerCase()} from anywhere in
-                    the world and deepen your practice.
-                  </p>
-                </div>
-              </div>
-            ))}
-
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg transition">
+              View Schedule
+            </button>
+            <button className="bg-yellow-500 hover:bg-yellow-600 px-6 py-3 rounded-lg transition">
+              Book Now
+            </button>
           </div>
         </div>
       </section>
 
+      {/* ================= SCHEDULE & BOOKING ================= */}
+      <section className="py-16 px-4 md:px-12 bg-white">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-serif mb-3">
+            Schedule & Booking
+          </h2>
+          <p className="text-gray-600">
+            Plan your journey with us
+          </p>
+        </div>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <Card img={scheduleImg} title="Class Schedule" />
+          <Card img={workshopImg} title="Workshop Calendar" />
+          <Card img={retreatImg} title="Retreat Dates" />
+          <Card img={ttcImg} title="TTC Intake Dates" />
+          <Card img={bookingImg} title="Online Booking" />
+        </div>
+      </section>
+
+      {/* ================= ONLINE LEARNING ================= */}
+     {/* ================= ONLINE LEARNING ================= */}
+<section className="py-16 px-4 md:px-12 bg-gray-50">
+  <div className="text-center mb-12">
+    <h2 className="text-3xl md:text-4xl font-serif mb-3">
+      Online Learning
+    </h2>
+    <p className="text-gray-600">
+      Practice from Anywhere
+    </p>
+  </div>
+
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <Card img={onlineClassImg} title="Online Yoga Classes" />
+    <Card img={beginnerFreeImg} title="Virtual TTC Programs " />
+    <Card img={ahamCourseImg} title="Recorded Video Library " />
+    <Card img={heroImg} title="Online Meditation Sessions" />
+  </div>
+</section>
+
+    </div>
+  );
+}
+
+/* ================= REUSABLE CARD ================= */
+function Card({ img, title }) {
+  return (
+    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <img
+        src={img}
+        alt={title}
+        className="w-full h-52 object-cover"
+      />
+      <div className="p-5 text-center">
+        <h3 className="text-xl font-semibold mb-4">{title}</h3>
+        <button className="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-lg transition">
+          View Details
+        </button>
+      </div>
     </div>
   );
 }

@@ -76,6 +76,12 @@
                 |-- yoga0.jpg
                 |-- yoga1.jpg
                 |-- yogagallery.jpg
+        |-- meditation
+            |-- images
+                |-- hero.jpg
+                |-- meditation.jpg
+                |-- sunset-meditation.jpg
+            |-- MeditationPage.jsx
         |-- online
             |-- images
                 |-- aham-yoga-beginner-course.jpg
