@@ -5,7 +5,7 @@ import Home from "./pages/home/Home";
 import About from './pages/about/About';
 import Course from './pages/course/course';
 import Gallery from './pages/gallery/gallery';
-import Retreat from './pages/retreat/Retreat';
+import Retreat from './pages/retreat/retreat';
 // import Collegeanduniversitypage from './pages/collegeuniversity/Collegeanduniversitypage';
 // import StudentsAndParents from './pages/studentsandparents/StudentsAndParents';
 import Contact from './pages/contact/Contact';
