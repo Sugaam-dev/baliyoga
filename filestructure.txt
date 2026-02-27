@@ -91,6 +91,24 @@
                 |-- yoga0.jpg
                 |-- yoga1.jpg
                 |-- yogagallery.jpg
+        |-- meditation
+            |-- images
+                |-- hero.jpg
+                |-- meditation.jpg
+                |-- sunset-meditation.jpg
+            |-- MeditationPage.jsx
+        |-- online
+            |-- images
+                |-- aham-yoga-beginner-course.jpg
+                |-- booking.jpg
+                |-- Free-Online-Beginner’s-Yoga-Class.jpg
+                |-- online-beginner-yoga-classes.jpg
+                |-- online.jpg
+                |-- retreat.jpg
+                |-- schedule.jpg
+                |-- ttc.jpg
+                |-- workshop.jpg
+            |-- OnlinePage.jsx
         |-- retreat
             |-- guestWorkshopSection.jsx
             |-- retreat.jsx

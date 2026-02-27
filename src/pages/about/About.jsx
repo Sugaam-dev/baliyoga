@@ -79,6 +79,7 @@ export default function About() {
   return (
     <div className="bg-[#f8f5f0] text-gray-800 overflow-hidden">
       {/* ================= HERO ================= */}
+
       <section className="relative py-32 text-white">
         {/* Background */}
         <div className="absolute inset-0">
@@ -102,6 +103,7 @@ export default function About() {
           </p>
         </div>
       </section>
+
 
       {/* ================= OUR STORY ================= */}
       <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
