@@ -81,7 +81,7 @@ export default function About() {
 
       {/* ================= HERO ================= */}
       <section
-        className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+       className="relative w-full h-screen flex items-center justify-center overflow-hidden"
         style={{ backgroundImage: `url(${storyImg})` }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
