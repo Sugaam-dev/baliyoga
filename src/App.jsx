@@ -27,7 +27,7 @@ function App() {
                    
 
                     <Route path='online' element={<OnlinePage/>} />
-                     {/* <Route path='meditation' element={<MeditationPage/>} /> */}
+                     <Route path='meditation' element={<MeditationPage/>} />
                      
 
                     {/* <Route path='contact' element={<Contact/>} />  */}
