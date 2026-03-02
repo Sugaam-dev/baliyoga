@@ -21,16 +21,16 @@ function App() {
             <Route index element={<Home />} />
                    <Route path='about' element={<About/>} />
 
-                   {/* <Route path='course' element={<Course/>} />
+                   <Route path='course' element={<Course/>} />
                    <Route path='gallery' element={<Gallery/>} />
-                   <Route path='retreat'  element={<Retreat/>} />
+                   {/* <Route path='retreat'  element={<Retreat/>} /> */}
                    
 
                     <Route path='online' element={<OnlinePage/>} />
-                    <Route path='meditation' element={<MeditationPage/>} />
+                     {/* <Route path='meditation' element={<MeditationPage/>} /> */}
                      
 
-                    <Route path='contact' element={<Contact/>} /> */}
+                    {/* <Route path='contact' element={<Contact/>} />  */}
 
           </Route>
         </Routes>
