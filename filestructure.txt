@@ -43,7 +43,7 @@
                 |-- test4.jpeg
                 |-- test5.jpg
                 |-- Yoga-Teacher.jpg
-                |-- YogaBali.jpg
+                |-- YogaBali.JPG
         |-- collegeuniversity
             |-- Collegeanduniversitypage.jsx
             |-- images
