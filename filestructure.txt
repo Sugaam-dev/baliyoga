@@ -149,10 +149,13 @@
                 |-- yoga-bali.jpg
                 |-- yoga-in-bali.jpg
                 |-- Yoga-Searcher.jpg
+                |-- yogabali.jpg
                 |-- yogaimage.jpg
+                |-- yogainbali.jpg
             |-- InclusionExclusion.jsx
             |-- Service.jsx
             |-- SyllabusSection.jsx
+            |-- TermsPolicy.jsx
             |-- TrainingInfo.jsx
             |-- YogaStyles.jsx
         |-- studentsandparents

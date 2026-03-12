@@ -12,6 +12,7 @@ import FoodAccommodation from "./FoodAccommodation";
 import YogaStyles from "./YogaStyles";
 import EligibilitySection from "./EligibilitySection";
 import ArrivalAmenities from "./ArrivalAmenities";
+import TermsPolicy from "./TermsPolicy";
 
 const Service = () => {
   return (
@@ -37,6 +38,7 @@ const Service = () => {
       <FoodAccommodation />
       <FaqSection />
       <ExcursionPlaces />
+      <TermsPolicy />
     </div>
   );
 };
