@@ -11,6 +11,8 @@ import Retreat from './pages/retreat/retreat';
 import Contact from './pages/contact/Contact';
 import OnlinePage from './pages/online/OnlinePage';
 import MeditationPage from './pages/meditation/MeditationPage';
+import Service from './pages/services/Service';
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
                    <Route path='online' element={<OnlinePage/>} />
                    <Route path='meditation' element={<MeditationPage/>} />                    
                    <Route path='contact' element={<Contact/>} /> 
+                    <Route path='200-hour-yoga-teacher-training-in-bali' element={<Service/>} /> 
 
           </Route>
         </Routes>

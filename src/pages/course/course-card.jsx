@@ -1,4 +1,6 @@
+import { useNavigate } from "react-router-dom";
 export function CourseCard({ title, description, level, duration }) {
+  const navigate = useNavigate();
   const levelColors = {
     Beginner: "bg-green-100 text-green-700",
     Intermediate: "bg-blue-100 text-blue-700",
@@ -35,7 +37,8 @@ export function CourseCard({ title, description, level, duration }) {
           </p>
         )}
 
-        <button className="w-full mt-2 bg-[#b4533c] text-white py-2.5 rounded-full font-medium hover:bg-[#9e4633] transition">
+        <button  onClick={() => navigate("/200-hour-yoga-teacher-training-in-bali")} className="w-full mt-2 bg-[#b4533c] text-white py-2.5 rounded-full font-medium hover:bg-[#9e4633] transition">
+         
           Enroll Now
         </button>
       </div>

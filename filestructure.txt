@@ -124,6 +124,32 @@
             |-- images
                 |-- graphimage.png
             |-- Schoolpage.jsx
+        |-- services
+            |-- CourseFee.jsx
+            |-- CourseTabs.jsx
+            |-- DailySchedule.jsx
+            |-- ExcursionPlaces.jsx
+            |-- FaqSection.jsx
+            |-- FoodAccommodation.jsx
+            |-- HeroSection.jsx
+            |-- images
+                |-- hero.jpg
+                |-- image.jpg
+                |-- room.jpg
+                |-- room1.jpg
+                |-- room2.jpg
+                |-- room3.jpg
+                |-- room4.jpg
+                |-- room5.jpg
+                |-- yoga-bali-yoga-school.jpg
+                |-- yoga-bali-yoga.jpg
+                |-- yoga-bali.jpg
+                |-- Yoga-Searcher.jpg
+                |-- yogaimage.jpg
+            |-- InclusionExclusion.jsx
+            |-- Service.jsx
+            |-- SyllabusSection.jsx
+            |-- TrainingInfo.jsx
         |-- studentsandparents
             |-- CenterCardForm.jsx
             |-- StudentsAndParents.jsx
