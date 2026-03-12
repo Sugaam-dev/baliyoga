@@ -9,6 +9,9 @@ import FaqSection from "./FaqSection";
 import ExcursionPlaces from "./ExcursionPlaces";
 import SyllabusSection from "./SyllabusSection";
 import FoodAccommodation from "./FoodAccommodation";
+import YogaStyles from "./YogaStyles";
+import EligibilitySection from "./EligibilitySection";
+import ArrivalAmenities from "./ArrivalAmenities";
 
 const Service = () => {
   return (
@@ -25,24 +28,15 @@ const Service = () => {
 
       {/* Schedule Section */}
       <DailySchedule />
-
-     <CourseFee />
-     <InclusionExclusion />
-
-           {/* Dummy sections */}
-      {/* <section id="syllabus" className="scroll-mt-32 py-24 text-center">
-        Syllabus Section
-      </section> */}
-      <SyllabusSection />
-
-     
-<FoodAccommodation />
-      {/* <section id="rooms" className="scroll-mt-32 py-24 text-center">
-        Rooms Section
-      </section> */}
-
-<FaqSection />
-<ExcursionPlaces />
+      <YogaStyles />
+      <EligibilitySection />
+      <ArrivalAmenities />
+      <CourseFee />
+      <InclusionExclusion />
+      <SyllabusSection />   
+      <FoodAccommodation />
+      <FaqSection />
+      <ExcursionPlaces />
     </div>
   );
 };
