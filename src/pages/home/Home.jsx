@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight ,Flower2, Leaf, Sparkles, Medal} from "lucide-react";
 
 // Import images
 import bali1 from "./images/bali1.jpg";
@@ -112,17 +112,29 @@ export default function Home() {
       <HeroSection />
 
       <section className="px-6 py-16">
+
+        {/* Section Heading */}
+        <div className="max-w-7xl mx-auto text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-semibold text-[#b4533c] tracking-wide">
+            Experience the Essence of Bali Yoga
+          </h2>
+
+          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            Explore inspiring yoga practices, retreats, workshops, and mindful
+            experiences designed to deepen your connection with body, mind, and spirit.
+          </p>
+        </div>
         <div className="mx-auto max-w-7xl relative">
 
           {/* Left Arrow */}
-<button
-  onClick={handlePrev}
-  className="absolute left-2 md:-left-6 top-1/2 z-10 -translate-y-1/2 
-  rounded-full bg-[#b4533c] p-3 shadow-lg 
-  hover:bg-[#9c3f2b] transition-all duration-300"
->
-  <ChevronLeft className="text-white" />
-</button>
+            <button
+              onClick={handlePrev}
+              className="absolute left-2 md:-left-6 top-1/2 z-10 -translate-y-1/2 
+              rounded-full bg-[#b4533c] p-3 shadow-lg 
+              hover:bg-[#9c3f2b] transition-all duration-300"
+            >
+              <ChevronLeft className="text-white" />
+            </button>
 
           {/* Slider Wrapper */}
           <div className="overflow-hidden">
@@ -166,18 +178,108 @@ export default function Home() {
           </div>
 
           {/* Right Arrow */}
-<button
-  onClick={handleNext}
-  className="absolute right-2 md:-right-6 top-1/2 z-10 -translate-y-1/2 
-  rounded-full bg-[#b4533c] p-3 shadow-lg 
-  hover:bg-[#9c3f2b] transition-all duration-300"
->
-  <ChevronRight className="text-white" />
-</button>
+            <button
+              onClick={handleNext}
+              className="absolute right-2 md:-right-6 top-1/2 z-10 -translate-y-1/2 
+              rounded-full bg-[#b4533c] p-3 shadow-lg 
+              hover:bg-[#9c3f2b] transition-all duration-300"
+            >
+              <ChevronRight className="text-white" />
+            </button>
         </div>
       </section>
 
-       
+       {/* ======================================================== */}
+
+       <section className="bg-[#f6f1ed] py-20 px-6">
+      <div className="max-w-7xl mx-auto text-center">
+
+        {/* Heading */}
+        <h2 className="text-2xl md:text-4xl font-semibold text-[#b4533c]">
+          Bali Yoga Retreats (BYR): Teacher Training, Workshops and Retreats
+        </h2>
+
+        {/* Sub Text */}
+        <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-sm md:text-base">
+          Go on a life-changing yoga adventure in Bali. You can learn to be a teacher,
+          join fun workshops, or relax on a refreshing retreat.
+        </p>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mt-16">
+
+          {/* Card 1 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-20 h-20 rounded-full border border-[#b4533c] flex items-center justify-center mb-6">
+              <Flower2 size={34} className="text-[#b4533c]" />
+            </div>
+
+            <h3 className="text-[#b4533c] font-semibold text-lg">
+              12 Types of Yoga Courses
+            </h3>
+
+            <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+              Our extensive varieties of yoga teacher training courses in Bali
+              will motivate and inspire you to learn more and explore.
+              These include 3 Multistyle Yoga, 3 Kundalini Yoga, and 6 Short Courses.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-20 h-20 rounded-full border border-[#b4533c] flex items-center justify-center mb-6">
+              <Leaf size={34} className="text-[#b4533c]" />
+            </div>
+
+            <h3 className="text-[#b4533c] font-semibold text-lg">
+              5 Days Yoga Retreat
+            </h3>
+
+            <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+              This 5-Day Yoga Retreat offers an opportunity to relax and look
+              beyond the body, cleansing both the mind and soul for inner peace.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-20 h-20 rounded-full border border-[#b4533c] flex items-center justify-center mb-6">
+              <Sparkles size={34} className="text-[#b4533c]" />
+            </div>
+
+            <h3 className="text-[#b4533c] font-semibold text-lg">
+              14 Workshops
+            </h3>
+
+            <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+              Our workshops help you connect with your energy and truly enjoy life.
+              While we offer many sessions, some of the most meaningful ones include
+              Meditation, Yoga Nidra, and Sound Healing.
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="flex flex-col items-center text-center">
+            <div className="w-20 h-20 rounded-full border border-[#b4533c] flex items-center justify-center mb-6">
+              <Medal size={34} className="text-[#b4533c]" />
+            </div>
+
+            <h3 className="text-[#b4533c] font-semibold text-lg">
+              11+ Years of Experience
+            </h3>
+
+            <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+              With over 11 years of experience in yoga teacher training in Bali
+              since 2015, we are ready to serve you and share our expertise.
+              Join us in this journey of eternal peace!
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+       {/* ======================================================= */}
 
 
                     {/* Bali Yoga Centre Section */}
