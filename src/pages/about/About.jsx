@@ -15,6 +15,7 @@ import teacher4 from "./images/Minu.jpeg";
 import teacher5 from "./images/Hrishanth.jpeg";
 import teacher6 from "./images/Charanya.jpeg";
 import teacher7 from "./images/vinayaksir.jpeg";
+import teacher8 from "./images/Anulasha.png";
 
 
 // TESTIMONIAL IMAGES
@@ -72,6 +73,12 @@ export default function About() {
       title: "Yoga Philosophy, Meditation & Sound Healing Teacher",
       image: teacher7,
       description: "Vinayaka Honnavar is a dedicated teacher of Yoga Philosophy, Meditation, and Sound Healing, deeply rooted in the traditional wisdom of yoga and mindful living. His teachings are inspired by classical yogic texts and contemplative practices, offering students a meaningful path toward self-understanding, inner balance, and holistic wellbeing."
+    },
+    {
+      name: "ANULASHA RAM",
+      title: "Social Media & Marketing Team Head | Graphic Designer, Web Developer, and Admin",
+      image: teacher8,
+      description: "Anulasha Ram is the Social Media and Marketing Team Head at Yoga With Srinatha, overseeing all aspects of the institute’s online presence. She manages social media platforms, handles student inquiries, and ensures effective communication across digital channels."
     }
    
 
