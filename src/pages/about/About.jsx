@@ -8,9 +8,14 @@ import lifestyleImg from "./images/jbz00ii9peh5jqjjyna2.jpg";
 import ourImg from "./images/about.jpg";
 
 // TEACHER IMAGES (USE YOUR REAL FILE NAMES)
-import teacher1 from "./images/about.jpg";
-import teacher2 from "./images/Yoga-Teacher.jpg";
-import teacher3 from "./images/jbz00ii9peh5jqjjyna2.jpg";
+import teacher1 from "./images/SrinathSir.jpeg";
+import teacher2 from "./images/Sahana.jpeg";
+import teacher3 from "./images/RaviSir.jpeg";
+import teacher4 from "./images/Minu.jpeg";
+import teacher5 from "./images/Hrishanth.jpeg";
+import teacher6 from "./images/Charanya.jpeg";
+import teacher7 from "./images/vinayaksir.jpeg";
+
 
 // TESTIMONIAL IMAGES
 import test1 from "./images/test1.jpg";
@@ -27,20 +32,49 @@ export default function About() {
   // ===============================
   const teachers = [
     {
-      name: "Master Anand",
+      name: "SRINATHA SIR",
+      title: "Founder & Director Yoga With Srinatha",
       image: teacher1,
-      description: "Specialist in Classical Hatha Yoga and breathwork."
+      description: "Dr. Srinatha is the Founder and Director of Yoga With Srinatha, with 30+ years of experience in the field of yoga education and practice. He is a senior teacher of Hatha Yoga, Iyengar Yoga, and Ashtanga Yoga, widely respected for his depth of knowledge, precision, and commitment to authentic yogic traditions."
     },
     {
-      name: "Guru Meera",
+      name: "SAHANA P R",
+      title: "Yin Yoga, Prenatal & Postnatal Yoga, and Anatomy Teacher",
       image: teacher2,
-      description: "Meditation guide and philosophy teacher."
+      description: "Sahana P R is a dedicated yoga teacher and educator specializing in Yin Yoga, Prenatal and Postnatal Yoga, and Applied Yoga Anatomy. With a strong foundation in traditional yogic principles and modern anatomical understanding, she offers a safe, mindful, and compassionate approach to teaching."
     },
     {
-      name: "Yogi Arjun",
+      name: "RAVI PRABHAKAR",
+      title: "Student Accommodation Manager | Methodology, Anatomy & Physiology Teacher",
       image: teacher3,
-      description: "Expert in alignment, strength, and yogic lifestyle."
+      description: "Ravi Prabhakar is an experienced Methodology, Anatomy, and Physiology teacher with 15+ years of experience, and a skilled practitioner of Hatha Yoga, Ashtanga Yoga, and Iyengar Yoga. He supports students with a clear, structured, and practical understanding of yoga practice, bridging traditional methodology with modern anatomical and physiological knowledge to ensure safe and confident practice."
+    },
+    {
+      name: "MINU SAJJI",
+      title: "Pranayama & Assistant Yoga Teacher",
+      image: teacher4,
+      description: "Minu Sajji is a dedicated Pranayama teacher and Assistant Teacher at Yoga With Srinatha, specializing in Chair Yoga, Wheel Yoga, and Hatha Yoga. With a compassionate and student-centered approach, she supports practitioners in developing strength, flexibility, and mindfulness while emphasizing safe and effective practice."
+    },
+    {
+      name: "HRISHANTH ",
+      title: "Yoga Therapy & Ashtanga Yoga Teacher",
+      image: teacher5,
+      description: "Hrishanth is a skilled Yoga Therapy teacher and an experienced instructor in Ashtanga Yoga as well as Integrative Yoga Massage workshops at Yoga With Srinatha. He specializes in using yoga as a therapeutic tool to support physical, mental, and emotional wellbeing, helping students restore balance and vitality in their daily lives."
+    },
+    {
+      name: "CHARANYA",
+      title: "Ayurveda, Philosophy & Pranayama Teacher",
+      image: teacher6,
+      description: "Charanya is a dedicated teacher of Ayurveda, Yoga Philosophy, and Pranayama at Yoga With Srinatha, guiding students in the holistic integration of mind, body, and breath. Her teaching focuses on connecting traditional yogic wisdom with practical, everyday applications, helping students cultivate balance, clarity, and wellbeing."
+    },
+    {
+      name: "VINAYAKA HONNAVAR",
+      title: "Yoga Philosophy, Meditation & Sound Healing Teacher",
+      image: teacher7,
+      description: "Vinayaka Honnavar is a dedicated teacher of Yoga Philosophy, Meditation, and Sound Healing, deeply rooted in the traditional wisdom of yoga and mindful living. His teachings are inspired by classical yogic texts and contemplative practices, offering students a meaningful path toward self-understanding, inner balance, and holistic wellbeing."
     }
+   
+
   ];
 
   // ===============================
@@ -175,6 +209,11 @@ export default function About() {
               </div>
 
               <h3 className="text-xl font-semibold">{teacher.name}</h3>
+              {teacher.title && (
+                  <p className="text-[#b4533c] text-sm font-medium mt-1">
+                    {teacher.title}
+                  </p>
+                )}
               <p className="text-gray-600 mt-2">{teacher.description}</p>
             </div>
           ))}

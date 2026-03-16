@@ -31,17 +31,24 @@
             |-- About.jsx
             |-- images
                 |-- about.jpg
+                |-- Charanya.jpeg
                 |-- FPO_BAL_980.jpg
                 |-- home-hero.jpg
+                |-- Hrishanth.jpeg
                 |-- jbz00ii9peh5jqjjyna2.jpg
+                |-- Minu.jpeg
                 |-- OIP.jpg
                 |-- Radiantly-scaled.jpg
+                |-- RaviSir.jpeg
+                |-- Sahana.jpeg
+                |-- SrinathSir.jpeg
                 |-- test.jpg
                 |-- test1.jpg
                 |-- test2.jpg
                 |-- test3.jpg
                 |-- test4.jpeg
                 |-- test5.jpg
+                |-- vinayaksir.jpeg
                 |-- Yoga-Teacher.jpg
                 |-- YogaBali.JPG
         |-- collegeuniversity
