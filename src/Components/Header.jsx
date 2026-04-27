@@ -100,7 +100,37 @@ const Header = () => {
               </div>
             </li> */}
           </ul>
+{/* Right Side (Book Now + Hamburger) */}
+<div className="flex items-center gap-4 shrink-0">
 
+  {/* Book Now */}
+  <a
+    href="#"
+    className="border border-[#3d4a3e] text-[#3d4a3e] hover:bg-[#3d4a3e] hover:text-[#f5f2eb] transition-colors duration-200 px-5 py-2 text-xs tracking-[0.18em] font-medium hidden sm:inline-block"
+    style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif" }}
+  >
+    APPLY NOW
+  </a>
+
+  {/* Mobile Book Button */}
+  <a
+    href="#"
+    className="sm:hidden border border-[#3d4a3e] text-[#3d4a3e] px-3 py-1 text-[11px]"
+  >
+    APPLY NOW
+  </a>
+
+  {/* Hamburger */}
+  {/* <button
+    className="max-[968px]:flex hidden flex-col justify-center items-center w-9 h-9 gap-1.5"
+    onClick={toggleMenu}
+  >
+    <span className={`block h-px w-6 bg-[#3d4a3e] transition-all ${isMenuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+    <span className={`block h-px w-6 bg-[#3d4a3e] ${isMenuOpen ? "opacity-0" : ""}`} />
+    <span className={`block h-px w-6 bg-[#3d4a3e] transition-all ${isMenuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+  </button> */}
+
+</div>
           {/* Desktop Right Side */}
           {/* <div className="flex items-center gap-6 shrink-0 max-[968px]:hidden min-[969px]:max-[1024px]:gap-4">
             <div className="flex items-center gap-[0.4rem] text-gray-700 text-[0.9rem] font-medium">

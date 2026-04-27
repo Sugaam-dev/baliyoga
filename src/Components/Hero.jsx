@@ -85,7 +85,7 @@ function HeroSection() {
       </Swiper>
 
       {/* Content Overlay */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center text-white max-w-[800px] w-[90%] px-5 pointer-events-none">
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center text-white max-w-[800px] w-[90%] px-5 pointer-events-none">
         <h1 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-bold mb-5 leading-[1.2] drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)] animate-[fadeInUp_1s_ease_0.3s_backwards] pointer-events-auto">
           Welcome to BALIYOGA
         </h1>
@@ -100,8 +100,79 @@ function HeroSection() {
         >
           Get Started
           {/* <span className="absolute right-5 top-1/2 -translate-y-1/2 w-[12px] h-[12px] border-r-2 border-b-2 border-white -rotate-45 transition-all duration-400 group-hover:right-[15px] group-hover:animate-[arrowSlide_0.6s_ease_infinite]"></span> */}
-        </Link>
+        {/* </Link>
+      </div> */} 
+
+      {/* Content Overlay */}
+<div className="absolute inset-0 z-20 flex flex-col justify-center items-center text-center text-white px-5">
+
+  <div className="max-w-[900px] w-full">
+
+    {/* Heading */}
+    <h1 className="text-[28px] sm:text-[36px] md:text-[48px] lg:text-[56px] font-bold mb-4 leading-[1.2] drop-shadow-[2px_2px_8px_rgba(0,0,0,0.7)]">
+      Transform Your Life with Yoga
+    </h1>
+
+    {/* Subtext */}
+    <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] mb-6 leading-[1.6] drop-shadow-[1px_1px_4px_rgba(0,0,0,0.7)]">
+      Join our certified yoga programs in Bali and elevate your mind, body, and spirit.
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+
+      {/* Apply Now */}
+      <a
+        href="/contact"
+        className="bg-[#3d4a3e] text-white px-6 py-3 rounded-md text-sm sm:text-base font-medium flex items-center gap-2 hover:bg-[#2c362d] transition"
+      >
+        Apply Now →
+      </a>
+
+      {/* Download Brochure */}
+      <a
+        href="/brochure.pdf"
+        className="bg-white text-black px-6 py-3 rounded-md text-sm sm:text-base font-medium flex items-center gap-2 hover:bg-gray-200 transition"
+      >
+        Download Brochure ⬇
+      </a>
+
+    </div>
+  </div>
+
+  {/* Bottom Info Strip */}
+  <div className="
+    absolute bottom-0 left-0 w-full 
+    bg-[#f5f2eb] text-black 
+    py-3 px-4
+  ">
+    <div className="
+      max-w-[1100px] mx-auto 
+      flex flex-col sm:flex-row 
+      justify-between items-center 
+      gap-3 text-center sm:text-left
+    ">
+
+      {/* Rating */}
+      <div className="flex items-center gap-2 text-sm">
+        ⭐ <span className="font-semibold">4.9/5 Rating</span>
+        <span className="text-gray-600">(120+ Reviews)</span>
       </div>
+
+      {/* Students */}
+      <div className="text-sm">
+        🌍 <span className="font-semibold">1000+</span> Students Trained
+      </div>
+
+      {/* Certification */}
+      <div className="text-sm">
+        🏆 Yoga Alliance Certified School
+      </div>
+
+    </div>
+  </div>
+
+</div>
 
       <style>{`
         @keyframes kenBurnsZoom {

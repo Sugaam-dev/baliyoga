@@ -16,6 +16,7 @@ import teacher5 from "./images/Hrishanth.jpeg";
 import teacher6 from "./images/Charanya.jpeg";
 import teacher7 from "./images/vinayaksir.jpeg";
 import teacher8 from "./images/Anulasha.png";
+import teacher9 from "./images/ranjan_sir.jpg";
 
 
 // TESTIMONIAL IMAGES
@@ -79,6 +80,12 @@ export default function About() {
       title: "Social Media & Marketing Team Head | Graphic Designer, Web Developer, and Admin",
       image: teacher8,
       description: "Anulasha Ram is the Social Media and Marketing Team Head at Yoga With Srinatha, overseeing all aspects of the institute’s online presence. She manages social media platforms, handles student inquiries, and ensures effective communication across digital channels."
+    },
+    {
+      name: "YOGI RANJAN",
+      title: "Yoga Guru",
+      image: teacher9,
+      description: "Yogi Ranjan is a highly experienced yoga teacher and practitioner, with over 10 years of deep-rooted experience in the field of yoga, meditation, and spiritual exploration. His journey is marked by dedication, discipline, and a profound connection to the ancient yogic traditions of India."
     }
    
 

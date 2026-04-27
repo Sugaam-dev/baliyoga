@@ -18,6 +18,7 @@
         |-- yoga0.jpg
         |-- yoga1.jpg
     |-- Components
+        |-- FloatingSocialBar.jsx
         |-- Footer.jsx
         |-- Header.jsx
         |-- Hero.jsx
@@ -40,6 +41,7 @@
                 |-- Minu.jpeg
                 |-- OIP.jpg
                 |-- Radiantly-scaled.jpg
+                |-- ranjan_sir.jpg
                 |-- RaviSir.jpeg
                 |-- Sahana.jpeg
                 |-- SrinathSir.jpeg
@@ -93,10 +95,14 @@
                 |-- baligallery.jpg
                 |-- baliimage.jpg
                 |-- fivelements-2.jpg
+                |-- Internatonal-yoga-organization.jpeg
+                |-- Internatonal-yoga.jpeg
                 |-- Prana-Yoga-Studio-Seminyak-Bali.jpg
                 |-- shutterstock_314587241.jpg
                 |-- the-istana-1.jpg
                 |-- Ubud-Yoga-Photography-3-1.jpg
+                |-- yoga-alliance-usa-certified-200.jpeg
+                |-- yoga-alliance-usa-certified.jpeg
                 |-- Yoga-Searcher-Uluwatu-Bali.jpg
                 |-- Yoga-session-at-the-Bali-Green-Retreat.jpg
                 |-- yoga-teacher-training-bali.jpg
