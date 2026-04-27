@@ -31,6 +31,7 @@ import gallery10 from "./images/baligallery.jpg";
 import retreatImg from "./images/bali1.jpg"; // or use your exact retreat image
 
 import HeroSection from "../../Components/Hero";
+import Certifications from "./Certifications";
 
 const galleryImages = [
   {
@@ -110,6 +111,7 @@ export default function Home() {
   return (
     <main className="bg-[#f8f5f5]">
       <HeroSection />
+      <Certifications/>
 
       <section className="px-6 py-16">
 

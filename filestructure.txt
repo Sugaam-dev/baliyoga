@@ -80,6 +80,7 @@
             |-- videoCard.jsx
             |-- videoGallery.jsx
         |-- home
+            |-- Certifications.jsx
             |-- Home.jsx
             |-- images
                 |-- 4-Days-Yoga-Retreat-In-Canggu-Bali.jpg
