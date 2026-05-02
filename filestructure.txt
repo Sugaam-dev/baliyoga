@@ -80,7 +80,9 @@
             |-- videoCard.jsx
             |-- videoGallery.jsx
         |-- home
+            |-- AdditionalActivities.jsx
             |-- Certifications.jsx
+            |-- FounderSection.jsx
             |-- Home.jsx
             |-- images
                 |-- 4-Days-Yoga-Retreat-In-Canggu-Bali.jpg
@@ -99,6 +101,7 @@
                 |-- Internatonal-yoga-organization.jpeg
                 |-- Internatonal-yoga.jpeg
                 |-- Prana-Yoga-Studio-Seminyak-Bali.jpg
+                |-- ranjan_sir.jpg
                 |-- shutterstock_314587241.jpg
                 |-- the-istana-1.jpg
                 |-- Ubud-Yoga-Photography-3-1.jpg
