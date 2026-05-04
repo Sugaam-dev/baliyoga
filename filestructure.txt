@@ -11,8 +11,14 @@
     |-- App.css
     |-- App.jsx
     |-- assets
+        |-- guide.jpg
+        |-- hill.jpg
+        |-- hill1.jpg
+        |-- hill2.jpg
+        |-- hill3.jpg
         |-- leaf.svg
         |-- mandala.svg
+        |-- mountain.jpg
         |-- react.svg
         |-- yoga.jpg
         |-- yoga0.jpg
