@@ -16,10 +16,10 @@ function RootLayout() {
       </main>
       <Footer/>
        {/* Global floating WhatsApp button */}
-      {/* <WhatsAppButton
+      <WhatsAppButton
         phone="917483987568"
         message="Hello! I'd like to know more about your yoga programs."
-      /> */}
+      />
     </div>
   )
 }

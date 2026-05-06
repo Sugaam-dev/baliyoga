@@ -87,6 +87,10 @@
             |-- videoGallery.jsx
         |-- home
             |-- AdditionalActivities.jsx
+            |-- BaliYogaCourses.jsx
+            |-- BaliYogaKendraExperience.jsx
+            |-- BaliYogaOffers.jsx
+            |-- BaliYogaProgramSection.jsx
             |-- Certifications.jsx
             |-- FounderSection.jsx
             |-- Home.jsx
@@ -103,6 +107,7 @@
                 |-- bali7.jpg
                 |-- baligallery.jpg
                 |-- baliimage.jpg
+                |-- balitemple.JPEG
                 |-- fivelements-2.jpg
                 |-- Internatonal-yoga-organization.jpeg
                 |-- Internatonal-yoga.jpeg
