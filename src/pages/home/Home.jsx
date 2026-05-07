@@ -117,13 +117,13 @@ export default function Home() {
   return (
     <main className="bg-[#f8f5f5]">
       <HeroSection />
-      {/* <BaliYogaCourses/>
+      <BaliYogaCourses/>
       <AdditionalActivities/>
       <BaliYogaKendraExperience/>
       <Certifications/>
       <BaliYogaProgramSection/>
       <BaliYogaOffers/>
-      <FounderSection/> */}
+      <FounderSection/>
 
      {/* EXPERIENCE BALI YOGA SECTION */}
 <section className="bg-[#fdfaf7] py-16 md:py-20 xl:py-24 overflow-hidden">
