@@ -38,6 +38,7 @@ import BaliYogaCourses from "./BaliYogaCourses";
 import BaliYogaProgramSection from "./BaliYogaProgramSection";
 import BaliYogaKendraExperience from "./BaliYogaKendraExperience";
 import BaliYogaOffers from "./BaliYogaOffers";
+import Hero from "../../Components/Hero";
 
 const galleryImages = [
   {
@@ -116,7 +117,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#f8f5f5]">
-      <HeroSection />
+      <Hero />
       <BaliYogaCourses/>
       <AdditionalActivities/>
       <BaliYogaKendraExperience/>

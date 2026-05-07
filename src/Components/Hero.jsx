@@ -201,10 +201,6 @@
 
 // export default HeroSection;
 
-
-
-
-
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -222,7 +218,6 @@ import {
   Download,
   ArrowRight,
   Award,
-  Leaf,
 } from "lucide-react";
 
 // Swiper CSS
@@ -252,7 +247,7 @@ function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f8f5ef]">
+    <section className="relative w-full overflow-hidden bg-[#f8f5ef] pb-16 md:pb-20 lg:pb-0">
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         effect="fade"
@@ -272,24 +267,28 @@ function HeroSection() {
 
           [&_.swiper-button-next]:hidden
           lg:[&_.swiper-button-next]:flex
-          [&_.swiper-button-next]:right-8
-          [&_.swiper-button-next]:w-14
-          [&_.swiper-button-next]:h-14
+          [&_.swiper-button-next]:right-4
+          xl:[&_.swiper-button-next]:right-8
+          [&_.swiper-button-next]:top-[45%]
+          [&_.swiper-button-next]:w-12
+          [&_.swiper-button-next]:h-12
           [&_.swiper-button-next]:rounded-full
           [&_.swiper-button-next]:bg-white/90
           [&_.swiper-button-next]:shadow-xl
-          [&_.swiper-button-next]:after:text-[18px]
+          [&_.swiper-button-next]:after:text-[16px]
           [&_.swiper-button-next]:after:font-bold
 
           [&_.swiper-button-prev]:hidden
           lg:[&_.swiper-button-prev]:flex
-          [&_.swiper-button-prev]:left-8
-          [&_.swiper-button-prev]:w-14
-          [&_.swiper-button-prev]:h-14
+          [&_.swiper-button-prev]:left-4
+          xl:[&_.swiper-button-prev]:left-8
+          [&_.swiper-button-prev]:top-[45%]
+          [&_.swiper-button-prev]:w-12
+          [&_.swiper-button-prev]:h-12
           [&_.swiper-button-prev]:rounded-full
           [&_.swiper-button-prev]:bg-white/90
           [&_.swiper-button-prev]:shadow-xl
-          [&_.swiper-button-prev]:after:text-[18px]
+          [&_.swiper-button-prev]:after:text-[16px]
           [&_.swiper-button-prev]:after:font-bold
         "
       >
@@ -299,9 +298,10 @@ function HeroSection() {
               className="
                 relative
                 w-full
-                min-h-[100svh]
-                lg:min-h-[900px]
-                2xl:min-h-[1100px]
+                min-h-[760px]
+                md:min-h-[820px]
+                lg:min-h-[760px]
+                xl:min-h-[860px]
                 bg-[#f8f5ef]
               "
             >
@@ -310,11 +310,13 @@ function HeroSection() {
                 className="
                   grid
                   grid-cols-1
-                  lg:grid-cols-[42%_58%]
+                  lg:grid-cols-[44%_56%]
                   items-center
-                  min-h-[100svh]
-                  lg:min-h-[900px]
-                  2xl:min-h-[1100px]
+
+                  min-h-[760px]
+                  md:min-h-[820px]
+                  lg:min-h-[760px]
+                  xl:min-h-[860px]
                 "
               >
                 {/* LEFT CONTENT */}
@@ -322,44 +324,44 @@ function HeroSection() {
                   className="
                     relative
                     z-20
-                    bg-[#ffffff]
                     h-full
                     flex
                     flex-col
                     justify-center
+
+                    bg-gradient-to-r
+                    from-[#fffdf9]
+                    via-[#fffdf9f2]
+                    to-[#fffdf900]
+
                     px-5
                     sm:px-8
-                    md:px-12
+                    md:px-10
+                    lg:px-12
                     xl:px-16
-                    2xl:px-24
-                    py-16
-                    lg:py-10
+
+                    py-10
+                    md:py-12
+                    lg:py-8
                   "
                 >
-                  {/* Logo */}
-                  {/* <div className="w-20 h-20 rounded-full border border-[#dcc8b2] bg-white flex items-center justify-center shadow-sm">
-                    <Leaf
-                      size={34}
-                      className="text-[#b86b2b]"
-                    />
-                  </div> */}
-
-                  {/* Top Text */}
-                  <div className="mt-7 flex items-center gap-2 text-[#b86b2b] text-sm font-semibold tracking-wide">
-                    <Award size={16} />
-                    A JOURNEY THAT TRANSFORMS YOU
+                  {/* TOP TEXT */}
+                  <div className="flex items-center gap-2 text-[#b86b2b] text-xs sm:text-sm font-semibold tracking-[2px] uppercase">
+                    <Award size={15} />
+                    A Journey That Transforms You
                   </div>
 
-                  {/* Heading */}
+                  {/* HEADING */}
                   <h1
                     className="
-                      mt-5
-                      text-[2.7rem]
-                      sm:text-[3.5rem]
-                      md:text-[4.5rem]
-                      xl:text-[5.2rem]
-                      2xl:text-[6.5rem]
-                      leading-[1.03]
+                      mt-4
+                      text-[2.5rem]
+                      sm:text-[3.2rem]
+                      md:text-[4rem]
+                      lg:text-[4.3rem]
+                      xl:text-[5rem]
+                      leading-[1.05]
+                      tracking-[-1px]
                       font-bold
                       text-[#1f3528]
                     "
@@ -377,31 +379,34 @@ function HeroSection() {
                     </span>
                   </h1>
 
-                  {/* Subtitle */}
+                  {/* SUBTITLE */}
                   <p
                     className="
-                      mt-6
-                      text-[17px]
-                      sm:text-[19px]
-                      xl:text-[22px]
+                      mt-4
+                      text-[15px]
+                      sm:text-[17px]
+                      lg:text-[18px]
+                      xl:text-[20px]
                       italic
                       text-gray-600
                       leading-relaxed
-                      max-w-[650px]
+                      max-w-[620px]
                     "
                   >
-                    Transform Your Life. Inspire The World.
+                    Transform Your Life. Inspire The
+                    World.
                   </p>
 
-                  {/* Features */}
-                  <div className="mt-10 grid grid-cols-2 gap-5 max-w-[700px]">
+                  {/* FEATURES */}
+                  <div className="mt-7 grid grid-cols-2 gap-4 max-w-[620px]">
                     {[
                       {
                         title: "21-Day Training",
                         icon: "🧘",
                       },
                       {
-                        title: "Yoga Alliance Certified",
+                        title:
+                          "Yoga Alliance Certified",
                         icon: "🏆",
                       },
                       {
@@ -409,7 +414,8 @@ function HeroSection() {
                         icon: "🌿",
                       },
                       {
-                        title: "Satvic Food & Excursions",
+                        title:
+                          "Satvic Food & Excursions",
                         icon: "🍃",
                       },
                     ].map((item, i) => (
@@ -417,19 +423,19 @@ function HeroSection() {
                         key={i}
                         className="flex items-start gap-3"
                       >
-                        <div className="w-12 h-12 rounded-xl bg-[#f1ebe2] flex items-center justify-center text-xl">
+                        <div className="w-10 h-10 rounded-xl bg-[#f1ebe2] flex items-center justify-center text-lg shrink-0">
                           {item.icon}
                         </div>
 
-                        <div className="text-[#1f3528] font-medium leading-snug">
+                        <div className="text-[#1f3528] text-sm sm:text-base font-medium leading-snug">
                           {item.title}
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Buttons */}
-                  <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                  {/* BUTTONS */}
+                  <div className="mt-7 flex flex-col sm:flex-row gap-4">
                     <Link
                       to="/contact"
                       className="
@@ -439,25 +445,28 @@ function HeroSection() {
                         to-[#466a49]
                         hover:from-[#26472b]
                         hover:to-[#39593d]
+
                         text-white
-                        px-8
-                        py-4
-                        rounded-2xl
-                        text-lg
+                        px-6
+                        py-3.5
+                        rounded-xl
+                        text-base
                         font-semibold
-                        shadow-xl
+
+                        shadow-lg
                         transition-all
                         duration-300
+
                         flex
                         items-center
                         justify-center
-                        gap-3
+                        gap-2
                       "
                     >
                       APPLY NOW
 
                       <ArrowRight
-                        size={20}
+                        size={18}
                         className="group-hover:translate-x-1 transition"
                       />
                     </Link>
@@ -468,29 +477,33 @@ function HeroSection() {
                         border-2
                         border-[#d8b18b]
                         text-[#c9732c]
+
                         hover:bg-[#c9732c]
                         hover:text-white
-                        px-8
-                        py-4
-                        rounded-2xl
-                        text-lg
+
+                        px-6
+                        py-3.5
+                        rounded-xl
+                        text-base
                         font-semibold
+
                         transition-all
                         duration-300
+
                         flex
                         items-center
                         justify-center
-                        gap-3
+                        gap-2
                       "
                     >
-                      <Download size={20} />
+                      <Download size={18} />
                       DOWNLOAD BROCHURE
                     </a>
                   </div>
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="relative h-full min-h-[420px] lg:min-h-full">
+                <div className="relative h-full min-h-[360px] md:min-h-[500px] overflow-hidden">
                   <img
                     src={image.url}
                     alt={image.alt}
@@ -502,21 +515,42 @@ function HeroSection() {
                     "
                   />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/10"></div>
+                  {/* OVERLAYS */}
+                  <>
+                    <div className="absolute inset-0 bg-black/10"></div>
+
+                    <div
+                      className="
+                        absolute
+                        inset-y-0
+                        left-0
+                        w-40
+                        hidden
+                        lg:block
+                        bg-gradient-to-r
+                        from-[#fffdf9]
+                        to-transparent
+                      "
+                    ></div>
+                  </>
                 </div>
               </div>
 
-              {/* FLOATING BOTTOM CARD */}
+              {/* FLOATING STATS CARD */}
               <div
                 className="
                   absolute
-                  bottom-4
+                  bottom-[1.5px]
                   left-4
                   right-4
+
+                  md:bottom-[-40px]
+
+                  lg:bottom-6
                   lg:left-auto
                   lg:right-8
-                  lg:w-[700px]
+                  lg:w-[680px]
+
                   z-30
                 "
               >
@@ -524,24 +558,30 @@ function HeroSection() {
                   className="
                     bg-white/95
                     backdrop-blur-xl
-                    rounded-[24px]
+
+                    rounded-[20px]
+
                     shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-                    px-5
-                    py-5
+
+                    px-4
+                    py-4
+
+                    md:px-5
+                    md:py-5
                   "
                 >
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                    {/* Rating */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    {/* RATING */}
                     <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-2xl bg-[#fff3e8] flex items-center justify-center shrink-0">
                         <Star
                           className="text-[#c9732c]"
-                          size={28}
+                          size={24}
                         />
                       </div>
 
                       <div>
-                        <h3 className="text-2xl font-bold text-[#1f3528]">
+                        <h3 className="text-xl font-bold text-[#1f3528]">
                           4.9/5
                         </h3>
 
@@ -551,17 +591,17 @@ function HeroSection() {
                       </div>
                     </div>
 
-                    {/* Students */}
+                    {/* STUDENTS */}
                     <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-[#eef7ee] flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-2xl bg-[#eef7ee] flex items-center justify-center shrink-0">
                         <Users
                           className="text-[#2f7d4c]"
-                          size={28}
+                          size={24}
                         />
                       </div>
 
                       <div>
-                        <h3 className="text-2xl font-bold text-[#1f3528]">
+                        <h3 className="text-xl font-bold text-[#1f3528]">
                           1000+
                         </h3>
 
@@ -571,17 +611,17 @@ function HeroSection() {
                       </div>
                     </div>
 
-                    {/* Countries */}
+                    {/* COUNTRIES */}
                     <div className="flex items-center gap-4">
-                      <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-2xl bg-[#fff3e8] flex items-center justify-center shrink-0">
                         <Globe
                           className="text-[#c9732c]"
-                          size={28}
+                          size={24}
                         />
                       </div>
 
                       <div>
-                        <h3 className="text-2xl font-bold text-[#1f3528]">
+                        <h3 className="text-xl font-bold text-[#1f3528]">
                           15+
                         </h3>
 
@@ -594,7 +634,7 @@ function HeroSection() {
                 </div>
               </div>
 
-              {/* MOBILE GRADIENT */}
+              {/* MOBILE OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent lg:hidden"></div>
             </div>
           </SwiperSlide>
@@ -605,6 +645,409 @@ function HeroSection() {
 }
 
 export default HeroSection;
+
+
+
+// import React from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import {
+//   Autoplay,
+//   Navigation,
+//   EffectFade,
+// } from "swiper/modules";
+
+// import { Link } from "react-router-dom";
+
+// import {
+//   Star,
+//   Users,
+//   Globe,
+//   Download,
+//   ArrowRight,
+//   Award,
+//   Leaf,
+// } from "lucide-react";
+
+// // Swiper CSS
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/effect-fade";
+
+// // Images
+// import yoga0 from "../pages/home/images/yoga0.jpg";
+// import yoga1 from "../pages/home/images/yoga1.jpg";
+// import yoga from "../pages/home/images/yoga.jpg";
+
+// function HeroSection() {
+//   const heroImages = [
+//     {
+//       url: yoga0,
+//       alt: "Yoga Training Bali",
+//     },
+//     {
+//       url: yoga1,
+//       alt: "Yoga Retreat Bali",
+//     },
+//     {
+//       url: yoga,
+//       alt: "Yoga Meditation Bali",
+//     },
+//   ];
+
+//   return (
+//     <section className="relative w-full overflow-hidden bg-[#f8f5ef]">
+//       <Swiper
+//         modules={[Autoplay, Navigation, EffectFade]}
+//         effect="fade"
+//         fadeEffect={{ crossFade: true }}
+//         speed={1200}
+//         autoplay={{
+//           delay: 4500,
+//           disableOnInteraction: false,
+//         }}
+//         navigation={true}
+//         loop={true}
+//         className="
+//           w-full
+//           h-auto
+
+//           [--swiper-navigation-color:#b86b2b]
+
+//           [&_.swiper-button-next]:hidden
+//           lg:[&_.swiper-button-next]:flex
+//           [&_.swiper-button-next]:right-8
+//           [&_.swiper-button-next]:w-14
+//           [&_.swiper-button-next]:h-14
+//           [&_.swiper-button-next]:rounded-full
+//           [&_.swiper-button-next]:bg-white/90
+//           [&_.swiper-button-next]:shadow-xl
+//           [&_.swiper-button-next]:after:text-[18px]
+//           [&_.swiper-button-next]:after:font-bold
+
+//           [&_.swiper-button-prev]:hidden
+//           lg:[&_.swiper-button-prev]:flex
+//           [&_.swiper-button-prev]:left-8
+//           [&_.swiper-button-prev]:w-14
+//           [&_.swiper-button-prev]:h-14
+//           [&_.swiper-button-prev]:rounded-full
+//           [&_.swiper-button-prev]:bg-white/90
+//           [&_.swiper-button-prev]:shadow-xl
+//           [&_.swiper-button-prev]:after:text-[18px]
+//           [&_.swiper-button-prev]:after:font-bold
+//         "
+//       >
+//         {heroImages.map((image, index) => (
+//           <SwiperSlide key={index}>
+//             <div
+//               className="
+//                 relative
+//                 w-full
+//                 min-h-[100svh]
+//                 lg:min-h-[900px]
+//                 2xl:min-h-[1100px]
+//                 bg-[#f8f5ef]
+//               "
+//             >
+//               {/* MAIN HERO */}
+//               <div
+//                 className="
+//                   grid
+//                   grid-cols-1
+//                   lg:grid-cols-[42%_58%]
+//                   items-center
+//                   min-h-[100svh]
+//                   lg:min-h-[900px]
+//                   2xl:min-h-[1100px]
+//                 "
+//               >
+//                 {/* LEFT CONTENT */}
+//                 <div
+//                   className="
+//                     relative
+//                     z-20
+//                     bg-[#ffffff]
+//                     h-full
+//                     flex
+//                     flex-col
+//                     justify-center
+//                     px-5
+//                     sm:px-8
+//                     md:px-12
+//                     xl:px-16
+//                     2xl:px-24
+//                     py-16
+//                     lg:py-10
+//                   "
+//                 >
+//                   {/* Logo */}
+//                   {/* <div className="w-20 h-20 rounded-full border border-[#dcc8b2] bg-white flex items-center justify-center shadow-sm">
+//                     <Leaf
+//                       size={34}
+//                       className="text-[#b86b2b]"
+//                     />
+//                   </div> */}
+
+//                   {/* Top Text */}
+//                   <div className="mt-7 flex items-center gap-2 text-[#b86b2b] text-sm font-semibold tracking-wide">
+//                     <Award size={16} />
+//                     A JOURNEY THAT TRANSFORMS YOU
+//                   </div>
+
+//                   {/* Heading */}
+//                   <h1
+//                     className="
+//                       mt-5
+//                       text-[2.7rem]
+//                       sm:text-[3.5rem]
+//                       md:text-[4.5rem]
+//                       xl:text-[5.2rem]
+//                       2xl:text-[6.5rem]
+//                       leading-[1.03]
+//                       font-bold
+//                       text-[#1f3528]
+//                     "
+//                   >
+//                     Become a
+//                     <span className="block">
+//                       Certified Yoga
+//                     </span>
+
+//                     <span className="block">
+//                       Teacher in{" "}
+//                       <span className="text-[#c9732c]">
+//                         Bali
+//                       </span>
+//                     </span>
+//                   </h1>
+
+//                   {/* Subtitle */}
+//                   <p
+//                     className="
+//                       mt-6
+//                       text-[17px]
+//                       sm:text-[19px]
+//                       xl:text-[22px]
+//                       italic
+//                       text-gray-600
+//                       leading-relaxed
+//                       max-w-[650px]
+//                     "
+//                   >
+//                     Transform Your Life. Inspire The World.
+//                   </p>
+
+//                   {/* Features */}
+//                   <div className="mt-10 grid grid-cols-2 gap-5 max-w-[700px]">
+//                     {[
+//                       {
+//                         title: "21-Day Training",
+//                         icon: "🧘",
+//                       },
+//                       {
+//                         title: "Yoga Alliance Certified",
+//                         icon: "🏆",
+//                       },
+//                       {
+//                         title: "Luxury Stay In Nature",
+//                         icon: "🌿",
+//                       },
+//                       {
+//                         title: "Satvic Food & Excursions",
+//                         icon: "🍃",
+//                       },
+//                     ].map((item, i) => (
+//                       <div
+//                         key={i}
+//                         className="flex items-start gap-3"
+//                       >
+//                         <div className="w-12 h-12 rounded-xl bg-[#f1ebe2] flex items-center justify-center text-xl">
+//                           {item.icon}
+//                         </div>
+
+//                         <div className="text-[#1f3528] font-medium leading-snug">
+//                           {item.title}
+//                         </div>
+//                       </div>
+//                     ))}
+//                   </div>
+
+//                   {/* Buttons */}
+//                   <div className="mt-10 flex flex-col sm:flex-row gap-4">
+//                     <Link
+//                       to="/contact"
+//                       className="
+//                         group
+//                         bg-gradient-to-r
+//                         from-[#2f5134]
+//                         to-[#466a49]
+//                         hover:from-[#26472b]
+//                         hover:to-[#39593d]
+//                         text-white
+//                         px-8
+//                         py-4
+//                         rounded-2xl
+//                         text-lg
+//                         font-semibold
+//                         shadow-xl
+//                         transition-all
+//                         duration-300
+//                         flex
+//                         items-center
+//                         justify-center
+//                         gap-3
+//                       "
+//                     >
+//                       APPLY NOW
+
+//                       <ArrowRight
+//                         size={20}
+//                         className="group-hover:translate-x-1 transition"
+//                       />
+//                     </Link>
+
+//                     <a
+//                       href="/brochure.pdf"
+//                       className="
+//                         border-2
+//                         border-[#d8b18b]
+//                         text-[#c9732c]
+//                         hover:bg-[#c9732c]
+//                         hover:text-white
+//                         px-8
+//                         py-4
+//                         rounded-2xl
+//                         text-lg
+//                         font-semibold
+//                         transition-all
+//                         duration-300
+//                         flex
+//                         items-center
+//                         justify-center
+//                         gap-3
+//                       "
+//                     >
+//                       <Download size={20} />
+//                       DOWNLOAD BROCHURE
+//                     </a>
+//                   </div>
+//                 </div>
+
+//                 {/* RIGHT IMAGE */}
+//                 <div className="relative h-full min-h-[420px] lg:min-h-full">
+//                   <img
+//                     src={image.url}
+//                     alt={image.alt}
+//                     loading={index === 0 ? "eager" : "lazy"}
+//                     className="
+//                       w-full
+//                       h-full
+//                       object-cover
+//                     "
+//                   />
+
+//                   {/* Overlay */}
+//                   <div className="absolute inset-0 bg-black/10"></div>
+//                 </div>
+//               </div>
+
+//               {/* FLOATING BOTTOM CARD */}
+//               <div
+//                 className="
+//                   absolute
+//                   bottom-4
+//                   left-4
+//                   right-4
+//                   lg:left-auto
+//                   lg:right-8
+//                   lg:w-[700px]
+//                   z-30
+//                 "
+//               >
+//                 <div
+//                   className="
+//                     bg-white/95
+//                     backdrop-blur-xl
+//                     rounded-[24px]
+//                     shadow-[0_10px_40px_rgba(0,0,0,0.12)]
+//                     px-5
+//                     py-5
+//                   "
+//                 >
+//                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+//                     {/* Rating */}
+//                     <div className="flex items-center gap-4">
+//                       <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center">
+//                         <Star
+//                           className="text-[#c9732c]"
+//                           size={28}
+//                         />
+//                       </div>
+
+//                       <div>
+//                         <h3 className="text-2xl font-bold text-[#1f3528]">
+//                           4.9/5
+//                         </h3>
+
+//                         <p className="text-gray-600 text-sm">
+//                           Student Rating
+//                         </p>
+//                       </div>
+//                     </div>
+
+//                     {/* Students */}
+//                     <div className="flex items-center gap-4">
+//                       <div className="w-14 h-14 rounded-2xl bg-[#eef7ee] flex items-center justify-center">
+//                         <Users
+//                           className="text-[#2f7d4c]"
+//                           size={28}
+//                         />
+//                       </div>
+
+//                       <div>
+//                         <h3 className="text-2xl font-bold text-[#1f3528]">
+//                           1000+
+//                         </h3>
+
+//                         <p className="text-gray-600 text-sm">
+//                           Happy Students
+//                         </p>
+//                       </div>
+//                     </div>
+
+//                     {/* Countries */}
+//                     <div className="flex items-center gap-4">
+//                       <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center">
+//                         <Globe
+//                           className="text-[#c9732c]"
+//                           size={28}
+//                         />
+//                       </div>
+
+//                       <div>
+//                         <h3 className="text-2xl font-bold text-[#1f3528]">
+//                           15+
+//                         </h3>
+
+//                         <p className="text-gray-600 text-sm">
+//                           Countries
+//                         </p>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+
+//               {/* MOBILE GRADIENT */}
+//               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent lg:hidden"></div>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+//     </section>
+//   );
+// }
+
+// export default HeroSection;
 
 
 
