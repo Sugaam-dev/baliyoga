@@ -230,7 +230,7 @@ import yoga0 from "../pages/home/images/yoga0.jpg";
 import yoga1 from "../pages/home/images/yoga1.jpg";
 import yoga from "../pages/home/images/yoga.jpg";
 
-function HeroSection() {
+function Hero() {
   const heroImages = [
     {
       url: yoga0,
@@ -644,7 +644,7 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default Hero;
 
 
 
