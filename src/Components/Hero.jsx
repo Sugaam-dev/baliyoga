@@ -201,6 +201,9 @@
 
 // export default HeroSection;
 
+
+
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -230,24 +233,15 @@ import yoga0 from "../pages/home/images/yoga0.jpg";
 import yoga1 from "../pages/home/images/yoga1.jpg";
 import yoga from "../pages/home/images/yoga.jpg";
 
-function Hero() {
+function HeroSection() {
   const heroImages = [
-    {
-      url: yoga0,
-      alt: "Yoga Training Bali",
-    },
-    {
-      url: yoga1,
-      alt: "Yoga Retreat Bali",
-    },
-    {
-      url: yoga,
-      alt: "Yoga Meditation Bali",
-    },
+    { url: yoga0, alt: "Yoga Training Bali" },
+    { url: yoga1, alt: "Yoga Retreat Bali" },
+    { url: yoga, alt: "Yoga Meditation Bali" },
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f8f5ef] pb-16 md:pb-20 lg:pb-0">
+    <section className="relative w-full overflow-hidden bg-[#f8f5ef]">
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         effect="fade"
@@ -260,382 +254,105 @@ function Hero() {
         navigation={true}
         loop={true}
         className="
-          w-full
-          h-auto
-
+          w-full h-auto
           [--swiper-navigation-color:#b86b2b]
 
-          [&_.swiper-button-next]:hidden
-          lg:[&_.swiper-button-next]:flex
-          [&_.swiper-button-next]:right-4
-          xl:[&_.swiper-button-next]:right-8
-          [&_.swiper-button-next]:top-[45%]
-          [&_.swiper-button-next]:w-12
-          [&_.swiper-button-next]:h-12
+          [&_.swiper-button-next]:!hidden
+          lg:[&_.swiper-button-next]:!flex
+          [&_.swiper-button-next]:right-8
+          [&_.swiper-button-next]:w-14
+          [&_.swiper-button-next]:h-14
           [&_.swiper-button-next]:rounded-full
           [&_.swiper-button-next]:bg-white/90
           [&_.swiper-button-next]:shadow-xl
-          [&_.swiper-button-next]:after:text-[16px]
+          [&_.swiper-button-next]:after:text-[18px]
           [&_.swiper-button-next]:after:font-bold
 
-          [&_.swiper-button-prev]:hidden
-          lg:[&_.swiper-button-prev]:flex
-          [&_.swiper-button-prev]:left-4
-          xl:[&_.swiper-button-prev]:left-8
-          [&_.swiper-button-prev]:top-[45%]
-          [&_.swiper-button-prev]:w-12
-          [&_.swiper-button-prev]:h-12
+          [&_.swiper-button-prev]:!hidden
+          lg:[&_.swiper-button-prev]:!flex
+          [&_.swiper-button-prev]:left-8
+          [&_.swiper-button-prev]:w-14
+          [&_.swiper-button-prev]:h-14
           [&_.swiper-button-prev]:rounded-full
           [&_.swiper-button-prev]:bg-white/90
           [&_.swiper-button-prev]:shadow-xl
-          [&_.swiper-button-prev]:after:text-[16px]
+          [&_.swiper-button-prev]:after:text-[18px]
           [&_.swiper-button-prev]:after:font-bold
         "
       >
         {heroImages.map((image, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="
-                relative
-                w-full
-                min-h-[760px]
-                md:min-h-[820px]
-                lg:min-h-[760px]
-                xl:min-h-[860px]
-                bg-[#f8f5ef]
-              "
-            >
-              {/* MAIN HERO */}
-              <div
-                className="
-                  grid
-                  grid-cols-1
-                  lg:grid-cols-[44%_56%]
-                  items-center
+            <div className="relative w-full bg-[#f8f5ef] flex flex-col lg:block">
 
-                  min-h-[760px]
-                  md:min-h-[820px]
-                  lg:min-h-[760px]
-                  xl:min-h-[860px]
-                "
+              {/* ── DESKTOP LAYOUT (lg+) ── */}
+              <div
+                className="hidden lg:flex lg:flex-row"
+                style={{ height: "clamp(500px, 48vw, 780px)" }}
               >
-                {/* LEFT CONTENT */}
+                {/* LEFT — text panel: 38% at lg (1024px), 34% at xl, 32% at 2xl+ */}
                 <div
                   className="
-                    relative
-                    z-20
-                    h-full
-                    flex
-                    flex-col
-                    justify-center
-
-                    bg-gradient-to-r
-                    from-[#fffdf9]
-                    via-[#fffdf9f2]
-                    to-[#fffdf900]
-
-                    px-5
-                    sm:px-8
-                    md:px-10
-                    lg:px-12
-                    xl:px-16
-
-                    py-10
-                    md:py-12
-                    lg:py-8
+                    relative z-20 bg-white
+                    flex-shrink-0
+                    flex flex-col justify-center
+                    px-8 xl:px-12 2xl:px-16
+                    py-8
+                    w-[38%] xl:w-[34%] 2xl:w-[32%]
                   "
                 >
-                  {/* TOP TEXT */}
-                  <div className="flex items-center gap-2 text-[#b86b2b] text-xs sm:text-sm font-semibold tracking-[2px] uppercase">
-                    <Award size={15} />
-                    A Journey That Transforms You
-                  </div>
-
-                  {/* HEADING */}
-                  <h1
-                    className="
-                      mt-4
-                      text-[2.5rem]
-                      sm:text-[3.2rem]
-                      md:text-[4rem]
-                      lg:text-[4.3rem]
-                      xl:text-[5rem]
-                      leading-[1.05]
-                      tracking-[-1px]
-                      font-bold
-                      text-[#1f3528]
-                    "
-                  >
-                    Become a
-                    <span className="block">
-                      Certified Yoga
-                    </span>
-
-                    <span className="block">
-                      Teacher in{" "}
-                      <span className="text-[#c9732c]">
-                        Bali
-                      </span>
-                    </span>
-                  </h1>
-
-                  {/* SUBTITLE */}
-                  <p
-                    className="
-                      mt-4
-                      text-[15px]
-                      sm:text-[17px]
-                      lg:text-[18px]
-                      xl:text-[20px]
-                      italic
-                      text-gray-600
-                      leading-relaxed
-                      max-w-[620px]
-                    "
-                  >
-                    Transform Your Life. Inspire The
-                    World.
-                  </p>
-
-                  {/* FEATURES */}
-                  <div className="mt-7 grid grid-cols-2 gap-4 max-w-[620px]">
-                    {[
-                      {
-                        title: "21-Day Training",
-                        icon: "🧘",
-                      },
-                      {
-                        title:
-                          "Yoga Alliance Certified",
-                        icon: "🏆",
-                      },
-                      {
-                        title: "Luxury Stay In Nature",
-                        icon: "🌿",
-                      },
-                      {
-                        title:
-                          "Satvic Food & Excursions",
-                        icon: "🍃",
-                      },
-                    ].map((item, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-3"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-[#f1ebe2] flex items-center justify-center text-lg shrink-0">
-                          {item.icon}
-                        </div>
-
-                        <div className="text-[#1f3528] text-sm sm:text-base font-medium leading-snug">
-                          {item.title}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* BUTTONS */}
-                  <div className="mt-7 flex flex-col sm:flex-row gap-4">
-                    <Link
-                      to="/contact"
-                      className="
-                        group
-                        bg-gradient-to-r
-                        from-[#2f5134]
-                        to-[#466a49]
-                        hover:from-[#26472b]
-                        hover:to-[#39593d]
-
-                        text-white
-                        px-6
-                        py-3.5
-                        rounded-xl
-                        text-base
-                        font-semibold
-
-                        shadow-lg
-                        transition-all
-                        duration-300
-
-                        flex
-                        items-center
-                        justify-center
-                        gap-2
-                      "
-                    >
-                      APPLY NOW
-
-                      <ArrowRight
-                        size={18}
-                        className="group-hover:translate-x-1 transition"
-                      />
-                    </Link>
-
-                    <a
-                      href="/brochure.pdf"
-                      className="
-                        border-2
-                        border-[#d8b18b]
-                        text-[#c9732c]
-
-                        hover:bg-[#c9732c]
-                        hover:text-white
-
-                        px-6
-                        py-3.5
-                        rounded-xl
-                        text-base
-                        font-semibold
-
-                        transition-all
-                        duration-300
-
-                        flex
-                        items-center
-                        justify-center
-                        gap-2
-                      "
-                    >
-                      <Download size={18} />
-                      DOWNLOAD BROCHURE
-                    </a>
-                  </div>
+                  <LeftContent />
                 </div>
 
-                {/* RIGHT IMAGE */}
-                <div className="relative h-full min-h-[360px] md:min-h-[500px] overflow-hidden">
+                {/* RIGHT — image (67%) */}
+                <div className="relative flex-1 overflow-hidden">
                   <img
                     src={image.url}
                     alt={image.alt}
                     loading={index === 0 ? "eager" : "lazy"}
-                    className="
-                      w-full
-                      h-full
-                      object-cover
-                    "
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
-
-                  {/* OVERLAYS */}
-                  <>
-                    <div className="absolute inset-0 bg-black/10"></div>
-
-                    <div
-                      className="
-                        absolute
-                        inset-y-0
-                        left-0
-                        w-40
-                        hidden
-                        lg:block
-                        bg-gradient-to-r
-                        from-[#fffdf9]
-                        to-transparent
-                      "
-                    ></div>
-                  </>
+                  <div className="absolute inset-0 bg-black/10" />
                 </div>
               </div>
 
-              {/* FLOATING STATS CARD */}
+              {/* ── MOBILE / TABLET LAYOUT ── */}
+              <div className="flex flex-col lg:hidden">
+
+                {/* Text block */}
+                <div className="bg-white px-5 sm:px-8 py-10">
+                  <LeftContent />
+                </div>
+
+                {/* Image */}
+                <div className="relative">
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="w-full object-cover"
+                    style={{ height: "62vw", minHeight: "260px", maxHeight: "480px" }}
+                  />
+                  <div className="absolute inset-0 bg-black/10" />
+                </div>
+
+                {/* Stats card — top ~10% overlaps image */}
+                <div className="relative z-20 -mt-[10%] px-3 pb-4">
+                  <StatsCard />
+                </div>
+              </div>
+
+              {/* ── DESKTOP FLOATING STATS CARD ── */}
               <div
                 className="
-                  absolute
-                  bottom-[1.5px]
-                  left-4
-                  right-4
-
-                  md:bottom-[-40px]
-
-                  lg:bottom-6
-                  lg:left-auto
-                  lg:right-8
-                  lg:w-[680px]
-
+                  hidden lg:block
+                  absolute bottom-6 right-6
+                  w-[420px] xl:w-[540px] 2xl:w-[660px]
                   z-30
                 "
               >
-                <div
-                  className="
-                    bg-white/95
-                    backdrop-blur-xl
-
-                    rounded-[20px]
-
-                    shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-
-                    px-4
-                    py-4
-
-                    md:px-5
-                    md:py-5
-                  "
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    {/* RATING */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-[#fff3e8] flex items-center justify-center shrink-0">
-                        <Star
-                          className="text-[#c9732c]"
-                          size={24}
-                        />
-                      </div>
-
-                      <div>
-                        <h3 className="text-xl font-bold text-[#1f3528]">
-                          4.9/5
-                        </h3>
-
-                        <p className="text-gray-600 text-sm">
-                          Student Rating
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* STUDENTS */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-[#eef7ee] flex items-center justify-center shrink-0">
-                        <Users
-                          className="text-[#2f7d4c]"
-                          size={24}
-                        />
-                      </div>
-
-                      <div>
-                        <h3 className="text-xl font-bold text-[#1f3528]">
-                          1000+
-                        </h3>
-
-                        <p className="text-gray-600 text-sm">
-                          Happy Students
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* COUNTRIES */}
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-2xl bg-[#fff3e8] flex items-center justify-center shrink-0">
-                        <Globe
-                          className="text-[#c9732c]"
-                          size={24}
-                        />
-                      </div>
-
-                      <div>
-                        <h3 className="text-xl font-bold text-[#1f3528]">
-                          15+
-                        </h3>
-
-                        <p className="text-gray-600 text-sm">
-                          Countries
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <StatsCard />
               </div>
 
-              {/* MOBILE OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent lg:hidden"></div>
             </div>
           </SwiperSlide>
         ))}
@@ -644,847 +361,167 @@ function Hero() {
   );
 }
 
-export default Hero;
-
-
-
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import {
-//   Autoplay,
-//   Navigation,
-//   EffectFade,
-// } from "swiper/modules";
-
-// import { Link } from "react-router-dom";
-
-// import {
-//   Star,
-//   Users,
-//   Globe,
-//   Download,
-//   ArrowRight,
-//   Award,
-//   Leaf,
-// } from "lucide-react";
-
-// // Swiper CSS
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/effect-fade";
-
-// // Images
-// import yoga0 from "../pages/home/images/yoga0.jpg";
-// import yoga1 from "../pages/home/images/yoga1.jpg";
-// import yoga from "../pages/home/images/yoga.jpg";
-
-// function HeroSection() {
-//   const heroImages = [
-//     {
-//       url: yoga0,
-//       alt: "Yoga Training Bali",
-//     },
-//     {
-//       url: yoga1,
-//       alt: "Yoga Retreat Bali",
-//     },
-//     {
-//       url: yoga,
-//       alt: "Yoga Meditation Bali",
-//     },
-//   ];
-
-//   return (
-//     <section className="relative w-full overflow-hidden bg-[#f8f5ef]">
-//       <Swiper
-//         modules={[Autoplay, Navigation, EffectFade]}
-//         effect="fade"
-//         fadeEffect={{ crossFade: true }}
-//         speed={1200}
-//         autoplay={{
-//           delay: 4500,
-//           disableOnInteraction: false,
-//         }}
-//         navigation={true}
-//         loop={true}
-//         className="
-//           w-full
-//           h-auto
-
-//           [--swiper-navigation-color:#b86b2b]
-
-//           [&_.swiper-button-next]:hidden
-//           lg:[&_.swiper-button-next]:flex
-//           [&_.swiper-button-next]:right-8
-//           [&_.swiper-button-next]:w-14
-//           [&_.swiper-button-next]:h-14
-//           [&_.swiper-button-next]:rounded-full
-//           [&_.swiper-button-next]:bg-white/90
-//           [&_.swiper-button-next]:shadow-xl
-//           [&_.swiper-button-next]:after:text-[18px]
-//           [&_.swiper-button-next]:after:font-bold
-
-//           [&_.swiper-button-prev]:hidden
-//           lg:[&_.swiper-button-prev]:flex
-//           [&_.swiper-button-prev]:left-8
-//           [&_.swiper-button-prev]:w-14
-//           [&_.swiper-button-prev]:h-14
-//           [&_.swiper-button-prev]:rounded-full
-//           [&_.swiper-button-prev]:bg-white/90
-//           [&_.swiper-button-prev]:shadow-xl
-//           [&_.swiper-button-prev]:after:text-[18px]
-//           [&_.swiper-button-prev]:after:font-bold
-//         "
-//       >
-//         {heroImages.map((image, index) => (
-//           <SwiperSlide key={index}>
-//             <div
-//               className="
-//                 relative
-//                 w-full
-//                 min-h-[100svh]
-//                 lg:min-h-[900px]
-//                 2xl:min-h-[1100px]
-//                 bg-[#f8f5ef]
-//               "
-//             >
-//               {/* MAIN HERO */}
-//               <div
-//                 className="
-//                   grid
-//                   grid-cols-1
-//                   lg:grid-cols-[42%_58%]
-//                   items-center
-//                   min-h-[100svh]
-//                   lg:min-h-[900px]
-//                   2xl:min-h-[1100px]
-//                 "
-//               >
-//                 {/* LEFT CONTENT */}
-//                 <div
-//                   className="
-//                     relative
-//                     z-20
-//                     bg-[#ffffff]
-//                     h-full
-//                     flex
-//                     flex-col
-//                     justify-center
-//                     px-5
-//                     sm:px-8
-//                     md:px-12
-//                     xl:px-16
-//                     2xl:px-24
-//                     py-16
-//                     lg:py-10
-//                   "
-//                 >
-//                   {/* Logo */}
-//                   {/* <div className="w-20 h-20 rounded-full border border-[#dcc8b2] bg-white flex items-center justify-center shadow-sm">
-//                     <Leaf
-//                       size={34}
-//                       className="text-[#b86b2b]"
-//                     />
-//                   </div> */}
-
-//                   {/* Top Text */}
-//                   <div className="mt-7 flex items-center gap-2 text-[#b86b2b] text-sm font-semibold tracking-wide">
-//                     <Award size={16} />
-//                     A JOURNEY THAT TRANSFORMS YOU
-//                   </div>
-
-//                   {/* Heading */}
-//                   <h1
-//                     className="
-//                       mt-5
-//                       text-[2.7rem]
-//                       sm:text-[3.5rem]
-//                       md:text-[4.5rem]
-//                       xl:text-[5.2rem]
-//                       2xl:text-[6.5rem]
-//                       leading-[1.03]
-//                       font-bold
-//                       text-[#1f3528]
-//                     "
-//                   >
-//                     Become a
-//                     <span className="block">
-//                       Certified Yoga
-//                     </span>
-
-//                     <span className="block">
-//                       Teacher in{" "}
-//                       <span className="text-[#c9732c]">
-//                         Bali
-//                       </span>
-//                     </span>
-//                   </h1>
-
-//                   {/* Subtitle */}
-//                   <p
-//                     className="
-//                       mt-6
-//                       text-[17px]
-//                       sm:text-[19px]
-//                       xl:text-[22px]
-//                       italic
-//                       text-gray-600
-//                       leading-relaxed
-//                       max-w-[650px]
-//                     "
-//                   >
-//                     Transform Your Life. Inspire The World.
-//                   </p>
-
-//                   {/* Features */}
-//                   <div className="mt-10 grid grid-cols-2 gap-5 max-w-[700px]">
-//                     {[
-//                       {
-//                         title: "21-Day Training",
-//                         icon: "🧘",
-//                       },
-//                       {
-//                         title: "Yoga Alliance Certified",
-//                         icon: "🏆",
-//                       },
-//                       {
-//                         title: "Luxury Stay In Nature",
-//                         icon: "🌿",
-//                       },
-//                       {
-//                         title: "Satvic Food & Excursions",
-//                         icon: "🍃",
-//                       },
-//                     ].map((item, i) => (
-//                       <div
-//                         key={i}
-//                         className="flex items-start gap-3"
-//                       >
-//                         <div className="w-12 h-12 rounded-xl bg-[#f1ebe2] flex items-center justify-center text-xl">
-//                           {item.icon}
-//                         </div>
-
-//                         <div className="text-[#1f3528] font-medium leading-snug">
-//                           {item.title}
-//                         </div>
-//                       </div>
-//                     ))}
-//                   </div>
-
-//                   {/* Buttons */}
-//                   <div className="mt-10 flex flex-col sm:flex-row gap-4">
-//                     <Link
-//                       to="/contact"
-//                       className="
-//                         group
-//                         bg-gradient-to-r
-//                         from-[#2f5134]
-//                         to-[#466a49]
-//                         hover:from-[#26472b]
-//                         hover:to-[#39593d]
-//                         text-white
-//                         px-8
-//                         py-4
-//                         rounded-2xl
-//                         text-lg
-//                         font-semibold
-//                         shadow-xl
-//                         transition-all
-//                         duration-300
-//                         flex
-//                         items-center
-//                         justify-center
-//                         gap-3
-//                       "
-//                     >
-//                       APPLY NOW
-
-//                       <ArrowRight
-//                         size={20}
-//                         className="group-hover:translate-x-1 transition"
-//                       />
-//                     </Link>
-
-//                     <a
-//                       href="/brochure.pdf"
-//                       className="
-//                         border-2
-//                         border-[#d8b18b]
-//                         text-[#c9732c]
-//                         hover:bg-[#c9732c]
-//                         hover:text-white
-//                         px-8
-//                         py-4
-//                         rounded-2xl
-//                         text-lg
-//                         font-semibold
-//                         transition-all
-//                         duration-300
-//                         flex
-//                         items-center
-//                         justify-center
-//                         gap-3
-//                       "
-//                     >
-//                       <Download size={20} />
-//                       DOWNLOAD BROCHURE
-//                     </a>
-//                   </div>
-//                 </div>
-
-//                 {/* RIGHT IMAGE */}
-//                 <div className="relative h-full min-h-[420px] lg:min-h-full">
-//                   <img
-//                     src={image.url}
-//                     alt={image.alt}
-//                     loading={index === 0 ? "eager" : "lazy"}
-//                     className="
-//                       w-full
-//                       h-full
-//                       object-cover
-//                     "
-//                   />
-
-//                   {/* Overlay */}
-//                   <div className="absolute inset-0 bg-black/10"></div>
-//                 </div>
-//               </div>
-
-//               {/* FLOATING BOTTOM CARD */}
-//               <div
-//                 className="
-//                   absolute
-//                   bottom-4
-//                   left-4
-//                   right-4
-//                   lg:left-auto
-//                   lg:right-8
-//                   lg:w-[700px]
-//                   z-30
-//                 "
-//               >
-//                 <div
-//                   className="
-//                     bg-white/95
-//                     backdrop-blur-xl
-//                     rounded-[24px]
-//                     shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-//                     px-5
-//                     py-5
-//                   "
-//                 >
-//                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-//                     {/* Rating */}
-//                     <div className="flex items-center gap-4">
-//                       <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center">
-//                         <Star
-//                           className="text-[#c9732c]"
-//                           size={28}
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <h3 className="text-2xl font-bold text-[#1f3528]">
-//                           4.9/5
-//                         </h3>
-
-//                         <p className="text-gray-600 text-sm">
-//                           Student Rating
-//                         </p>
-//                       </div>
-//                     </div>
-
-//                     {/* Students */}
-//                     <div className="flex items-center gap-4">
-//                       <div className="w-14 h-14 rounded-2xl bg-[#eef7ee] flex items-center justify-center">
-//                         <Users
-//                           className="text-[#2f7d4c]"
-//                           size={28}
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <h3 className="text-2xl font-bold text-[#1f3528]">
-//                           1000+
-//                         </h3>
-
-//                         <p className="text-gray-600 text-sm">
-//                           Happy Students
-//                         </p>
-//                       </div>
-//                     </div>
-
-//                     {/* Countries */}
-//                     <div className="flex items-center gap-4">
-//                       <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center">
-//                         <Globe
-//                           className="text-[#c9732c]"
-//                           size={28}
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <h3 className="text-2xl font-bold text-[#1f3528]">
-//                           15+
-//                         </h3>
-
-//                         <p className="text-gray-600 text-sm">
-//                           Countries
-//                         </p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* MOBILE GRADIENT */}
-//               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent lg:hidden"></div>
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-//     </section>
-//   );
-// }
-
-// export default HeroSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import {
-//   Autoplay,
-//   Navigation,
-//   EffectFade,
-// } from "swiper/modules";
-
-// import { Link } from "react-router-dom";
-
-// import {
-//   Star,
-//   Users,
-//   Globe,
-//   Download,
-//   ArrowRight,
-//   Award,
-// } from "lucide-react";
-
-// // Swiper CSS
-// import "swiper/css";
-// import "swiper/css/navigation";
-// import "swiper/css/effect-fade";
-
-// // Images
-// import yoga0 from "../pages/home/images/yoga0.jpg";
-// import yoga1 from "../pages/home/images/yoga1.jpg";
-// import yoga from "../pages/home/images/yoga.jpg";
-
-// function HeroSection() {
-//   const heroImages = [
-//     {
-//       url: yoga0,
-//       alt: "Yoga Training Bali",
-//     },
-//     {
-//       url: yoga1,
-//       alt: "Yoga Retreat Bali",
-//     },
-//     {
-//       url: yoga,
-//       alt: "Yoga Meditation Bali",
-//     },
-//   ];
-
-//   return (
-//     <section className="relative w-full overflow-hidden bg-[#f8f5ef]">
-//       <Swiper
-//         modules={[Autoplay, Navigation, EffectFade]}
-//         effect="fade"
-//         fadeEffect={{ crossFade: true }}
-//         speed={1200}
-//         autoplay={{
-//           delay: 4500,
-//           disableOnInteraction: false,
-//         }}
-//         navigation={true}
-//         loop={true}
-//         className="
-//           w-full
-//           h-auto
-
-//           [--swiper-navigation-color:#b86b2b]
-
-//           [&_.swiper-button-next]:hidden
-//           lg:[&_.swiper-button-next]:flex
-//           [&_.swiper-button-next]:right-8
-//           [&_.swiper-button-next]:w-14
-//           [&_.swiper-button-next]:h-14
-//           [&_.swiper-button-next]:rounded-full
-//           [&_.swiper-button-next]:bg-white/90
-//           [&_.swiper-button-next]:shadow-xl
-//           [&_.swiper-button-next]:after:text-[18px]
-//           [&_.swiper-button-next]:after:font-bold
-
-//           [&_.swiper-button-prev]:hidden
-//           lg:[&_.swiper-button-prev]:flex
-//           [&_.swiper-button-prev]:left-8
-//           [&_.swiper-button-prev]:w-14
-//           [&_.swiper-button-prev]:h-14
-//           [&_.swiper-button-prev]:rounded-full
-//           [&_.swiper-button-prev]:bg-white/90
-//           [&_.swiper-button-prev]:shadow-xl
-//           [&_.swiper-button-prev]:after:text-[18px]
-//           [&_.swiper-button-prev]:after:font-bold
-//         "
-//       >
-//         {heroImages.map((image, index) => (
-//           <SwiperSlide key={index}>
-//             <div
-//               className="
-//                 relative
-//                 w-full
-//                 min-h-[100svh]
-//                 lg:min-h-[920px]
-//                 2xl:min-h-[1100px]
-//                 bg-[#f8f5ef]
-//                 overflow-hidden
-//                 pb-[140px]
-//                 lg:pb-[180px]
-//                 xl:pb-[120px]
-//               "
-//             >
-//               {/* MAIN HERO */}
-//               <div
-//                 className="
-//                   grid
-//                   grid-cols-1
-//                   lg:grid-cols-[45%_55%]
-//                   items-center
-//                   min-h-[100svh]
-//                   lg:min-h-[920px]
-//                   2xl:min-h-[1100px]
-//                 "
-//               >
-//                 {/* LEFT CONTENT */}
-//                 <div
-//                   className="
-//                     relative
-//                     z-20
-//                     bg-[#ffffff]
-//                     h-full
-//                     flex
-//                     flex-col
-//                     justify-center
-//                     px-5
-//                     sm:px-8
-//                     md:px-10
-//                     lg:px-12
-//                     xl:px-16
-//                     2xl:px-24
-//                     py-16
-//                     lg:py-10
-//                   "
-//                 >
-//                   {/* TOP TEXT */}
-//                   <div className="mt-7 flex items-center gap-2 text-[#b86b2b] text-sm font-semibold tracking-wide">
-//                     <Award size={16} />
-//                     A JOURNEY THAT TRANSFORMS YOU
-//                   </div>
-
-//                   {/* HEADING */}
-//                   <h1
-//                     className="
-//                       mt-5
-//                       text-[2.8rem]
-//                       sm:text-[3.6rem]
-//                       md:text-[4.4rem]
-//                       lg:text-[4.8rem]
-//                       xl:text-[5.4rem]
-//                       2xl:text-[6.3rem]
-//                       leading-[1.03]
-//                       font-bold
-//                       text-[#1f3528]
-//                     "
-//                   >
-//                     Become a
-//                     <span className="block">
-//                       Certified Yoga
-//                     </span>
-
-//                     <span className="block">
-//                       Teacher in{" "}
-//                       <span className="text-[#c9732c]">
-//                         Bali
-//                       </span>
-//                     </span>
-//                   </h1>
-
-//                   {/* SUBTITLE */}
-//                   <p
-//                     className="
-//                       mt-6
-//                       text-[17px]
-//                       sm:text-[19px]
-//                       xl:text-[22px]
-//                       italic
-//                       text-gray-600
-//                       leading-relaxed
-//                       max-w-[650px]
-//                     "
-//                   >
-//                     Transform Your Life. Inspire The World.
-//                   </p>
-
-//                   {/* FEATURES */}
-//                   <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-[680px]">
-//                     {[
-//                       {
-//                         title: "21-Day Training",
-//                         icon: "🧘",
-//                       },
-//                       {
-//                         title: "Yoga Alliance Certified",
-//                         icon: "🏆",
-//                       },
-//                       {
-//                         title: "Luxury Stay In Nature",
-//                         icon: "🌿",
-//                       },
-//                       {
-//                         title: "Satvic Food & Excursions",
-//                         icon: "🍃",
-//                       },
-//                     ].map((item, i) => (
-//                       <div
-//                         key={i}
-//                         className="
-//                           flex
-//                           items-start
-//                           gap-4
-//                           bg-[#faf7f2]
-//                           border
-//                           border-[#eee5d8]
-//                           rounded-2xl
-//                           p-4
-//                           hover:shadow-md
-//                           transition-all
-//                           duration-300
-//                         "
-//                       >
-//                         <div className="w-12 h-12 rounded-xl bg-[#f1ebe2] flex items-center justify-center text-xl shrink-0">
-//                           {item.icon}
-//                         </div>
-
-//                         <div className="text-[#1f3528] font-medium leading-snug">
-//                           {item.title}
-//                         </div>
-//                       </div>
-//                     ))}
-//                   </div>
-
-//                   {/* BUTTONS */}
-//                   <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4">
-//                     <Link
-//                       to="/contact"
-//                       className="
-//                         group
-//                         bg-gradient-to-r
-//                         from-[#2f5134]
-//                         to-[#466a49]
-//                         hover:from-[#26472b]
-//                         hover:to-[#39593d]
-//                         text-white
-//                         px-8
-//                         py-4
-//                         rounded-2xl
-//                         text-lg
-//                         font-semibold
-//                         shadow-xl
-//                         transition-all
-//                         duration-300
-//                         flex
-//                         items-center
-//                         justify-center
-//                         gap-3
-//                         hover:-translate-y-1
-//                       "
-//                     >
-//                       APPLY NOW
-
-//                       <ArrowRight
-//                         size={20}
-//                         className="group-hover:translate-x-1 transition"
-//                       />
-//                     </Link>
-
-//                     <a
-//                       href="/brochure.pdf"
-//                       className="
-//                         border-2
-//                         border-[#d8b18b]
-//                         text-[#c9732c]
-//                         hover:bg-[#c9732c]
-//                         hover:text-white
-//                         px-8
-//                         py-4
-//                         rounded-2xl
-//                         text-lg
-//                         font-semibold
-//                         transition-all
-//                         duration-300
-//                         flex
-//                         items-center
-//                         justify-center
-//                         gap-3
-//                         bg-white
-//                         hover:-translate-y-1
-//                       "
-//                     >
-//                       <Download size={20} />
-//                       DOWNLOAD BROCHURE
-//                     </a>
-//                   </div>
-//                 </div>
-
-//                 {/* RIGHT IMAGE */}
-//                 <div className="relative h-full min-h-[420px] lg:min-h-full">
-//                   <img
-//                     src={image.url}
-//                     alt={image.alt}
-//                     loading={index === 0 ? "eager" : "lazy"}
-//                     className="
-//                       w-full
-//                       h-full
-//                       object-cover
-//                     "
-//                   />
-
-//                   {/* OVERLAY */}
-//                   <div className="absolute inset-0 bg-black/10"></div>
-
-//                   {/* PREMIUM OVERLAY */}
-//                   <div className="absolute inset-0 bg-gradient-to-r from-black/25 via-transparent to-transparent"></div>
-//                 </div>
-//               </div>
-
-//               {/* FLOATING STATS CARD */}
-//               <div
-//                 className="
-//                   absolute
-//                   left-4
-//                   right-4
-//                   bottom-6
-
-//                   md:bottom-8
-
-//                   lg:left-1/2
-//                   lg:-translate-x-1/2
-//                   lg:bottom-10
-//                   lg:w-[88%]
-
-//                   xl:left-auto
-//                   xl:translate-x-0
-//                   xl:right-8
-//                   xl:w-[720px]
-
-//                   z-30
-//                 "
-//               >
-//                 <div
-//                   className="
-//                     bg-white/95
-//                     backdrop-blur-xl
-//                     rounded-[28px]
-//                     shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-//                     px-5
-//                     py-5
-//                     border
-//                     border-white/50
-//                   "
-//                 >
-//                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-//                     {/* RATING */}
-//                     <div className="flex items-center gap-4">
-//                       <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center shrink-0">
-//                         <Star
-//                           className="text-[#c9732c]"
-//                           size={28}
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <h3 className="text-2xl font-bold text-[#1f3528]">
-//                           4.9/5
-//                         </h3>
-
-//                         <p className="text-gray-600 text-sm">
-//                           Student Rating
-//                         </p>
-//                       </div>
-//                     </div>
-
-//                     {/* STUDENTS */}
-//                     <div className="flex items-center gap-4">
-//                       <div className="w-14 h-14 rounded-2xl bg-[#eef7ee] flex items-center justify-center shrink-0">
-//                         <Users
-//                           className="text-[#2f7d4c]"
-//                           size={28}
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <h3 className="text-2xl font-bold text-[#1f3528]">
-//                           1000+
-//                         </h3>
-
-//                         <p className="text-gray-600 text-sm">
-//                           Happy Students
-//                         </p>
-//                       </div>
-//                     </div>
-
-//                     {/* COUNTRIES */}
-//                     <div className="flex items-center gap-4">
-//                       <div className="w-14 h-14 rounded-2xl bg-[#fff3e8] flex items-center justify-center shrink-0">
-//                         <Globe
-//                           className="text-[#c9732c]"
-//                           size={28}
-//                         />
-//                       </div>
-
-//                       <div>
-//                         <h3 className="text-2xl font-bold text-[#1f3528]">
-//                           15+
-//                         </h3>
-
-//                         <p className="text-gray-600 text-sm">
-//                           Countries
-//                         </p>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-
-//               {/* MOBILE GRADIENT */}
-//               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent lg:hidden"></div>
-//             </div>
-//           </SwiperSlide>
-//         ))}
-//       </Swiper>
-//     </section>
-//   );
-// }
-
-// export default HeroSection;
+/* ─────────────────────────────────────────────
+   Sub-components
+───────────────────────────────────────────── */
+
+function LeftContent() {
+  return (
+    <>
+      {/* Badge */}
+      <div className="flex items-center gap-2 text-[#b86b2b] text-[10px] lg:text-[10px] xl:text-xs 2xl:text-sm font-semibold tracking-wide">
+        <Award size={12} />
+        A JOURNEY THAT TRANSFORMS YOU
+      </div>
+
+      {/* Heading
+          Panel widths: lg=40%≈410px → 2.2rem | xl=35%≈448px → 2.6rem | 2xl=33%≈512px → 3.2rem */}
+      <h1
+        className="
+          mt-3
+          text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem]
+          lg:text-[2.1rem] xl:text-[2.6rem] 2xl:text-[3.2rem]
+          leading-[1.05] font-bold text-[#1f3528]
+        "
+      >
+        Become a
+        <span className="block">Certified Yoga</span>
+        <span className="block">
+          Teacher in{" "}
+          <span className="text-[#c9732c]">Bali</span>
+        </span>
+      </h1>
+
+      {/* Subtitle */}
+      <p className="
+        mt-2 italic text-gray-600 leading-relaxed
+        text-[15px] sm:text-[17px]
+        lg:text-[13px] xl:text-[15px] 2xl:text-[17px]
+      ">
+        Transform Your Life. Inspire The World.
+      </p>
+
+      {/* Feature pills */}
+      <div className="mt-4 lg:mt-3 grid grid-cols-2 gap-3 lg:gap-2 xl:gap-3">
+        {[
+          { title: "21-Day Training", icon: "🧘" },
+          { title: "Yoga Alliance Certified", icon: "🏆" },
+          { title: "Luxury Stay In Nature", icon: "🌿" },
+          { title: "Satvic Food & Excursions", icon: "🍃" },
+        ].map((item, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <div className="
+              rounded-xl bg-[#f1ebe2] flex items-center justify-center flex-shrink-0
+              w-9 h-9 text-base
+              lg:w-8 lg:h-8 lg:text-sm
+              xl:w-9 xl:h-9 xl:text-base
+            ">
+              {item.icon}
+            </div>
+            <div className="
+              text-[#1f3528] font-medium leading-snug
+              text-sm
+              lg:text-[12px] xl:text-[13px] 2xl:text-sm
+            ">
+              {item.title}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* CTA Buttons */}
+      <div className="mt-5 lg:mt-4 flex flex-col sm:flex-row gap-3">
+        <Link
+          to="/contact"
+          className="
+            group
+            bg-gradient-to-r from-[#2f5134] to-[#466a49]
+            hover:from-[#26472b] hover:to-[#39593d]
+            text-white
+            px-5 lg:px-4 xl:px-5 py-3 lg:py-2 xl:py-3
+            rounded-2xl
+            text-base lg:text-[12px] xl:text-sm 2xl:text-base
+            font-semibold shadow-lg
+            transition-all duration-300
+            flex items-center justify-center gap-2
+          "
+        >
+          APPLY NOW
+          <ArrowRight size={15} className="group-hover:translate-x-1 transition" />
+        </Link>
+
+        <a
+          href="/brochure.pdf"
+          className="
+            border-2 border-[#d8b18b]
+            text-[#c9732c]
+            hover:bg-[#c9732c] hover:text-white
+            px-5 lg:px-3 xl:px-5 py-3 lg:py-2 xl:py-3
+            rounded-2xl
+            text-base lg:text-[12px] xl:text-sm 2xl:text-base
+            font-semibold
+            transition-all duration-300
+            flex items-center justify-center gap-2
+          "
+        >
+          <Download size={15} />
+          DOWNLOAD BROCHURE
+        </a>
+      </div>
+    </>
+  );
+}
+
+function StatsCard() {
+  return (
+    <div className="
+      bg-white/95 backdrop-blur-xl
+      rounded-[20px]
+      shadow-[0_10px_40px_rgba(0,0,0,0.12)]
+      px-2 py-3 sm:px-5 sm:py-4
+    ">
+      <div className="flex items-center justify-between">
+
+        {/* Rating */}
+        <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1">
+          <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
+            <Star className="text-[#c9732c]" size={13} />
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">4.9/5</h3>
+            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">Student Rating</p>
+          </div>
+        </div>
+
+        <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
+
+        {/* Students */}
+        <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 sm:px-2">
+          <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#eef7ee] flex items-center justify-center flex-shrink-0">
+            <Users className="text-[#2f7d4c]" size={13} />
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">1000+</h3>
+            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">Happy Students</p>
+          </div>
+        </div>
+
+        <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
+
+        {/* Countries */}
+        <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 justify-start">
+          <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
+            <Globe className="text-[#c9732c]" size={13} />
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">15+</h3>
+            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">Countries</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
+export default HeroSection;
