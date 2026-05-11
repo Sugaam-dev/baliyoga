@@ -39,6 +39,7 @@ import BaliYogaProgramSection from "./BaliYogaProgramSection";
 import BaliYogaKendraExperience from "./BaliYogaKendraExperience";
 import BaliYogaOffers from "./BaliYogaOffers";
 import Hero from "../../Components/Hero";
+import TestimonialsSection from "./TestimonialsSection";
 
 const galleryImages = [
   {
@@ -1572,6 +1573,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+<TestimonialsSection/>
     </main>
   );
 }

@@ -125,6 +125,7 @@
                 |-- yoga0.jpg
                 |-- yoga1.jpg
                 |-- yogagallery.jpg
+            |-- TestimonialsSection.jsx
         |-- meditation
             |-- images
                 |-- hero.jpg
