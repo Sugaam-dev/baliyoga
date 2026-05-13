@@ -229,7 +229,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
 // Images
-import yoga0 from "../pages/home/images/yoga0.jpg";
+import yoga0 from "../pages/home/images/yoga10.png";
 import yoga1 from "../pages/home/images/yoga1.jpg";
 import yoga from "../pages/home/images/yoga.jpg";
 
