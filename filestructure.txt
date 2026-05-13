@@ -20,9 +20,9 @@
         |-- mandala.svg
         |-- mountain.jpg
         |-- react.svg
-        |-- yoga.jpg
         |-- yoga0.jpg
         |-- yoga1.jpg
+        |-- yoga10.png
     |-- Components
         |-- FloatingSocialBar.jsx
         |-- Footer.jsx
@@ -124,6 +124,7 @@
                 |-- yoga.jpg
                 |-- yoga0.jpg
                 |-- yoga1.jpg
+                |-- yoga10.png
                 |-- yogagallery.jpg
             |-- TestimonialsSection.jsx
         |-- meditation

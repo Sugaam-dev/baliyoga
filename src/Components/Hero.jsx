@@ -554,9 +554,9 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
 // Images
-import yoga0 from "../pages/home/images/yoga0.jpg";
+import yoga0 from "../pages/home/images/yoga10.png";
 import yoga1 from "../pages/home/images/yoga1.jpg";
-import yoga from "../pages/home/images/yoga.jpg";
+import yoga from "../pages/home/images/yoga0.jpg";
 
 function HeroSection() {
   const heroImages = [
@@ -638,7 +638,7 @@ function HeroSection() {
     bg-gradient-to-r
     from-[#f8f5eff4]
     via-[#f8f5efb3]
-    via-[4%]
+    via-[1%]
     to-transparent
   "
                   />
@@ -649,7 +649,7 @@ function HeroSection() {
                     className="
     absolute inset-y-0 left-0
     w-[30%]
-    backdrop-blur-[0.5px]
+    backdrop-blur-[0.1px]
   "
                   />
                 </div>
