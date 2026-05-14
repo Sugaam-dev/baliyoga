@@ -298,7 +298,6 @@
 // }
 
 
-
 import React, { useEffect, useState } from "react";
 
 // HERO + SECTION IMAGES
@@ -319,12 +318,12 @@ import teacher8 from "./images/Anulasha.png";
 import teacher9 from "./images/ranjan_sir.jpg";
 
 // TESTIMONIAL IMAGES
-import test1 from "./images/test1.jpg";
+import test1 from "./images/test3.jpg";
 import test2 from "./images/test2.jpg";
 import test3 from "./images/test3.jpg";
-import test4 from "./images/test4.jpeg";
-import test5 from "./images/test5.jpg";
-import test from "./images/test.jpg";
+import test4 from "./images/test2.jpg";
+import test5 from "./images/test3.jpg";
+import test from "./images/test2.jpg";
 
 export default function About() {
   const teachers = [
@@ -655,15 +654,15 @@ export default function About() {
               "
             >
               {/* Image */}
-              <div className="overflow-hidden flex items-center justify-center bg-[#f6f1e8] p-6">
+              <div className="bg-[#f6f1e8] p-4 flex items-center justify-center">
                 <img
                   src={teacher.image}
                   alt={teacher.name}
                   className="
                     w-full
                     h-auto
-                    max-h-[500px]
                     object-contain
+                    rounded-[25px]
                     transition-transform
                     duration-700
                     group-hover:scale-105
@@ -735,72 +734,94 @@ export default function About() {
 
       {/* ================= TESTIMONIALS ================= */}
 
-      <section className="py-28 bg-[#efe5d7] overflow-hidden">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-16 2xl:px-24">
-          <div className="text-center mb-16">
-            <p className="uppercase tracking-[5px] text-[#b07d52] text-sm mb-4">
-              Testimonials
-            </p>
+<section className="py-28 bg-[#efe5d7] overflow-hidden">
+  <div className="max-w-[1600px] mx-auto px-6 lg:px-16 2xl:px-24">
+    <div className="text-center mb-16">
+      <p className="uppercase tracking-[5px] text-[#b07d52] text-sm mb-4">
+        Testimonials
+      </p>
 
-            <h2 className="text-4xl md:text-6xl font-light leading-tight">
-              Stories Of
-              <span className="block italic text-[#a06a42]">
-                Transformation
-              </span>
-            </h2>
-          </div>
+      <h2 className="text-4xl md:text-6xl font-light leading-tight">
+        Stories Of
+        <span className="block italic text-[#a06a42]">
+          Transformation
+        </span>
+      </h2>
+    </div>
 
-          <div className="overflow-hidden">
+    <div className="overflow-hidden">
+      <div
+        className="flex transition-transform duration-[1500ms] ease-in-out"
+        style={{
+          transform: `translateX(-${
+            currentIndex *
+            (100 / (window.innerWidth >= 1024 ? 3 : 1))
+          }%)`,
+        }}
+      >
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="w-full lg:w-1/3 px-4 flex-shrink-0"
+          >
             <div
-              className="flex transition-transform duration-[1500ms] ease-in-out"
-              style={{
-                transform: `translateX(-${
-                  currentIndex *
-                  (100 / (window.innerWidth >= 1024 ? 3 : 1))
-                }%)`,
-              }}
+              className="
+                bg-white/70
+                backdrop-blur-xl
+                rounded-[35px]
+                overflow-hidden
+                shadow-2xl
+                h-full
+                flex
+                flex-col
+              "
             >
-              {testimonials.map((item, index) => (
-                <div
-                  key={index}
-                  className="w-full lg:w-1/3 px-4 flex-shrink-0"
-                >
-                  <div className="bg-white/70 backdrop-blur-xl rounded-[35px] overflow-hidden shadow-2xl">
-                    {/* Image */}
-                    <div className="overflow-hidden flex items-center justify-center bg-[#f6f1e8] p-4">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="
-                          w-full
-                          h-auto
-                          max-h-[420px]
-                          object-contain
-                        "
-                      />
-                    </div>
+              {/* Image */}
+              <div
+                className="
+                  bg-[#f6f1e8]
+                  p-4
+                  h-[260px]
+                  sm:h-[300px]
+                  md:h-[320px]
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="
+                    w-full
+                    h-full
+                    object-contain
+                    rounded-[25px]
+                  "
+                />
+              </div>
 
-                    {/* Content */}
-                    <div className="p-8 text-center">
-                      <div className="flex justify-center gap-1 text-[#d4a373] mb-4">
-                        ★★★★★
-                      </div>
-
-                      <p className="italic text-lg text-[#5b4a3f] leading-8">
-                        "{item.text}"
-                      </p>
-
-                      <p className="mt-6 text-[#a06a42] font-semibold tracking-wide">
-                        {item.name}
-                      </p>
-                    </div>
-                  </div>
+              {/* Content */}
+              <div className="p-8 text-center flex-1 flex flex-col justify-center">
+                <div className="flex justify-center gap-1 text-[#d4a373] mb-4">
+                  ★★★★★
                 </div>
-              ))}
+
+                <p className="italic text-lg text-[#5b4a3f] leading-8">
+                  "{item.text}"
+                </p>
+
+                <p className="mt-6 text-[#a06a42] font-semibold tracking-wide">
+                  {item.name}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   );
 }
