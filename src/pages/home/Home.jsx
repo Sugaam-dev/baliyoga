@@ -32,7 +32,7 @@ import retreatImg from "./images/bali1.jpg"; // or use your exact retreat image
 
 import HeroSection from "../../Components/Hero";
 import Certifications from "./Certifications";
-// import FounderSection from "./FounderSection";
+import FounderSection from "./FounderSection";
 import AdditionalActivities from "./AdditionalActivities";
 import BaliYogaCourses from "./BaliYogaCourses";
 import BaliYogaProgramSection from "./BaliYogaProgramSection";
@@ -125,7 +125,7 @@ export default function Home() {
       <Certifications/>
       <BaliYogaProgramSection/>
       <BaliYogaOffers/>
-      {/* <FounderSection/> */}
+      <FounderSection/>
 
      {/* EXPERIENCE BALI YOGA SECTION */}
 <section className="bg-[#fdfaf7] py-16 md:py-20 xl:py-24 overflow-hidden">
