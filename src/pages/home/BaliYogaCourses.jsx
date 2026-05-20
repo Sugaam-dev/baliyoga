@@ -104,7 +104,6 @@ const BaliCoursesPage = () => {
                 xl:text-5xl
                 2xl:text-6xl
                 font-serif
-                font-semibold
                 leading-tight
               "
             >

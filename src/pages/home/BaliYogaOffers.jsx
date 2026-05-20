@@ -63,7 +63,7 @@ const BaliYogaOffers = () => {
             SPECIAL BALI YOGA OFFERS
           </div>
 
-          <h2 className="mt-6 text-[2.3rem] sm:text-[3rem] md:text-[4rem] xl:text-[5rem] font-bold leading-[1.1] text-[#1e3527]">
+          <h2 className="mt-6 text-[1.8rem] sm:text-[2rem] md:text-[3rem] xl:text-[4rem] font-bold leading-[1.1] text-[#1e3527]">
             Transform Your Life With
             <span className="block bg-gradient-to-r from-orange-500 to-green-600 bg-clip-text text-transparent">
               Bali Yoga Experiences
@@ -95,66 +95,68 @@ const BaliYogaOffers = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10"></div>
 
-                {/* Top Badge */}
-                <div className="absolute top-6 left-6">
-                  <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white text-sm font-semibold">
-                    <Star size={16} className="fill-white" />
-                    Bali Yoga Kendra
-                  </div>
-                </div>
-
                 {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-                  {/* Title */}
-                  <h3 className="text-white text-[2rem] sm:text-[2.5rem] xl:text-[3rem] leading-[1.05] font-light uppercase tracking-wide">
-                    {offer.title}
-                  </h3>
-
-                  {/* Divider */}
-                  <div className="w-full h-[2px] bg-white/40 my-5"></div>
-
-                  {/* Discount */}
-                  <div className="flex items-end gap-4">
-                    <h1
-                      className={`text-[5rem] sm:text-[6rem] xl:text-[7rem] leading-none font-black bg-gradient-to-r ${offer.color} bg-clip-text text-transparent drop-shadow-2xl`}
-                    >
-                      {offer.discount}
-                    </h1>
-
-                    <span className="text-white text-[2rem] sm:text-[2.5rem] xl:text-[3rem] font-bold mb-4 tracking-wide">
-                      {offer.subtitle}
-                    </span>
+                <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
+                  {/* Top Badge */}
+                  <div className="self-start">
+                    <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full text-white text-sm font-semibold">
+                      <Star size={16} className="fill-white" />
+                      Bali Yoga Kendra
+                    </div>
                   </div>
 
-                  {/* Locations */}
-                  <div className="mt-5 space-y-3">
-                    {offer.locations.map((location, index) => (
-                      <div
-                        key={index}
-                        className="flex items-center gap-3 text-white/90 text-lg sm:text-xl"
+                  <div className="space-y-5">
+                    {/* Title */}
+                    <h3 className="text-white text-[2rem] sm:text-[2.5rem] xl:text-[3rem] leading-[1.05] font-light uppercase tracking-wide">
+                      {offer.title}
+                    </h3>
+
+                    {/* Divider */}
+                    <div className="w-full h-[2px] bg-white/40"></div>
+
+                    {/* Discount */}
+                    <div className="flex flex-wrap items-end gap-4">
+                      <h1
+                        className={`text-[4rem] sm:text-[5rem] xl:text-[5.8rem] leading-none font-black bg-gradient-to-r ${offer.color} bg-clip-text text-transparent drop-shadow-2xl`}
                       >
-                        <MapPin
-                          size={18}
-                          className="text-orange-300 min-w-[18px]"
-                        />
+                        {offer.discount}
+                      </h1>
 
-                        <span>{location}</span>
-                      </div>
-                    ))}
+                      <span className="text-white text-[2rem] sm:text-[2.5rem] xl:text-[3rem] font-bold mb-4 tracking-wide whitespace-normal">
+                        {offer.subtitle}
+                      </span>
+                    </div>
+
+                    {/* Locations */}
+                    <div className="space-y-3">
+                      {offer.locations.map((location, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-3 text-white/90 text-lg sm:text-xl"
+                        >
+                          <MapPin
+                            size={18}
+                            className="text-orange-300 min-w-[18px]"
+                          />
+
+                          <span>{location}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Button */}
+                    <button className="group/btn w-full bg-white text-[#1e3527] hover:bg-gradient-to-r hover:from-orange-500 hover:to-green-600 hover:text-white px-6 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-xl">
+                      {offer.button}
+
+                      <ArrowRight
+                        size={20}
+                        className="group-hover/btn:translate-x-1 transition"
+                      />
+                    </button>
                   </div>
-
-                  {/* Button */}
-                  <button className="group/btn mt-8 bg-white text-[#1e3527] hover:bg-gradient-to-r hover:from-orange-500 hover:to-green-600 hover:text-white px-6 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-3 shadow-xl">
-                    {offer.button}
-
-                    <ArrowRight
-                      size={20}
-                      className="group-hover/btn:translate-x-1 transition"
-                    />
-                  </button>
 
                   {/* Bottom Label */}
-                  <div className="mt-6 flex items-center justify-between text-white/70 text-sm">
+                  <div className="flex items-center justify-between text-white/70 text-sm">
                     <div className="flex items-center gap-2">
                       <BadgePercent size={16} />
                       Limited Time Offer

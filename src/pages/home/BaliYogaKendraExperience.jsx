@@ -610,13 +610,13 @@ const BaliYogaKendraExperience = () => {
             <h1
               className="
                 mt-6
-                text-[2.4rem]
-                sm:text-[3.3rem]
-                md:text-[4.5rem]
-                xl:text-[5rem]
-                2xl:text-[6rem]
+                text-[2rem]
+                sm:text-[3rem]
+                md:text-[4rem]
+                xl:text-[4rem]
+                2xl:text-[5rem]
                 leading-[1.05]
-                font-bold
+                
                 text-[#1f3528]
               "
             >
