@@ -30,9 +30,7 @@ import gallery10 from "./images/baligallery.jpg";
 
 import retreatImg from "./images/bali1.jpg"; // or use your exact retreat image
 
-import HeroSection from "../../Components/Hero";
 import Certifications from "./Certifications";
-import FounderSection from "./FounderSection";
 import AdditionalActivities from "./AdditionalActivities";
 import BaliYogaCourses from "./BaliYogaCourses";
 import BaliYogaProgramSection from "./BaliYogaProgramSection";
@@ -125,7 +123,6 @@ export default function Home() {
       <Certifications/>
       <BaliYogaProgramSection/>
       <BaliYogaOffers/>
-      <FounderSection/>
 
      {/* EXPERIENCE BALI YOGA SECTION */}
 <section className="bg-[#fdfaf7] py-16 md:py-20 xl:py-24 overflow-hidden">
@@ -150,7 +147,6 @@ export default function Home() {
           xl:text-6xl
           2xl:text-7xl
           font-serif
-          font-semibold
           leading-tight
           text-[#234b2c]
         "
@@ -441,7 +437,6 @@ export default function Home() {
             xl:text-6xl
             2xl:text-7xl
             font-serif
-            font-semibold
             leading-tight
             text-[#234b2c]
           "
@@ -1202,11 +1197,11 @@ export default function Home() {
 
           <h2
             className="
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              xl:text-6xl
-              2xl:text-7xl
+              text-2xl
+              sm:text-3xl
+              md:text-4xl
+              xl:text-5xl
+              2xl:text-6xl
               font-serif
               font-semibold
               leading-tight

@@ -205,6 +205,24 @@ const certifications = [
   },
 ];
 
+const leadershipCards = [
+  {
+    icon: "🪷",
+    title: "Visionary Leader",
+    description: "Inspiring conscious growth through authentic yoga guidance.",
+  },
+  {
+    icon: "⛰️",
+    title: "Community Builder",
+    description: "Creating supportive spaces that uplift students worldwide.",
+  },
+  {
+    icon: "🧘",
+    title: "Yoga Practitioner",
+    description: "Embodies yogic wisdom in every class, retreat, and training.",
+  },
+];
+
 const CardContent = () => (
   <>
     {/* SMALL TITLE */}
@@ -325,7 +343,7 @@ const Certifications = () => {
                   International Recognition
                 </p>
 
-                <h2 className="text-[34px] sm:text-[46px] md:text-[58px] lg:text-[64px] font-serif font-bold text-[#234b2c] leading-[1.05]">
+                <h2 className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[55px] font-serif font-bold text-[#234b2c] leading-[1.05]">
                   Our Teachers Certifications
                 </h2>
 
@@ -334,6 +352,8 @@ const Certifications = () => {
                   <span className="text-[#d97706] text-lg">❦</span>
                 </div>
               </div>
+
+              
 
               {/* CERTIFICATIONS GRID */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -356,6 +376,25 @@ const Certifications = () => {
                     <h3 className="text-[#234b2c] text-base md:text-lg font-semibold text-center leading-7 mt-4">
                       {item.title}
                     </h3>
+                  </div>
+                ))}
+              </div>
+
+              {/* HIGHLIGHT CARDS */}
+              {/* HIGHLIGHT CARDS */}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 xl:mt-14 mb-8">
+                {leadershipCards.map((card, index) => (
+                  <div
+                    key={index}
+                    className="bg-white border border-[#eadfce] rounded-[24px] p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="text-4xl mb-4">{card.icon}</div>
+                    <h3 className="text-[#234b2c] text-xl font-semibold mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-6">
+                      {card.description}
+                    </p>
                   </div>
                 ))}
               </div>
