@@ -63,7 +63,7 @@ const BaliYogaOffers = () => {
             SPECIAL BALI YOGA OFFERS
           </div>
 
-          <h2 className="mt-6 text-[1.8rem] sm:text-[2rem] md:text-[3rem] xl:text-[4rem] font-bold leading-[1.1] text-[#1e3527]">
+          <h2 className="mt-6 text-[1rem] sm:text-[1.5rem] md:text-[2.5rem] xl:text-[3rem] leading-[1.1] text-[#1e3527]">
             Transform Your Life With
             <span className="block bg-gradient-to-r from-orange-500 to-green-600 bg-clip-text text-transparent">
               Bali Yoga Experiences

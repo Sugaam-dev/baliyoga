@@ -231,7 +231,7 @@ const CardContent = () => (
     </p>
 
     {/* NAME */}
-    <h2 className="text-[30px] sm:text-[40px] md:text-[48px] font-serif font-bold text-[#234b2c] leading-[1.1]">
+    <h2 className="text-[30px] sm:text-[40px] md:text-[48px] font-serif text-[#234b2c] leading-[1.1]">
       Yogi Balaji
     </h2>
 
@@ -343,7 +343,7 @@ const Certifications = () => {
                   International Recognition
                 </p>
 
-                <h2 className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[55px] font-serif font-bold text-[#234b2c] leading-[1.05]">
+                <h2 className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[55px] font-serif text-[#234b2c] leading-[1.05]">
                   Our Teachers Certifications
                 </h2>
 

@@ -189,12 +189,12 @@ const Header = () => {
 
   const navLinkStyles = (path) => `
     relative block py-2 px-3
-    text-[0.95rem]
+    text-[0.92rem]
 
-    min-[1400px]:text-[1.7rem]
-    min-[2200px]:text-[2.5rem]
+    min-[1400px]:text-[1.25rem]
+    min-[2200px]:text-[1.6rem]
 
-    min-[969px]:max-[1100px]:text-[1.1rem]
+    min-[969px]:max-[1100px]:text-[1rem]
     min-[969px]:max-[1100px]:px-2
 
     font-medium tracking-tight
@@ -235,7 +235,7 @@ const Header = () => {
             flex justify-between items-center
             w-full mx-auto
             px-4 sm:px-6 lg:px-8
-            py-3
+            py-2
             gap-4
             flex-nowrap
 
@@ -314,8 +314,8 @@ const Header = () => {
               gap-2
               m-0 p-0
 
-              min-[1101px]:gap-10
-              min-[1400px]:gap-10
+              min-[1101px]:gap-7
+              min-[1400px]:gap-8
               min-[2200px]:gap-20
 
               min-[969px]:max-[1100px]:gap-[20px]

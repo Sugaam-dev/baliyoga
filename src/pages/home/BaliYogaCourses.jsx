@@ -169,7 +169,7 @@ const BaliCoursesPage = () => {
                       2xl:text-[24px]
                       leading-snug
                       font-serif
-                      font-semibold
+                     
                       min-h-[78px]
                     "
                   >
