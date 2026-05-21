@@ -38,6 +38,7 @@ import BaliYogaKendraExperience from "./BaliYogaKendraExperience";
 import BaliYogaOffers from "./BaliYogaOffers";
 import Hero from "../../Components/Hero";
 import TestimonialsSection from "./TestimonialsSection";
+import UpcomingBatches from "./UpcomingBatches";
 
 const galleryImages = [
   {
@@ -123,7 +124,6 @@ export default function Home() {
       <Certifications/>
       <BaliYogaProgramSection/>
       <BaliYogaOffers/>
-
      {/* EXPERIENCE BALI YOGA SECTION */}
 <section className="bg-[#fdfaf7] py-16 md:py-20 xl:py-24 overflow-hidden">
 
@@ -141,11 +141,11 @@ export default function Home() {
       {/* HEADING */}
       <h2
         className="
-          text-3xl
-          sm:text-4xl
-          md:text-5xl
-          xl:text-6xl
-          2xl:text-7xl
+          text-2xl
+          sm:text-3xl
+          md:text-4xl
+          xl:text-5xl
+          2xl:text-6xl
           font-serif
           leading-tight
           text-[#234b2c]
@@ -431,11 +431,11 @@ export default function Home() {
         {/* MAIN TITLE */}
         <h2
           className="
-            text-3xl
-            sm:text-4xl
-            md:text-5xl
-            xl:text-6xl
-            2xl:text-7xl
+            text-2xl
+            sm:text-3xl
+            md:text-4xl
+            xl:text-5xl
+            2xl:text-6xl
             font-serif
             leading-tight
             text-[#234b2c]
@@ -558,7 +558,6 @@ export default function Home() {
             className="
               text-[#234b2c]
               font-serif
-              font-semibold
               text-2xl
               xl:text-3xl
               leading-snug
@@ -655,7 +654,6 @@ export default function Home() {
             className="
               text-[#234b2c]
               font-serif
-              font-semibold
               text-2xl
               xl:text-3xl
               leading-snug
@@ -748,7 +746,6 @@ export default function Home() {
             className="
               text-[#234b2c]
               font-serif
-              font-semibold
               text-2xl
               xl:text-3xl
               leading-snug
@@ -841,7 +838,7 @@ export default function Home() {
             className="
               text-[#234b2c]
               font-serif
-              font-semibold
+              
               text-2xl
               xl:text-3xl
               leading-snug
@@ -931,12 +928,11 @@ export default function Home() {
         <h2
           className="
             relative
-            text-4xl
-            sm:text-5xl
-            xl:text-6xl
-            2xl:text-7xl
+            text-3xl
+            sm:text-4xl
+            xl:text-5xl
+            2xl:text-6xl
             font-serif
-            font-bold
             leading-tight
             text-[#b4533c]
           "
@@ -1203,7 +1199,6 @@ export default function Home() {
               xl:text-5xl
               2xl:text-6xl
               font-serif
-              font-semibold
               leading-tight
               text-[#234b2c]
             "
@@ -1332,6 +1327,7 @@ export default function Home() {
 </section>
 
 <TestimonialsSection/>
+<UpcomingBatches/>
     </main>
   );
 }

@@ -422,7 +422,7 @@ const AdditionalActivities = () => {
                   className="
                     text-[#234b2c]
                     font-serif
-                    font-semibold
+                    
                     text-2xl
                     xl:text-3xl
                     mb-4

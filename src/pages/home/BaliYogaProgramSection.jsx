@@ -775,7 +775,7 @@ const BaliYogaProgramSection = () => {
               Bali Yoga Kendra
             </span>
 
-            <h2 className="mx-auto max-w-4xl text-3xl font-bold leading-tight text-[#18392b] sm:text-4xl lg:text-5xl">
+            <h2 className="mx-auto max-w-4xl text-3xl leading-tight text-[#18392b] sm:text-4xl lg:text-5xl">
               Begin Your Transformational
               <span className="block text-orange-500">
                 Yoga Journey In Bali

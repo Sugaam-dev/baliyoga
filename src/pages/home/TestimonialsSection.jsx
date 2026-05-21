@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
             Student Experiences
           </p>
 
-          <h2 className="mx-auto max-w-4xl font-serif text-3xl font-bold leading-tight text-[#1e3d2f] sm:text-4xl lg:text-5xl 2xl:text-7xl">
+          <h2 className="mx-auto max-w-4xl font-serif text-3xl leading-tight text-[#1e3d2f] sm:text-4xl lg:text-5xl 2xl:text-7xl">
             Stories That Inspire
             <span className="block text-[#d97706]">
               Transformation Through Yoga
