@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight ,Flower2, Leaf, Sparkles, Medal} from "lucide-react";
-
 // Import images
 import bali1 from "./images/bali1.jpg";
 import bali2 from "./images/bali2.jpg";

@@ -92,7 +92,6 @@
             |-- BaliYogaOffers.jsx
             |-- BaliYogaProgramSection.jsx
             |-- Certifications.jsx
-            |-- FounderSection.jsx
             |-- Home.jsx
             |-- images
                 |-- 4-Days-Yoga-Retreat-In-Canggu-Bali.jpg
