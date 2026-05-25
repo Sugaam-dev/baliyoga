@@ -6,77 +6,122 @@ import img3 from "../../assets/hill2.jpg";
 import img4 from "../../assets/hill3.jpg";
 
 const UpcomingBatches = () => {
+  const batches = [
+    {
+      title: "BALI – 200 HOUR TTC",
+      date: "May 10, 2026",
+      seats: "5 Seats Left",
+      img: img1,
+      location: "Bali, Indonesia",
+    },
+    {
+      title: "RISHIKESH – 200 HOUR TTC",
+      date: "June 02, 2026",
+      seats: "8 Seats Left",
+      img: img2,
+      location: "Rishikesh, India",
+    },
+    {
+      title: "MYSORE – 200 HOUR TTC",
+      date: "June 16, 2026",
+      seats: "6 Seats Left",
+      img: img3,
+      location: "Mysore, India",
+    },
+    {
+      title: "BALI – 300 HOUR TTC",
+      date: "July 05, 2026",
+      seats: "7 Seats Left",
+      img: img4,
+      location: "Bali, Indonesia",
+    },
+  ];
+
   return (
-    <section className="bg-[#f5f1ea] py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#f8f4ee] to-[#efe7da] py-16 sm:py-20 lg:py-24 px-4">
+      
+      {/* Background Blur */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-amber-100/40 rounded-full blur-3xl" />
 
-        <h3 className="text-center text-sm tracking-[0.25em] text-[#3b2a1f] mb-10 font-semibold">
-          UPCOMING BATCHES ✦
-        </h3>
+      <div className="relative z-10 mx-auto w-full max-w-[95%] sm:max-w-[92%] lg:max-w-[90%] 2xl:max-w-[1800px]">
+        
+        {/* Heading */}
+        <div className="text-center mb-12 lg:mb-16">
+          <p className="text-xs sm:text-sm tracking-[0.35em] text-[#9a6b3d] font-semibold uppercase mb-4">
+            Upcoming Yoga Programs ✦
+          </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2f241c] leading-tight">
+            Join Our Upcoming
+            <span className="block text-[#c47b37] mt-2">
+              Yoga Teacher Trainings
+            </span>
+          </h2>
 
-          {[
-            {
-              title: "BALI – 200 HOUR TTC",
-              date: "May 10, 2026",
-              seats: "5 Seats Left",
-              img: img1,
-            },
-            {
-              title: "RISHIKESH – 200 HOUR TTC",
-              date: "June 02, 2026",
-              seats: "8 Seats Left",
-              img: img2,
-            },
-            {
-              title: "MYSORE – 200 HOUR TTC",
-              date: "June 16, 2026",
-              seats: "6 Seats Left",
-              img: img3,
-            },
-            {
-              title: "BALI – 300 HOUR TTC",
-              date: "July 05, 2026",
-              seats: "7 Seats Left",
-              img: img4,
-            },
-          ].map((item, i) => (
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-500 mx-auto rounded-full mt-6" />
+
+          <p className="max-w-2xl mx-auto mt-6 text-sm sm:text-base text-[#5c5248] leading-relaxed">
+            Discover transformative yoga journeys in the world's most peaceful
+            destinations. Reserve your seat and begin your path toward growth,
+            healing, and self-discovery.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+          {batches.map((item, i) => (
             <div
               key={i}
-              className="relative h-52 rounded-2xl overflow-hidden group shadow-md hover:shadow-2xl transition duration-300"
+              className="group relative overflow-hidden rounded-[28px] h-[380px] sm:h-[400px] shadow-[0_10px_40px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.22)] transition-all duration-500 hover:-translate-y-2"
             >
+              {/* Image */}
               <img
                 src={item.img}
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10" />
 
-              <div className="relative z-10 p-4 h-full flex flex-col justify-between text-white">
+              {/* Top Badge */}
+              <div className="absolute top-5 left-5 z-20">
+                <span className="bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] sm:text-xs px-4 py-1.5 rounded-full tracking-wide">
+                  {item.seats}
+                </span>
+              </div>
 
-                <div>
-                  <h4 className="text-sm font-semibold leading-tight">
-                    {item.title}
-                  </h4>
+              {/* Content */}
+              <div className="relative z-10 h-full flex flex-col justify-end p-6 sm:p-7 text-white">
+                
+                {/* Location */}
+                <p className="text-xs sm:text-sm text-orange-200 tracking-wide mb-2 uppercase">
+                  {item.location}
+                </p>
 
-                  <p className="text-xs text-gray-200 mt-1">
+                {/* Title */}
+                <h3 className="text-xl sm:text-2xl font-semibold leading-snug mb-3">
+                  {item.title}
+                </h3>
+
+                {/* Date */}
+                <div className="flex items-center justify-between mb-6">
+                  <p className="text-sm sm:text-base text-gray-200">
                     {item.date}
                   </p>
+
+                  <div className="w-10 h-[2px] bg-orange-400 rounded-full" />
                 </div>
 
-                <div className="flex justify-between items-center">
-                  <span className="text-[10px] bg-orange-500/90 px-3 py-1 rounded-full">
-                    {item.seats}
-                  </span>
-
-                  <button className="text-xs hover:underline">
-                    Reserve Now →
-                  </button>
-                </div>
-
+                {/* Button */}
+                <button className="w-full bg-white text-[#2f241c] font-semibold text-sm sm:text-base py-3 rounded-full transition-all duration-300 hover:bg-orange-400 hover:text-white hover:scale-[1.02]">
+                  Reserve Your Seat
+                </button>
               </div>
+
+              {/* Hover Glow */}
+              <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-orange-400/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition duration-700" />
             </div>
           ))}
         </div>

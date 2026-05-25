@@ -127,6 +127,7 @@
                 |-- yoga10.png
                 |-- yogagallery.jpg
             |-- TestimonialsSection.jsx
+            |-- UpcomingBatches.jsx
         |-- meditation
             |-- images
                 |-- hero.jpg

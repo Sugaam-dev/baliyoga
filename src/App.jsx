@@ -6,8 +6,6 @@ import About from './pages/about/About';
 import Course from './pages/course/course';
 import Gallery from './pages/gallery/gallery';
 import Retreat from './pages/retreat/retreat';
-// import Collegeanduniversitypage from './pages/collegeuniversity/Collegeanduniversitypage';
-// import StudentsAndParents from './pages/studentsandparents/StudentsAndParents';
 import Contact from './pages/contact/Contact';
 import OnlinePage from './pages/online/OnlinePage';
 import MeditationPage from './pages/meditation/MeditationPage';
@@ -22,7 +20,6 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
                    <Route path='about' element={<About/>} />
-
                    <Route path='course' element={<Course/>} />
                    <Route path='gallery' element={<Gallery/>} />
                    <Route path='retreat'  element={<Retreat/>} />
