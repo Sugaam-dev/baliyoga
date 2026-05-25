@@ -6,7 +6,14 @@ const Header = () => {
   const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
+  const closeMenu = () => {
+  setIsMenuOpen(false);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
@@ -102,7 +109,9 @@ const Header = () => {
               max-[968px]:h-[58px]
               max-[480px]:h-[52px]
             "
-            onClick={closeMenu}
+            onClick={() => {
+                closeMenu();
+              }}
           >
             <img
               src="/logo.png"
