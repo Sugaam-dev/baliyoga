@@ -117,7 +117,7 @@ const Header = () => {
               src="/logo.png"
               alt="Company Logo"
               className="
-                h-[90px]
+                h-[86px]
                 w-auto
                 object-contain
                 block
@@ -127,7 +127,7 @@ const Header = () => {
                 min-[969px]:max-[1100px]:h-[70px]
                 min-[969px]:max-[1100px]:max-w-[150px]
 
-                min-[1600px]:h-[110px]
+                min-[1600px]:h-[100px]
                 min-[1600px]:max-w-[260px]
 
                 min-[2200px]:h-[130px]
