@@ -167,15 +167,7 @@ export default function Home() {
       {/* SUBTEXT */}
       <p
         className="
-          mt-7
-          text-gray-600
-          max-w-3xl
-          mx-auto
-          text-sm
-          md:text-base
-          xl:text-lg
-          leading-7
-          xl:leading-8
+          mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl
         "
       >
         Explore inspiring yoga practices, retreats, workshops, and mindful
@@ -457,15 +449,7 @@ export default function Home() {
         {/* SUB TEXT */}
         <p
           className="
-            mt-7
-            text-gray-600
-            max-w-4xl
-            mx-auto
-            text-sm
-            md:text-base
-            xl:text-lg
-            leading-7
-            xl:leading-8
+            mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl
           "
         >
           Go on a life-changing yoga adventure in Bali. Learn to become a
@@ -567,16 +551,18 @@ export default function Home() {
           >
             12 Types of Yoga Courses
           </h3>
-
+              {/* // text-gray-600
+              // mt-5
+              // text-sm
+              // md:text-base
+              // leading-7
+              // xl:leading-8 */}
           {/* TEXT */}
+           
           <p
             className="
-              text-gray-600
-              mt-5
-              text-sm
-              md:text-base
-              leading-7
-              xl:leading-8
+            mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl
+             
             "
           >
             Our extensive yoga teacher training courses in Bali inspire deeper
@@ -662,14 +648,15 @@ export default function Home() {
           </h3>
 
           {/* TEXT */}
-          <p
-            className="
-              text-gray-600
+           {/* text-gray-600
               mt-5
               text-sm
               md:text-base
               leading-7
-              xl:leading-8
+              xl:leading-8 */}
+          <p
+            className="
+              mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl
             "
           >
             This 5-day retreat offers space to relax, heal, and reconnect with
@@ -756,12 +743,13 @@ export default function Home() {
           {/* TEXT */}
           <p
             className="
-              text-gray-600
-              mt-5
-              text-sm
-              md:text-base
-              leading-7
-              xl:leading-8
+             mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl
+              // text-gray-600
+              // mt-5
+              // text-sm
+              // md:text-base
+              // leading-7
+              // xl:leading-8
             "
           >
             Join workshops that awaken your energy and elevate your life through
@@ -849,12 +837,13 @@ export default function Home() {
           {/* TEXT */}
           <p
             className="
-              text-gray-600
-              mt-5
-              text-sm
-              md:text-base
-              leading-7
-              xl:leading-8
+              // text-gray-600
+              // mt-5
+              // text-sm
+              // md:text-base
+              // leading-7
+              // xl:leading-8
+               mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl
             "
           >
             With over 11 years of yoga teaching experience in Bali since 2015,
@@ -951,7 +940,7 @@ export default function Home() {
         </div>
 
         {/* DESCRIPTION */}
-        <p className="mt-8 text-gray-700 text-sm md:text-base xl:text-lg leading-7 xl:leading-8 max-w-2xl">
+        <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
           Experience transformational retreats surrounded by Bali’s healing
           energy, tropical nature, yoga philosophy, meditation, and soulful
           community living designed for complete rejuvenation.

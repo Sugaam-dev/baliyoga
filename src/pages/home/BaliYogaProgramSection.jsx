@@ -154,7 +154,7 @@ const BaliYogaProgramSection = () => {
               </span>
             </h2>
 
-            <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+            <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
               Immerse yourself in authentic yogic living surrounded by Bali’s
               peaceful nature, spiritual culture, and healing energy.
             </p>
@@ -180,7 +180,7 @@ const BaliYogaProgramSection = () => {
                 </div>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-4 ">
                 {includes.map((item, index) => (
                   <div
                     key={index}

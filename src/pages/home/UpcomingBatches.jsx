@@ -52,7 +52,7 @@ const UpcomingBatches = () => {
             Upcoming Yoga Programs ✦
           </p>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#2f241c] leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl  2xl:text-6xl font-serif text-[#2f241c] leading-tight">
             Join Our Upcoming
             <span className="block text-[#c47b37] mt-2">
               Yoga Teacher Trainings
@@ -61,7 +61,7 @@ const UpcomingBatches = () => {
 
           <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-amber-500 mx-auto rounded-full mt-6" />
 
-          <p className="max-w-2xl mx-auto mt-6 text-sm sm:text-base text-[#5c5248] leading-relaxed">
+          <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
             Discover transformative yoga journeys in the world's most peaceful
             destinations. Reserve your seat and begin your path toward growth,
             healing, and self-discovery.

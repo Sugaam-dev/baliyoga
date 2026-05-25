@@ -70,7 +70,7 @@ const BaliYogaOffers = () => {
             </span>
           </h2>
 
-          <p className="mt-6 text-gray-700 text-[16px] sm:text-[18px] xl:text-[20px] leading-relaxed">
+          <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
             Discover authentic yoga teacher training, peaceful retreats,
             meditation, sound healing, and spiritual growth in Bali’s most
             beautiful destinations.

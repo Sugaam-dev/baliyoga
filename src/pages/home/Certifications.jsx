@@ -60,14 +60,14 @@ const CardContent = () => (
     </p>
 
     {/* DESCRIPTION */}
-    <p className="text-gray-600 text-sm md:text-[15px] leading-7 mt-5">
+    <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
       Rooted in traditional yogic wisdom and refined through
       years of global teaching experience, Yogi Balaji guides
       students through a deeply transformative spiritual journey.
     </p>
 
     {/* FEATURES */}
-    <div className="space-y-3 mt-6">
+    <div className="space-y-3 mt-6 ">
       {[
         "E-RYT 500 Certified Yoga Alliance Professional",
         "YACEP Continuing Education Provider",
@@ -211,7 +211,7 @@ const Certifications = () => {
                     <h3 className="text-[#234b2c] text-xl font-semibold mb-3">
                       {card.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-6">
+                    <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
                       {card.description}
                     </p>
                   </div>

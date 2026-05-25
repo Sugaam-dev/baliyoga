@@ -105,7 +105,7 @@ const BaliYogaKendraExperience = () => {
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-700 leading-relaxed text-sm sm:text-base">
+              <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
                 Experience authentic yoga surrounded by Bali's spiritual
                 atmosphere, lush greenery, peaceful beaches, and healing
                 energy.
@@ -162,7 +162,7 @@ const BaliYogaKendraExperience = () => {
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-6 text-gray-700 leading-relaxed text-[16px] sm:text-[18px] xl:text-[20px] max-w-2xl">
+            <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
               Bali is a sacred destination filled with spiritual energy,
               tropical beauty, peaceful beaches, and healing traditions. At
               Bali Yoga Kendra, you will deepen your practice through yoga,

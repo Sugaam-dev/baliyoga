@@ -83,7 +83,8 @@ const AdditionalActivities = () => {
             <div className="w-14 h-[2px] bg-[#234b2c]"></div>
           </div>
 
-          <p className="text-gray-600 text-sm md:text-base xl:text-lg leading-7 xl:leading-8 mt-6 max-w-3xl mx-auto">
+          {/* <p className="text-gray-600 text-sm md:text-base xl:text-lg leading-7 xl:leading-8 mt-6 max-w-3xl mx-auto"> */}
+           <p className=" mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
             Explore holistic experiences that complement your yoga journey and
             nurture mind, body & soul with healing, mindfulness, movement, and
             nature-inspired activities.
@@ -180,7 +181,7 @@ const AdditionalActivities = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm xl:text-base leading-7 xl:leading-8">
+                <p className="mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
                   {item.desc}
                 </p>
 
