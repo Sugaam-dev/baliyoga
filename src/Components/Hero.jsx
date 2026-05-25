@@ -78,15 +78,16 @@ function HeroSection() {
           <SwiperSlide key={index}>
             <div className="relative w-full bg-[#f8f5ef] flex flex-col lg:block">
 
-              {/* ── DESKTOP LAYOUT (lg+) ── */}
+              {/* ───────────────── DESKTOP ───────────────── */}
               <div
                 className="hidden lg:flex lg:flex-row"
                 style={{ height: "clamp(500px, 48vw, 780px)" }}
               >
-                {/* LEFT — text panel: 38% at lg (1024px), 34% at xl, 32% at 2xl+ */}
+
+                {/* LEFT CONTENT */}
                 <div
                   className="
-                    relative z-20 bg-white
+                    relative z-20 bg-[#f8f5ef]
                     flex-shrink-0
                     flex flex-col justify-center
                     px-8 xl:px-12 2xl:px-16
@@ -97,50 +98,82 @@ function HeroSection() {
                   <LeftContent />
                 </div>
 
-                {/* RIGHT — image (67%) */}
+                {/* RIGHT IMAGE */}
                 <div className="relative flex-1 overflow-hidden">
-  <img
-    src={image.url}
-    alt={image.alt}
-    loading={index === 0 ? "eager" : "lazy"}
-    className="absolute inset-0 w-full h-full object-cover"
-  />
 
-  {/* White fade from left side */}
-  <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#f8f5ef] via-[#f8f5ef]/70 to-transparent z-10" />
+                  {/* IMAGE */}
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="absolute inset-0 w-full h-full object-cover scale-[1.06]"
+                  />
 
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/10" />
-</div>
+                  {/* INVISIBLE CINEMATIC BLEND */}
+                  <div className="absolute inset-y-0 left-0 z-10 w-[32%] pointer-events-none">
+
+                    {/* Main smooth fade */}
+                    <div
+                      className="
+                        absolute inset-0
+                        bg-gradient-to-r
+                        from-[#f8f5ef]
+                        via-[#f8f5ef]
+                        via-[#f8f5ef]
+                        via-[#f8f5ef]/98
+                        via-[#f8f5ef]/95
+                        via-[#f8f5ef]/88
+                        via-[#f8f5ef]/72
+                        via-[#f8f5ef]/48
+                        via-[#f8f5ef]/20
+                        to-transparent
+                      "
+                    />
+
+                    {/* Creamy glow */}
+                    <div className="absolute inset-y-0 left-0 w-[180px] bg-[#f8f5ef] blur-[90px] opacity-100" />
+
+                  </div>
+
+                  {/* Dark cinematic overlay */}
+                  <div className="absolute inset-0 bg-black/[0.06]" />
+
+                </div>
               </div>
 
-              {/* ── MOBILE / TABLET LAYOUT ── */}
+              {/* ───────────────── MOBILE / TABLET ───────────────── */}
               <div className="flex flex-col lg:hidden">
 
-                {/* Text block */}
-                <div className="bg-white px-5 sm:px-8 py-10">
+                {/* TEXT */}
+                <div className="bg-[#f8f5ef] px-5 sm:px-8 py-10">
                   <LeftContent />
                 </div>
 
-                {/* Image */}
+                {/* IMAGE */}
                 <div className="relative">
+
                   <img
                     src={image.url}
                     alt={image.alt}
                     loading={index === 0 ? "eager" : "lazy"}
                     className="w-full object-cover"
-                    style={{ height: "62vw", minHeight: "260px", maxHeight: "480px" }}
+                    style={{
+                      height: "62vw",
+                      minHeight: "260px",
+                      maxHeight: "480px",
+                    }}
                   />
+
                   <div className="absolute inset-0 bg-black/10" />
                 </div>
 
-                {/* Stats card — top ~10% overlaps image */}
+                {/* STATS CARD */}
                 <div className="relative z-20 -mt-[10%] px-3 pb-4">
                   <StatsCard />
                 </div>
               </div>
 
-              {/* ── DESKTOP FLOATING STATS CARD ── */}
+              {/* FLOATING STATS CARD */}
               <div
                 className="
                   hidden lg:block
@@ -161,20 +194,19 @@ function HeroSection() {
 }
 
 /* ─────────────────────────────────────────────
-   Sub-components
+   LEFT CONTENT
 ───────────────────────────────────────────── */
 
 function LeftContent() {
   return (
     <>
-      {/* Badge */}
+      {/* BADGE */}
       <div className="flex items-center gap-2 text-[#b86b2b] text-[10px] lg:text-[10px] xl:text-xs 2xl:text-sm font-semibold tracking-wide">
         <Award size={12} />
         A JOURNEY THAT TRANSFORMS YOU
       </div>
 
-      {/* Heading
-          Panel widths: lg=40%≈410px → 2.2rem | xl=35%≈448px → 2.6rem | 2xl=33%≈512px → 3.2rem */}
+      {/* HEADING */}
       <h1
         className="
           mt-3
@@ -185,23 +217,27 @@ function LeftContent() {
       >
         Become a
         <span className="block">Certified Yoga</span>
+
         <span className="block">
           Teacher in{" "}
           <span className="text-[#c9732c]">Bali</span>
         </span>
       </h1>
 
-      {/* Subtitle */}
-      <p className="
-        mt-2 italic text-gray-600 leading-relaxed
-        text-[15px] sm:text-[17px]
-        lg:text-[13px] xl:text-[15px] 2xl:text-[17px]
-      ">
+      {/* SUBTITLE */}
+      <p
+        className="
+          mt-2 italic text-gray-600 leading-relaxed
+          text-[15px] sm:text-[17px]
+          lg:text-[13px] xl:text-[15px] 2xl:text-[17px]
+        "
+      >
         Transform Your Life. Inspire The World.
       </p>
 
-      {/* Feature pills */}
+      {/* FEATURES */}
       <div className="mt-4 lg:mt-3 grid grid-cols-2 gap-3 lg:gap-2 xl:gap-3">
+
         {[
           { title: "21-Day Training", icon: "🧘" },
           { title: "Yoga Alliance Certified", icon: "🏆" },
@@ -209,27 +245,42 @@ function LeftContent() {
           { title: "Satvic Food & Excursions", icon: "🍃" },
         ].map((item, i) => (
           <div key={i} className="flex items-center gap-2">
-            <div className="
-              rounded-xl bg-[#f1ebe2] flex items-center justify-center flex-shrink-0
-              w-9 h-9 text-base
-              lg:w-8 lg:h-8 lg:text-sm
-              xl:w-9 xl:h-9 xl:text-base
-            ">
+
+            <div
+              className="
+                rounded-xl bg-[#f1ebe2]
+                flex items-center justify-center
+                flex-shrink-0
+                w-9 h-9 text-base
+                lg:w-8 lg:h-8 lg:text-sm
+                xl:w-9 xl:h-9 xl:text-base
+              "
+            >
               {item.icon}
             </div>
-            <div className="
-              text-[#1f3528] font-medium leading-snug
-              text-sm
-              lg:text-[12px] xl:text-[13px] 2xl:text-sm
-            ">
+
+            <div
+              className="
+                text-[#1f3528]
+                font-medium
+                leading-snug
+                text-sm
+                lg:text-[12px]
+                xl:text-[13px]
+                2xl:text-sm
+              "
+            >
               {item.title}
             </div>
+
           </div>
         ))}
       </div>
 
-      {/* CTA Buttons */}
+      {/* BUTTONS */}
       <div className="mt-5 lg:mt-4 flex flex-col sm:flex-row gap-3">
+
+        {/* APPLY */}
         <Link
           to="/contact"
           className="
@@ -237,25 +288,34 @@ function LeftContent() {
             bg-gradient-to-r from-[#2f5134] to-[#466a49]
             hover:from-[#26472b] hover:to-[#39593d]
             text-white
-            px-5 lg:px-4 xl:px-5 py-3 lg:py-2 xl:py-3
+            px-5 lg:px-4 xl:px-5
+            py-3 lg:py-2 xl:py-3
             rounded-2xl
             text-base lg:text-[12px] xl:text-sm 2xl:text-base
-            font-semibold shadow-lg
+            font-semibold
+            shadow-lg
             transition-all duration-300
             flex items-center justify-center gap-2
           "
         >
           APPLY NOW
-          <ArrowRight size={15} className="group-hover:translate-x-1 transition" />
+
+          <ArrowRight
+            size={15}
+            className="group-hover:translate-x-1 transition"
+          />
         </Link>
 
+        {/* BROCHURE */}
         <a
           href="/brochure.pdf"
           className="
             border-2 border-[#d8b18b]
             text-[#c9732c]
-            hover:bg-[#c9732c] hover:text-white
-            px-5 lg:px-3 xl:px-5 py-3 lg:py-2 xl:py-3
+            hover:bg-[#c9732c]
+            hover:text-white
+            px-5 lg:px-3 xl:px-5
+            py-3 lg:py-2 xl:py-3
             rounded-2xl
             text-base lg:text-[12px] xl:text-sm 2xl:text-base
             font-semibold
@@ -266,55 +326,83 @@ function LeftContent() {
           <Download size={15} />
           DOWNLOAD BROCHURE
         </a>
+
       </div>
     </>
   );
 }
 
+/* ─────────────────────────────────────────────
+   STATS CARD
+───────────────────────────────────────────── */
+
 function StatsCard() {
   return (
-    <div className="
-      bg-white/95 backdrop-blur-xl
-      rounded-[20px]
-      shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-      px-2 py-3 sm:px-5 sm:py-4
-    ">
+    <div
+      className="
+        bg-white/95 backdrop-blur-xl
+        rounded-[20px]
+        shadow-[0_10px_40px_rgba(0,0,0,0.12)]
+        px-2 py-3 sm:px-5 sm:py-4
+      "
+    >
       <div className="flex items-center justify-between">
 
-        {/* Rating */}
+        {/* RATING */}
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1">
+
           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
             <Star className="text-[#c9732c]" size={13} />
           </div>
+
           <div className="min-w-0">
-            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">4.9/5</h3>
-            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">Student Rating</p>
+            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
+              4.9/5
+            </h3>
+
+            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
+              Student Rating
+            </p>
           </div>
         </div>
 
         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
 
-        {/* Students */}
+        {/* STUDENTS */}
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 sm:px-2">
+
           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#eef7ee] flex items-center justify-center flex-shrink-0">
             <Users className="text-[#2f7d4c]" size={13} />
           </div>
+
           <div className="min-w-0">
-            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">1000+</h3>
-            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">Happy Students</p>
+            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
+              1000+
+            </h3>
+
+            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
+              Happy Students
+            </p>
           </div>
         </div>
 
         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
 
-        {/* Countries */}
+        {/* COUNTRIES */}
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 justify-start">
+
           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
             <Globe className="text-[#c9732c]" size={13} />
           </div>
+
           <div className="min-w-0">
-            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">15+</h3>
-            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">Countries</p>
+            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
+              15+
+            </h3>
+
+            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
+              Countries
+            </p>
           </div>
         </div>
 
@@ -324,5 +412,3 @@ function StatsCard() {
 }
 
 export default HeroSection;
-
-
