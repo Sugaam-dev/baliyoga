@@ -130,7 +130,7 @@ const Header = () => {
                 min-[1600px]:h-[100px]
                 min-[1600px]:max-w-[260px]
 
-                min-[2200px]:h-[130px]
+                min-[2200px]:h-[124px]
                 min-[2200px]:max-w-[320px]
 
                 max-[968px]:h-[70px]
