@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import {
   Star,
   Users,
-  Globe,
+ Globe,
   Download,
   ArrowRight,
   Award,
@@ -36,6 +36,7 @@ function HeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden bg-[#f8f5ef]">
+
       <Swiper
         modules={[Autoplay, Navigation, EffectFade]}
         effect="fade"
@@ -74,11 +75,13 @@ function HeroSection() {
           [&_.swiper-button-prev]:after:font-bold
         "
       >
+
         {heroImages.map((image, index) => (
           <SwiperSlide key={index}>
+
             <div className="relative w-full bg-[#f8f5ef] flex flex-col lg:block">
 
-              {/* ───────────────── DESKTOP ───────────────── */}
+              {/* ───────────────── DESKTOP HERO ───────────────── */}
               <div
                 className="hidden lg:flex lg:flex-row"
                 style={{ height: "clamp(500px, 48vw, 780px)" }}
@@ -92,7 +95,7 @@ function HeroSection() {
                     flex flex-col justify-center
                     px-8 xl:px-12 2xl:px-16
                     py-8
-                    w-[38%] xl:w-[34%] 2xl:w-[32%]
+                    w-[30%] xl:w-[28%] 2xl:w-[26%]
                   "
                 >
                   <LeftContent />
@@ -109,10 +112,10 @@ function HeroSection() {
                     className="absolute inset-0 w-full h-full object-cover scale-[1.06]"
                   />
 
-                  {/* INVISIBLE CINEMATIC BLEND */}
-                  <div className="absolute inset-y-0 left-0 z-10 w-[32%] pointer-events-none">
+                  {/* PREMIUM INVISIBLE BLEND */}
+                  <div className="absolute inset-y-0 left-0 z-10 w-[24%] pointer-events-none">
 
-                    {/* Main smooth fade */}
+                    {/* MAIN CINEMATIC FADE */}
                     <div
                       className="
                         absolute inset-0
@@ -130,15 +133,16 @@ function HeroSection() {
                       "
                     />
 
-                    {/* Creamy glow */}
+                    {/* CREAMY GLOW */}
                     <div className="absolute inset-y-0 left-0 w-[180px] bg-[#f8f5ef] blur-[90px] opacity-100" />
 
                   </div>
 
-                  {/* Dark cinematic overlay */}
+                  {/* DARK CINEMATIC OVERLAY */}
                   <div className="absolute inset-0 bg-black/[0.06]" />
 
                 </div>
+
               </div>
 
               {/* ───────────────── MOBILE / TABLET ───────────────── */}
@@ -165,15 +169,17 @@ function HeroSection() {
                   />
 
                   <div className="absolute inset-0 bg-black/10" />
+
                 </div>
 
-                {/* STATS CARD */}
+                {/* MOBILE STATS */}
                 <div className="relative z-20 -mt-[10%] px-3 pb-4">
                   <StatsCard />
                 </div>
+
               </div>
 
-              {/* FLOATING STATS CARD */}
+              {/* DESKTOP FLOATING STATS */}
               <div
                 className="
                   hidden lg:block
@@ -186,9 +192,12 @@ function HeroSection() {
               </div>
 
             </div>
+
           </SwiperSlide>
         ))}
+
       </Swiper>
+
     </section>
   );
 }
@@ -200,10 +209,14 @@ function HeroSection() {
 function LeftContent() {
   return (
     <>
+
       {/* BADGE */}
       <div className="flex items-center gap-2 text-[#b86b2b] text-[10px] lg:text-[10px] xl:text-xs 2xl:text-sm font-semibold tracking-wide">
+
         <Award size={12} />
+
         A JOURNEY THAT TRANSFORMS YOU
+
       </div>
 
       {/* HEADING */}
@@ -211,16 +224,23 @@ function LeftContent() {
         className="
           mt-3
           text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem]
-          lg:text-[2.1rem] xl:text-[2.6rem] 2xl:text-[3.2rem]
+          lg:text-[1.9rem] xl:text-[2.4rem] 2xl:text-[3rem]
           leading-[1.05] font-bold text-[#1f3528]
         "
       >
         Become a
-        <span className="block">Certified Yoga</span>
+
+        <span className="block">
+          Certified Yoga
+        </span>
 
         <span className="block">
           Teacher in{" "}
-          <span className="text-[#c9732c]">Bali</span>
+
+          <span className="text-[#c9732c]">
+            Bali
+          </span>
+
         </span>
       </h1>
 
@@ -236,7 +256,7 @@ function LeftContent() {
       </p>
 
       {/* FEATURES */}
-      <div className="mt-4 lg:mt-3 grid grid-cols-2 gap-3 lg:gap-2 xl:gap-3">
+      <div className="mt-5 grid grid-cols-2 gap-3 lg:gap-3">
 
         {[
           { title: "21-Day Training", icon: "🧘" },
@@ -244,6 +264,7 @@ function LeftContent() {
           { title: "Luxury Stay In Nature", icon: "🌿" },
           { title: "Satvic Food & Excursions", icon: "🍃" },
         ].map((item, i) => (
+
           <div key={i} className="flex items-center gap-2">
 
             <div
@@ -274,13 +295,15 @@ function LeftContent() {
             </div>
 
           </div>
+
         ))}
+
       </div>
 
       {/* BUTTONS */}
-      <div className="mt-5 lg:mt-4 flex flex-col sm:flex-row gap-3">
+      <div className="mt-6 flex flex-col sm:flex-row gap-3">
 
-        {/* APPLY */}
+        {/* APPLY NOW */}
         <Link
           to="/contact"
           className="
@@ -298,12 +321,14 @@ function LeftContent() {
             flex items-center justify-center gap-2
           "
         >
+
           APPLY NOW
 
           <ArrowRight
             size={15}
             className="group-hover:translate-x-1 transition"
           />
+
         </Link>
 
         {/* BROCHURE */}
@@ -323,11 +348,15 @@ function LeftContent() {
             flex items-center justify-center gap-2
           "
         >
+
           <Download size={15} />
+
           DOWNLOAD BROCHURE
+
         </a>
 
       </div>
+
     </>
   );
 }
@@ -346,16 +375,20 @@ function StatsCard() {
         px-2 py-3 sm:px-5 sm:py-4
       "
     >
+
       <div className="flex items-center justify-between">
 
         {/* RATING */}
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1">
 
           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
+
             <Star className="text-[#c9732c]" size={13} />
+
           </div>
 
           <div className="min-w-0">
+
             <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
               4.9/5
             </h3>
@@ -363,7 +396,9 @@ function StatsCard() {
             <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
               Student Rating
             </p>
+
           </div>
+
         </div>
 
         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
@@ -372,10 +407,13 @@ function StatsCard() {
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 sm:px-2">
 
           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#eef7ee] flex items-center justify-center flex-shrink-0">
+
             <Users className="text-[#2f7d4c]" size={13} />
+
           </div>
 
           <div className="min-w-0">
+
             <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
               1000+
             </h3>
@@ -383,7 +421,9 @@ function StatsCard() {
             <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
               Happy Students
             </p>
+
           </div>
+
         </div>
 
         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
@@ -392,10 +432,13 @@ function StatsCard() {
         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 justify-start">
 
           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
+
             <Globe className="text-[#c9732c]" size={13} />
+
           </div>
 
           <div className="min-w-0">
+
             <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
               15+
             </h3>
@@ -403,10 +446,13 @@ function StatsCard() {
             <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
               Countries
             </p>
+
           </div>
+
         </div>
 
       </div>
+
     </div>
   );
 }
