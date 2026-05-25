@@ -1,358 +1,301 @@
-// import { FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
-
-// export default function Footer() {
-//   return (
-//     <footer className="bg-[#e6d6c3] text-black">
-//       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-//         {/* Main Footer Content */}
-//         <div className="mb-8 grid gap-8 md:grid-cols-3 md:items-start">
-//           {/* Left Section - Logo and Tagline */}
-//           <div className="flex flex-col items-start">
-//             <h3 className="mb-2 text-xl font-bold tracking-wide">BALI YOGA</h3>
-//             <p className="text-sm font-light opacity-90">
-//               Strengthening Education Systems
-//             </p>
-//           </div>
-
-//           {/* Center Section - Navigation Links */}
-//           <div className="flex flex-col items-center justify-start md:items-center">
-//             <nav className="flex flex-wrap justify-center gap-6 text-sm">
-//               <a href="/about" className="transition-opacity hover:opacity-80">
-//                 About
-//               </a>
-//               <span className="text-black/50">|</span>
-//               <a
-//                 href="/school"
-//                 className="transition-opacity hover:opacity-80"
-//               >
-//                 Course
-//               </a>
-//               <span className="text-black/50">|</span>
-//               <a
-//                 href="/College&University"
-//                 className="transition-opacity hover:opacity-80"
-//               >
-//                 Online
-//               </a>
-//               <span className="text-black/50">|</span>
-//               <a
-//                 href="/contact"
-//                 className="transition-opacity hover:opacity-80"
-//               >
-//                 Gallery
-//               </a>
-//               <span className="text-black/50">|</span>
-//               <a
-//                 href="/contact"
-//                 className="transition-opacity hover:opacity-80"
-//               >
-//                 Meditation
-//               </a>
-//               <span className="text-black/50">|</span>
-//               <a
-//                 href="/contact"
-//                 className="transition-opacity hover:opacity-80"
-//               >
-//                 Retreat
-//               </a>
-//               <span className="text-black/50">|</span>
-//               <a
-//                 href="/contact"
-//                 className="transition-opacity hover:opacity-80"
-//               >
-//                 Contact
-//               </a>
-//             </nav>
-//           </div>
-// {/* Home', 'About', 'Course', 'Online','Gallery' , 'Meditation' ,'Retreat','Contact */}
-//           {/* Right Section - Copyright and Social Icons */}
-//           <div className="flex flex-col items-start md:items-end">
-//             <p className="mb-4 text-sm opacity-90">© BALIYOGA</p>
-//             <div className="flex gap-4">
-//               <a
-//                 href="https://linkedin.com"
-//                 className="transition-opacity hover:opacity-80"
-//                 aria-label="LinkedIn"
-//               >
-//                 <FaLinkedinIn size={20} />
-//               </a>
-//               <a
-//                 href="https://twitter.com"
-//                 className="transition-opacity hover:opacity-80"
-//                 aria-label="Twitter"
-//               >
-//                 <FaTwitter size={20} />
-//               </a>
-//               <a
-//                 href="https://facebook.com"
-//                 className="transition-opacity hover:opacity-80"
-//                 aria-label="Facebook"
-//               >
-//                 <FaFacebookF size={20} />
-//               </a>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Bottom Divider */}
-//         <div className="border-t border-black/20"></div>
-//         <p className="mt-4 text-center text-xs text-black/80">
-//           Developed by{" "}
-//           <a
-//             href="https://www.pmrgsolution.com/"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="font-medium underline hover:text-black"
-//           >
-//             PMRG Solution
-//           </a>
-//         </p>
-//       </div>
-//     </footer>
-//   );
-// }
-
-
 import React from "react";
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaUserTie, FaWhatsapp, FaPassport, FaCreditCard  } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaTwitter,
+  FaYoutube,
+  FaUserTie,
+  FaWhatsapp,
+  FaPassport,
+  FaCreditCard,
+} from "react-icons/fa";
+
 import { MdEmail } from "react-icons/md";
 
 // IMPORT YOUR IMAGES
 import bgImg from "../assets/guide.jpg";
 import guideImg from "../assets/mountain.jpg";
 
-import img1 from "../assets/hill.jpg";
-import img2 from "../assets/hill1.jpg";
-import img3 from "../assets/hill2.jpg";
-import img4 from "../assets/hill3.jpg";
-
 const Footer = () => {
   return (
-    <footer className="w-full font-sans tracking-wide">
-
+    <footer className="w-full overflow-hidden font-sans tracking-wide">
+      
       {/* ===================== CTA SECTION ===================== */}
       <div
-        className="bg-cover bg-center"
+        className="relative bg-cover bg-center"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <div className="bg-[#1e3a2f]/80 backdrop-blur-md py-12 px-4">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#1e3a2f]/75 backdrop-blur-sm" />
 
+        <div className="relative z-10 py-14 sm:py-16 lg:py-20">
+          <div className="mx-auto w-full max-w-[95%] sm:max-w-[92%] lg:max-w-[90%] 2xl:max-w-[1800px] flex flex-col lg:flex-row justify-between items-center gap-10 xl:gap-16">
+            
             {/* LEFT TEXT */}
-            <div className="text-white text-center lg:text-left max-w-md">
-              <h3 className="text-2xl md:text-3xl font-serif leading-snug">
-                Have Questions? <br /> We’re Just a Message Away
+            <div className="text-white text-center lg:text-left max-w-xl">
+              
+              <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-orange-300 font-semibold mb-4">
+                Need Help?
+              </p>
+
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-serif leading-tight">
+                Have Questions?
+                <span className="block text-orange-300 mt-2">
+                  We’re Just a Message Away
+                </span>
               </h3>
 
-              <button className="bg-green-500 hover:bg-green-600 px-6 py-2 rounded-full mt-4 transition">
+              <p className="text-sm sm:text-base text-gray-200 mt-5 leading-relaxed">
+                Connect with our team anytime for guidance about yoga teacher
+                training, accommodation, travel assistance, and course details.
+              </p>
+
+              <button className="mt-7 bg-gradient-to-r from-green-500 to-green-600 hover:scale-105 transition-all duration-300 px-7 py-3 rounded-full text-white font-medium shadow-xl">
                 Chat on WhatsApp
               </button>
 
-              <p className="text-sm mt-3 text-gray-200">
-                Our team typically replies in a few minutes
+              <p className="text-sm mt-4 text-gray-300">
+                Usually replies within a few minutes
               </p>
             </div>
 
             {/* FEATURES */}
-           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-7 w-full lg:w-auto">
+              
+              {/* CARD 1 */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center text-white hover:-translate-y-2 transition-all duration-300">
+                <div className="text-orange-300 text-3xl mb-3 flex justify-center">
+                  <FaUserTie />
+                </div>
 
-  {/* 1 */}
-  <div className="flex flex-col items-center">
-    <div className="text-orange-400 text-2xl mb-2">
-      <FaUserTie />
-    </div>
-    <p className="text-xs leading-relaxed">
-      Personal Guidance <br /> From Our Experts
-    </p>
-  </div>
+                <p className="text-sm leading-relaxed">
+                  Personal Guidance <br /> From Experts
+                </p>
+              </div>
 
-  {/* 2 */}
-  <div className="flex flex-col items-center">
-    <div className="text-orange-400 text-2xl mb-2">
-      <FaWhatsapp />
-    </div>
-    <p className="text-xs leading-relaxed">
-      Quick Response <br /> On WhatsApp
-    </p>
-  </div>
+              {/* CARD 2 */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center text-white hover:-translate-y-2 transition-all duration-300">
+                <div className="text-orange-300 text-3xl mb-3 flex justify-center">
+                  <FaWhatsapp />
+                </div>
 
-  {/* 3 */}
-  <div className="flex flex-col items-center">
-    <div className="text-orange-400 text-2xl mb-2">
-      <FaPassport />
-    </div>
-    <p className="text-xs leading-relaxed">
-      Help With Visa <br /> & Travel
-    </p>
-  </div>
+                <p className="text-sm leading-relaxed">
+                  Fast WhatsApp <br /> Support
+                </p>
+              </div>
 
-  {/* 4 */}
-  <div className="flex flex-col items-center">
-    <div className="text-orange-400 text-2xl mb-2">
-      <FaCreditCard />
-    </div>
-    <p className="text-xs leading-relaxed">
-      Flexible Payment <br /> Options
-    </p>
-  </div>
+              {/* CARD 3 */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center text-white hover:-translate-y-2 transition-all duration-300">
+                <div className="text-orange-300 text-3xl mb-3 flex justify-center">
+                  <FaPassport />
+                </div>
 
-</div>
+                <p className="text-sm leading-relaxed">
+                  Visa & Travel <br /> Assistance
+                </p>
+              </div>
 
+              {/* CARD 4 */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center text-white hover:-translate-y-2 transition-all duration-300">
+                <div className="text-orange-300 text-3xl mb-3 flex justify-center">
+                  <FaCreditCard />
+                </div>
+
+                <p className="text-sm leading-relaxed">
+                  Flexible Payment <br /> Options
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* ===================== FREE GUIDE ===================== */}
-      <div className="bg-[#f5f1ea] py-10 px-4">
-        <div className="max-w-7xl mx-auto bg-[#f8f5ef] border border-[#e6dccf] rounded-2xl px-6 py-6 flex flex-col lg:flex-row items-center gap-6 shadow-sm">
+      {/* ===================== FREE GUIDE ===================== */}
+<div className="bg-[#f5f1ea] py-14 sm:py-16 px-4">
+  <div className="mx-auto w-full max-w-[95%] sm:max-w-[92%] lg:max-w-[90%] 2xl:max-w-[1800px] bg-[#f8f5ef]/90 backdrop-blur-md border border-[#e6dccf] rounded-[32px] px-5 sm:px-8 lg:px-10 py-8 sm:py-10 flex flex-col xl:flex-row items-start xl:items-center gap-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)]">
 
-          {/* IMAGE */}
-          <img
-            src={guideImg}
-            alt="Guide"
-            className="w-24 rotate-[-8deg] shadow-lg"
-          />
+    {/* IMAGE */}
+    <div className="w-full flex justify-center xl:w-auto">
+      <img
+        src={guideImg}
+        alt="Guide"
+        className="w-24 sm:w-28 md:w-32 rotate-[-8deg] rounded-xl shadow-2xl"
+      />
+    </div>
 
-          {/* TEXT */}
-          <div className="flex-1 text-center lg:text-left">
-            <p className="text-xs text-orange-500 font-semibold tracking-widest">
-              FREE GUIDE
+    {/* TEXT */}
+    <div className="w-full xl:flex-1 text-center xl:text-left">
+      
+      <p className="text-xs sm:text-sm text-orange-500 font-semibold tracking-[0.25em] uppercase">
+        Free Guide
+      </p>
+
+      <h3 className="text-[#2f241c] font-serif text-3xl sm:text-4xl leading-tight mt-3">
+        Bali vs Rishikesh vs Mysore
+      </h3>
+
+      <p className="text-base sm:text-lg text-gray-600 mt-4">
+        Which Yoga TTC is Right for You?
+      </p>
+
+      <p className="text-sm sm:text-base text-gray-500 mt-4 leading-relaxed max-w-2xl mx-auto xl:mx-0">
+        Download our detailed comparison guide and discover which yoga
+        destination perfectly matches your lifestyle, goals, and journey.
+      </p>
+    </div>
+
+    {/* FORM */}
+    <form className="w-full xl:w-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+
+      {/* NAME */}
+      <input
+        type="text"
+        placeholder="Your Name"
+        className="w-full min-w-0 px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm outline-none focus:ring-2 focus:ring-orange-300 transition"
+      />
+
+      {/* EMAIL */}
+      <input
+        type="email"
+        placeholder="Email Address"
+        className="w-full min-w-0 px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm outline-none focus:ring-2 focus:ring-orange-300 transition"
+      />
+
+      {/* WHATSAPP */}
+      <input
+        type="text"
+        placeholder="WhatsApp Number"
+        className="w-full min-w-0 px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm outline-none focus:ring-2 focus:ring-orange-300 transition"
+      />
+
+      {/* BUTTON */}
+      <button className="w-full xl:w-auto bg-gradient-to-r from-[#2f4f3e] to-[#264536] hover:scale-[1.02] transition-all duration-300 text-white px-7 py-3 rounded-full text-sm font-medium whitespace-nowrap shadow-lg">
+        Send Me the Guide
+      </button>
+
+    </form>
+  </div>
+</div>
+
+      {/* ===================== MAIN FOOTER ===================== */}
+      <div className="relative bg-gradient-to-r from-[#1b3328] via-[#234637] to-[#1b3328] text-white py-14 sm:py-16 lg:py-20 px-4 overflow-hidden">
+
+        {/* Background Glow */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-orange-400/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-300/10 rounded-full blur-3xl" />
+
+        <div className="relative z-10 mx-auto w-full max-w-[95%] sm:max-w-[92%] lg:max-w-[90%] 2xl:max-w-[1800px] grid gap-12 md:grid-cols-2 lg:grid-cols-4 xl:gap-16">
+
+          {/* LOGO */}
+          <div>
+            <img
+              src="/logo.png"
+              alt="Bali Yoga"
+              className="w-36 mb-5"
+            />
+
+            <h2 className="font-serif text-2xl tracking-wide">
+              BALI YOGA
+            </h2>
+
+            <p className="text-xs tracking-[0.3em] text-gray-300 mt-2 uppercase">
+              Teacher Training
             </p>
 
-            <h3 className="text-[#3b2a1f] font-serif text-xl">
-              Bali vs Rishikesh vs Mysore
-            </h3>
-
-            <p className="text-sm text-gray-500">
-              Which Yoga TTC is Right for You?
-            </p>
-
-            <p className="text-xs text-gray-400 mt-1">
-              Get a detailed comparison guide to help you choose the perfect destination.
+            <p className="text-sm text-gray-300 leading-relaxed mt-5 max-w-sm">
+              Transform your life through authentic yoga teachings, mindful
+              experiences, and spiritual growth in the world's most beautiful
+              yoga destinations.
             </p>
           </div>
 
-          {/* FORM */}
-          <form className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+          {/* QUICK LINKS */}
+          <div>
+            <h4 className="font-semibold text-lg mb-5 tracking-wide">
+              QUICK LINKS
+            </h4>
 
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="px-4 py-2 rounded-full border border-[#e0d6c8] text-sm w-full"
-            />
+            <ul className="text-sm text-gray-300 space-y-4">
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                TTC Programs
+              </li>
 
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="px-4 py-2 rounded-full border border-[#e0d6c8] text-sm w-full"
-            />
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                Retreats
+              </li>
 
-            <input
-              type="text"
-              placeholder="WhatsApp Number"
-              className="px-4 py-2 rounded-full border border-[#e0d6c8] text-sm w-full"
-            />
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                About Us
+              </li>
 
-            <button className="bg-[#2f4f3e] hover:bg-[#264536] text-white px-5 py-2 rounded-full text-sm whitespace-nowrap transition">
-              Send Me the Guide
-            </button>
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                Contact
+              </li>
+            </ul>
+          </div>
 
-          </form>
+          {/* RESOURCES */}
+          <div>
+            <h4 className="font-semibold text-lg mb-5 tracking-wide">
+              RESOURCES
+            </h4>
 
+            <ul className="text-sm text-gray-300 space-y-4">
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                Blog
+              </li>
+
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                FAQ
+              </li>
+
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                Student Reviews
+              </li>
+
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                Yoga Alliance
+              </li>
+
+              <li className="hover:text-orange-300 transition cursor-pointer">
+                Sitemap
+              </li>
+            </ul>
+          </div>
+
+          {/* CONTACT */}
+          <div>
+            <h4 className="font-semibold text-lg mb-5 tracking-wide">
+              CONNECT
+            </h4>
+
+            <div className="space-y-3 text-sm text-gray-300">
+              <p>info@baliyoga.com</p>
+              <p>+91 98765 43210</p>
+            </div>
+
+            {/* SOCIAL ICONS */}
+            <div className="flex flex-wrap gap-3 mt-6">
+
+              <FaInstagram className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
+
+              <FaFacebookF className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
+
+              <FaTwitter className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
+
+              <FaYoutube className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
+
+              <MdEmail className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM */}
+        <div className="relative z-10 text-center text-xs sm:text-sm text-gray-400 mt-14 border-t border-white/10 pt-6">
+          © 2026 Bali Yoga. All rights reserved.
         </div>
       </div>
-
-      {/* ===================== MAIN FOOTER ===================== */}
-      {/* ===================== MAIN FOOTER ===================== */}
-<div className="bg-gradient-to-r from-[#1e3a2f] via-[#254a3a] to-[#1e3a2f] text-white py-12 px-4">
-
-  <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-
-    {/* LOGO + TEXT */}
-    <div className="bg-gradient-to-r from-[#423939]">
-      <img
-        src="/logo.png"
-        alt="Bali Yoga"
-        className="w-36 mb-4"
-      />
- <div>
-    <h2 className="font-serif text-lg tracking-wide leading-none">
-      BALI YOGA
-    </h2>
-
-    <p className="text-[10px] tracking-[0.2em] text-gray-300 mt-1">
-      TEACHER TRAINING
-    </p>
-  </div>
-      <p className="text-sm text-gray-300 leading-relaxed">
-        Transform your life. Inspire the world.
-      </p>
-    </div>
-
-    {/* QUICK LINKS */}
-    <div>
-      <h4 className="font-semibold mb-3 tracking-wide">QUICK LINKS</h4>
-      <ul className="text-sm text-gray-300 space-y-2">
-        <li className="hover:text-orange-400 cursor-pointer">TTC Programs</li>
-        <li className="hover:text-orange-400 cursor-pointer">Retreats</li>
-        <li className="hover:text-orange-400 cursor-pointer">About Us</li>
-        <li className="hover:text-orange-400 cursor-pointer">Contact</li>
-      </ul>
-    </div>
-
-    {/* RESOURCES */}
-    <div>
-      <h4 className="font-semibold mb-3 tracking-wide">RESOURCES</h4>
-      <ul className="text-sm text-gray-300 space-y-2">
-        <li className="hover:text-orange-400 cursor-pointer">Blog</li>
-        <li className="hover:text-orange-400 cursor-pointer">FAQ</li>
-        <li className="hover:text-orange-400 cursor-pointer">Student Reviews</li>
-        <li className="hover:text-orange-400 cursor-pointer">Yoga Alliance</li>
-        <li className="hover:text-orange-400 cursor-pointer">Sitemap</li>
-      </ul>
-    </div>
-
-    {/* CONTACT */}
-    <div>
-      <h4 className="font-semibold mb-3 tracking-wide">CONNECT</h4>
-
-      <p className="text-sm text-gray-300 mb-2">
-        info@baliyoga.com
-      </p>
-
-      <p className="text-sm text-gray-300">
-        +91 98765 43210
-      </p>
-
-      {/* SOCIAL ICONS */}
-      <div className="flex gap-4 mt-4 text-lg">
-
-              <FaInstagram className="cursor-pointer hover:text-orange-400 transition" />
-              <FaFacebookF className="cursor-pointer hover:text-orange-400 transition" />
-              <FaTwitter className="cursor-pointer hover:text-orange-400 transition" />
-              <FaYoutube className="cursor-pointer hover:text-orange-400 transition" />
-              <MdEmail className="cursor-pointer hover:text-orange-400 transition" />
-
-            </div>
-    </div>
-
-  </div>
-
-  {/* BOTTOM */}
-  <div className="text-center text-xs text-gray-400 mt-10 border-t border-white/10 pt-6">
-    © 2026 Bali Yoga . All rights reserved.
-  </div>
-
-</div>
-
-      {/* FLOATING WHATSAPP */}
-      {/* <a
-        href="#"
-        className="fixed bottom-5 right-5 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition"
-      >
-        💬
-      </a> */}
-
     </footer>
   );
 };
