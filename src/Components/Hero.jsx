@@ -93,9 +93,9 @@ function HeroSection() {
                     relative z-20 bg-[#f8f5ef]
                     flex-shrink-0
                     flex flex-col justify-center
-                    px-8 xl:px-12 2xl:px-16
-                    py-8
-                    w-[30%] xl:w-[28%] 2xl:w-[26%]
+                    px-10 xl:px-14 2xl:px-20
+                    py-10
+                    w-[36%] xl:w-[34%] 2xl:w-[32%]
                   "
                 >
                   <LeftContent />
@@ -184,7 +184,7 @@ function HeroSection() {
                 className="
                   hidden lg:block
                   absolute bottom-6 right-6
-                  w-[420px] xl:w-[540px] 2xl:w-[660px]
+                  w-[700px] xl:w-[900px] 2xl:w-[1200px]
                   z-30
                 "
               >
@@ -223,8 +223,8 @@ function LeftContent() {
       <h1
         className="
           mt-3
-          text-[2.2rem] sm:text-[2.8rem] md:text-[3.4rem]
-          lg:text-[1.9rem] xl:text-[2.4rem] 2xl:text-[3rem]
+          text-[2.5rem] sm:text-[3rem] md:text-[3.6rem]
+          lg:text-[2.3rem] xl:text-[2.8rem] 2xl:text-[3.4rem]
           leading-[1.05] font-bold text-[#1f3528]
         "
       >
@@ -248,15 +248,15 @@ function LeftContent() {
       <p
         className="
           mt-2 italic text-gray-600 leading-relaxed
-          text-[15px] sm:text-[17px]
-          lg:text-[13px] xl:text-[15px] 2xl:text-[17px]
+          text-[16px] sm:text-[18px]
+          lg:text-[15px] xl:text-[17px] 2xl:text-[19px]
         "
       >
         Transform Your Life. Inspire The World.
       </p>
 
       {/* FEATURES */}
-      <div className="mt-5 grid grid-cols-2 gap-3 lg:gap-3">
+      <div className="mt-7 grid grid-cols-2 gap-4 lg:gap-4">
 
         {[
           { title: "21-Day Training", icon: "🧘" },
