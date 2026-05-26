@@ -183,8 +183,8 @@ function HeroSection() {
               <div
                 className="
                   hidden lg:block
-                  absolute bottom-6 right-6
-                  w-[700px] xl:w-[900px] 2xl:w-[1200px]
+                  absolute bottom-2 lg:bottom-2 xl:bottom-6 right-6
+                  w-[600px] xl:w-[900px] 2xl:w-[1200px]
                   z-30
                 "
               >
