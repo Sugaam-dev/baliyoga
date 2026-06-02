@@ -152,12 +152,12 @@ const Header = () => {
             <img
               src="/logo.png"
               alt="Bali Yoga Kendra Logo"
-              className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain block max-w-[140px] sm:max-w-[180px] lg:max-w-[220px]"
+              className="h-14 sm:h-16 md:h-18 lg:h-20 xl:h-24 2xl:h-28 w-auto object-contain block max-w-[140px] sm:max-w-[180px] lg:max-w-[220px]"
             />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden lg:flex items-center justify-end flex-1 gap-2 xl:gap-5 m-0 p-0 list-none" style={{ fontFamily: "'Caudex', serif" }}>
+          <ul className="hidden lg:flex items-center justify-end flex-1 gap-3 xl:gap-6 2xl:gap-8 m-0 p-0 list-none" style={{ fontFamily: "'Caudex', serif" }}>
             {navItems.map((item) => {
               const hasDropdown = !!item.type;
               const isCurrentActive = activeDropdown === item.type;
@@ -171,7 +171,7 @@ const Header = () => {
                   {hasDropdown ? (
                     <button
                       onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
-                      className={`flex items-center gap-1.5 px-2 xl:px-3 text-[15px] font-normal tracking-tight transition-colors duration-200 rounded-md whitespace-nowrap text-gray-800 hover:text-[#b4533c] ${
+                      className={`flex items-center gap-1.5 px-2 xl:px-3 text-[14px] xl:text-[16px] 2xl:text-[18px] font-normal tracking-tight transition-colors duration-200 rounded-md whitespace-nowrap text-gray-800 hover:text-[#b4533c] ${
                         isCurrentActive || isActive(item.path) ? 'text-[#b4533c]' : ''
                       }`}
                       style={{ paddingBlock: '8px' }}
@@ -184,7 +184,7 @@ const Header = () => {
                   ) : (
                     <Link
                       to={item.path}
-                      className={`px-2 xl:px-3 text-[15px] font-normal tracking-tight transition-colors duration-200 rounded-md whitespace-nowrap text-gray-800 hover:text-[#b4533c] ${
+                      className={`px-2 xl:px-3 text-[14px] xl:text-[16px] 2xl:text-[18px] font-normal tracking-tight transition-colors duration-200 rounded-md whitespace-nowrap text-gray-800 hover:text-[#b4533c] ${
                         isActive(item.path) ? 'text-[#b4533c]' : ''
                       }`}
                       style={{ paddingBlock: '8px' }}
