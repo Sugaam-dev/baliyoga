@@ -126,13 +126,14 @@
                 |-- yoga10.png
                 |-- yogagallery.jpg
             |-- TestimonialsSection.jsx
+            |-- TrustBanner.jsx
             |-- UpcomingBatches.jsx
         |-- meditation
+            |-- Facilities.jsx
             |-- images
                 |-- hero.jpg
                 |-- meditation.jpg
                 |-- sunset-meditation.jpg
-            |-- MeditationPage.jsx
         |-- online
             |-- images
                 |-- aham-yoga-beginner-course.jpg

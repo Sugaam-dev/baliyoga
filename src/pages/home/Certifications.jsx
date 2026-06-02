@@ -517,7 +517,7 @@ const Certifications = () => {
                 Founder, Bali Yoga Kendra
               </p>
               
-              <p className="text-[#5c5c5c] text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+              <p  className=" mx-auto mt-6 max-w-3xl px-2 text-sm leading-relaxed text-[#5c5c5c] sm:text-base lg:text-lg 2xl:max-w-5xl 2xl:text-2xl">
                 Rooted in traditional yogic wisdom and refined through years of global teaching experience, 
                 Yogi Ranjan guides students through a deeply transformative spiritual journey.
               </p>
@@ -608,9 +608,9 @@ const Certifications = () => {
             <span className="uppercase tracking-[3px] text-xs font-bold text-[#d97706] mb-2 inline-block">
               Our Core Pillars
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-[#234b2c]">
-              The Pillars of Leadership
-            </h2>
+          <h2 className="text-[25px] sm:text-[35px] md:text-[42px] lg:text-[48px] xl:text-[56px] font-serif text-[#234b2c] leading-[1.05] whitespace-nowrap">
+            The Pillars of Leadership
+          </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

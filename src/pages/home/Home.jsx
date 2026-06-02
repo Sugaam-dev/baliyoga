@@ -38,6 +38,7 @@ import BaliYogaOffers from "./BaliYogaOffers";
 import Hero from "../../Components/Hero";
 import TestimonialsSection from "./TestimonialsSection";
 import UpcomingBatches from "./UpcomingBatches";
+import TrustBanner from "./TrustBanner";
 
 const galleryImages = [
   {
@@ -117,6 +118,7 @@ export default function Home() {
   return (
     <main className="bg-[#f8f5f5]">
       <Hero />
+      <TrustBanner/>
       <Certifications/>
       <BaliYogaCourses/>
       <AdditionalActivities/>

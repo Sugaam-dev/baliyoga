@@ -1,346 +1,338 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
+// Mega Menu Content Map Data
+const MENU_CONTENT = {
+  ytt: {
+    title: "Yoga Teacher Training",
+    columns: [
+      {
+        category: "Multi-Style YTTC",
+        items: [
+          { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/ytt/6-days-50hr-multi-style" },
+          { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/ytt/10-days-100hr-multi-style" },
+          { name: "20 Days 200 Hours Multi-Style YTTC", link: "/ytt/20-days-200hr-multi-style" },
+          { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/ytt/300hr-multi-style-bali" },
+          { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/ytt/500hr-multi-style-bali" }
+        ]
+      },
+      {
+        category: "KUNDALINI YTTC",
+        items: [
+          { name: "6 Days 50 Hours Kundalini YTTC", link: "/ytt/6-days-50hr-kundalini" },
+          { name: "10 Days 100 Hours Kundalini YTTC", link: "/ytt/100hr-kundalini-bali" },
+          { name: "20 Days 200 Hours Kundalini YTTC", link: "/ytt/200hr-kundalini-bali" },
+          { name: "30 Days 300 Hours Kundalini YTTC", link: "/ytt/300hr-kundalini-bali" },
+          { name: "50 Days 500 Hours Kundalini YTTC", link: "/ytt/500hr-kundalini-bali" }
+        ]
+      },
+      {
+        category: "SHORT COURSES",
+        items: [
+          { name: "6 Days 50 Hours Yin Yoga Course", link: "/short-courses/50hr-yin-yoga" },
+          { name: "85-Hours Prenatal Yoga TTC in Bali", link: "/short-courses/85hr-prenatal-yoga" },
+          { name: "5 Days Aerial Yoga Course", link: "/short-courses/aerial-yoga-course" },
+          { name: "5 Days Acro Yoga Course", link: "/short-courses/acro-yoga-course" }
+        ]
+      },
+      {
+        category: "SPECIALIZATION",
+        items: [
+          { name: "Vedic Sound Healing Level 1 & 2", link: "/specialization/vedic-sound-healing-level-1-2" },
+          { name: "Bali 100 Hours Yoga Therapy Ayurveda", link: "/specialization/100hr-yoga-therapy-ayurveda" },
+          { name: "Ayurvedic Treatment In Bali", link: "/specialization/ayurvedic-treatment-bali" },
+          { name: "Abhyangam Massage Training Course In Bali", link: "/specialization/abhyangam-massage-training-bali" }
+        ]
+      }
+    ]
+  },
+  wellness: {
+    title: "Wellness Retreats",
+    columns: [
+      {
+        category: "Multi-Style YTTC",
+        items: [
+          { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/wellness/6-days-50hr-multi-style" },
+          { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/wellness/10-days-100hr-multi-style" },
+          { name: "20 Days 200 Hours Multi-Style YTTC", link: "/wellness/20-days-200hr-multi-style" },
+          { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/wellness/300hr-multi-style-bali" },
+          { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
+        ]
+      },
+      {
+        category: "Multi-Style YTTC",
+        items: [
+          { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/wellness/6-days-50hr-multi-style" },
+          { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/wellness/10-days-100hr-multi-style" },
+          { name: "20 Days 200 Hours Multi-Style YTTC", link: "/wellness/20-days-200hr-multi-style" },
+          { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/wellness/300hr-multi-style-bali" },
+          { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
+        ]
+      },
+      {
+        category: "Multi-Style YTTC",
+        items: [
+          { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/wellness/6-days-50hr-multi-style" },
+          { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/wellness/10-days-100hr-multi-style" },
+          { name: "20 Days 200 Hours Multi-Style YTTC", link: "/wellness/20-days-200hr-multi-style" },
+          { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/wellness/300hr-multi-style-bali" },
+          { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
+        ]
+      },
+      {
+        category: "Multi-Style YTTC",
+        items: [
+          { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/wellness/6-days-50hr-multi-style" },
+          { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/wellness/10-days-100hr-multi-style" },
+          { name: "20 Days 200 Hours Multi-Style YTTC", link: "/wellness/20-days-200hr-multi-style" },
+          { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/wellness/300hr-multi-style-bali" },
+          { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
+        ]
+      }
+    ]
+  },
+};
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null); // 'ytt' | 'wellness' | null
+  const [mobileExpandedSection, setMobileExpandedSection] = useState(null); 
+  
   const location = useLocation();
+  const navRef = useRef(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
   const closeMenu = () => {
-  setIsMenuOpen(false);
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+    setMobileExpandedSection(null);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
   }, [isMenuOpen]);
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => location.pathname.startsWith(path);
 
-  const navLinkStyles = (path) => `
-    relative block py-2 px-3
-    text-[0.92rem]
-
-    min-[1400px]:text-[1.25rem]
-    min-[2200px]:text-[1.6rem]
-
-    min-[969px]:max-[1100px]:text-[1rem]
-    min-[969px]:max-[1100px]:px-2
-
-    font-medium tracking-tight
-    transition-colors duration-300
-    rounded-lg
-    whitespace-nowrap
-
-    text-gray-700 hover:text-[#b4533c]
-
-    min-[969px]:after:content-['']
-    min-[969px]:after:absolute
-    min-[969px]:after:bottom-1
-    min-[969px]:after:left-1/2
-    min-[969px]:after:-translate-x-1/2
-    min-[969px]:after:h-[2px]
-    min-[969px]:after:bg-[#b4533c]
-    min-[969px]:after:transition-transform
-    min-[969px]:after:duration-300
-    min-[969px]:after:origin-center
-
-    ${
-      isActive(path)
-        ? 'text-[#b4533c] font-semibold min-[969px]:after:w-[40%] min-[969px]:after:scale-x-100'
-        : 'min-[969px]:after:w-[40%] min-[969px]:after:scale-x-0 hover:after:scale-x-100'
-    }
-
-    max-[968px]:w-full
-    max-[968px]:px-4
-    max-[968px]:py-3
-    max-[968px]:text-[1rem]
-  `;
+  const navItems = [
+    { label: 'About', path: '/about' },
+    { label: 'Yoga Teacher Training', path: '/yoga-teacher-training', type: 'ytt' },
+    { label: 'Wellness Retreats', path: '/wellness-retreats', type: 'wellness' },
+    { label: 'Bali Activities', path: '/bali-activities' },
+    { label: 'Holiday Packages', path: '/holiday-packages' },
+    { label: 'Facilities', path: '/facilities' },
+    { label: 'Contact', path: '/contact' },
+  ];
 
   return (
-    <header className="sticky top-0 w-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] z-[1000] transition-all duration-300 font-sans">
-      <nav className="w-full">
-        <div
-          className="
-            flex justify-between items-center
-            w-full mx-auto
-            px-4 sm:px-6 lg:px-8
-            py-2
-            gap-4
-            flex-nowrap
-
-            max-w-[100%]
-
-            min-[1600px]:max-w-[1700px]
-            min-[1900px]:max-w-[2000px]
-            min-[2200px]:max-w-[2300px]
-            min-[2400px]:max-w-[2500px]
-
-            min-[969px]:max-[1100px]:gap-2
-            min-[969px]:max-[1100px]:px-4
-
-            max-[968px]:py-2
-            max-[968px]:px-5
-
-            max-[480px]:px-4
-          "
-        >
-          {/* Logo */}
+    <header ref={navRef} className="sticky top-0 w-full bg-white shadow-md border-b border-gray-100 z-[1000]">
+      {/* Primary Navigation Layer */}
+      <nav className="w-full relative bg-white z-[1002]">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-3 lg:py-4 flex justify-between items-center gap-4 max-w-[1440px] min-[2000px]:max-w-[1920px]">
+          
+          {/* Logo Container */}
           <Link
             to="/"
-            className="
-              relative z-[1002]
-              flex items-center
-              transition-transform duration-300
-              hover:scale-105
-              shrink-0
-
-              h-[72px]
-
-              min-[969px]:max-[1100px]:h-[60px]
-
-              min-[1600px]:h-[90px]
-              min-[2200px]:h-[110px]
-
-              max-[968px]:h-[58px]
-              max-[480px]:h-[52px]
-            "
-            onClick={() => {
-                closeMenu();
-              }}
+            className="relative z-[1002] flex items-center transition-transform duration-300 hover:scale-105 shrink-0"
+            onClick={closeMenu}
           >
             <img
               src="/logo.png"
-              alt="Company Logo"
-              className="
-                h-[86px]
-                w-auto
-                object-contain
-                block
-
-                max-w-[220px]
-
-                min-[969px]:max-[1100px]:h-[70px]
-                min-[969px]:max-[1100px]:max-w-[150px]
-
-                min-[1600px]:h-[100px]
-                min-[1600px]:max-w-[260px]
-
-                min-[2200px]:h-[124px]
-                min-[2200px]:max-w-[320px]
-
-                max-[968px]:h-[70px]
-                max-[968px]:max-w-[160px]
-
-                max-[480px]:h-[58px]
-                max-[480px]:max-w-[130px]
-              "
+              alt="Bali Yoga Kendra Logo"
+              className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain block max-w-[140px] sm:max-w-[180px] lg:max-w-[220px]"
             />
           </Link>
 
-          {/* Navigation */}
-          <ul
-            className={`
-              flex list-none items-center justify-center
-              flex-1
-              gap-2
-              m-0 p-0
+          {/* Desktop Navigation Links */}
+          <ul className="hidden lg:flex items-center justify-end flex-1 gap-2 xl:gap-5 m-0 p-0 list-none" style={{ fontFamily: "'Caudex', serif" }}>
+            {navItems.map((item) => {
+              const hasDropdown = !!item.type;
+              const isCurrentActive = activeDropdown === item.type;
 
-              min-[1101px]:gap-7
-              min-[1400px]:gap-8
-              min-[2200px]:gap-20
-
-              min-[969px]:max-[1100px]:gap-[20px]
-
-              max-[968px]:fixed
-              max-[968px]:top-0
-              max-[968px]:left-0
-              max-[968px]:flex-col
-              max-[968px]:bg-white
-              max-[968px]:w-full
-              max-[968px]:max-w-[320px]
-              max-[968px]:h-screen
-              max-[968px]:pt-24
-              max-[968px]:px-6
-              max-[968px]:pb-8
-              max-[968px]:shadow-[4px_0_20px_rgba(0,0,0,0.15)]
-              max-[968px]:transition-all
-              max-[968px]:duration-300
-              max-[968px]:z-[1001]
-              max-[968px]:overflow-y-auto
-              max-[968px]:items-start
-              max-[968px]:justify-start
-
-              ${
-                isMenuOpen
-                  ? 'max-[968px]:translate-x-0'
-                  : 'max-[968px]:-translate-x-full'
-              }
-            `}
-          >
-            {[
-              // - will have all YTT 200/300/500 ect
-              'About',
-              'Yoga Teacher Training ',
-              // - Ayurveda Packages
-              'Wellness Retreats',
-              'Bali Activities',
-              'Holiday Packages',
-              'Facilities',
-              'Contact',
-            ].map((item) => (
-              <li
-                key={item}
-                className="relative w-full min-[969px]:w-auto"
-              >
-                <Link
-                  to={`/${item.toLowerCase()}`}
-                  className={navLinkStyles(`/${item.toLowerCase()}`)}
-                  onClick={closeMenu}
+              return (
+                <li 
+                  key={item.label} 
+                  className="flex items-center relative py-2"
+                  onMouseEnter={() => hasDropdown && setActiveDropdown(item.type)}
                 >
-                  {item}
-                </Link>
-              </li>
-            ))}
+                  {hasDropdown ? (
+                    <button
+                      onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
+                      className={`flex items-center gap-1.5 px-2 xl:px-3 text-[15px] font-normal tracking-tight transition-colors duration-200 rounded-md whitespace-nowrap text-gray-800 hover:text-[#b4533c] ${
+                        isCurrentActive || isActive(item.path) ? 'text-[#b4533c]' : ''
+                      }`}
+                      style={{ paddingBlock: '8px' }}
+                    >
+                      {item.label}
+                      <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${isCurrentActive ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className={`px-2 xl:px-3 text-[15px] font-normal tracking-tight transition-colors duration-200 rounded-md whitespace-nowrap text-gray-800 hover:text-[#b4533c] ${
+                        isActive(item.path) ? 'text-[#b4533c]' : ''
+                      }`}
+                      style={{ paddingBlock: '8px' }}
+                      onMouseEnter={() => setActiveDropdown(null)}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
           </ul>
 
-          {/* Right Side */}
-          <div
-            className="
-              flex items-center
-              gap-3
-              shrink-0
-
-              min-[969px]:max-[1100px]:gap-2
-            "
-          >
-            {/* Desktop Button */}
+          {/* Desktop Action Button */}
+          <div className="flex items-center gap-4 shrink-0">
             <a
-              href="#"
-              className="
-                border border-[#3d4a3e]
-                text-[#3d4a3e]
-                hover:bg-[#3d4a3e]
-                hover:text-[#f5f2eb]
-                transition-colors duration-200
-
-                px-4 py-2
-                text-[11px]
-                tracking-[0.15em]
-                font-medium
-                whitespace-nowrap
-
-                hidden sm:inline-block
-
-                min-[2500px]:px-10
-                min-[2500px]:py-5
-                min-[2500px]:text-[18px]
-                min-[2500px]:tracking-[0.2em]
-              "
-              style={{
-                fontFamily: "'Cormorant Garamond', 'Georgia', serif",
-              }}
+              href="#apply"
+              className="hidden sm:inline-block border border-[#3d4a3e] text-[#3d4a3e] hover:bg-[#3d4a3e] hover:text-white transition-all duration-200 px-5 py-2.5 text-xs tracking-[0.15em] font-semibold rounded-sm"
+              style={{ fontFamily: "'Cormorant Garamond', 'Georgia', serif" }}
             >
               APPLY NOW
             </a>
 
-            {/* Mobile Button */}
-            <a
-              href="#"
-              className="
-                sm:hidden
-                border border-[#3d4a3e]
-                text-[#3d4a3e]
-                px-3 py-1
-                text-[11px]
-              "
-            >
-              APPLY NOW
-            </a>
-
-            {/* Hamburger — fixed smooth animation */}
+            {/* Hamburger Button */}
             <button
-              className="
-                hidden max-[968px]:flex
-                flex-col justify-center items-center
-                bg-transparent border-none
-                cursor-pointer
-                p-2
-                z-[1002]
-                relative
-                w-10 h-10
-              "
+              className="flex lg:hidden flex-col justify-center items-center bg-transparent border-none cursor-pointer p-2 z-[1003] w-10 h-10 relative"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
-              {/* Top bar */}
-              <span
-                style={{
-                  position: 'absolute',
-                  width: '26px',
-                  height: '2.5px',
-                  borderRadius: '9999px',
-                  backgroundColor: isMenuOpen ? '#b4533c' : '#000',
-                  transition: 'transform 0.3s ease, background-color 0.3s ease',
-                  transform: isMenuOpen
-                    ? 'translateY(0px) rotate(45deg)'
-                    : 'translateY(-8px) rotate(0deg)',
-                }}
-              />
-
-              {/* Middle bar */}
-              <span
-                style={{
-                  position: 'absolute',
-                  width: '26px',
-                  height: '2.5px',
-                  borderRadius: '9999px',
-                  backgroundColor: isMenuOpen ? '#b4533c' : '#000',
-                  transition: 'opacity 0.3s ease, background-color 0.3s ease',
-                  opacity: isMenuOpen ? 0 : 1,
-                }}
-              />
-
-              {/* Bottom bar */}
-              <span
-                style={{
-                  position: 'absolute',
-                  width: '26px',
-                  height: '2.5px',
-                  borderRadius: '9999px',
-                  backgroundColor: isMenuOpen ? '#b4533c' : '#000',
-                  transition: 'transform 0.3s ease, background-color 0.3s ease',
-                  transform: isMenuOpen
-                    ? 'translateY(0px) rotate(-45deg)'
-                    : 'translateY(8px) rotate(0deg)',
-                }}
-              />
+              <span className={`absolute w-6 h-[2px] rounded-full transition-all duration-300 ${isMenuOpen ? 'bg-[#b4533c] rotate-45 translate-y-0' : 'bg-gray-800 -translate-y-1.5'}`} />
+              <span className={`absolute w-6 h-[2px] rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100 bg-gray-800'}`} />
+              <span className={`absolute w-6 h-[2px] rounded-full transition-all duration-300 ${isMenuOpen ? 'bg-[#b4533c] -rotate-45 translate-y-0' : 'bg-gray-800 translate-y-1.5'}`} />
             </button>
           </div>
         </div>
+
+        {/* Dynamic Multi-Column Mega Menu - Clean Flex layout ensuring flawless alignment for 3 or 4 columns */}
+        {activeDropdown && MENU_CONTENT[activeDropdown] && (
+          <div 
+            className="hidden lg:block absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 z-[1001]"
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
+            <div className="max-w-[1440px] mx-auto px-8 py-10">
+              <div className="flex flex-wrap justify-between gap-6 xl:gap-8">
+                {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
+                  <div key={idx} className="flex flex-col space-y-4 flex-1 min-w-[220px] max-w-[340px]">
+                    <h4 
+                      className="text-[13px] font-bold tracking-wider text-gray-400 uppercase border-b border-gray-100 pb-2"
+                      style={{ fontFamily: "'Caudex', serif" }}
+                    >
+                      {col.category}
+                    </h4>
+                    <ul className="space-y-2.5 list-none p-0 m-0">
+                      {col.items.map((item, itemIdx) => (
+                        <li key={itemIdx}>
+                          <Link
+                            to={item.link}
+                            onClick={() => setActiveDropdown(null)}
+                            className="block text-[14px] leading-snug font-medium text-gray-600 hover:text-[#b4533c] hover:translate-x-0.5 transition-all duration-150 py-1"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
-      {/* Overlay */}
-      <div
-        className={`
-          fixed inset-0
-          bg-black/60
-          backdrop-blur-[2px]
-          z-[999]
-          transition-opacity duration-300
+      {/* Mobile Drawer Panel */}
+      <div className={`fixed inset-y-0 left-0 w-full max-w-sm bg-white shadow-2xl z-[1005] flex flex-col transition-transform duration-300 transform lg:hidden ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className="p-6 border-b border-gray-100">
+          <span className="font-bold text-gray-800" style={{ fontFamily: "'Caudex', serif" }}>Navigation Menu</span>
+        </div>
+        
+        <div className="flex-1 overflow-y-auto px-4 py-4">
+          <ul className="space-y-2 list-none p-0 m-0" style={{ fontFamily: "'Caudex', serif" }}>
+            {navItems.map((item) => {
+              const isExpandable = !!item.type && !!MENU_CONTENT[item.type]; 
+              const isSectionOpen = mobileExpandedSection === item.type;
 
-          ${
-            isMenuOpen
-              ? 'opacity-100 visible'
-              : 'opacity-0 invisible'
-          }
-        `}
-        onClick={closeMenu}
-      />
+              return (
+                <li key={item.label} className="border-b border-gray-50 pb-2">
+                  {isExpandable ? (
+                    <div>
+                      <button
+                        onClick={() => setMobileExpandedSection(isSectionOpen ? null : item.type)}
+                        className="w-full flex justify-between items-center py-3 px-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg text-left text-[15px]"
+                      >
+                        <span>{item.label}</span>
+                        <svg className={`w-4 h-4 transition-transform duration-200 ${isSectionOpen ? 'rotate-180 text-[#b4533c]' : 'text-gray-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      
+                      <div className={`overflow-hidden transition-all duration-300 max-h-0 ${isSectionOpen ? 'max-h-[1200px] mt-2' : ''}`}>
+                        <div className="pl-4 space-y-4 border-l-2 border-gray-100 ml-3">
+                          {MENU_CONTENT[item.type].columns.map((col, colIdx) => (
+                            <div key={colIdx} className="space-y-1">
+                              <span className="text-[12px] font-bold text-gray-400 uppercase tracking-wider block mb-1">{col.category}</span>
+                              {col.items.map((subItem, subIdx) => (
+                                <Link
+                                  key={subIdx}
+                                  to={subItem.link}
+                                  onClick={closeMenu}
+                                  className="block py-1.5 px-2 text-[14px] text-gray-600 rounded hover:bg-gray-50"
+                                >
+                                  {subItem.name}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={closeMenu}
+                      className="block py-3 px-3 text-gray-800 font-medium hover:bg-gray-50 rounded-lg text-[15px]"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="p-6 border-t border-gray-100">
+          <a href="#apply" onClick={closeMenu} className="block w-full text-center bg-[#3d4a3e] text-white py-3 font-semibold rounded-md shadow-md text-sm">
+            APPLY NOW
+          </a>
+        </div>
+      </div>
+
+      {/* Dimmed Background Overlay */}
+      {(isMenuOpen || activeDropdown) && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-[999] transition-opacity duration-300"
+          onClick={closeMenu}
+        />
+      )}
     </header>
   );
 };

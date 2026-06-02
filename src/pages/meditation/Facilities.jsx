@@ -8,7 +8,7 @@ import nidraImg from "./images/meditation.jpg";
 import silentImg from "./images/hero.jpg";
 import mindfulnessImg from "./images/hero.jpg";
 
-export default function MeditationPage() {
+export default function Facilities() {
   return (
     <div className="bg-[#f8f5f0] text-gray-800">
 
