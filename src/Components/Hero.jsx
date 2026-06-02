@@ -95,7 +95,7 @@ function HeroSection() {
                     flex flex-col justify-center
                     px-10 xl:px-14 2xl:px-20
                     py-10
-                    w-[36%] xl:w-[34%] 2xl:w-[32%]
+                    w-[30%] xl:w-[28%] 2xl:w-[26%]
                   "
                 >
                   <LeftContent />
@@ -113,7 +113,7 @@ function HeroSection() {
                   />
 
                   {/* PREMIUM INVISIBLE BLEND */}
-                  <div className="absolute inset-y-0 left-0 z-10 w-[24%] pointer-events-none">
+            <div className="absolute inset-y-0 -left-[4%] z-10 w-[28%] pointer-events-none">
 
                     {/* MAIN CINEMATIC FADE */}
                     <div
@@ -134,7 +134,7 @@ function HeroSection() {
                     />
 
                     {/* CREAMY GLOW */}
-                    <div className="absolute inset-y-0 left-0 w-[180px] bg-[#f8f5ef] blur-[90px] opacity-100" />
+                 <div className="absolute inset-y-0 -left-[60px] w-[220px] bg-[#f8f5ef] blur-[90px] opacity-100" />
 
                   </div>
 
