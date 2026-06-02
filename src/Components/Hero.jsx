@@ -93,7 +93,7 @@ function HeroSection() {
                     relative z-20 bg-[#f8f5ef]
                     flex-shrink-0
                     flex flex-col justify-center
-                    px-10 xl:px-14 2xl:px-20
+                    pl-10 xl:pl-15 2xl:pl-20
                     py-10
                     w-[30%] xl:w-[28%] 2xl:w-[26%]
                   "
