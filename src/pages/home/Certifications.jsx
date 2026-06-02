@@ -565,7 +565,7 @@ const Certifications = () => {
               <span className="uppercase tracking-[4px] text-xs font-bold text-[#d97706] mb-3 inline-block">
                 International Recognition
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#234b2c] tracking-tight">
+              <h2 className="text-[25px] sm:text-[35px] md:text-[45px] lg:text-[55px] font-serif text-[#234b2c] leading-[1.05]">
                 Our Teachers Certifications
               </h2>
               <div className="flex items-center justify-center gap-3 mt-4">
