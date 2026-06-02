@@ -117,10 +117,11 @@ export default function Home() {
   return (
     <main className="bg-[#f8f5f5]">
       <Hero />
+      <Certifications/>
       <BaliYogaCourses/>
       <AdditionalActivities/>
       <BaliYogaKendraExperience/>
-      <Certifications/>
+      
       <BaliYogaProgramSection/>
       <BaliYogaOffers/>
      {/* EXPERIENCE BALI YOGA SECTION */}

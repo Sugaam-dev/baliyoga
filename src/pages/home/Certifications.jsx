@@ -51,7 +51,7 @@ const CardContent = () => (
 
     {/* NAME */}
     <h2 className="text-[30px] sm:text-[40px] md:text-[48px] font-serif text-[#234b2c] leading-[1.1]">
-      Yogi Balaji
+      Yogi Ranjan
     </h2>
 
     {/* ROLE */}

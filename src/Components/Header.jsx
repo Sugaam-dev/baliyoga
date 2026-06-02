@@ -183,12 +183,14 @@ const Header = () => {
             `}
           >
             {[
+              // - will have all YTT 200/300/500 ect
               'About',
-              'Course',
-              'Online',
-              'Gallery',
-              'Meditation',
-              'Retreat',
+              'Yoga Teacher Training ',
+              // - Ayurveda Packages
+              'Wellness Retreats',
+              'Bali Activities',
+              'Holiday Packages',
+              'Facilities',
               'Contact',
             ].map((item) => (
               <li
