@@ -157,7 +157,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden lg:flex items-center justify-end flex-1 gap-3 xl:gap-6 2xl:gap-8 m-0 p-0 list-none" style={{ fontFamily: "'Caudex', serif" }}>
+          <ul className="hidden lg:flex items-center justify-end flex-1 gap-2 xl:gap-5 m-0 p-0 list-none" style={{ fontFamily: "'Caudex', serif" }}>
             {navItems.map((item) => {
               const hasDropdown = !!item.type;
               const isCurrentActive = activeDropdown === item.type;
