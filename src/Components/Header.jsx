@@ -95,7 +95,7 @@
 
 // const Header = () => {
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const [activeDropdown, setActiveDropdown] = useState(null); // 'ytt' | 'wellness' | null
+//   const [activeDropdown, setActiveDropdown] = useState(null); 
 //   const [mobileExpandedSection, setMobileExpandedSection] = useState(null); 
   
 //   const location = useLocation();
@@ -110,7 +110,6 @@
 //     window.scrollTo({ top: 0, behavior: "smooth" });
 //   };
 
-//   // Close dropdowns when clicking outside
 //   useEffect(() => {
 //     const handleClickOutside = (event) => {
 //       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -221,7 +220,7 @@
 //           </div>
 //         </div>
 
-//         {/* Dynamic Multi-Column Mega Menu - Clean Flex layout ensuring flawless alignment for 3 or 4 columns */}
+//         {/* Desktop Mega Menu */}
 //         {activeDropdown && MENU_CONTENT[activeDropdown] && (
 //           <div 
 //             className="hidden lg:block absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 z-[1001]"
@@ -260,8 +259,27 @@
 
 //       {/* Mobile Drawer Panel */}
 //       <div className={`fixed inset-y-0 left-0 w-full max-w-sm bg-white shadow-2xl z-[1005] flex flex-col transition-transform duration-300 transform lg:hidden ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-//         <div className="p-6 border-b border-gray-100">
-//           <span className="font-bold text-gray-800" style={{ fontFamily: "'Caudex', serif" }}>Navigation Menu</span>
+        
+//         {/* MODIFIED: Matching UI header layout with Logo and Styled Custom Close Box */}
+//         <div className="p-4 flex items-center justify-between border-b border-gray-100">
+//           <Link to="/" onClick={closeMenu} className="block shrink-0">
+//             <img
+//               src="/logo.png"
+//               alt="Bali Yoga Kendra Logo"
+//               className="h-14 w-auto object-contain"
+//             />
+//           </Link>
+          
+//           {/* Styled explicit orange border close box layout */}
+//           <button 
+//             onClick={closeMenu}
+//             className="w-10 h-10 border-2 border-[#dca34b] rounded-md flex items-center justify-center p-1.5 transition-colors hover:bg-amber-50"
+//             aria-label="Close menu"
+//           >
+//             <svg className="w-full h-full text-[#a44d37]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+//               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+//             </svg>
+//           </button>
 //         </div>
         
 //         <div className="flex-1 overflow-y-auto px-4 py-4">
@@ -550,15 +568,15 @@ const Header = () => {
               APPLY NOW
             </a>
 
-            {/* Hamburger Button */}
+            {/* Hamburger Button (Hides automatically when menu drawer opens to avoid dual layout crosses) */}
             <button
-              className="flex lg:hidden flex-col justify-center items-center bg-transparent border-none cursor-pointer p-2 z-[1003] w-10 h-10 relative"
+              className={`flex lg:hidden flex-col justify-center items-center bg-transparent border-none cursor-pointer p-2 z-[1003] w-10 h-10 relative transition-opacity duration-200 ${isMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
-              <span className={`absolute w-6 h-[2px] rounded-full transition-all duration-300 ${isMenuOpen ? 'bg-[#b4533c] rotate-45 translate-y-0' : 'bg-gray-800 -translate-y-1.5'}`} />
-              <span className={`absolute w-6 h-[2px] rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100 bg-gray-800'}`} />
-              <span className={`absolute w-6 h-[2px] rounded-full transition-all duration-300 ${isMenuOpen ? 'bg-[#b4533c] -rotate-45 translate-y-0' : 'bg-gray-800 translate-y-1.5'}`} />
+              <span className="absolute w-6 h-[2px] rounded-full bg-gray-800 -translate-y-1.5" />
+              <span className="absolute w-6 h-[2px] rounded-full bg-gray-800 opacity-100" />
+              <span className="absolute w-6 h-[2px] rounded-full bg-gray-800 translate-y-1.5" />
             </button>
           </div>
         </div>
@@ -603,8 +621,8 @@ const Header = () => {
       {/* Mobile Drawer Panel */}
       <div className={`fixed inset-y-0 left-0 w-full max-w-sm bg-white shadow-2xl z-[1005] flex flex-col transition-transform duration-300 transform lg:hidden ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         
-        {/* MODIFIED: Matching UI header layout with Logo and Styled Custom Close Box */}
-        <div className="p-4 flex items-center justify-between border-b border-gray-100">
+        {/* Header Layout with Logo and Styled Custom Close Box */}
+        <div className="p-4 flex items-center justify-between border-b border-gray-100 bg-white">
           <Link to="/" onClick={closeMenu} className="block shrink-0">
             <img
               src="/logo.png"
@@ -680,17 +698,17 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="p-6 border-t border-gray-100">
+        <div className="p-6 border-t border-gray-100 bg-white">
           <a href="#apply" onClick={closeMenu} className="block w-full text-center bg-[#3d4a3e] text-white py-3 font-semibold rounded-md shadow-md text-sm">
             APPLY NOW
           </a>
         </div>
       </div>
 
-      {/* Dimmed Background Overlay */}
+      {/* Dimmed Background Overlay with premium Backdrop Blur Effect */}
       {(isMenuOpen || activeDropdown) && (
         <div 
-          className="fixed inset-0 bg-black/20 z-[999] transition-opacity duration-300"
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[999] transition-opacity duration-300"
           onClick={closeMenu}
         />
       )}
