@@ -440,16 +440,16 @@ const MENU_CONTENT = {
           { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
         ]
       },
-      {
-        category: "Multi-Style YTTC",
-        items: [
-          { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/wellness/6-days-50hr-multi-style" },
-          { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/wellness/10-days-100hr-multi-style" },
-          { name: "20 Days 200 Hours Multi-Style YTTC", link: "/wellness/20-days-200hr-multi-style" },
-          { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/wellness/300hr-multi-style-bali" },
-          { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
-        ]
-      }
+      // {
+      //   category: "Multi-Style YTTC",
+      //   items: [
+      //     { name: "6 Days 50 Hours Multi-Style Yoga Course", link: "/wellness/6-days-50hr-multi-style" },
+      //     { name: "10 Days 100 Hours Multi-Style Yoga Course", link: "/wellness/10-days-100hr-multi-style" },
+      //     { name: "20 Days 200 Hours Multi-Style YTTC", link: "/wellness/20-days-200hr-multi-style" },
+      //     { name: "26 Days 300 Hours Advanced Multi-Style YTTC", link: "/wellness/300hr-multi-style-bali" },
+      //     { name: "56 Days 500 Hours Advanced Multi-Style YTTC", link: "/wellness/500hr-multi-style-bali" }
+      //   ]
+      // }
     ]
   },
 };
