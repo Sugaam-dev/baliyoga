@@ -592,7 +592,7 @@ const Header = () => {
                 {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
                   <div key={idx} className="flex flex-col space-y-4 flex-1 min-w-[220px] max-w-[340px]">
                     <h4 
-                      className="text-[13px] font-bold tracking-wider text-gray-400 uppercase border-b border-gray-100 pb-2"
+                      className="text-[18px] font-bold tracking-wider text-yellow-400 uppercase border-b border-gray-100 pb-2"
                       style={{ fontFamily: "'Caudex', serif" }}
                     >
                       {col.category}
@@ -603,7 +603,7 @@ const Header = () => {
                           <Link
                             to={item.link}
                             onClick={() => setActiveDropdown(null)}
-                            className="block text-[14px] leading-snug font-medium text-gray-600 hover:text-[#b4533c] hover:translate-x-0.5 transition-all duration-150 py-1"
+                            className="block text-[16px] leading-snug font-medium text-gray-600 hover:text-[#b4533c] hover:translate-x-0.5 transition-all duration-150 py-1"
                           >
                             {item.name}
                           </Link>
