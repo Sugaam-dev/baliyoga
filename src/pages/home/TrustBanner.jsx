@@ -1,19 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Importing local images from your project's images folder
-// import yogaAllianceLogo from '../../images/cirtificats/yoga.png'; 
-// import rys200 from '../../images/cirtificats/200.png';
-// import rys300 from '../../images/cirtificats/300yy.png';
-// import rys500 from '../../images/cirtificats/500.webp';
-// import yacep from '../../images/cirtificats/YACEP.png';
+import yogaAllianceLogo from './images/yogaicon.jpg'; 
+import rys100 from './images/100.jpg';
+import rys200 from './images/200.jpg';
+import rys300 from './images/300yy.jpg';
+import rys500 from './images/yoga500.jpg';
+import yacep from './images/YACEP.jpg';
 
 const TrustBanner = () => {
   const certificates = [
-    // { id: 1, name: 'Yoga Alliance', src: yogaAllianceLogo },
-    // { id: 2, name: 'RYS 200', src: rys200 },
-    // { id: 3, name: 'RYS 300', src: rys300 },
-    // { id: 4, name: 'RYS 500', src: rys500 },
-    // { id: 5, name: 'YACEP', src: yacep },
+    { id: 1, name: 'Yoga Alliance', src: yogaAllianceLogo },
+    { id: 2, name: 'RYS 100', src: rys100 },
+    { id: 3, name: 'RYS 200', src: rys200 },
+    { id: 4, name: 'RYS 300', src: rys300 },
+    { id: 5, name: 'RYS 500', src: rys500 },
+    { id: 6, name: 'YACEP', src: yacep },
   ];
 
   const bannerRef = useRef(null);

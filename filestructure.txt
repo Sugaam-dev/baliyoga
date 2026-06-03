@@ -94,6 +94,9 @@
             |-- Certifications.jsx
             |-- Home.jsx
             |-- images
+                |-- 100.jpg
+                |-- 200.jpg
+                |-- 300yy.jpg
                 |-- 4-Days-Yoga-Retreat-In-Canggu-Bali.jpg
                 |-- alchemyyoga.jpg
                 |-- bali-yoga-teacher-training-check-list-NAMASTSHAY.jpg
@@ -115,6 +118,7 @@
                 |-- shutterstock_314587241.jpg
                 |-- the-istana-1.jpg
                 |-- Ubud-Yoga-Photography-3-1.jpg
+                |-- YACEP.jpg
                 |-- yoga-alliance-usa-certified-200.jpeg
                 |-- yoga-alliance-usa-certified.jpeg
                 |-- Yoga-Searcher-Uluwatu-Bali.jpg
@@ -124,7 +128,9 @@
                 |-- yoga0.jpg
                 |-- yoga1.jpg
                 |-- yoga10.png
+                |-- yoga500.jpg
                 |-- yogagallery.jpg
+                |-- yogaicon.jpg
             |-- TestimonialsSection.jsx
             |-- TrustBanner.jsx
             |-- UpcomingBatches.jsx
