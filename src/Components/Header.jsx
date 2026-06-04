@@ -888,9 +888,9 @@ const Header = () => {
                       style={{ paddingBlock: '8px' }}
                     >
                       {item.label}
-                      {/* <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${isCurrentActive ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${isCurrentActive ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                      </svg> */}
+                      </svg>
                     </button>
                   ) : (
                     <Link
@@ -941,16 +941,16 @@ const Header = () => {
               <div className="flex flex-wrap justify-between gap-6 xl:gap-8">
                 {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
                   <div key={idx} className="flex flex-col space-y-4 flex-1 min-w-[220px] max-w-[340px]">
-                    <h4 className="text-[14px] font-bold tracking-widest text-gray-400 uppercase border-b border-gray-100 pb-2">
+                    <h4 className="text-[18px]  tracking-widest text-blue-400 uppercase border-b border-gray-100 pb-2">
                       {col.category}
                     </h4>
-                    <ul className="space-y-3 list-none p-0 m-0">
+                    <ul className="space-y-6 list-none p-0 m-0">
                       {col.items.map((item, itemIdx) => (
                         <li key={itemIdx}>
                           <Link
                             to={item.link}
                             onClick={() => setActiveDropdown(null)}
-                            className="block text-[16px] leading-snug font-normal text-gray-600 hover:text-black transition-all duration-150 py-0.5"
+                            className="block text-[16px] leading-snug font-normal text-black-600 hover:text-black transition-all duration-150 py-0.5"
                           >
                             {item.name}
                           </Link>
