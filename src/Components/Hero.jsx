@@ -174,7 +174,7 @@ function HeroSection() {
 
                 {/* MOBILE STATS */}
                 <div className="relative z-20 -mt-[10%] px-3 pb-4">
-                  <StatsCard />
+                  {/* <StatsCard /> */}
                 </div>
 
               </div>
@@ -188,7 +188,7 @@ function HeroSection() {
                   z-30
                 "
               >
-                <StatsCard />
+                {/* <StatsCard /> */}
               </div>
 
             </div>
@@ -365,96 +365,96 @@ function LeftContent() {
    STATS CARD
 ───────────────────────────────────────────── */
 
-function StatsCard() {
-  return (
-    <div
-      className="
-        bg-white/95 backdrop-blur-xl
-        rounded-[20px]
-        shadow-[0_10px_40px_rgba(0,0,0,0.12)]
-        px-2 py-3 sm:px-5 sm:py-4
-      "
-    >
+// function StatsCard() {
+//   return (
+//     <div
+//       className="
+//         bg-white/95 backdrop-blur-xl
+//         rounded-[20px]
+//         shadow-[0_10px_40px_rgba(0,0,0,0.12)]
+//         px-2 py-3 sm:px-5 sm:py-4
+//       "
+//     >
 
-      <div className="flex items-center justify-between">
+//       <div className="flex items-center justify-between">
 
-        {/* RATING */}
-        <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1">
+//         {/* RATING */}
+//         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1">
 
-          <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
+//           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
 
-            <Star className="text-[#c9732c]" size={13} />
+//             <Star className="text-[#c9732c]" size={13} />
 
-          </div>
+//           </div>
 
-          <div className="min-w-0">
+//           <div className="min-w-0">
 
-            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
-              4.9/5
-            </h3>
+//             <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
+//               4.9/5
+//             </h3>
 
-            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
-              Student Rating
-            </p>
+//             <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
+//               Student Rating
+//             </p>
 
-          </div>
+//           </div>
 
-        </div>
+//         </div>
 
-        <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
+//         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
 
-        {/* STUDENTS */}
-        <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 sm:px-2">
+//         {/* STUDENTS */}
+//         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 sm:px-2">
 
-          <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#eef7ee] flex items-center justify-center flex-shrink-0">
+//           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#eef7ee] flex items-center justify-center flex-shrink-0">
 
-            <Users className="text-[#2f7d4c]" size={13} />
+//             <Users className="text-[#2f7d4c]" size={13} />
 
-          </div>
+//           </div>
 
-          <div className="min-w-0">
+//           <div className="min-w-0">
 
-            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
-              1000+
-            </h3>
+//             <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
+//               1000+
+//             </h3>
 
-            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
-              Happy Students
-            </p>
+//             <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
+//               Happy Students
+//             </p>
 
-          </div>
+//           </div>
 
-        </div>
+//         </div>
 
-        <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
+//         <div className="w-px h-8 bg-gray-200 flex-shrink-0" />
 
-        {/* COUNTRIES */}
-        <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 justify-start">
+//         {/* COUNTRIES */}
+//         <div className="flex items-center gap-1.5 sm:gap-3 min-w-0 flex-1 px-1 justify-start">
 
-          <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
+//           <div className="w-7 h-7 sm:w-10 sm:h-10 lg:w-9 lg:h-9 xl:w-11 xl:h-11 rounded-xl bg-[#fff3e8] flex items-center justify-center flex-shrink-0">
 
-            <Globe className="text-[#c9732c]" size={13} />
+//             <Globe className="text-[#c9732c]" size={13} />
 
-          </div>
+//           </div>
 
-          <div className="min-w-0">
+//           <div className="min-w-0">
 
-            <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
-              15+
-            </h3>
+//             <h3 className="text-[11px] sm:text-xl lg:text-base xl:text-2xl font-bold text-[#1f3528] leading-none">
+//               15+
+//             </h3>
 
-            <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
-              Countries
-            </p>
+//             <p className="text-gray-600 text-[8px] sm:text-xs lg:text-[10px] xl:text-sm leading-tight">
+//               Countries
+//             </p>
 
-          </div>
+//           </div>
 
-        </div>
+//         </div>
 
-      </div>
+//       </div>
 
-    </div>
-  );
-}
+//     </div>
+//   );
+// }
 
 export default HeroSection;
