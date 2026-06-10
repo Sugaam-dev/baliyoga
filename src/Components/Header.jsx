@@ -936,14 +936,14 @@ const Header = () => {
           >
             <div className="max-w-[1440px] mx-auto px-10 py-10">
               {/* Dropdown title */}
-              <p className="text-xs tracking-[0.25em] uppercase mb-7 font-medium" style={{ color: '#c3875a', fontFamily: "'Caudex', serif" }}>
+              <p className="text-18 tracking-[0.25em] uppercase mb-7 font-medium" style={{ color: '#c3875a', fontFamily: "'Caudex', serif" }}>
                 {MENU_CONTENT[activeDropdown].title}
               </p>
               <div className="flex flex-wrap justify-between gap-6 xl:gap-10">
                 {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
                   <div key={idx} className="flex flex-col space-y-3 flex-1 min-w-[180px] max-w-[320px]">
                     <h4
-                      className="text-[11px] font-bold uppercase tracking-[0.2em] pb-2.5"
+                      className="text-[16px] font-bold uppercase tracking-[0.2em] pb-2.5"
                       style={{ color: '#1e3a2f', borderBottom: '1px solid #d4c9b8', fontFamily: "'Caudex', serif" }}
                     >
                       {col.category}
@@ -954,7 +954,7 @@ const Header = () => {
                           <Link
                             to={item.link}
                             onClick={() => setActiveDropdown(null)}
-                            className="group block text-[14px] leading-snug py-0.5 transition-all duration-200"
+                            className="group block text-[16px] leading-snug py-0.5 transition-all duration-200"
                             style={{ color: '#4a3728', fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                             onMouseEnter={e => e.currentTarget.style.color = '#c3875a'}
                             onMouseLeave={e => e.currentTarget.style.color = '#4a3728'}
