@@ -138,7 +138,7 @@ export function HeroSection() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-5 mt-10">
+          <div className="flex flex-wrap gap-5 mt-10 mb-10 lg:mb-16">
 
             <button
               className="
@@ -185,7 +185,7 @@ export function HeroSection() {
               grid-cols-2
               sm:grid-cols-3
               gap-6
-              mt-14
+              mt-20 lg:mt-28
             "
           >
 
