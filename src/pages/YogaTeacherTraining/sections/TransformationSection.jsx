@@ -1,13 +1,21 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 
-const TransformationSection = () => {
+/**
+ * Expects: data = courseData.transformationSection.content
+ * Shape:
+ * { bgImage, quoteStart, highlight, quoteEnd, description }
+ */
+const TransformationSection = ({ data }) => {
+  if (!data) return null;
+  const { bgImage, quoteStart, highlight, quoteEnd, description } = data;
+
   return (
     <section className="relative overflow-hidden text-center text-white">
 
       {/* Background */}
       <img
-        src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80"
+        src={bgImage}
         alt="Yoga Meditation"
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover"
@@ -26,14 +34,14 @@ const TransformationSection = () => {
 
         {/* Quote */}
         <blockquote className="text-3xl md:text-5xl font-light leading-snug mb-8">
-          Begin your{" "}
-          <em className="text-[#C8A96A] not-italic">multi style yoga journey</em>{" "}
-          in the spiritual heart of Bali
+          {quoteStart}{" "}
+          <em className="text-[#C8A96A] not-italic">{highlight}</em>{" "}
+          {quoteEnd}
         </blockquote>
 
         {/* Description */}
         <p className="text-sm md:text-lg text-white/85 leading-[1.8] max-w-2xl mx-auto">
-          Discover a deeper connection with yourself through guided multi style practice, ancient wisdom, and a supportive community designed to nurture your growth from the very first step.
+          {description}
         </p>
 
       </div>
