@@ -1,29 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Award, Bed, Utensils, Heart, Compass, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { getIcon } from "./icons";
 
-const iconMap = {
-  award: <Award size={18} />,
-  bed: <Bed size={18} />,
-  utensils: <Utensils size={18} />,
-  heart: <Heart size={18} />,
-  compass: <Compass size={18} />,
-};
-
-const features = [
-  { icon: "award", title: "YACEP Certificate", sub: "Registerable foundation certification" },
-  { icon: "bed", title: "Comfortable Accommodation", sub: "Shared & private room options" },
-  { icon: "utensils", title: "Sattvic Meals", sub: "Freshly cooked vegetarian food 3x daily" },
-  { icon: "heart", title: "Multi Style Training", sub: "Hatha, Ashtanga, Pranayama & more" },
-  { icon: "compass", title: "Bali Cultural Experience", sub: "Temples, nature & spiritual atmosphere" },
-];
-
-const PromoSection = () => {
+/**
+ * Expects: data = courseData.promoSection.content
+ * Shape:
+ * {
+ *   eyebrow, title, highlight, duration, strongText,
+ *   features: { icon, title, sub }[],
+ *   images: { main, food, stay }
+ * }
+ */
+const PromoSection = ({ data }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(t);
   }, []);
+
+  if (!data) return null;
+  const { eyebrow, title, highlight, duration, strongText, features = [], images = {} } = data;
 
   return (
     <section className="py-16 lg:py-20 px-4">
@@ -33,11 +30,11 @@ const PromoSection = () => {
           {/* Left */}
           <div>
             <div className="flex items-center gap-1.5 text-sm text-gray-500 mb-3">
-              <Sparkles size={14} /> Bali Yoga Experience
+              <Sparkles size={14} /> {eyebrow}
             </div>
             <h2 className="text-3xl md:text-4xl font-medium leading-snug mb-6 text-[#1A2456]">
-              Join our <em className="text-[#C8A96A] not-italic">immersive</em> 6-day journey in{" "}
-              <strong>Ubud</strong>
+              {title} <em className="text-[#C8A96A] not-italic">{highlight}</em> {duration} journey in{" "}
+              <strong>{strongText}</strong>
             </h2>
 
             <div className="flex flex-col gap-4">
@@ -48,7 +45,7 @@ const PromoSection = () => {
                   style={{ transitionDelay: `${i * 0.1}s` }}
                 >
                   <div className="min-w-[42px] h-[42px] rounded-xl bg-[#1A2456] text-white flex items-center justify-center flex-shrink-0">
-                    {iconMap[f.icon]}
+                    {getIcon(f.icon, 18)}
                   </div>
                   <div>
                     <p className="font-semibold text-base text-gray-900 mb-0.5">{f.title}</p>
@@ -63,29 +60,14 @@ const PromoSection = () => {
           <div className="flex flex-col gap-4">
             {/* Main image */}
             <div className="rounded-2xl overflow-hidden h-[clamp(220px,30vw,360px)] relative">
-              <img
-                src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80"
-                alt="Yoga"
-                loading="lazy"
-                className="w-full h-full object-cover"
-              />
+              <img src={images.main} alt="Yoga" loading="lazy" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
 
             {/* Small images */}
             <div className="grid grid-cols-2 gap-3.5">
-              <img
-                src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=80"
-                alt="Food"
-                loading="lazy"
-                className="w-full h-[150px] object-cover rounded-2xl"
-              />
-              <img
-                src="https://t4.ftcdn.net/jpg/02/75/39/23/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg"
-                alt="Stay"
-                loading="lazy"
-                className="w-full h-[150px] object-cover rounded-2xl"
-              />
+              <img src={images.food} alt="Food" loading="lazy" className="w-full h-[150px] object-cover rounded-2xl" />
+              <img src={images.stay} alt="Stay" loading="lazy" className="w-full h-[150px] object-cover rounded-2xl" />
             </div>
           </div>
 

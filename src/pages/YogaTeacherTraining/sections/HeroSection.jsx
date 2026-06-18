@@ -2,7 +2,17 @@ import React, { useEffect, useState } from "react";
 import { MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const HeroSection = () => {
+/**
+ * Expects: data = courseData.heroSection
+ * Shape:
+ * {
+ *   hero: { location, title, highlight, subtitle, price, priceNote, bgImage, certificateImage, buttonText, url },
+ *   gains: string[],
+ *   certificates: { img, label }[],
+ *   content: { bottomText }
+ * }
+ */
+const HeroSection = ({ data }) => {
   const [loaded, setLoaded] = useState(false);
   const [hoverIndex, setHoverIndex] = useState(null);
 
@@ -11,20 +21,8 @@ const HeroSection = () => {
     return () => clearTimeout(t);
   }, []);
 
-  const gains = [
-    "Basic understanding of yoga teaching course",
-    "Taste of authentic yogic lifestyle in Bali",
-    "Builds confidence to continue advanced course training",
-    "Introduction to multi style yoga — Hatha, Ashtanga & more",
-    "YACEP registerable 50-hour foundation certificate",
-    "Pathway to extend into 100, 200 or 500-hour TTC",
-  ];
-
-  const certificates = [
-    { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.png", label: "50 Hrs" },
-    { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.png", label: "Certified" },
-    { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.png", label: "YACEP" },
-  ];
+  if (!data) return null;
+  const { hero, gains = [], certificates = [], content = {} } = data;
 
   return (
     <section className="bg-[#F7F3EF]">
@@ -32,7 +30,7 @@ const HeroSection = () => {
       {/* ── HERO BG IMAGE ── */}
       <div className="relative w-full min-h-[500px] lg:min-h-[90vh] max-h-[900px] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=80"
+          src={hero.bgImage}
           alt=""
           loading="lazy"
           className={`absolute inset-0 w-full h-full object-cover object-center block transition-transform duration-[1200ms] ease-in-out ${loaded ? "scale-100" : "scale-110"}`}
@@ -47,30 +45,30 @@ const HeroSection = () => {
           {/* Location */}
           <div className={`inline-flex items-center gap-1.5 text-[#C8A96A] text-sm mb-4 transition-all duration-500 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
             <MapPin size={14} />
-            Ubud, Bali · 50-Hour Multi Style
+            {hero.location}
           </div>
 
           {/* Title */}
           <h1 className={`text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-5 transition-all duration-700 delay-100 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <em className="text-[#C8A96A] not-italic">6-Day 50-Hour </em>
-            Multi-Style Yoga Training in Bali
+            <em className="text-[#C8A96A] not-italic">{hero.highlight}</em>
+            {hero.title}
           </h1>
 
           {/* Subtitle */}
           <p className={`text-base md:text-lg text-white/85 mb-7 leading-relaxed transition-all duration-700 delay-200 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            An immersive experience to transform your body, mind, and teaching journey
+            {hero.subtitle}
           </p>
 
           {/* Price */}
-          <div className="text-5xl md:text-6xl font-semibold leading-tight mb-2">$650</div>
-          <p className="text-sm text-white/80 mb-8">Includes stay, meals & certification</p>
+          <div className="text-5xl md:text-6xl font-semibold leading-tight mb-2">{hero.price}</div>
+          <p className="text-sm text-white/80 mb-8">{hero.priceNote}</p>
 
           {/* CTA */}
           <Link
-            to="/contact"
+            to={hero.url || "/contact"}
             className="inline-flex items-center gap-2 bg-gradient-to-br from-green-600 via-green-700 to-green-900 text-white font-semibold px-8 py-4 rounded-full text-sm hover:-translate-y-2 hover:scale-105 hover:shadow-[0_15px_35px_rgba(11,78,53,0.6)] transition-all duration-300 animate-[floatingGlow_3.5s_ease-in-out_infinite]"
           >
-            Book Now <ArrowRight size={18} />
+            {hero.buttonText || "Book Now"} <ArrowRight size={18} />
           </Link>
         </div>
       </div>
@@ -79,14 +77,16 @@ const HeroSection = () => {
       <div className="max-w-6xl mx-auto px-5 py-16">
 
         {/* Feature image */}
-        <div className="rounded-2xl overflow-hidden mb-12 shadow-[0_12px_40px_rgba(0,0,0,0.2)] w-full aspect-[16/10]">
-          <img
-            src="https://www.ombreathe.in/static/media/Yogalyaa_200_Hour_TTC_1st%20image.68041e974b4b6b7d159e.jpg"
-            alt=""
-            loading="lazy"
-            className="w-full h-full object-cover object-[center_40%] block"
-          />
-        </div>
+        {hero.certificateImage && (
+          <div className="rounded-2xl overflow-hidden mb-12 shadow-[0_12px_40px_rgba(0,0,0,0.2)] w-full aspect-[16/10]">
+            <img
+              src={hero.certificateImage}
+              alt=""
+              loading="lazy"
+              className="w-full h-full object-cover object-[center_40%] block"
+            />
+          </div>
+        )}
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -121,9 +121,11 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-5 text-sm md:text-base leading-relaxed text-gray-700">
-              Receive a 50-hour multi style foundation certificate and begin your transformation journey in yoga.
-            </p>
+            {content.bottomText && (
+              <p className="mt-5 text-sm md:text-base leading-relaxed text-gray-700">
+                {content.bottomText}
+              </p>
+            )}
           </div>
 
         </div>

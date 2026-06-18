@@ -1,54 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Waves, Heart, Leaf, Wifi, Utensils, Feather, Trees, Music, CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getIcon } from "./icons";
 
-const iconMap = {
-  waves: <Waves size={18} />,
-  heart: <Heart size={18} />,
-  leaf: <Leaf size={18} />,
-  wifi: <Wifi size={18} />,
-  utensils: <Utensils size={18} />,
-  feather: <Feather size={18} />,
-  trees: <Trees size={18} />,
-  music: <Music size={18} />,
-};
-
-const rooms = [
-  {
-    type: "2 Sharing Room", tag: "Included", tagBg: "bg-[#7BAF8A]",
-    price: "$650",
-    img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80",
-    desc: "Comfortable shared rooms surrounded by lush tropical gardens in the heart of Ubud.",
-    features: ["Twin sharing", "Garden access", "En-suite bathroom", "Air conditioning", "WiFi", "Daily cleaning"],
-  },
-  {
-    type: "Private Room", tag: "Upgrade", tagBg: "bg-[#5B4FCF]",
-    price: "$750",
-    img: "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=1200&q=80",
-    desc: "Private room with peaceful Balinese ambience and a tranquil vibe.",
-    features: ["Private ensuite", "Personal space", "Mini fridge", "Premium bedding", "AC", "Quiet stay"],
-  },
-  {
-    type: "Private Room (No Meals)", tag: "Flexible", tagBg: "bg-[#C8964A]",
-    price: "$1,150",
-    img: "https://images.unsplash.com/photo-1501117716987-c8e1ecb210c1?w=1200&q=80",
-    desc: "Private room option without meals for those who prefer flexibility in dining.",
-    features: ["Private room", "No meals included", "King bed", "Independent schedule", "AC & WiFi", "Premium stay"],
-  },
-];
-
-const amenities = [
-  { icon: "waves", label: "Pool" },
-  { icon: "heart", label: "Spa" },
-  { icon: "leaf", label: "Garden" },
-  { icon: "wifi", label: "WiFi" },
-  { icon: "utensils", label: "Kitchen" },
-  { icon: "feather", label: "Yoga Hall" },
-  { icon: "trees", label: "Nature" },
-  { icon: "music", label: "Healing" },
-];
-
-const AccommodationSection = () => {
+/**
+ * Expects: data = courseData.accommodationSection.content
+ * Shape:
+ * {
+ *   title, highlight, subtitle,
+ *   rooms: { type, tag, tagBg, price, img, desc, features: string[] }[],
+ *   amenities: { icon, label }[],
+ *   buttonText, url
+ * }
+ */
+const AccommodationSection = ({ data }) => {
   const [activeRoom, setActiveRoom] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -59,7 +24,10 @@ const AccommodationSection = () => {
     return () => window.removeEventListener("resize", check);
   }, []);
 
+  if (!data) return null;
+  const { title, highlight, subtitle, rooms = [], amenities = [], buttonText, url } = data;
   const room = rooms[activeRoom];
+  if (!room) return null;
 
   return (
     <section className="bg-[#1A2456] text-white py-14 lg:py-24 px-4">
@@ -68,10 +36,10 @@ const AccommodationSection = () => {
         {/* Header */}
         <div className="mb-10">
           <h2 className="text-2xl md:text-4xl font-semibold mb-2">
-            Your <em className="text-[#C8A96A] not-italic">Stay in Bali</em>
+            {title} <em className="text-[#C8A96A] not-italic">{highlight}</em>
           </h2>
           <p className="text-white/70 max-w-lg text-sm md:text-base">
-            Experience comfort, nature, and deep relaxation during your 6-day journey.
+            {subtitle}
           </p>
         </div>
 
@@ -98,11 +66,16 @@ const AccommodationSection = () => {
           {/* Content card */}
           <div className="bg-white text-[#1A2456] rounded-2xl p-6 md:p-9 shadow-[0_8px_24px_rgba(0,0,0,0.15)] flex flex-col justify-between">
             <div>
-              <span className={`${room.tagBg} text-white px-3.5 py-1 rounded-full text-xs`}>{room.tag}</span>
+              <span
+                className="text-white px-3.5 py-1 rounded-full text-xs"
+                style={{ backgroundColor: room.tagBg }}
+              >
+                {room.tag}
+              </span>
               <h2 className="text-xl md:text-2xl font-semibold mt-3 mb-2">{room.type}</h2>
               <p className="text-gray-500 text-sm mb-5">{room.desc}</p>
               <div className="grid grid-cols-2 gap-2.5">
-                {room.features.map((f, i) => (
+                {(room.features || []).map((f, i) => (
                   <div key={i} className="flex items-center gap-1.5 text-sm text-gray-700">
                     <CheckCircle size={14} className="text-[#7BAF8A] flex-shrink-0" /> {f}
                   </div>
@@ -112,27 +85,29 @@ const AccommodationSection = () => {
             <div className="mt-6">
               <div className="text-lg font-semibold text-[#1A2456] mb-3">{room.price}</div>
               <Link
-                to="/contact"
+                to={url || "/contact"}
                 className="inline-flex items-center gap-2 bg-[#1A2456] text-white font-medium text-sm px-5 py-3 rounded-full shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition-all duration-200 no-underline"
               >
-                Book Now <ArrowRight size={16} />
+                {buttonText || "Book Now"} <ArrowRight size={16} />
               </Link>
             </div>
           </div>
         </div>
 
         {/* Amenities */}
-        <div className="mt-12">
-          <h3 className="text-xl md:text-2xl font-semibold mb-4">Amenities</h3>
-          <div className="grid grid-cols-4 sm:grid-cols-8 gap-3.5">
-            {amenities.map((a, i) => (
-              <div key={i} className="bg-white/8 text-white p-3.5 rounded-xl text-center">
-                <div className="flex justify-center mb-1.5">{iconMap[a.icon]}</div>
-                <div className="text-xs">{a.label}</div>
-              </div>
-            ))}
+        {amenities.length > 0 && (
+          <div className="mt-12">
+            <h3 className="text-xl md:text-2xl font-semibold mb-4">Amenities</h3>
+            <div className="grid grid-cols-4 sm:grid-cols-8 gap-3.5">
+              {amenities.map((a, i) => (
+                <div key={i} className="bg-white/8 text-white p-3.5 rounded-xl text-center">
+                  <div className="flex justify-center mb-1.5">{getIcon(a.icon, 18)}</div>
+                  <div className="text-xs">{a.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
       </div>
       <style>{`.scrollbar-hide::-webkit-scrollbar { display: none; }`}</style>

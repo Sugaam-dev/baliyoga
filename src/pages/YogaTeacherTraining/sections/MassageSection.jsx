@@ -1,74 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Clock, Star, Sparkles } from "lucide-react";
 
-const massages = [
-  {
-    id: 1,
-    title: "Deep Tissue Ritual",
-    tagline: "Designed to relieve deep-seated muscle tension, chronic stress, and stiffness using slow, deliberate strokes.",
-    duration: "60 mins",
-    rating: 4.9,
-    reviews: 184,
-    isPopular: true,
-    isPaid: true,
-    image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 2,
-    title: "Himalayan Hot Stone",
-    tagline: "Warm, mineral-rich basalt stones are placed strategically to melt away anxiety and restore deeply aligned energy flow.",
-    duration: "75 mins",
-    rating: 4.8,
-    reviews: 92,
-    isPopular: false,
-    isPaid: true,
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 3,
-    title: "Complimentary Aroma Mist",
-    tagline: "A brief, relaxing hydration aromatherapy session available to all resort guests during morning welcome check-ins.",
-    duration: "15 mins",
-    rating: 5.0,
-    reviews: 210,
-    isPopular: false,
-    isPaid: false,
-    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 4,
-    title: "Swedish Bliss Massage",
-    tagline: "Long, gliding strokes mixed with kneading to promote total body relaxation, improved circulation, and optimal flexibility.",
-    duration: "50 mins",
-    rating: 4.7,
-    reviews: 145,
-    isPopular: false,
-    isPaid: true,
-    image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80",
-  },
-  {
-    id: 5,
-    title: "Welcome Scalp Massage",
-    tagline: "Enjoy a quick, stress-relieving tension release head massage routine. Completely complimentary.",
-    duration: "10 mins",
-    rating: 4.9,
-    reviews: 76,
-    isPopular: true,
-    isPaid: false,
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
-  },
-];
-
-// Triplicate for infinite scroll illusion
-const infiniteMassages = [...massages, ...massages, ...massages];
-
-const MassageSection = () => {
+/**
+ * Expects: data = courseData.MassageSection.content
+ * Shape:
+ * {
+ *   title, highlight, subtitle,
+ *   massages: { id, title, tagline, duration, rating, reviews, isPopular, isPaid, image }[]
+ * }
+ */
+const MassageSection = ({ data }) => {
   const scrollRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
 
+  if (!data) return null;
+  const { title, highlight, subtitle, massages = [] } = data;
+
+  // Triplicate for infinite scroll illusion
+  const infiniteMassages = [...massages, ...massages, ...massages];
+
   useEffect(() => {
     const container = scrollRef.current;
-    if (!container) return;
+    if (!container || massages.length === 0) return;
     let rafId;
     const tick = () => {
       if (!isPaused) {
@@ -81,7 +34,9 @@ const MassageSection = () => {
     };
     rafId = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(rafId);
-  }, [isPaused]);
+  }, [isPaused, massages.length]);
+
+  if (massages.length === 0) return null;
 
   return (
     <section className="w-full bg-[#1A2456] py-14 md:py-20 px-4 md:px-10 overflow-hidden">
@@ -92,10 +47,10 @@ const MassageSection = () => {
           Relaxation Menu
         </span>
         <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-2">
-          Signature <span className="text-[#7BAF8A]">Massage Treatments</span>
+          {title} <span className="text-[#7BAF8A]">{highlight}</span>
         </h2>
         <p className="text-white/60 text-sm max-w-xl leading-relaxed">
-          Unwind your body and restore your muscle flexibility after intensive yoga training sessions with expert therapies.
+          {subtitle}
         </p>
       </div>
 
@@ -123,11 +78,7 @@ const MassageSection = () => {
 
             {/* Image */}
             <div className="h-[190px] overflow-hidden relative">
-              <img
-                src={m.image}
-                alt={m.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <img src={m.image} alt={m.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(26,36,86,0.4)] to-transparent" />
             </div>
 
