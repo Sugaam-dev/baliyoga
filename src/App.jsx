@@ -31,6 +31,7 @@ import { BaliAyurveda5HoursAbhyangamData } from './pages/YogaTeacherTraining/dat
 import { SoundHealingData } from './pages/YogaTeacherTraining/data/SoundHealingData';
 
 import Facilities from './pages/meditation/Facilities';
+import TermsAndConditions from './pages/term&condition/term-condition';
 
 
 function App() {
@@ -66,6 +67,10 @@ function App() {
                     <Route path='specialization/ayurvedic-treatment-bali' element={<YogaTeacherTrainingPage data={BaliAyurvedicTreatmentTTCData} />} />
                     <Route path='specialization/abhyangam-massage-training-bali' element={<YogaTeacherTrainingPage data={BaliAyurveda5HoursAbhyangamData} />} />
                     <Route path='specialization/vedic-sound-healing-level-1-2' element={<YogaTeacherTrainingPage data={SoundHealingData} />} />
+                     <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
+                    <Route path='6-days-50-hour-multi-style-yoga-training-in-bali' element={<YogaTeacherTraining/>} />
+                    <Route path='ytt/6-days-50hr-multi-style' element={<YogaTeacherTraining/>} />
+
           </Route>
         </Routes>
       </BrowserRouter>

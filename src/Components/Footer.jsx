@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaInstagram,
   FaFacebookF,
@@ -293,11 +294,19 @@ const Footer = () => {
 
         {/* BOTTOM */}
         <div className="relative z-10 text-center text-xs sm:text-sm text-gray-400 mt-14 border-t border-white/10 pt-6">
-          © 2026 Bali Yoga. All rights reserved.
+          © 2026 Bali Yoga. All rights reserved.uuu
+        </div>
+        <div className="relative z-10 text-center text-xs sm:text-sm text-gray-400 mt-2">
+          <Link
+            to="/terms-and-conditions"
+            className="text-orange-400 hover:text-orange-300 transition duration-300 underline"
+          >
+            Terms and Conditions
+          </Link>
         </div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
