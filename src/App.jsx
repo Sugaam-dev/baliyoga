@@ -10,6 +10,7 @@ import Contact from './pages/contact/Contact';
 import OnlinePage from './pages/online/OnlinePage';
 // import MeditationPage from './pages/meditation/Facilities';
 import Service from './pages/services/Service';
+import YogaTeacherTraining from './pages/YogaTeacherTraining/YogaTeacherTraining';
 import Facilities from './pages/meditation/Facilities';
 import TermsAndConditions from './pages/term&condition/term-condition';
 
@@ -30,6 +31,8 @@ function App() {
                    <Route path='contact' element={<Contact/>} /> 
                     <Route path='200-hour-yoga-teacher-training-in-bali' element={<Service/>} /> 
                      <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
+                    <Route path='6-days-50-hour-multi-style-yoga-training-in-bali' element={<YogaTeacherTraining/>} />
+                    <Route path='ytt/6-days-50hr-multi-style' element={<YogaTeacherTraining/>} />
 
           </Route>
         </Routes>
