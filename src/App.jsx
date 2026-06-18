@@ -11,6 +11,7 @@ import OnlinePage from './pages/online/OnlinePage';
 // import MeditationPage from './pages/meditation/Facilities';
 import Service from './pages/services/Service';
 import Facilities from './pages/meditation/Facilities';
+import TermsAndConditions from './pages/term&condition/term-condition';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                    <Route path='facilities' element={<Facilities/>} />                    
                    <Route path='contact' element={<Contact/>} /> 
                     <Route path='200-hour-yoga-teacher-training-in-bali' element={<Service/>} /> 
+                     <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
 
           </Route>
         </Routes>
