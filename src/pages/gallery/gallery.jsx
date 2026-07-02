@@ -1,11 +1,11 @@
-import GalleryHero from "./galleryHero";
-import PhotoGallery from "./photoGallery";
-import VideoGallery from "./videoGallery";
+import GalleryHero from "./components/GalleryHero";
+import PhotoGallery from "./components/PhotoGallery";
+import VideoGallery from "./components/VideoGallery";
 
 // Import some existing images (you can add unlimited later)
-import bali1 from "../home/images/bali1.jpg";
-import bali2 from "../home/images/bali2.jpg";
-import bali3 from "../home/images/bali3.jpg";
+import bali1 from "../../assets/images/home/bali1.jpg";
+import bali2 from "../../assets/images/home/bali2.jpg";
+import bali3 from "../../assets/images/home/bali3.jpg";
 import yoga0 from "../../assets/yoga0.jpg";
 import yoga1 from "../../assets/yoga1.jpg";
 

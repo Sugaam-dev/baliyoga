@@ -1,17 +1,17 @@
 // import React from "react";
 
 // /* ================= IMAGES ================= */
-// import heroImg from "./images/online.jpg";
+// import heroImg from "../../assets/images/online/online.jpg";
 
-// import scheduleImg from "./images/schedule.jpg";
-// import workshopImg from "./images/workshop.jpg";
-// import retreatImg from "./images/retreat.jpg";
-// import ttcImg from "./images/ttc.jpg";
-// import bookingImg from "./images/booking.jpg";
+// import scheduleImg from "../../assets/images/online/schedule.jpg";
+// import workshopImg from "../../assets/images/online/workshop.jpg";
+// import retreatImg from "../../assets/images/online/retreat.jpg";
+// import ttcImg from "../../assets/images/online/ttc.jpg";
+// import bookingImg from "../../assets/images/online/booking.jpg";
 
-// import onlineClassImg from "./images/online-beginner-yoga-classes.jpg";
-// import beginnerFreeImg from "./images/Free-Online-Beginner’s-Yoga-Class.jpg";
-// import ahamCourseImg from "./images/aham-yoga-beginner-course.jpg";
+// import onlineClassImg from "../../assets/images/online/online-beginner-yoga-classes.jpg";
+// import beginnerFreeImg from "../../assets/images/online/Free-Online-Beginner’s-Yoga-Class.jpg";
+// import ahamCourseImg from "../../assets/images/online/aham-yoga-beginner-course.jpg";
 
 // export default function OnlinePage() {
 //   return (
@@ -114,17 +114,17 @@
 import React from "react";
 
 /* ================= IMAGES ================= */
-import heroImg from "./images/schedule.jpg";
+import heroImg from "../../assets/images/online/schedule.jpg";
 
-import scheduleImg from "./images/schedule.jpg";
-import workshopImg from "./images/workshop.jpg";
-import retreatImg from "./images/retreat.jpg";
-import ttcImg from "./images/ttc.jpg";
-import bookingImg from "./images/booking.jpg";
+import scheduleImg from "../../assets/images/online/schedule.jpg";
+import workshopImg from "../../assets/images/online/workshop.jpg";
+import retreatImg from "../../assets/images/online/retreat.jpg";
+import ttcImg from "../../assets/images/online/ttc.jpg";
+import bookingImg from "../../assets/images/online/booking.jpg";
 
-import onlineClassImg from "./images/online-beginner-yoga-classes.jpg";
-import beginnerFreeImg from "./images/Free-Online-Beginner’s-Yoga-Class.jpg";
-import ahamCourseImg from "./images/aham-yoga-beginner-course.jpg";
+import onlineClassImg from "../../assets/images/online/online-beginner-yoga-classes.jpg";
+import beginnerFreeImg from "../../assets/images/online/Free-Online-Beginner’s-Yoga-Class.jpg";
+import ahamCourseImg from "../../assets/images/online/aham-yoga-beginner-course.jpg";
 
 export default function OnlinePage() {
   return (

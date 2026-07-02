@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { Outlet } from 'react-router-dom'
-import Footer from '../Components/Footer'
-import Header from '../Components/Header'
-import WhatsAppButton from '../Components/WhatsAppButton'
-import FloatingSocialBar from '../Components/FloatingSocialBar'
+import Footer from '../components/layout/Footer'
+import Header from '../components/layout/Header'
+import FloatingSocialBar from '../components/shared/FloatingSocialBar'
 
 function RootLayout() {
   return (
@@ -15,11 +14,6 @@ function RootLayout() {
         <Outlet/>
       </main>
       <Footer/>
-       {/* Global floating WhatsApp button */}
-      <WhatsAppButton
-        phone="917483987568"
-        message="Hello! I'd like to know more about your yoga programs."
-      />
     </div>
   )
 }

@@ -202,9 +202,9 @@
 // }
 
 
-import { HeroSection } from "./hero-section";
-import { CourseSection } from "./course-section";
-import { CTASection } from "./cta-section";
+import { HeroSection } from "./components/HeroSection";
+import { CourseSection } from "./components/CourseSection";
+import { CTASection } from "./components/CtaSection";
 
 export const metadata = {
   title: "Yoga Courses | Transform Your Practice",

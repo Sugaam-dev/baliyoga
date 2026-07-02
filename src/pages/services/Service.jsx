@@ -1,18 +1,18 @@
 import React from "react";
-import HeroSection from "./HeroSection";
-import TrainingInfo from "./TrainingInfo";
-import CourseTabs from "./CourseTabs";
-import DailySchedule from "./DailySchedule";
-import CourseFee from "./CourseFee";
-import InclusionExclusion from "./InclusionExclusion";
-import FaqSection from "./FaqSection";
-import ExcursionPlaces from "./ExcursionPlaces";
-import SyllabusSection from "./SyllabusSection";
-import FoodAccommodation from "./FoodAccommodation";
-import YogaStyles from "./YogaStyles";
-import EligibilitySection from "./EligibilitySection";
-import ArrivalAmenities from "./ArrivalAmenities";
-import TermsPolicy from "./TermsPolicy";
+import HeroSection from "./components/HeroSection";
+import TrainingInfo from "./components/TrainingInfo";
+import CourseTabs from "./components/CourseTabs";
+import DailySchedule from "./components/DailySchedule";
+import CourseFee from "./components/CourseFee";
+import InclusionExclusion from "./components/InclusionExclusion";
+import FaqSection from "./components/FaqSection";
+import ExcursionPlaces from "./components/ExcursionPlaces";
+import SyllabusSection from "./components/SyllabusSection";
+import FoodAccommodation from "./components/FoodAccommodation";
+import YogaStyles from "./components/YogaStyles";
+import EligibilitySection from "./components/EligibilitySection";
+import ArrivalAmenities from "./components/ArrivalAmenities";
+import TermsPolicy from "./components/TermsPolicy";
 
 const Service = () => {
   return (
