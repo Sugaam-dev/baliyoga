@@ -1,6 +1,6 @@
 import React from "react";
 import { Sparkles, Flower2, CheckCircle2, ArrowRight } from "lucide-react";
-
+import ScrollReveal from "../../../components/shared/ScrollReveal";
 import baliMeditation from "../../../assets/images/home/yogagallery.jpg";
 
 const BaliYogaKendraExperience = () => {
@@ -39,119 +39,130 @@ const BaliYogaKendraExperience = () => {
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          {/* LEFT IMAGE + FLOATING CARD */}
+          {/* LEFT IMAGE WITH RESPONSIVE OVERLAP CARD */}
           <div className="relative group w-full max-w-md lg:max-w-none mx-auto">
-            {/* Glow frame */}
-            <div className="absolute -inset-2  rounded-[34px] blur opacity-10 group-hover:opacity-20 transition duration-500"></div>
+            <ScrollReveal>
+              {/* Glow frame */}
+              <div className="absolute -inset-2 rounded-[34px] blur opacity-10 group-hover:opacity-20 transition duration-500"></div>
 
-            {/* Image container */}
-            <div className="relative rounded-[30px] overflow-hidden shadow-xl aspect-[3/4] w-full">
-              <img
-                src={baliMeditation}
-                alt="Bali Yoga"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent"></div>
-            </div>
+              {/* Image container */}
+              <div className="relative rounded-[30px] overflow-hidden shadow-xl aspect-[3/4] w-full">
+                <img
+                  src={baliMeditation}
+                  alt="Bali Yoga"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                
+                {/* Soft dark gradient mask for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent" />
 
-            {/* Floating Card */}
-            <div className="relative z-10 -mt-16 mx-4 sm:mx-6 bg-white/90 backdrop-blur-md rounded-3xl p-5 sm:p-6 shadow-xl border border-white/60">
-              <div className="flex items-center gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#1c2e24] to-[#c38b5f] flex items-center justify-center text-white shadow-md flex-shrink-0">
-                  <Flower2 size={18} className="sm:w-5 sm:h-5" />
-                </div>
-
-                <div className="min-w-0">
-                  <h3 className="text-base sm:text-lg font-bold text-stone-900 font-serif truncate">
+                {/* Overlapping text directly on the image (no solid white block to cover details) */}
+                <div className="absolute bottom-6 left-6 right-6 text-white pointer-events-none">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-6 h-6 rounded-full bg-[#c38b5f] flex items-center justify-center text-white shadow">
+                      <Flower2 size={11} />
+                    </div>
+                    <span className="uppercase tracking-[0.2em] text-[8px] sm:text-[9px] text-[#c38b5f] font-bold">
+                      Healing • Nature • Transformation
+                    </span>
+                  </div>
+                  <h3 className="text-white text-base sm:text-lg md:text-xl font-serif font-bold leading-snug mb-1">
                     Bali Yoga Kendra
                   </h3>
-                  <p className="text-[9px] sm:text-xs text-stone-600 font-semibold uppercase tracking-wider truncate">
-                    Healing • Nature • Transformation
+                  <p className="text-stone-300 text-[11px] leading-relaxed">
+                    Experience authentic yoga surrounded by Bali's spiritual atmosphere, lush greenery, peaceful beaches, and healing energy.
                   </p>
                 </div>
               </div>
-
-              <p className="mt-3 sm:mt-4 text-xs text-stone-600 leading-relaxed">
-                Experience authentic yoga surrounded by Bali's spiritual atmosphere, lush greenery, 
-                peaceful beaches, and healing energy.
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
 
           {/* RIGHT CONTENT */}
           <div className="relative flex flex-col justify-center">
             
             {/* TAG */}
-            <div className="flex flex-wrap items-center gap-2 bg-[#f4f7f4] border border-green-200/50 text-[#1c2e24] px-4 py-1.5 rounded-[20px] text-[10px] sm:text-xs font-bold uppercase tracking-wider self-start shadow-sm max-w-full">
-              <Sparkles size={13} className="text-[#c38b5f] flex-shrink-0" />
-              <span>MORE THAN A COURSE, IT'S A TRANSFORMATION</span>
-            </div>
+            <ScrollReveal delay={0.1}>
+              <div className="flex flex-wrap items-center gap-2 bg-[#f4f7f4] border border-green-200/50 text-[#1c2e24] px-4 py-1.5 rounded-[20px] text-[10px] sm:text-xs font-bold uppercase tracking-wider self-start shadow-sm max-w-full">
+                <Sparkles size={13} className="text-[#c38b5f] flex-shrink-0" />
+                <span>MORE THAN A COURSE, IT'S A TRANSFORMATION</span>
+              </div>
+            </ScrollReveal>
 
             {/* HEADING */}
-            <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#1c2e24] leading-tight">
-              Experience The{" "}
-              <span className="block bg-gradient-to-r from-[#c38b5f] to-[#a6734c] bg-clip-text text-transparent mt-1">
-                Magic Of Bali
-              </span>
-            </h2>
+            <ScrollReveal delay={0.15}>
+              <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#1c2e24] leading-tight">
+                Experience The{" "}
+                <span className="block bg-gradient-to-r from-[#c38b5f] to-[#a6734c] bg-clip-text text-transparent mt-1">
+                  Magic Of Bali
+                </span>
+              </h2>
+            </ScrollReveal>
 
             {/* DESCRIPTION */}
-            <p className="mt-6 text-stone-600 text-base sm:text-lg leading-relaxed">
-              Bali is a sacred destination filled with spiritual energy, tropical beauty, peaceful beaches, 
-              and healing traditions. At Bali Yoga Kendra, you will deepen your practice through yoga, 
-              meditation, breathwork, philosophy, and self-discovery.
-            </p>
+            <ScrollReveal delay={0.2}>
+              <p className="mt-6 text-stone-600 text-base sm:text-lg leading-relaxed">
+                Bali is a sacred destination filled with spiritual energy, tropical beauty, peaceful beaches, 
+                and healing traditions. At Bali Yoga Kendra, you will deepen your practice through yoga, 
+                meditation, breathwork, philosophy, and self-discovery.
+              </p>
+            </ScrollReveal>
 
             {/* FEATURES */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {features.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 bg-white/70 border border-stone-200/40 p-4 rounded-2xl shadow-sm hover:shadow-md transition duration-300"
-                >
-                  <CheckCircle2 size={18} className="text-[#c38b5f] flex-shrink-0" />
-                  <p className="text-stone-700 text-sm font-semibold">
-                    {item}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <ScrollReveal delay={0.25}>
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {features.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 bg-white/70 border border-stone-200/40 p-4 rounded-2xl shadow-sm hover:shadow-md transition duration-300"
+                  >
+                    <CheckCircle2 size={18} className="text-[#c38b5f] flex-shrink-0" />
+                    <p className="text-stone-700 text-sm font-semibold">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
 
             {/* BUTTONS */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a 
-                href="#contact"
-                className="group bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center gap-2 no-underline"
-              >
-                Explore Our Experience
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition" />
-              </a>
-
-              <a 
-                href="#courses"
-                className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 text-center no-underline"
-              >
-                View Programs
-              </a>
-            </div>
-
-            {/* STATS (Changed from cols-3 to cols-1 on mobile, sm:cols-3 on desktop to prevent overflow) */}
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {stats.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white/80 border border-stone-200/40 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition duration-300"
+            <ScrollReveal delay={0.3}>
+              <div className="mt-10 flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="#contact"
+                  className="group bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center gap-2 no-underline"
                 >
-                  <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] bg-clip-text text-transparent font-serif">
-                    {item.number}
-                  </h3>
-                  <p className="mt-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-stone-500">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+                  Explore Our Experience
+                  <ArrowRight size={14} className="group-hover:translate-x-1 transition" />
+                </a>
+
+                <a 
+                  href="#courses"
+                  className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 text-center no-underline"
+                >
+                  View Programs
+                </a>
+              </div>
+            </ScrollReveal>
+
+            {/* STATS */}
+            <ScrollReveal delay={0.35}>
+              <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {stats.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/80 border border-stone-200/40 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition duration-300"
+                  >
+                    <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] bg-clip-text text-transparent font-serif">
+                      {item.number}
+                    </h3>
+                    <p className="mt-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-stone-500">
+                      {item.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
 
           </div>
         </div>

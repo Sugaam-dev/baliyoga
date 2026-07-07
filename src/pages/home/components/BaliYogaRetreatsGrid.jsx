@@ -1,6 +1,7 @@
 import React from "react";
 import { Flower2, Leaf, Sparkles, Medal } from "lucide-react";
 import SectionHeading from "../../../components/shared/SectionHeading";
+import MobileCarousel from "../../../components/shared/MobileCarousel";
 
 const retreatFeatures = [
   {
@@ -48,12 +49,14 @@ const BaliYogaRetreatsGrid = () => {
           />
         </div>
 
-        {/* CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-          {retreatFeatures.map((item, index) => (
+        {/* Carousel on mobile, Grid on desktop */}
+        <MobileCarousel
+          items={retreatFeatures}
+          gridClass="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8"
+          renderItem={(item, index) => (
             <div
               key={index}
-              className="group bg-white rounded-[28px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-stone-200/40 text-center relative overflow-hidden flex flex-col justify-between"
+              className="group bg-white rounded-[28px] p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 border border-stone-200/40 text-center relative overflow-hidden flex flex-col justify-between h-full"
             >
               <div>
                 {/* Icon Container */}
@@ -75,8 +78,8 @@ const BaliYogaRetreatsGrid = () => {
               {/* Bottom Line decoration */}
               <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] group-hover:w-full transition-all duration-500 absolute bottom-0 left-0" />
             </div>
-          ))}
-        </div>
+          )}
+        />
 
       </div>
     </section>

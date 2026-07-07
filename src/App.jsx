@@ -10,8 +10,8 @@ import Contact from './pages/Contact/Contact';
 import OnlinePage from './pages/Online/OnlinePage';
 import ScrollToTop from './components/shared/ScrollToTop';
 
-import Service from './pages/Services/Service';
-import YogaTeacherTrainingPage from './pages/YogaTeacherTraining/YogaTeacherTrainingPage';
+import ProgramPage from './pages/Program/ProgramPage';
+import CheckoutPage from './pages/Checkout/CheckoutPage';
 
 import Facilities from './pages/Meditation/Facilities';
 import TermsAndConditions from './pages/term&condition/term-condition';
@@ -32,8 +32,8 @@ function App() {
                    <Route path='online' element={<OnlinePage/>} />
                    <Route path='facilities' element={<Facilities/>} />                    
                    <Route path='contact' element={<Contact/>} /> 
-                    <Route path='200-hour-yoga-teacher-training-in-bali' element={<Service/>} /> 
-                    <Route path=':category/:slug' element={<YogaTeacherTrainingPage />} />
+                   <Route path='checkout' element={<CheckoutPage />} />
+                    <Route path=':category/:slug' element={<ProgramPage />} />
                      <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
                     {/* <Route path='6-days-50-hour-multi-style-yoga-training-in-bali' element={<YogaTeacherTraining/>} /> */}
                     {/* <Route path='ytt/6-days-50hr-multi-style' element={<YogaTeacherTraining/>} /> */}

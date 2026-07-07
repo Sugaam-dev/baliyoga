@@ -119,7 +119,8 @@ const Header = () => {
               {navItems.map((item) => {
                 const hasDropdown = !!item.type;
                 const isCurrentActive = activeDropdown === item.type;
-                const isLinkActive = isNavItemActive(item) || (hasDropdown && isCurrentActive);
+                const isLinkActive = isNavItemActive(item);
+                const isParentHighlighted = isLinkActive || (hasDropdown && isCurrentActive);
                 
                 return (
                   <li
@@ -131,7 +132,7 @@ const Header = () => {
                       <button
                         onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
                         className={`flex items-center gap-1.5 px-2 text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[17px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
-                          isLinkActive ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
+                          isParentHighlighted ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                       >
@@ -217,20 +218,22 @@ const Header = () => {
                           {col.category}
                         </h4>
                         <ul className="space-y-3.5 list-none p-0 m-0">
-                          {col.items.map((item, itemIdx) => (
-                            <li key={itemIdx}>
-                              <Link
-                                to={item.link}
-                                onClick={() => setActiveDropdown(null)}
-                                className="block text-[13px] xl:text-[14px] font-normal transition-colors duration-200 uppercase tracking-wide leading-tight"
-                                style={{ color: '#ffffff' }}
-                                onMouseEnter={e => e.currentTarget.style.color = '#e5a93b'}
-                                onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
-                              >
-                                {item.name}
-                              </Link>
-                            </li>
-                          ))}
+                          {col.items.map((sub, itemIdx) => {
+                            const isSubActive = location.pathname === sub.link;
+                            return (
+                              <li key={itemIdx}>
+                                <Link
+                                  to={sub.link}
+                                  onClick={() => setActiveDropdown(null)}
+                                  className={`block text-[13px] xl:text-[14px] font-normal transition-colors duration-200 uppercase tracking-wide leading-tight ${
+                                    isSubActive ? 'text-[#e5a93b] font-semibold' : 'text-white hover:text-[#e5a93b]'
+                                  }`}
+                                >
+                                  {sub.name}
+                                </Link>
+                              </li>
+                            );
+                          })}
                         </ul>
                       </div>
                     ))}
@@ -272,6 +275,7 @@ const Header = () => {
               {navItems.map((item) => {
                 const isExpandable = !!item.type && !!MENU_CONTENT[item.type];
                 const isSectionOpen = mobileExpandedSection === item.type;
+                const isParentActive = isNavItemActive(item);
 
                 return (
                   <li key={item.label} className="border-b" style={{ borderColor: 'rgba(229,169,59,0.2)' }}>
@@ -280,7 +284,7 @@ const Header = () => {
                         <button
                           onClick={() => setMobileExpandedSection(isSectionOpen ? null : item.type)}
                           className="w-full flex justify-between items-center py-4 text-[17px] font-normal uppercase tracking-wide transition-colors duration-200"
-                          style={{ color: isSectionOpen ? '#e5a93b' : '#ffffff' }}
+                          style={{ color: isParentActive ? '#e5a93b' : isSectionOpen ? '#e5a93b' : '#ffffff' }}
                         >
                           <span>{item.label}</span>
                           <svg
@@ -307,18 +311,22 @@ const Header = () => {
                                     {col.category}
                                   </h4>
                                   <ul className="space-y-3 list-none p-0 m-0">
-                                    {col.items.map((sub, sIdx) => (
-                                      <li key={sIdx}>
-                                        <Link
-                                          to={sub.link}
-                                          onClick={closeMenu}
-                                          className="block text-[13px] font-normal uppercase tracking-wide leading-snug transition-colors duration-200"
-                                          style={{ color: '#ffffff' }}
-                                        >
-                                          {sub.name}
-                                        </Link>
-                                      </li>
-                                    ))}
+                                    {col.items.map((sub, sIdx) => {
+                                      const isSubActive = location.pathname === sub.link;
+                                      return (
+                                        <li key={sIdx}>
+                                          <Link
+                                            to={sub.link}
+                                            onClick={closeMenu}
+                                            className={`block text-[13px] font-normal uppercase tracking-wide leading-snug transition-colors duration-200 ${
+                                              isSubActive ? 'text-[#e5a93b] font-semibold' : 'text-white'
+                                            }`}
+                                          >
+                                            {sub.name}
+                                          </Link>
+                                        </li>
+                                      );
+                                    })}
                                   </ul>
                                 </div>
                               ))}
@@ -331,7 +339,7 @@ const Header = () => {
                         to={item.path}
                         onClick={closeMenu}
                         className="block py-4 text-[17px] font-normal uppercase tracking-wide transition-colors duration-200"
-                        style={{ color: '#ffffff' }}
+                        style={{ color: isParentActive ? '#e5a93b' : '#ffffff' }}
                       >
                         {item.label}
                       </Link>

@@ -15,3 +15,29 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Cormorant Garamond", var(--font-serif);
 }
+
+/* Custom Webkit Scrollbar (thinner and stylish) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f3ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c38b5f;
+  border-radius: 9999px;
+  border: 2px solid #f7f3ef;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a6734c;
+}
+
+/* Firefox scrollbar compatibility */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #c38b5f #f7f3ef;
+}

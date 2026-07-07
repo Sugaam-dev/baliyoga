@@ -1,6 +1,8 @@
 import React from "react";
 import { Sparkles, Users, Compass } from "lucide-react";
 import SectionHeading from "../../../components/shared/SectionHeading";
+import MobileCarousel from "../../../components/shared/MobileCarousel";
+import ScrollReveal from "../../../components/shared/ScrollReveal";
 import founderImg from "../../../assets/images/home/balitemple.JPEG";
 
 const leadershipCards = [
@@ -32,71 +34,75 @@ const Certifications = () => {
             
             {/* Left Column: Image with Elegant Double Frame */}
             <div className="lg:col-span-5 relative w-full max-w-md lg:max-w-none mx-auto">
-              <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
-                <div className="relative h-[480px] sm:h-[550px] lg:h-[580px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da] isolate transform translate-z-0">
-                  <img
-                    src={founderImg}
-                    alt="Yogi Ranjan - Founder"
-                    className="w-full h-full object-cover object-center transform transition duration-700 hover:scale-[1.03]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent"></div>
+              <ScrollReveal>
+                <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
+                  <div className="relative h-[480px] sm:h-[550px] lg:h-[580px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da] isolate transform translate-z-0">
+                    <img
+                      src={founderImg}
+                      alt="Yogi Ranjan - Founder"
+                      className="w-full h-full object-cover object-center transform transition duration-700 hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent"></div>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             </div>
 
             {/* Right Column: Founder Bio Content */}
             <div className="lg:col-span-7 flex flex-col justify-center">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">
-                Meet The Founder ✦
-              </span>
-              <h2 className="text-4xl sm:text-5xl font-serif font-semibold text-stone-900 tracking-tight leading-none mb-3">
-                Yogi Ranjan
-              </h2>
-              <p className="text-[#a6734c] text-sm font-semibold tracking-wider uppercase mb-6">
-                Founder, Bali Yoga Kendra
-              </p>
-              
-              <p className="text-stone-600 text-base sm:text-lg leading-relaxed mb-8">
-                Rooted in traditional yogic wisdom and refined through years of global teaching experience, 
-                Yogi Ranjan guides students through a deeply transformative spiritual journey. His classes blend 
-                classical practices with mindful awareness to cultivate internal balance and inner peace.
-              </p>
+              <ScrollReveal delay={0.15}>
+                <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">
+                  Meet The Founder ✦
+                </span>
+                <h2 className="text-4xl sm:text-5xl font-serif font-semibold text-stone-900 tracking-tight leading-none mb-3">
+                  Yogi Ranjan
+                </h2>
+                <p className="text-[#a6734c] text-sm font-semibold tracking-wider uppercase mb-6">
+                  Founder, Bali Yoga Kendra
+                </p>
+                
+                <p className="text-stone-600 text-base sm:text-lg leading-relaxed mb-8">
+                  Rooted in traditional yogic wisdom and refined through years of global teaching experience, 
+                  Yogi Ranjan guides students through a deeply transformative spiritual journey. His classes blend 
+                  classical practices with mindful awareness to cultivate internal balance and inner peace.
+                </p>
 
-              {/* Accent Separator */}
-              <div className="h-px w-20 bg-stone-300/80 mb-8"></div>
+                {/* Accent Separator */}
+                <div className="h-px w-20 bg-stone-300/80 mb-8"></div>
 
-              {/* Bullet Highlights */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10">
-                {[
-                  "E-RYT 500 Certified Yoga Alliance Professional",
-                  "YACEP Continuing Education Provider",
-                  "Master in Yoga & Conscious Meditation",
-                  "Specialist in Pranayama & Breathwork Healing",
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <span className="text-[#c38b5f] text-xs mt-1.5 flex-shrink-0">✦</span>
-                    <p className="text-sm sm:text-base text-stone-700 leading-snug">
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
+                {/* Bullet Highlights */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10">
+                  {[
+                    "E-RYT 500 Certified Yoga Alliance Professional",
+                    "YACEP Continuing Education Provider",
+                    "Master in Yoga & Conscious Meditation",
+                    "Specialist in Pranayama & Breathwork Healing",
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <span className="text-[#c38b5f] text-xs mt-1.5 flex-shrink-0">✦</span>
+                      <p className="text-sm sm:text-base text-stone-700 leading-snug">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <a 
-                  href="#contact" 
-                  className="bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 text-center no-underline"
-                >
-                  Learn From The Founder
-                </a>
-                <a 
-                  href="#about" 
-                  className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 text-center no-underline"
-                >
-                  View Full Journey
-                </a>
-              </div>
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                  <a 
+                    href="#contact" 
+                    className="bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 text-center no-underline"
+                  >
+                    Learn From The Founder
+                  </a>
+                  <a 
+                    href="#about" 
+                    className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 text-center no-underline"
+                  >
+                    View Full Journey
+                  </a>
+                </div>
+              </ScrollReveal>
             </div>
 
           </div>
@@ -104,35 +110,42 @@ const Certifications = () => {
 
         {/* SECTION 2: CORE LEADERSHIP PILLARS */}
         <section className="relative w-full border-t border-stone-200/50 pt-10 md:pt-12">
-          <SectionHeading 
-            title="The Pillars of" 
-            highlight="Leadership" 
-            subtitle="Explore our core leadership pillars representing our dedication to yoga, self-growth, and global community."
-          />
+          <ScrollReveal>
+            <SectionHeading 
+              title="The Pillars of" 
+              highlight="Leadership" 
+              subtitle="Explore our core leadership pillars representing our dedication to yoga, self-growth, and global community."
+            />
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {leadershipCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white border border-stone-200/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col items-center text-center group"
-              >
-                {/* Icon Frame */}
-                <div className="w-16 h-16 bg-[#faf8f5] border border-stone-200/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-[#c38b5f]/10 group-hover:border-[#c38b5f] transition-all duration-500">
-                  {card.icon}
+          {/* Carousel on mobile, Grid on desktop */}
+          <ScrollReveal delay={0.15}>
+            <MobileCarousel
+              items={leadershipCards}
+              gridClass="grid-cols-1 md:grid-cols-3 gap-8 mt-12"
+              renderItem={(card, index) => (
+                <div
+                  key={index}
+                  className="bg-white border border-stone-200/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col items-center text-center group h-full"
+                >
+                  {/* Icon Frame */}
+                  <div className="w-16 h-16 bg-[#faf8f5] border border-stone-200/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-[#c38b5f]/10 group-hover:border-[#c38b5f] transition-all duration-500">
+                    {card.icon}
+                  </div>
+                  
+                  {/* Pillar Title */}
+                  <h3 className="text-stone-900 text-xl font-bold mb-3 font-serif">
+                    {card.title}
+                  </h3>
+                  
+                  {/* Pillar Description */}
+                  <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
+                    {card.description}
+                  </p>
                 </div>
-                
-                {/* Pillar Title */}
-                <h3 className="text-stone-900 text-xl font-bold mb-3 font-serif">
-                  {card.title}
-                </h3>
-                
-                {/* Pillar Description */}
-                <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
+              )}
+            />
+          </ScrollReveal>
         </section>
 
       </div>

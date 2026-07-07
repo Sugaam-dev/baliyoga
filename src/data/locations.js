@@ -1,54 +1,56 @@
-// src/data/locations.js
-// Single source of truth for all program links and retreats, matching Ombreathe's dynamic design.
-
-export const LOCATIONS = [
-  { slug: "bali", label: "Bali" }
-];
+/**
+ * Navigation link data for the header mega-menu.
+ * Slugs here MUST match the keys in baliDataMap.js exactly.
+ */
 
 export const PROGRAM_LINKS = {
   bali: {
+    // ─── Multi-Style YTT ─────────────────────────────────────────────────────
     ytt: [
-      { path: "6-days-50hr-multi-style", label: "6 Days 50 Hours Multi-Style Yoga Course" },
-      { path: "10-days-100hr-multi-style", label: "10 Days 100 Hours Multi-Style Yoga Course" },
-      { path: "20-days-200hr-multi-style", label: "20 Days 200 Hours Multi-Style YTTC" },
-      { path: "300hr-multi-style-bali", label: "26 Days 300 Hours Advanced Multi-Style YTTC" },
-      { path: "500hr-multi-style-bali", label: "56 Days 500 Hours Advanced Multi-Style YTTC" }
+      { label: "6 Days 50Hr Multi-Style",  path: "6-days-50hr-multi-style" },
+      { label: "10 Days 100Hr Multi-Style", path: "10-days-100hr-multi-style" },
+      { label: "20 Days 200Hr Multi-Style", path: "20-days-200hr-multi-style" },
+      { label: "300Hr Multi-Style",         path: "300hr-multi-style-bali" },
+      { label: "500Hr Multi-Style",         path: "500hr-multi-style-bali" },
     ],
+
+    // ─── Kundalini YTT ───────────────────────────────────────────────────────
     kundalini: [
-      { path: "6-days-50hr-kundalini", label: "6 Days 50 Hours Kundalini YTTC" },
-      { path: "100hr-kundalini-bali", label: "10 Days 100 Hours Kundalini YTTC" },
-      { path: "200hr-kundalini-bali", label: "20 Days 200 Hours Kundalini YTTC" },
-      { path: "300hr-kundalini-bali", label: "30 Days 300 Hours Kundalini YTTC" },
-      { path: "500hr-kundalini-bali", label: "50 Days 500 Hours Kundalini YTTC" }
+      { label: "6 Days 50Hr Kundalini",  path: "6-days-50hr-kundalini" },
+      { label: "100Hr Kundalini",        path: "100hr-kundalini-bali" },
+      { label: "200Hr Kundalini",        path: "200hr-kundalini-bali" },
+      { label: "300Hr Kundalini",        path: "300hr-kundalini-bali" },
+      { label: "500Hr Kundalini",        path: "500hr-kundalini-bali" },
     ],
+
+    // ─── Short Courses ────────────────────────────────────────────────────────
     "short-courses": [
-      { path: "50hr-yin-yoga", label: "6 Days 50 Hours Yin Yoga Course" },
-      { path: "85hr-prenatal-yoga", label: "85-Hours Prenatal Yoga TTC in Bali" },
-      { path: "aerial-yoga-course", label: "5 Days Aerial Yoga Course" },
-      { path: "acro-yoga-course", label: "5 Days Acro Yoga Course" }
+      { label: "Acro Yoga Course",     path: "acro-yoga-course" },
+      { label: "Aerial Yoga Course",   path: "aerial-yoga-course" },
+      { label: "50Hr Yin Yoga",        path: "50hr-yin-yoga" },
+      { label: "85Hr Prenatal Yoga",   path: "85hr-prenatal-yoga" },
     ],
+
+    // ─── Specialization ───────────────────────────────────────────────────────
     specialization: [
-      { path: "vedic-sound-healing-level-1-2", label: "Vedic Sound Healing Level 1 & 2" },
-      { path: "100hr-yoga-therapy-ayurveda", label: "Bali 100 Hours Yoga Therapy Ayurveda" },
-      { path: "ayurvedic-treatment-bali", label: "Ayurvedic Treatment In Bali" },
-      { path: "abhyangam-massage-training-bali", label: "Abhyangam Massage Training Course In Bali" }
-    ]
-  }
+      { label: "100Hr Yoga Therapy & Ayurveda",    path: "100hr-yoga-therapy-ayurveda" },
+      { label: "Ayurvedic Treatment TTC",          path: "ayurvedic-treatment-bali" },
+      { label: "Abhyangam Massage Training",       path: "abhyangam-massage-training-bali" },
+      { label: "Vedic Sound Healing Level 1 & 2",  path: "vedic-sound-healing-level-1-2" },
+    ],
+  },
 };
 
 export const RETREAT_LINKS = {
   bali: [
-    { path: "6-days-50hr-multi-style", label: "6 Days 50 Hours Multi-Style Yoga Course" },
-    { path: "10-days-100hr-multi-style", label: "10 Days 100 Hours Multi-Style Yoga Course" },
-    { path: "20-days-200hr-multi-style", label: "20 Days 200 Hours Multi-Style YTTC" },
-    { path: "300hr-multi-style-bali", label: "26 Days 300 Hours Advanced Multi-Style YTTC" },
-    { path: "500hr-multi-style-bali", label: "56 Days 500 Hours Advanced Multi-Style YTTC" }
-  ]
+    { label: "Yoga Retreat Bali",          path: "yoga-retreat-bali" },
+    { label: "Meditation Retreat",         path: "meditation-retreat-bali" },
+    { label: "Sound Healing Retreat",      path: "sound-healing-retreat-bali" },
+    { label: "Wellness & Detox Retreat",   path: "wellness-detox-retreat-bali" },
+  ],
 };
 
-// Category path builder - directly builds path based on category key
-export const buildPath = (category, slug) => {
-  let catPrefix = category;
-  if (category === "retreats") catPrefix = "wellness";
-  return `/${catPrefix}/${slug}`;
-};
+/**
+ * Builds a full URL path: /category/slug
+ */
+export const buildPath = (category, slug) => `/${category}/${slug}`;

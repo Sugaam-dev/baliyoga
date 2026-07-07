@@ -1,17 +1,26 @@
 import React from 'react'
-
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
 import FloatingSocialBar from '../components/shared/FloatingSocialBar'
 
 function RootLayout() {
+  const location = useLocation();
+
   return (
     <div>
       <Header/>
-       <FloatingSocialBar/>
-      <main>
-        <Outlet/>
+      <FloatingSocialBar/>
+      <main className="overflow-x-hidden">
+        <motion.div
+          key={location.pathname}
+          initial={{ opacity: 0.6 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.18, ease: "easeOut" }}
+        >
+          <Outlet/>
+        </motion.div>
       </main>
       <Footer/>
     </div>
