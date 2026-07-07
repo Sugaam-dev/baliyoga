@@ -1,19 +1,19 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
-import Home from "./pages/Home/Home";
-import About from './pages/About/About';
-import Course from './pages/Course/Course';
-import Gallery from './pages/Gallery/Gallery';
-import Retreat from './pages/Retreat/Retreat';
-import Contact from './pages/Contact/Contact';
-import OnlinePage from './pages/Online/OnlinePage';
+import Home from "./pages/home/Home";
+import About from './pages/about/About';
+import Course from './pages/course/course';
+import Gallery from './pages/gallery/gallery';
+import Retreat from './pages/retreat/retreat';
+import Contact from './pages/contact/Contact';
+import OnlinePage from './pages/online/OnlinePage';
 import ScrollToTop from './components/shared/ScrollToTop';
 
 import ProgramPage from './pages/Program/ProgramPage';
 import CheckoutPage from './pages/Checkout/CheckoutPage';
 
-import Facilities from './pages/Meditation/Facilities';
+import Facilities from './pages/meditation/Facilities';
 import TermsAndConditions from './pages/term&condition/term-condition';
 
 
