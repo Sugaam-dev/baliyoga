@@ -1,12 +1,12 @@
-import RetreatsHero from "./retreatsHero.jsx";
-import RetreatSection from "./retreatSection";
-import RetreatCard from "./retreatCard";
-import GuestWorkshopSection from "./guestWorkshopSection";
+import RetreatsHero from "./components/RetreatsHero.jsx";
+import RetreatSection from "./components/RetreatSection";
+import RetreatCard from "./components/RetreatCard";
+import GuestWorkshopSection from "./components/GuestWorkshopSection";
 
 // Bali images
-import bali1 from "../home/images/bali1.jpg";
-import bali2 from "../home/images/bali2.jpg";
-import bali3 from "../home/images/bali3.jpg";
+import bali1 from "../../assets/images/home/bali1.jpg";
+import bali2 from "../../assets/images/home/bali2.jpg";
+import bali3 from "../../assets/images/home/bali3.jpg";
 
 // Yoga assets
 import yoga0 from "../../assets/yoga0.jpg";

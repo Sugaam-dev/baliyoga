@@ -1,1 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", var(--font-sans);
+  background-color: #faf8f5;
+  color: #2c2520;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", var(--font-serif);
+}
+
+/* Custom Webkit Scrollbar (thinner and stylish) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f3ef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c38b5f;
+  border-radius: 9999px;
+  border: 2px solid #f7f3ef;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a6734c;
+}
+
+/* Firefox scrollbar compatibility */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #c38b5f #f7f3ef;
+}

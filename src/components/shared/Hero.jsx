@@ -1,0 +1,252 @@
+import React, { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { Link } from "react-router-dom";
+import { Award, Calendar, Home, Utensils, ArrowRight } from "lucide-react";
+
+// Swiper CSS
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+// Images
+import yoga1 from "../../assets/images/home/yoga1.jpg";
+import yoga from "../../assets/images/home/yoga.jpg";
+
+function HeroSection() {
+  // Dynamically inject Google Fonts for both Montserrat (Heading) and Playfair Display (Subtitle)
+  useEffect(() => {
+    const fontId = "google-fonts-hero";
+    if (!document.getElementById(fontId)) {
+      const link = document.createElement("link");
+      link.id = fontId;
+      link.rel = "stylesheet";
+      link.href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Playfair+Display:ital,wght@1,400&display=swap";
+      document.head.appendChild(link);
+    }
+  }, []);
+
+  const heroImages = [
+    { url: yoga1, alt: "Yoga Retreat Bali" },
+    { url: yoga, alt: "Yoga Meditation Bali" },
+  ];
+
+  return (
+    <section className="relative w-full overflow-hidden bg-[#FAF8F5] p-0 m-0">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={1200}
+        autoplay={{
+          delay: 4500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        className="w-full h-full"
+      >
+        {heroImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full bg-[#FAF8F5] flex flex-col lg:block">
+
+              {/* ───────────────── DESKTOP HERO (Unified Layout) ───────────────── */}
+              <div className="hidden lg:block relative h-[75vh] min-h-[500px] max-h-[720px] w-full">
+                
+                {/* Background image spanning the entire banner */}
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* 
+                    Smooth, wide fade:
+                    - Solid #FAF8F5 on the left (0% to 30%) to make sure the user does not see the image behind the text
+                    - Increased, gradual fade-out from 30% to 65% to blend the transition seamlessly
+                  */}
+                  <div 
+                    className="absolute inset-0" 
+                    style={{
+                      background: 'linear-gradient(to right, #FAF8F5 0%, #FAF8F5 30%, rgba(250, 248, 245, 0.95) 38%, rgba(250, 248, 245, 0.6) 50%, rgba(250, 248, 245, 0) 65%)'
+                    }}
+                  />
+                </div>
+
+                {/* Left content overlaid directly on top of the blended canvas */}
+                <div className="relative z-10 h-full w-[38%] flex flex-col justify-center pl-10 xl:pl-16 2xl:pl-24 pr-4">
+                  <LeftContent />
+                </div>
+
+              </div>
+
+              {/* ───────────────── MOBILE / TABLET ───────────────── */}
+              <div className="flex flex-col lg:hidden">
+                {/* TEXT */}
+                <div className="bg-[#FAF8F5] px-6 sm:px-12 pt-8 pb-6">
+                  <LeftContent />
+                </div>
+
+                {/* IMAGE */}
+                <div className="relative w-full overflow-hidden">
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    loading={index === 0 ? "eager" : "lazy"}
+                    className="w-full object-cover"
+                    style={{
+                      height: "45vw",
+                      minHeight: "240px",
+                      maxHeight: "400px",
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/5" />
+                </div>
+              </div>
+
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+    LEFT CONTENT COMPONENT
+───────────────────────────────────────────── */
+
+function LeftContent() {
+  return (
+    <>
+      {/* BADGE */}
+      <div className="flex items-center gap-2 text-[#b86b2b] text-[10px] xl:text-[11px] 2xl:text-xs font-semibold tracking-wider uppercase">
+        <Award size={13} className="stroke-[2.5]" />
+        A Journey That Transforms You
+      </div>
+
+      {/* HEADING */}
+      <h1
+        className="
+          mt-4
+          font-['Montserrat']
+          text-[1.8rem] sm:text-[2.3rem]
+          lg:text-[2.8rem] xl:text-[2.4rem] 2xl:text-[2.0rem]
+          leading-[1.15] font-bold text-[#1f3528]
+          tracking-tight
+        "
+      >
+        Become a <br />
+        <span className="font-bold">Certified Yoga</span> <br />
+        Teacher in{" "}
+        <span className="text-[#b86b2b] font-bold">Bali</span>
+      </h1>
+
+      {/* SUBTITLE */}
+      <p
+        className="
+          mt-7 text-black-600 font-medium
+          font-['Playfair_Display'] italic
+          text-[14px] sm:text-[17px]
+          lg:text-[16px] xl:text-[18px] 2xl:text-[18px]
+        "
+      >
+        Transform Your Life. Inspire the World.
+      </p>
+
+      {/* HORIZONTAL FEATURES */}
+      <div className="mt-3 flex flex-row flex-wrap lg:flex-nowrap items-center justify-start gap-y-3 gap-x-2 border-t border-gray-200/80 pt-4">
+        {[
+          { title: <>21-Day <br /> Training</>, icon: Calendar },
+          { title: <>Yoga Alliance <br /> Certified</>, icon: Award },
+          { title: <>Luxury Stay <br /> In Nature</>, icon: Home },
+          { title: <>Sattvic Food <br /> & Excursions</>, icon: Utensils },
+        ].map((item, i) => {
+          const IconComponent = item.icon;
+          return (
+            <React.Fragment key={i}>
+              <div className="flex flex-col items-center text-center gap-1 flex-shrink-0 min-w-[72px] lg:min-w-[65px] xl:min-w-[75px]">
+                {/* Logo / Icon on top */}
+                <div
+                  className="
+                    rounded-full border border-gray-300 bg-white
+                    flex items-center justify-center flex-shrink-0
+                    w-7 h-7 text-[#1f3528] shadow-sm
+                  "
+                >
+                  <IconComponent size={13} className="stroke-[1.75]" />
+                </div>
+
+                {/* Label text directly below icon */}
+                <div
+                  className="
+                    text-[#1f3528]
+                    font-semibold
+                    text-[9px]
+                    xl:text-[10px]
+                    2xl:text-[11px]
+                    tracking-wide
+                    leading-tight
+                  "
+                >
+                  {item.title}
+                </div>
+              </div>
+
+              {/* Middle line separator dividers between items */}
+              {i < 3 && (
+                <div className="hidden lg:block h-6 w-px bg-gray-300/70 mx-0.5 self-center flex-shrink-0" />
+              )}
+            </React.Fragment>
+          );
+        })}
+      </div>
+
+      {/* BUTTONS */}
+      <div className="mt-8 flex flex-col sm:flex-row gap-2.5">
+        {/* APPLY NOW */}
+        <Link
+          to="/contact"
+          className="
+            group
+            bg-[#26402e] hover:bg-[#182b1f]
+            text-white
+            px-4 lg:px-3 xl:px-4
+            py-3 lg:py-2.5 xl:py-3
+            rounded-xl
+            text-xs lg:text-[10px] xl:text-xs 2xl:text-sm
+            font-bold tracking-wide
+            shadow-md transition-all duration-300
+            flex items-center justify-center gap-1.5
+          "
+        >
+          APPLY NOW
+          <ArrowRight
+            size={14}
+            className="group-hover:translate-x-1 transition stroke-[2.5]"
+          />
+        </Link>
+
+        {/* DOWNLOAD BROCHURE */}
+        <a
+          href="/brochure.pdf"
+          className="
+            border border-[#b86b2b]
+            text-[#b86b2b] bg-transparent
+            hover:bg-[#b86b2b] hover:text-white
+            px-4 lg:px-3 xl:px-4
+            py-3 lg:py-2.5 xl:py-3
+            rounded-xl
+            text-xs lg:text-[10px] xl:text-xs 2xl:text-sm
+            font-bold tracking-wide
+            transition-all duration-300
+            flex items-center justify-center gap-1.5
+          "
+        >
+          DOWNLOAD BROCHURE
+        </a>
+      </div>
+    </>
+  );
+}
+
+export default HeroSection;

@@ -1,8 +1,8 @@
-import ContactHero from "./ContactHero";
-import LocationSection from "./LocationSection";
-import ContactMethods from "./ContactMethods";
-import InquiryForm from "./InquiryForm";
-import SocialLinksSection from "./SocialLinksSection";
+import ContactHero from "./components/ContactHero";
+import LocationSection from "./components/LocationSection";
+import ContactMethods from "./components/ContactMethods";
+import InquiryForm from "./components/InquiryForm";
+import SocialLinksSection from "./components/SocialLinksSection";
 
 export default function Contact() {
   return (
