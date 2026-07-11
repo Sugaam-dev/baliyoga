@@ -1,28 +1,68 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ScrollReveal from "../../../components/shared/ScrollReveal";
+import SectionHeading from "../../../components/shared/SectionHeading";
+
+const offerings = [
+  { icon: "🧘", label: "Yoga Teacher Training" },
+  { icon: "🪷", label: "Meditation Retreats" },
+  { icon: "🌿", label: "Wellness Programs" },
+  { icon: "🔔", label: "Sound Healing Programs" },
+  { icon: "✨", label: "Spiritual Workshops" },
+  { icon: "🌍", label: "Community Events" },
+];
 
 export default function Lifestyle({ lifestyleImg }) {
   return (
-    <section className="bg-white py-14 sm:py-16 md:py-20">
+    <section className="bg-white py-14 sm:py-16 md:py-20 border-b border-stone-200/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="overflow-hidden rounded-3xl">
-            <img
-              src={lifestyleImg}
-              alt="Lifestyle"
-              className="w-full h-full object-cover rounded-3xl shadow-md transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl cursor-pointer"
-            />
-          </div>
 
-          <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl mb-6 leading-tight">
-              Bali Yoga Lifestyle
-            </h2>
+        <ScrollReveal>
+          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3">
+            More Than a Yoga School ✦
+          </span>
+          <SectionHeading
+            title="More Than a"
+            highlight="Yoga School"
+            subtitle="Bali Yoga Kendra is a thriving community dedicated to conscious living, spiritual exploration, personal growth, and holistic wellness."
+          />
+        </ScrollReveal>
 
-            <p className="leading-relaxed text-base sm:text-lg text-gray-700">
-              From sunrise meditation to nourishing vegetarian meals, students
-              immerse themselves in conscious living.
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-6">
+
+          {/* Left: image */}
+          <ScrollReveal>
+            <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
+              <div className="relative h-[380px] sm:h-[460px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da]">
+                <img
+                  src={lifestyleImg}
+                  alt="Bali Yoga Lifestyle"
+                  className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent" />
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Right: content */}
+          <ScrollReveal delay={0.1}>
+            <p className="text-stone-600 text-base leading-relaxed mb-6">
+              Bali Yoga Kendra is more than a place to earn a yoga certification. It is a thriving community dedicated to conscious living, spiritual exploration, personal growth, and holistic wellness.
             </p>
-          </div>
+            <p className="text-stone-600 text-base leading-relaxed mb-8">
+              Our goal is to inspire individuals to live with greater awareness, purpose, compassion, and joy.
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+              {offerings.map((o, i) => (
+                <div key={i} className="flex items-center gap-2 bg-[#FAF8F5] border border-stone-200/40 rounded-xl px-3 py-3 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <span className="text-lg">{o.icon}</span>
+                  <p className="text-stone-700 text-xs font-semibold leading-snug">{o.label}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
         </div>
       </div>
     </section>
