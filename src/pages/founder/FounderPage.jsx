@@ -3,7 +3,7 @@ import { ArrowLeft, Award, Globe, Heart, Star, BookOpen, Users } from "lucide-re
 import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 import founderImg from "../../assets/images/home/ranjan_sir.jpg";
-import baliTemple from "../../assets/images/home/balitemple.JPEG";
+import baliTemple from "../../assets/images/home/bali2.jpg";
 
 const credentials = [
   "E-RYT 500 — Yoga Alliance Registered Senior Teacher",
@@ -110,34 +110,44 @@ const FounderPage = () => {
         </div>
       </section>
 
-      {/* ── MAIN CONTENT ── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      {/* ── MAIN CONTENT: full-width, minimal side gap ── */}
+      <div className="w-full px-3 sm:px-5 md:px-8 py-12 md:py-16 flex flex-col gap-4">
 
-          {/* ── LEFT SIDEBAR (sticky on desktop) ── */}
-          <aside className="lg:col-span-4">
-            <div className="sticky top-8 flex flex-col gap-6">
+        {/* ── TOP ROW: Name/Photo | Certifications | Stats (vertical stack) — matches sketch ── */}
+        <ScrollReveal>
+          <div className="bg-white border border-stone-200/40 rounded-3xl p-6 sm:p-8 shadow-sm">
+            <h2 className="text-stone-900 font-serif text-2xl sm:text-3xl font-semibold mb-6">
+              Dr. Yogi Ranjan
+            </h2>
+            <div className="h-px w-full bg-stone-100 mb-6" />
 
-              <ScrollReveal>
-                <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
-                  <div className="relative h-[380px] sm:h-[440px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da]">
-                    <img
-                      src={founderImg}
-                      alt="Yogi Ranjan"
-                      className="w-full h-full object-cover object-center hover:scale-[1.03] transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-transparent" />
-                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+
+              {/* Photo — large, left side, full height */}
+              <div className="flex flex-col gap-4">
+                <div className="border border-stone-200/60 p-2 rounded-[28px] flex-1">
+                  <div className="relative w-full h-full min-h-[220px] max-h-[260px] rounded-[20px] overflow-hidden shadow-lg bg-[#efe7da] flex items-center justify-center">
+  <img
+    src={founderImg}
+    alt="Yogi Ranjan"
+    className="w-full h-full object-cover object-center"
+  />
+</div>
                 </div>
-              </ScrollReveal>
+                <p className="text-[#a6734c] text-xs font-bold uppercase tracking-widest">
+                  Founder &amp; Lead Yoga Teacher — Bali Yoga Kendra
+                </p>
+              </div>
 
-              <ScrollReveal delay={0.1}>
-                <div className="bg-white border border-stone-200/40 rounded-3xl p-6 shadow-sm">
-                  <h3 className="text-stone-900 font-serif text-lg font-semibold mb-4 flex items-center gap-2">
-                    <Award className="w-5 h-5 text-[#c38b5f]" />
+              {/* Right side: Certifications (2-col grid) on top, Stats (2x2 grid) below */}
+              <div className="flex flex-col gap-6">
+
+                <div className="flex-1 flex flex-col">
+                  <h3 className="text-stone-900 font-serif text-base font-semibold mb-4 flex items-center gap-2">
+                    <Award className="w-4 h-4 text-[#c38b5f]" />
                     Certifications
                   </h3>
-                  <div className="flex flex-col gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
                     {credentials.map((cred, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <span className="text-[#c38b5f] text-xs mt-1 flex-shrink-0">✦</span>
@@ -146,152 +156,140 @@ const FounderPage = () => {
                     ))}
                   </div>
                 </div>
-              </ScrollReveal>
 
-              <ScrollReveal delay={0.15}>
-                <div className="grid grid-cols-2 gap-3">
-                  {highlights.map((h, i) => (
-                    <div
-                      key={i}
-                      className="bg-white border border-stone-200/40 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition-all duration-300 flex flex-col items-center gap-1"
-                    >
-                      {h.icon}
-                      <span className="text-xl font-bold font-serif bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] bg-clip-text text-transparent">
-                        {h.number}
-                      </span>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-stone-500">
-                        {h.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </ScrollReveal>
-
-            </div>
-          </aside>
-
-          {/* ── RIGHT: Full Story ── */}
-          <div className="lg:col-span-8 flex flex-col gap-10">
-
-            {/* Full Bio Introduction */}
-            <ScrollReveal>
-              <div className="bg-white border border-stone-200/40 rounded-3xl p-7 sm:p-8 shadow-sm">
-                <h2 className="text-stone-900 font-serif text-2xl sm:text-3xl font-semibold mb-2">
-                  Dr. Yogi Ranjan — Founder & Lead Yoga Teacher at Bali Yoga Kendra
-                </h2>
-                <div className="h-px w-full bg-stone-100 my-5" />
-                <div className="flex flex-col gap-4">
-                  <p className="text-stone-600 text-base leading-relaxed">
-                    Dr. Yogi Ranjan is an internationally respected Yoga Teacher, Spiritual Healer, Meditation Guide, 
-                    and Yog Acharya with over a decade of dedicated experience in the fields of traditional yoga, 
-                    mindfulness, meditation, and holistic wellness. As the Founder of Bali Yoga Kendra, he is committed 
-                    to preserving and sharing the authentic teachings of yogic science through Yoga Alliance Certified 
-                    Teacher Training Programs, yoga retreats, and transformational wellness experiences.
-                  </p>
-                  <p className="text-stone-600 text-base leading-relaxed">
-                    Holding a Doctorate degree and a deep passion for spiritual growth, Dr. Yogi Ranjan has devoted his 
-                    life to exploring the profound wisdom of ancient yogic traditions. His spiritual journey has taken 
-                    him across the sacred landscapes of India, including the Himalayas, Rishikesh, Varanasi, and other 
-                    renowned pilgrimage destinations, where he studied under revered gurus, Himalayan masters, and 
-                    traditional yoga practitioners. These experiences have enriched his understanding of Yoga Philosophy, 
-                    Meditation, Pranayama, Kundalini Energy, and Conscious Living.
-                  </p>
-                  <p className="text-stone-600 text-base leading-relaxed">
-                    A devoted follower of Lord Shiva and an alumnus of the Isha Foundation, Dr. Yogi Ranjan combines 
-                    ancient yogic wisdom with modern teaching methodologies to create life-changing learning experiences 
-                    for students from around the world. His teaching style integrates the core principles of Hatha Yoga, 
-                    Raja Yoga, Kundalini Yoga, Breathwork, Meditation, Mindfulness, and Spiritual Healing, helping 
-                    practitioners achieve physical vitality, mental clarity, emotional balance, and inner transformation.
-                  </p>
-                  <p className="text-stone-600 text-base leading-relaxed">
-                    Over the years, Dr. Yogi Ranjan has trained and mentored hundreds of yoga practitioners, wellness 
-                    seekers, and aspiring yoga teachers through 200 Hour Yoga Teacher Training, 300 Hour Yoga Teacher 
-                    Training, Meditation Teacher Training, and Yoga Retreat Programs in Bali and internationally. His 
-                    teachings extend far beyond physical postures, emphasizing self-awareness, breath mastery, energy 
-                    alignment, and spiritual awakening.
-                  </p>
-                  <p className="text-stone-600 text-base leading-relaxed">
-                    Known for his compassionate guidance, authentic approach, and deep spiritual insight, Dr. Yogi Ranjan 
-                    inspires students to embrace yoga as a complete lifestyle and a path toward self-realization. Through 
-                    Bali Yoga Kendra, he continues to empower individuals worldwide to discover inner peace, holistic 
-                    well-being, and a deeper connection with their true nature.
-                  </p>
-                  <p className="text-stone-600 text-base leading-relaxed">
-                    Whether you are seeking professional yoga certification, personal transformation, spiritual growth, 
-                    or a deeper understanding of authentic yoga, Dr. Yogi Ranjan offers a powerful and inspiring pathway 
-                    rooted in tradition, wisdom, and experience.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Intro quote */}
-            <ScrollReveal>
-              <blockquote className="border-l-4 border-[#c38b5f] pl-6 py-2">
-                <p className="text-stone-700 text-lg sm:text-xl font-serif italic leading-relaxed">
-                  "Yoga is not something you do — it is something you become. My greatest teaching is 
-                  to help each student remember what they have always been."
-                </p>
-                <footer className="mt-3 text-[#a6734c] text-xs font-bold uppercase tracking-widest">
-                  — Yogi Ranjan
-                </footer>
-              </blockquote>
-            </ScrollReveal>
-
-            {/* Story sections */}
-            {journeySections.map((section, index) => (
-              <ScrollReveal key={index} delay={0.1 * (index + 1)}>
-                <div className="bg-white border border-stone-200/40 rounded-3xl p-7 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-9 h-9 rounded-xl bg-[#faf8f5] border border-stone-200/50 flex items-center justify-center flex-shrink-0">
-                      {section.icon}
-                    </div>
-                    <h2 className="text-stone-900 font-serif text-xl sm:text-2xl font-semibold leading-snug">
-                      {section.title}
-                    </h2>
+                <div className="bg-[#faf8f5] border border-stone-200/40 rounded-2xl p-6">
+                  <div className="grid grid-cols-2 gap-6">
+                    {highlights.map((h, i) => (
+                      <div key={i} className="flex items-center gap-3">
+                        <div className="flex-shrink-0">{h.icon}</div>
+                        <div className="flex flex-col leading-tight">
+                          <span className="text-2xl sm:text-3xl font-bold font-serif bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] bg-clip-text text-transparent">
+                            {h.number}
+                          </span>
+                          <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                            {h.label}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="h-px w-full bg-stone-100 mb-5" />
-                  {section.body.split("\n\n").map((para, pi) => (
-                    <p key={pi} className="text-stone-600 text-base leading-relaxed mb-4 last:mb-0">
-                      {para.trim()}
-                    </p>
-                  ))}
-                </div>
-              </ScrollReveal>
-            ))}
-
-            {/* Bottom CTA */}
-            <ScrollReveal delay={0.5}>
-              <div className="bg-[#1c2e24] rounded-3xl p-8 text-center shadow-lg">
-                <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">
-                  Train With The Founder ✦
-                </span>
-                <h3 className="font-serif text-2xl sm:text-3xl text-white font-semibold mb-3">
-                  Begin Your Own Journey
-                </h3>
-                <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-7 max-w-lg mx-auto">
-                  Join Yogi Ranjan and the BYK faculty for a life-changing yoga teacher training or 
-                  retreat in the heart of Ubud, Bali.
-                </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Link
-                    to="/course"
-                    className="bg-[#c38b5f] hover:bg-[#a6734c] text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 no-underline"
-                  >
-                    View All Programs
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="border border-stone-500 text-stone-300 hover:border-white hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 no-underline"
-                  >
-                    Get In Touch
-                  </Link>
                 </div>
               </div>
-            </ScrollReveal>
-
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
+
+        {/* Full bio — wide, minimal side margin */}
+        <ScrollReveal>
+          <div className="bg-white border border-stone-200/40 rounded-3xl p-7 sm:p-10 shadow-sm flex flex-col gap-4">
+            <p className="text-stone-600 text-base leading-relaxed">
+              Dr. Yogi Ranjan is an internationally respected Yoga Teacher, Spiritual Healer, Meditation Guide, 
+              and Yog Acharya with over a decade of dedicated experience in the fields of traditional yoga, 
+              mindfulness, meditation, and holistic wellness. As the Founder of Bali Yoga Kendra, he is committed 
+              to preserving and sharing the authentic teachings of yogic science through Yoga Alliance Certified 
+              Teacher Training Programs, yoga retreats, and transformational wellness experiences.
+            </p>
+            <p className="text-stone-600 text-base leading-relaxed">
+              Holding a Doctorate degree and a deep passion for spiritual growth, Dr. Yogi Ranjan has devoted his 
+              life to exploring the profound wisdom of ancient yogic traditions. His spiritual journey has taken 
+              him across the sacred landscapes of India, including the Himalayas, Rishikesh, Varanasi, and other 
+              renowned pilgrimage destinations, where he studied under revered gurus, Himalayan masters, and 
+              traditional yoga practitioners. These experiences have enriched his understanding of Yoga Philosophy, 
+              Meditation, Pranayama, Kundalini Energy, and Conscious Living.
+            </p>
+            <p className="text-stone-600 text-base leading-relaxed">
+              A devoted follower of Lord Shiva and an alumnus of the Isha Foundation, Dr. Yogi Ranjan combines 
+              ancient yogic wisdom with modern teaching methodologies to create life-changing learning experiences 
+              for students from around the world. His teaching style integrates the core principles of Hatha Yoga, 
+              Raja Yoga, Kundalini Yoga, Breathwork, Meditation, Mindfulness, and Spiritual Healing, helping 
+              practitioners achieve physical vitality, mental clarity, emotional balance, and inner transformation.
+            </p>
+            <p className="text-stone-600 text-base leading-relaxed">
+              Over the years, Dr. Yogi Ranjan has trained and mentored hundreds of yoga practitioners, wellness 
+              seekers, and aspiring yoga teachers through 200 Hour Yoga Teacher Training, 300 Hour Yoga Teacher 
+              Training, Meditation Teacher Training, and Yoga Retreat Programs in Bali and internationally. His 
+              teachings extend far beyond physical postures, emphasizing self-awareness, breath mastery, energy 
+              alignment, and spiritual awakening.
+            </p>
+            <p className="text-stone-600 text-base leading-relaxed">
+              Known for his compassionate guidance, authentic approach, and deep spiritual insight, Dr. Yogi Ranjan 
+              inspires students to embrace yoga as a complete lifestyle and a path toward self-realization. Through 
+              Bali Yoga Kendra, he continues to empower individuals worldwide to discover inner peace, holistic 
+              well-being, and a deeper connection with their true nature.
+            </p>
+            <p className="text-stone-600 text-base leading-relaxed">
+              Whether you are seeking professional yoga certification, personal transformation, spiritual growth, 
+              or a deeper understanding of authentic yoga, Dr. Yogi Ranjan offers a powerful and inspiring pathway 
+              rooted in tradition, wisdom, and experience.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Intro quote */}
+        <ScrollReveal>
+          <blockquote className="border-l-4 border-[#c38b5f] pl-6 py-2">
+            <p className="text-stone-700 text-lg sm:text-xl font-serif italic leading-relaxed">
+              "Yoga is not something you do — it is something you become. My greatest teaching is 
+              to help each student remember what they have always been."
+            </p>
+            <footer className="mt-3 text-[#a6734c] text-xs font-bold uppercase tracking-widest">
+              — Yogi Ranjan
+            </footer>
+          </blockquote>
+        </ScrollReveal>
+
+        {/* Story sections — full width, minimal side gap */}
+        {journeySections.map((section, index) => (
+          <ScrollReveal key={index} delay={0.1 * (index + 1)}>
+            <div className="bg-white border border-stone-200/40 rounded-3xl p-7 sm:p-10 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-9 h-9 rounded-xl bg-[#faf8f5] border border-stone-200/50 flex items-center justify-center flex-shrink-0">
+                  {section.icon}
+                </div>
+                <h2 className="text-stone-900 font-serif text-xl sm:text-2xl font-semibold leading-snug">
+                  {section.title}
+                </h2>
+              </div>
+              <div className="h-px w-full bg-stone-100 mb-5" />
+              {section.body.split("\n\n").map((para, pi) => (
+                <p key={pi} className="text-stone-600 text-base leading-relaxed mb-4 last:mb-0">
+                  {para.trim()}
+                </p>
+              ))}
+            </div>
+          </ScrollReveal>
+        ))}
+
+        {/* Bottom CTA */}
+        <ScrollReveal delay={0.5}>
+          <div className="bg-[#1c2e24] rounded-3xl p-8 text-center shadow-lg">
+            <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">
+              Train With The Founder ✦
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl text-white font-semibold mb-3">
+              Begin Your Own Journey
+            </h3>
+            <p className="text-stone-400 text-sm sm:text-base leading-relaxed mb-7 max-w-lg mx-auto">
+              Join Yogi Ranjan and the BYK faculty for a life-changing yoga teacher training or 
+              retreat in the heart of Ubud, Bali.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/course"
+                className="bg-[#c38b5f] hover:bg-[#a6734c] text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 no-underline"
+              >
+                View All Programs
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-stone-500 text-stone-300 hover:border-white hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 no-underline"
+              >
+                Get In Touch
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
+
       </div>
     </div>
   );

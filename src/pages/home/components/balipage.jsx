@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import baliHero from "../../../assets/images/home/balitemple.JPEG";
+import baliHero from "../../../assets/images/home/bali1.jpg";
 
 // ────────────────────────────────────────────────────────────
 // Bali destination landing page — /programs/bali
@@ -31,25 +31,32 @@ const whyCards = [
   },
 ];
 
+// NOTE: id values match the ":category" keys in baliDataMap.js exactly
+// (ytt, kundalini, short-courses, specialization)
+// slug values match the keys inside each category in baliDataMap.js exactly
 const PROGRAM_CATEGORIES = [
   {
-    id: "multi-style-yttc",
+    id: "ytt",
     icon: "🧘",
     label: "Multi-Style YTTC",
     programs: [
-      { name: "200hr Multi-Style YTTC", duration: "25 Days", price: "$1,450" },
-      { name: "300hr Multi-Style YTTC", duration: "30 Days", price: "$1,890" },
-      { name: "500hr Multi-Style YTTC", duration: "45 Days", price: "$2,650" },
+      { name: "6 Days 50hr Multi-Style YTTC", duration: "6 Days", price: "$690", slug: "6-days-50hr-multi-style" },
+      { name: "10 Days 100hr Multi-Style YTTC", duration: "10 Days", price: "$990", slug: "10-days-100hr-multi-style" },
+      { name: "20 Days 200hr Multi-Style YTTC", duration: "20 Days", price: "$1,450", slug: "20-days-200hr-multi-style" },
+      { name: "300hr Multi-Style YTTC", duration: "30 Days", price: "$1,890", slug: "300hr-multi-style-bali" },
+      { name: "500hr Multi-Style YTTC", duration: "45 Days", price: "$2,650", slug: "500hr-multi-style-bali" },
     ],
   },
   {
-    id: "kundalini-yttc",
+    id: "kundalini",
     icon: "🔥",
     label: "Kundalini YTTC",
     programs: [
-      { name: "100hr Kundalini YTTC", duration: "12 Days", price: "$890" },
-      { name: "200hr Kundalini YTTC", duration: "25 Days", price: "$1,450" },
-      { name: "300hr Kundalini YTTC", duration: "30 Days", price: "$1,790" },
+      { name: "6 Days 50hr Kundalini YTTC", duration: "6 Days", price: "$690", slug: "6-days-50hr-kundalini" },
+      { name: "100hr Kundalini YTTC", duration: "12 Days", price: "$890", slug: "100hr-kundalini-bali" },
+      { name: "200hr Kundalini YTTC", duration: "25 Days", price: "$1,450", slug: "200hr-kundalini-bali" },
+      { name: "300hr Kundalini YTTC", duration: "30 Days", price: "$1,790", slug: "300hr-kundalini-bali" },
+      { name: "500hr Kundalini YTTC", duration: "45 Days", price: "$2,650", slug: "500hr-kundalini-bali" },
     ],
   },
   {
@@ -57,19 +64,21 @@ const PROGRAM_CATEGORIES = [
     icon: "🌿",
     label: "Short Courses",
     programs: [
-      { name: "7-Day Yoga Immersion", duration: "7 Days", price: "$490" },
-      { name: "14-Day Foundation Course", duration: "14 Days", price: "$820" },
-      { name: "Weekend Retreat", duration: "3 Days", price: "$220" },
+      { name: "Acro Yoga Course", duration: "Short Course", price: "$390", slug: "acro-yoga-course" },
+      { name: "Aerial Yoga Course", duration: "Short Course", price: "$420", slug: "aerial-yoga-course" },
+      { name: "50hr Yin Yoga", duration: "7 Days", price: "$490", slug: "50hr-yin-yoga" },
+      { name: "85hr Prenatal Yoga", duration: "10 Days", price: "$650", slug: "85hr-prenatal-yoga" },
     ],
   },
   {
-    id: "specialization-retreats",
+    id: "specialization",
     icon: "🎵",
     label: "Specialization & Retreats",
     programs: [
-      { name: "Yin & Restorative Specialization", duration: "10 Days", price: "$680" },
-      { name: "Sound Healing Retreat", duration: "5 Days", price: "$390" },
-      { name: "Ayurveda & Yoga Retreat", duration: "8 Days", price: "$560" },
+      { name: "100hr Yoga Therapy & Ayurveda", duration: "12 Days", price: "$890", slug: "100hr-yoga-therapy-ayurveda" },
+      { name: "Ayurvedic Treatment TTC", duration: "10 Days", price: "$680", slug: "ayurvedic-treatment-bali" },
+      { name: "Abhyangam Massage Training", duration: "7 Days", price: "$490", slug: "abhyangam-massage-training-bali" },
+      { name: "Vedic Sound Healing Level 1 & 2", duration: "5 Days", price: "$390", slug: "vedic-sound-healing-level-1-2" },
     ],
   },
 ];
@@ -205,8 +214,10 @@ function BaliLandingPage() {
                 </p>
                 <div className="mt-auto flex items-center justify-between pt-5 border-t border-stone-100">
                   <span className="font-serif text-2xl text-emerald-800">{p.price}</span>
+                  {/* This is the ONLY Enroll link that should use activeCategory/p.slug —
+                      it is inside the .map(), so both variables are in scope here. */}
                   <Link
-                    to="/contact"
+                    to={`/${activeCategory}/${p.slug}`}
                     className="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300"
                   >
                     Enroll
@@ -231,6 +242,8 @@ function BaliLandingPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3 shrink-0">
+            {/* This button is OUTSIDE the .map(), so it must NOT reference p.slug.
+                It just sends people to the contact/enquiry page. */}
             <Link
               to="/contact"
               className="bg-white text-emerald-900 px-8 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
