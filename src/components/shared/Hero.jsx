@@ -49,7 +49,7 @@ function HeroSection() {
             <div className="relative w-full bg-[#FAF8F5] flex flex-col lg:block">
 
               {/* ───────────────── DESKTOP HERO (Unified Layout) ───────────────── */}
-              <div className="hidden lg:block relative h-[75vh] min-h-[500px] max-h-[720px] w-full">
+              <div className="hidden lg:block relative h-[86vh] min-h-[600px] max-h-[820px] w-full">
                 
                 {/* Background image spanning the entire banner */}
                 <div className="absolute inset-0 z-0">
@@ -73,7 +73,7 @@ function HeroSection() {
                 </div>
 
                 {/* Left content overlaid directly on top of the blended canvas */}
-                <div className="relative z-10 h-full w-[38%] flex flex-col justify-center pl-10 xl:pl-16 2xl:pl-24 pr-4">
+                <div className="relative z-10 h-full w-[38%] flex flex-col justify-center pt-24 pb-24 pl-10 xl:pl-16 2xl:pl-24 pr-4">
                   <LeftContent />
                 </div>
 
@@ -82,7 +82,7 @@ function HeroSection() {
               {/* ───────────────── MOBILE / TABLET ───────────────── */}
               <div className="flex flex-col lg:hidden">
                 {/* TEXT */}
-                <div className="bg-[#FAF8F5] px-6 sm:px-12 pt-8 pb-6">
+                <div className="bg-[#FAF8F5] px-6 sm:px-12 pt-24 pb-24">
                   <LeftContent />
                 </div>
 
@@ -129,25 +129,25 @@ function LeftContent() {
         className="
           mt-4
           font-['Montserrat']
-          text-[1.8rem] sm:text-[2.3rem]
-          lg:text-[2.8rem] xl:text-[2.4rem] 2xl:text-[2.0rem]
-          leading-[1.15] font-bold text-[#1f3528]
+          text-[2.2rem] sm:text-[2.8rem]
+          lg:text-[3.2rem] xl:text-[3.5rem] 2xl:text-[3.8rem]
+          leading-[1.15] font-extrabold text-[#1f3528]
           tracking-tight
         "
       >
         Become a <br />
-        <span className="font-bold">Certified Yoga</span> <br />
+        <span className="font-extrabold">Certified Yoga</span> <br />
         Teacher in{" "}
-        <span className="text-[#b86b2b] font-bold">Bali</span>
+        <span className="text-[#b86b2b] font-extrabold">Bali</span>
       </h1>
 
       {/* SUBTITLE */}
       <p
         className="
-          mt-7 text-black-600 font-medium
+          mt-7 text-black-600 font-bold
           font-['Playfair_Display'] italic
-          text-[14px] sm:text-[17px]
-          lg:text-[16px] xl:text-[18px] 2xl:text-[18px]
+          text-[16px] sm:text-[20px]
+          lg:text-[18px] xl:text-[22px] 2xl:text-[24px]
         "
       >
         Transform Your Life. Inspire the World.
