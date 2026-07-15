@@ -15,8 +15,10 @@ import CheckoutPage from './pages/Checkout/CheckoutPage';
 
 import Facilities from './pages/meditation/Facilities';
 import TermsAndConditions from './pages/term&condition/term-condition';
-
-
+import FounderPage from "./pages/founder/FounderPage";
+import BaliLandingPage from "./pages/home/components/balipage";
+import RishikeshLandingPage from "./pages/home/components/rishikeshpage";
+import MysoreLandingPage from "./pages/home/components/mysorepage";
 function App() {
   return (
     <>
@@ -33,8 +35,14 @@ function App() {
                    <Route path='facilities' element={<Facilities/>} />                    
                    <Route path='contact' element={<Contact/>} /> 
                    <Route path='checkout' element={<CheckoutPage />} />
-                    <Route path=':category/:slug' element={<ProgramPage />} />
+                    
                      <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
+                     <Route path="/founder" element={<FounderPage/>}/>
+                     <Route path="/programs/bali" element={<BaliLandingPage />} />
+                     <Route path="/programs/rishikesh" element={<RishikeshLandingPage />} />
+                    
+                     <Route path="/programs/mysore" element={<MysoreLandingPage />} />
+                     <Route path=':category/:slug' element={<ProgramPage />} />
                     {/* <Route path='6-days-50-hour-multi-style-yoga-training-in-bali' element={<YogaTeacherTraining/>} /> */}
                     {/* <Route path='ytt/6-days-50hr-multi-style' element={<YogaTeacherTraining/>} /> */}
 
