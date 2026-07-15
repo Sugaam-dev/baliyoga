@@ -34,17 +34,60 @@ const whyCards = [
 // NOTE: id values match the ":category" keys in baliDataMap.js exactly
 // (ytt, kundalini, short-courses, specialization)
 // slug values match the keys inside each category in baliDataMap.js exactly
+//
+// Added fields: badge (top-right pill), location (pin line),
+// features (checkmark list) — mirrors the Rishikesh-style card design.
 const PROGRAM_CATEGORIES = [
   {
     id: "ytt",
     icon: "🧘",
     label: "Multi-Style YTTC",
     programs: [
-      { name: "6 Days 50hr Multi-Style YTTC", duration: "6 Days", price: "$690", slug: "6-days-50hr-multi-style" },
-      { name: "10 Days 100hr Multi-Style YTTC", duration: "10 Days", price: "$990", slug: "10-days-100hr-multi-style" },
-      { name: "20 Days 200hr Multi-Style YTTC", duration: "20 Days", price: "$1,450", slug: "20-days-200hr-multi-style" },
-      { name: "300hr Multi-Style YTTC", duration: "30 Days", price: "$1,890", slug: "300hr-multi-style-bali" },
-      { name: "500hr Multi-Style YTTC", duration: "45 Days", price: "$2,650", slug: "500hr-multi-style-bali" },
+      {
+        name: "6 Days 50hr Multi-Style YTTC",
+        duration: "6 Days",
+        price: "$650",
+        slug: "6-days-50hr-multi-style",
+        badge: "UBUD STAY",
+        location: "ubud",
+        features: ["YACEP Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "10 Days 100hr Multi-Style YTTC",
+        duration: "10 Days",
+        price: "$999",
+        slug: "10-days-100hr-multi-style",
+        badge: "ISLAND IMMERSION",
+        location: "ubud",
+        features: ["Yoga Alliance Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "20 Days 200hr Multi-Style YTTC",
+        duration: "20 Days",
+        price: "$1,299",
+        slug: "20-days-200hr-multi-style",
+        badge: "BEST VALUE",
+        location: "ubud",
+        features: ["RYT-200 Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "300hr Multi-Style YTTC",
+        duration: "26 Days",
+        price: "$2099",
+        slug: "300hr-multi-style-bali",
+        badge: "DEEP PRACTICE",
+        location: "ubud",
+        features: ["RYT-300 Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "500hr Multi-Style YTTC",
+        duration: "56Days",
+        price: "$3,599",
+        slug: "500hr-multi-style-bali",
+        badge: "ULTIMATE MASTERY",
+        location: "ubud",
+        features: ["RYT-500 Certified", "Meals & accommodation", "All materials included"],
+      },
     ],
   },
   {
@@ -52,11 +95,51 @@ const PROGRAM_CATEGORIES = [
     icon: "🔥",
     label: "Kundalini YTTC",
     programs: [
-      { name: "6 Days 50hr Kundalini YTTC", duration: "6 Days", price: "$690", slug: "6-days-50hr-kundalini" },
-      { name: "100hr Kundalini YTTC", duration: "12 Days", price: "$890", slug: "100hr-kundalini-bali" },
-      { name: "200hr Kundalini YTTC", duration: "25 Days", price: "$1,450", slug: "200hr-kundalini-bali" },
-      { name: "300hr Kundalini YTTC", duration: "30 Days", price: "$1,790", slug: "300hr-kundalini-bali" },
-      { name: "500hr Kundalini YTTC", duration: "45 Days", price: "$2,650", slug: "500hr-kundalini-bali" },
+      {
+        name: "6 Days 50hr Kundalini YTTC",
+        duration: "6 Days",
+        price: "$650",
+        slug: "6-days-50hr-kundalini",
+        badge: "UBUD STAY",
+        location: "ubud",
+        features: ["YACEP Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "100hr Kundalini YTTC",
+        duration: "10 Days",
+        price: "$999",
+        slug: "100hr-kundalini-bali",
+        badge: "ISLAND IMMERSION",
+        location: "ubud",
+        features: ["Yoga Alliance Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "200hr Kundalini YTTC",
+        duration: "20 Days",
+        price: "$1,299",
+        slug: "200hr-kundalini-bali",
+        badge: "BEST VALUE",
+        location: "ubud",
+        features: ["RYT-200 Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "300hr Kundalini YTTC",
+        duration: "30 Days",
+        price: "$2,199",
+        slug: "300hr-kundalini-bali",
+        badge: "DEEP PRACTICE",
+        location: "ubud",
+        features: ["RYT-300 Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "500hr Kundalini YTTC",
+        duration: "45 Days",
+        price: "$3,599",
+        slug: "500hr-kundalini-bali",
+        badge: "ULTIMATE MASTERY",
+        location: "ubud",
+        features: ["RYT-500 Certified", "Meals & accommodation", "All materials included"],
+      },
     ],
   },
   {
@@ -64,10 +147,42 @@ const PROGRAM_CATEGORIES = [
     icon: "🌿",
     label: "Short Courses",
     programs: [
-      { name: "Acro Yoga Course", duration: "Short Course", price: "$390", slug: "acro-yoga-course" },
-      { name: "Aerial Yoga Course", duration: "Short Course", price: "$420", slug: "aerial-yoga-course" },
-      { name: "50hr Yin Yoga", duration: "7 Days", price: "$490", slug: "50hr-yin-yoga" },
-      { name: "85hr Prenatal Yoga", duration: "10 Days", price: "$650", slug: "85hr-prenatal-yoga" },
+      {
+        name: "Acro Yoga Course",
+        duration: "Short Course",
+        price: "$799",
+        slug: "acro-yoga-course",
+        badge: "PARTNER FLOW",
+        location: "ubud",
+        features: ["Certificate Included", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "Aerial Yoga Course",
+        duration: "Short Course",
+        price: "$550",
+        slug: "aerial-yoga-course",
+        badge: "SILK & SKY",
+        location: "canggu",
+        features: ["Certificate Included", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "50hr Yin Yoga",
+        duration: "6 Days",
+        price: "$650",
+        slug: "50hr-yin-yoga",
+        badge: "SLOW & DEEP",
+        location: "ubud",
+        features: ["YACEP Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "85hr Prenatal Yoga",
+        duration: "short course",
+        price: "$650",
+        slug: "85hr-prenatal-yoga",
+        badge: "MOTHER & CHILD",
+        location: "ubud",
+        features: ["Certified Instructors", "Meals & accommodation", "All materials included"],
+      },
     ],
   },
   {
@@ -75,10 +190,42 @@ const PROGRAM_CATEGORIES = [
     icon: "🎵",
     label: "Specialization & Retreats",
     programs: [
-      { name: "100hr Yoga Therapy & Ayurveda", duration: "12 Days", price: "$890", slug: "100hr-yoga-therapy-ayurveda" },
-      { name: "Ayurvedic Treatment TTC", duration: "10 Days", price: "$680", slug: "ayurvedic-treatment-bali" },
-      { name: "Abhyangam Massage Training", duration: "7 Days", price: "$490", slug: "abhyangam-massage-training-bali" },
-      { name: "Vedic Sound Healing Level 1 & 2", duration: "5 Days", price: "$390", slug: "vedic-sound-healing-level-1-2" },
+      {
+        name: "100hr Yoga Therapy & Ayurveda",
+        duration: "10 Days",
+        price: "$1299",
+        slug: "100hr-yoga-therapy-ayurveda",
+        badge: "HEALING FOCUS",
+        location: "ubud",
+        features: ["Yoga Alliance Certified", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "Ayurvedic Treatment TTC",
+        duration: "12 Days",
+        price: "$1450",
+        slug: "ayurvedic-treatment-bali",
+        badge: "AYURVEDA IMMERSION",
+        location: "ubud",
+        features: ["Certificate Included", "Meals & accommodation", "All materials included"],
+      },
+      {
+        name: "Abhyangam Massage Training",
+        duration: "5 hours",
+        price: "$250",
+        slug: "abhyangam-massage-training-bali",
+        badge: "HANDS-ON SKILL",
+        location: "ubud",
+        features: ["Certificate Included", "All materials included"],
+      },
+      {
+        name: "Vedic Sound Healing Level 1 & 2",
+        duration: "7Days",
+        price: "$400",
+        slug: "vedic-sound-healing-level-1-2",
+        badge: "SOUND JOURNEY",
+        location: "ubud",
+        features: ["Certificate Included", "All materials included"],
+      },
     ],
   },
 ];
@@ -204,24 +351,58 @@ function BaliLandingPage() {
             {activeCategoryData.programs.map((p, i) => (
               <div
                 key={i}
-                className="bg-white rounded-2xl border border-stone-200/70 p-7 flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="bg-white rounded-2xl border border-stone-200/70 overflow-hidden flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <h3 className="font-serif text-xl font-semibold text-emerald-900 mb-2">
-                  {p.name}
-                </h3>
-                <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-6">
-                  {p.duration}
-                </p>
-                <div className="mt-auto flex items-center justify-between pt-5 border-t border-stone-100">
-                  <span className="font-serif text-2xl text-emerald-800">{p.price}</span>
-                  {/* This is the ONLY Enroll link that should use activeCategory/p.slug —
-                      it is inside the .map(), so both variables are in scope here. */}
-                  <Link
-                    to={`/${activeCategory}/${p.slug}`}
-                    className="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300"
-                  >
-                    Enroll
-                  </Link>
+                {/* ── Header band: hour badge + label pill (top-right) ── */}
+                <div className="relative bg-emerald-700 px-6 pt-5 pb-6">
+                  {p.badge && (
+                    <span className="absolute top-3 right-3 bg-white/15 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
+                      {p.badge}
+                    </span>
+                  )}
+                  <h3 className="font-serif text-2xl font-semibold text-white leading-tight">
+                    {p.name}
+                  </h3>
+                </div>
+
+                {/* ── Body: duration, location, features ── */}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex items-center gap-4 text-xs font-bold uppercase tracking-wider text-stone-400 mb-4">
+                    <span className="flex items-center gap-1">
+                      🕐 {p.duration}
+                    </span>
+                    {p.location && (
+                      <span className="flex items-center gap-1">
+                        📍 {p.location}
+                      </span>
+                    )}
+                  </div>
+
+                  {p.features && p.features.length > 0 && (
+                    <ul className="space-y-1.5 mb-6">
+                      {p.features.map((f, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start gap-2 text-[13px] text-stone-600"
+                        >
+                          <span className="text-emerald-600 font-bold">✓</span>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="mt-auto flex items-center justify-between pt-5 border-t border-stone-100">
+                    <span className="font-serif text-2xl text-emerald-800">{p.price}</span>
+                    {/* This is the ONLY Enroll link that should use activeCategory/p.slug —
+                        it is inside the .map(), so both variables are in scope here. */}
+                    <Link
+                      to={`/${activeCategory}/${p.slug}`}
+                      className="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300"
+                    >
+                      Enroll
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
