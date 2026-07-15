@@ -1,93 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import ScrollReveal from "../../../components/shared/ScrollReveal";
 
-export default function Testimonials({ testimonials }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(3);
-
-  // ===============================
-  // RESPONSIVE CARDS
-  // ===============================
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setVisibleCards(3);
-      } else if (window.innerWidth >= 640) {
-        setVisibleCards(2);
-      } else {
-        setVisibleCards(1);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // ===============================
-  // AUTO SLIDER
-  // ===============================
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => {
-        const maxIndex = testimonials.length - visibleCards;
-
-        if (prev >= maxIndex) return 0;
-
-        return prev + 1;
-      });
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [visibleCards, testimonials.length]);
-
+export default function Testimonials() {
   return (
-    <section className="py-14 sm:py-16 md:py-20 bg-[#f3eee7] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl text-center mb-12">
-          Student Testimonials
-        </h2>
-
-        <div className="relative overflow-hidden">
-          <div
-            className="flex transition-transform duration-[2000ms] ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-            }}
+    <section className="bg-[#1c2e24] py-16 sm:py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <ScrollReveal>
+          <span className="uppercase tracking-[0.25em] text-[11px] font-bold text-[#c38b5f] mb-4 inline-block">
+            Begin Your Yoga Journey in Bali ✦
+          </span>
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-semibold mb-6 leading-tight">
+            Begin Your Yoga Journey in Bali
+          </h2>
+          <p className="text-stone-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+            Whether you dream of becoming a certified yoga teacher, deepening your personal practice, joining a transformative yoga retreat, or experiencing authentic yogic living in Bali, Bali Yoga Kendra welcomes you.
+          </p>
+          <p className="text-stone-400 text-sm leading-relaxed mb-10 max-w-xl mx-auto">
+            Join our global community and discover why students from around the world choose Bali Yoga Kendra for Yoga Teacher Training in Bali, Meditation Retreats, Spiritual Growth, and Holistic Wellness.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block bg-[#c38b5f] hover:bg-[#a6734c] text-white px-10 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all duration-300 no-underline"
           >
-            {testimonials.map((item, index) => (
-              <div
-                key={index}
-                className={`px-3 flex-shrink-0 ${
-                  visibleCards === 1
-                    ? "w-full"
-                    : visibleCards === 2
-                    ? "w-1/2"
-                    : "w-1/3"
-                }`}
-              >
-                <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 sm:p-8 text-center h-full border border-stone-100">
-                  <div className="overflow-hidden rounded-2xl">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-52 sm:h-64 object-cover rounded-2xl mb-6 transition-all duration-500 hover:scale-105 cursor-pointer"
-                    />
-                  </div>
-
-                  <p className="italic text-base sm:text-lg text-gray-700 leading-relaxed">
-                    "{item.text}"
-                  </p>
-
-                  <p className="mt-4 font-semibold text-[#b4533c]">
-                    – {item.name}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+            Join Our Global Community
+          </Link>
+        </ScrollReveal>
       </div>
     </section>
   );
