@@ -123,7 +123,7 @@ import ttcImg from "../../assets/images/online/ttc.jpg";
 import bookingImg from "../../assets/images/online/booking.jpg";
 
 import onlineClassImg from "../../assets/images/online/online-beginner-yoga-classes.jpg";
-import beginnerFreeImg from "../../assets/images/online/Free-Online-Beginner’s-Yoga-Class.jpg";
+import beginnerFreeImg from "../../assets/images/online/Free-Online-Beginners-Yoga-Class.jpg";
 import ahamCourseImg from "../../assets/images/online/aham-yoga-beginner-course.jpg";
 
 export default function OnlinePage() {

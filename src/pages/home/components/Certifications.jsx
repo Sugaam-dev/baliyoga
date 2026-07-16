@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Sparkles, Users, Compass } from "lucide-react";
 import SectionHeading from "../../../components/shared/SectionHeading";
 import MobileCarousel from "../../../components/shared/MobileCarousel";
@@ -32,7 +33,7 @@ const Certifications = () => {
         <section className="relative w-full mb-12 md:mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Left Column: Image with Elegant Double Frame */}
+            {/* Left Column: Image */}
             <div className="lg:col-span-5 relative w-full max-w-md lg:max-w-none mx-auto">
               <ScrollReveal>
                 <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
@@ -67,10 +68,8 @@ const Certifications = () => {
                   classical practices with mindful awareness to cultivate internal balance and inner peace.
                 </p>
 
-                {/* Accent Separator */}
                 <div className="h-px w-20 bg-stone-300/80 mb-8"></div>
 
-                {/* Bullet Highlights */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10">
                   {[
                     "E-RYT 500 Certified Yoga Alliance Professional",
@@ -89,18 +88,18 @@ const Certifications = () => {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                  <a 
-                    href="#contact" 
+                  <Link 
+                    to="/contact" 
                     className="bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 text-center no-underline"
                   >
                     Learn From The Founder
-                  </a>
-                  <a 
-                    href="#about" 
+                  </Link>
+                  <Link 
+                    to="/founder" 
                     className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 text-center no-underline"
                   >
                     View Full Journey
-                  </a>
+                  </Link>
                 </div>
               </ScrollReveal>
             </div>
@@ -118,7 +117,6 @@ const Certifications = () => {
             />
           </ScrollReveal>
 
-          {/* Carousel on mobile, Grid on desktop */}
           <ScrollReveal delay={0.15}>
             <MobileCarousel
               items={leadershipCards}
@@ -128,17 +126,14 @@ const Certifications = () => {
                   key={index}
                   className="bg-white border border-stone-200/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col items-center text-center group h-full"
                 >
-                  {/* Icon Frame */}
                   <div className="w-16 h-16 bg-[#faf8f5] border border-stone-200/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-[#c38b5f]/10 group-hover:border-[#c38b5f] transition-all duration-500">
                     {card.icon}
                   </div>
                   
-                  {/* Pillar Title */}
                   <h3 className="text-stone-900 text-xl font-bold mb-3 font-serif">
                     {card.title}
                   </h3>
                   
-                  {/* Pillar Description */}
                   <p className="text-sm sm:text-base text-stone-600 leading-relaxed">
                     {card.description}
                   </p>

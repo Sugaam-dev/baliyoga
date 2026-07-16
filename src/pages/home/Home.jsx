@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../../components/shared/Hero";
 import TrustBanner from "./components/TrustBanner";
+import BYKIntroduction from "./BYKIntroduction";
 import Certifications from "./components/Certifications";
 import BaliYogaCourses from "./components/BaliYogaCourses";
 import AdditionalActivities from "./components/AdditionalActivities";
@@ -13,7 +14,7 @@ import BaliYogaOffers from "./components/BaliYogaOffers";
 import BaliYogaGallery from "./components/BaliYogaGallery";
 import TestimonialsSection from "./components/TestimonialsSection";
 import UpcomingBatches from "./components/UpcomingBatches";
-
+import WhereToTrain from "./components/WhereToTrain";
 export default function Home() {
   return (
     <main className="bg-[#FAF8F5]">
@@ -22,9 +23,16 @@ export default function Home() {
       
       {/* 2. Trust Seals & Ratings Banner */}
       <TrustBanner />
+      {/* Introduction Section */}
+      <BYKIntroduction />
+
       
       {/* 3. Founder Details & Core Pillars */}
       <Certifications />
+
+      {/* Where To Train */}
+      <WhereToTrain />
+      
       
       {/* 4. Yoga Teacher Training Courses Slider */}
       <BaliYogaCourses />
