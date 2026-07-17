@@ -3,7 +3,7 @@ import Hero from "../../components/shared/Hero";
 import TrustBanner from "./TrustBanner";
 import BYKIntroduction from "./BYKIntroduction";
 import Certifications from "./Certifications";
-import BaliYogaCourses from "./BaliYogaCourses";
+import Programs from "../about/components/Programs";
 import AdditionalActivities from "./AdditionalActivities";
 import BaliYogaKendraExperience from "./BaliYogaKendraExperience";
 import BaliYogaEssenceSlider from "./BaliYogaEssenceSlider";
@@ -26,7 +26,11 @@ export default function Home() {
       {/* Introduction Section */}
       <BYKIntroduction />
   {/* 4. Yoga Teacher Training Courses Slider */}
-      <BaliYogaCourses />
+      <Programs
+        title="Yoga Teacher Training"
+        highlight="Courses in Bali"
+        subtitle="Deepen your practice and obtain an internationally recognized certification in the heart of paradise."
+      />
       
       
       {/* 3. Founder Details & Core Pillars */}

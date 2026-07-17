@@ -16,9 +16,13 @@ import "swiper/css/pagination";
 // Displays all YTT programs (100 / 200 / 300 / 500 hr) in a Swiper carousel.
 // To add/edit/remove a program → update ProgramsData.js
 // To change card layout → edit the SwiperSlide block below
-// To change section heading/subtitle → edit the SectionHeading props below
+// To change section heading/subtitle → pass title, highlight, subtitle props
 
-export default function Programs() {
+export default function Programs({
+  title = "Choose the Right Program",
+  highlight = "for Your Journey",
+  subtitle = "Each training integrates yoga philosophy, asana alignment, anatomy, meditation, pranayama, teaching methodology, and spiritual development to create a well-rounded educational experience.",
+}) {
   return (
     <section className="bg-white py-14 sm:py-16 md:py-20 border-b border-stone-200/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,9 +33,9 @@ export default function Programs() {
             Yoga Alliance Certified Teacher Training in Bali ✦
           </span>
           <SectionHeading
-            title="Choose the Right Program"
-            highlight="for Your Journey"
-            subtitle="Each training integrates yoga philosophy, asana alignment, anatomy, meditation, pranayama, teaching methodology, and spiritual development to create a well-rounded educational experience."
+            title={title}
+            highlight={highlight}
+            subtitle={subtitle}
           />
         </ScrollReveal>
 
@@ -76,6 +80,12 @@ export default function Programs() {
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/35 via-transparent to-transparent" />
+                    {/* Price badge on image */}
+                    {p.price && (
+                      <div className="absolute top-3 right-3 bg-[#c38b5f] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md tracking-wide">
+                        From {p.price}
+                      </div>
+                    )}
                   </div>
 
                   {/* Card body */}
@@ -113,3 +123,6 @@ export default function Programs() {
     </section>
   );
 }
+
+
+
