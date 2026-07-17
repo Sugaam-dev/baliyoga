@@ -119,25 +119,27 @@ const FounderPage = () => {
             <h2 className="text-stone-900 font-serif text-2xl sm:text-3xl font-semibold mb-6">
               Dr. Yogi Ranjan
             </h2>
+             <p className="text-[#a6734c] text-xs font-bold uppercase tracking-widest">
+    Founder &amp; Lead Yoga Teacher — Bali Yoga Kendra
+  </p>
             <div className="h-px w-full bg-stone-100 mb-6" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
 
               {/* Photo — large, left side, full height */}
-              <div className="flex flex-col gap-4">
-                <div className="border border-stone-200/60 p-2 rounded-[28px] flex-1">
-                  <div className="relative w-full h-full min-h-[220px] max-h-[260px] rounded-[20px] overflow-hidden shadow-lg bg-[#efe7da] flex items-center justify-center">
-  <img
-    src={founderImg}
-    alt="Yogi Ranjan"
-    className="w-full h-full object-cover object-center"
-  />
+              {/* Photo — exactly matches right column height, no gap, no overflow */}
+<div className="relative h-full">
+  <div className="absolute inset-0 border border-stone-200/60 p-2 rounded-[28px]">
+    <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-lg bg-[#efe7da]">
+      <img
+        src={founderImg}
+        alt="Yogi Ranjan"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+    </div>
+  </div>
 </div>
-                </div>
-                <p className="text-[#a6734c] text-xs font-bold uppercase tracking-widest">
-                  Founder &amp; Lead Yoga Teacher — Bali Yoga Kendra
-                </p>
-              </div>
+                
 
               {/* Right side: Certifications (2-col grid) on top, Stats (2x2 grid) below */}
               <div className="flex flex-col gap-6">
