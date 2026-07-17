@@ -1,6 +1,6 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { baliDataMap } from "../../data/baliDataMap";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { locationDataMap } from "../../data/locationDataMap";
 
 import HeroSection          from "./sections/HeroSection";
 import HighlightsSection    from "./sections/HighlightsSection";
@@ -12,20 +12,30 @@ import FaqSection           from "./sections/FaqSection";
 
 /**
  * Generic dynamic course page.
- * Data shape (all 18 files):
- *   courseData.heroSection
- *   courseData.highlightsSection.{ community, promo, transformation }
- *   courseData.practiceSection
- *   courseData.programDetailsSection.{ curriculum, schedule }
- *   courseData.experienceSection.{ food, excursion, location, massage }
- *   courseData.accommodationSection
- *   courseData.faqSection
  */
 const ProgramPage = ({ data }) => {
-  const { category, slug } = useParams();
+  const { location: locParam, course: courseParam } = useParams();
   const navigate = useNavigate();
+  const locationPath = useLocation().pathname;
 
-  const pageData = data || baliDataMap.bali?.[category?.toLowerCase()]?.[slug?.toLowerCase()];
+  let pageData = data;
+  if (!pageData) {
+    const locKey = locParam?.toLowerCase();
+    const slugKey = courseParam?.toLowerCase();
+    const isRetreat = locationPath.toLowerCase().startsWith("/retreats/");
+    const targetCats = isRetreat 
+      ? ["retreats"] 
+      : ["ytt", "kundalini", "short-courses", "specialization"];
+
+    if (locationDataMap[locKey]) {
+      for (const cat of targetCats) {
+        if (locationDataMap[locKey][cat]?.[slugKey]) {
+          pageData = locationDataMap[locKey][cat][slugKey];
+          break;
+        }
+      }
+    }
+  }
 
   if (!pageData) {
     return (
@@ -37,7 +47,15 @@ const ProgramPage = ({ data }) => {
   }
 
   const handleOpenCheckout = (roomType) => {
-    navigate("/checkout", { state: { category, slug, roomType } });
+    const isRetreat = locationPath.toLowerCase().startsWith("/retreats/");
+    navigate("/checkout", { 
+      state: { 
+        location: locParam, 
+        slug: courseParam, 
+        type: isRetreat ? "retreats" : "programs", 
+        roomType 
+      } 
+    });
   };
 
   return (

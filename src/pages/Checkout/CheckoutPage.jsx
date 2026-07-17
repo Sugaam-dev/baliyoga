@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Check, ArrowRight, ShieldCheck, Mail, MessageSquare, AlertCircle, Copy, CheckCircle2, ChevronRight, ChevronDown, QrCode, ShoppingBag, Trash2, Plus, Minus } from "lucide-react";
 import { getCart, removeFromCart, updateQuantity, clearCart } from "../../utils/cart";
-import { baliDataMap } from "../../data/baliDataMap";
+import { locationDataMap } from "../../data/locationDataMap";
 
 export default function CheckoutPage() {
   const location = useLocation();
@@ -30,10 +30,36 @@ export default function CheckoutPage() {
   useEffect(() => {
     const state = location.state || {};
     
-    if (state.category && state.slug) {
+    if (state.slug) {
       // Find course details
-      const categoryData = baliDataMap.bali?.[state.category?.toLowerCase()];
-      const programData = categoryData?.[state.slug?.toLowerCase()];
+      let programData = null;
+      const slugKey = state.slug?.toLowerCase();
+      
+      if (state.location && state.type) {
+        const locKey = state.location?.toLowerCase();
+        const catList = state.type === "retreats" 
+          ? ["retreats"] 
+          : ["ytt", "kundalini", "short-courses", "specialization"];
+        if (locationDataMap[locKey]) {
+          for (const cat of catList) {
+            if (locationDataMap[locKey][cat]?.[slugKey]) {
+              programData = locationDataMap[locKey][cat][slugKey];
+              break;
+            }
+          }
+        }
+      }
+
+      if (!programData) {
+        for (const loc of Object.keys(locationDataMap)) {
+          for (const cat of Object.keys(locationDataMap[loc])) {
+            if (locationDataMap[loc][cat]?.[slugKey]) {
+              programData = locationDataMap[loc][cat][slugKey];
+              break;
+            }
+          }
+        }
+      }
       
       if (programData) {
         setIsDirectBooking(true);
@@ -44,7 +70,7 @@ export default function CheckoutPage() {
         const rooms = programData.accommodationSection?.content?.rooms || [];
 
         setDirectCourse({
-          category: state.category,
+          category: state.type || "programs",
           slug: state.slug,
           title,
           rooms,

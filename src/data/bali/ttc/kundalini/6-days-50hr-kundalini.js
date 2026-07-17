@@ -1,3 +1,4 @@
+import { PROGRAM_PRICES } from "../../programPrices";
 export const courseData = {
   heroSection: {
     colors: {
@@ -18,7 +19,7 @@ export const courseData = {
       highlight: "6 Days 50 Hours ",
       subtitle:
         "50-hour Kundalini yoga teacher training in Bali — chakras, Nadis, Kriya & spiritual awakening from within",
-      price: "$650",
+      price: PROGRAM_PRICES.kundalini["50hr"],
       priceNote: "Includes stay, meals & YACEP certificate",
       bgImage:
         "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=80",

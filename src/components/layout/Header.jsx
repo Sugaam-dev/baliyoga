@@ -58,22 +58,44 @@ const Header = () => {
     return false;
   };
 
-  // Dynamic mega-menu contents built from the central locations mapping
   const MENU_CONTENT = {
     ytt: {
       title: "Yoga Teacher Training",
       columns: [
-        { category: "Multi-Style YTTC", items: PROGRAM_LINKS.bali.ytt.map(item => ({ name: item.label, link: buildPath("ytt", item.path) })) },
-        { category: "KUNDALINI YTTC", items: PROGRAM_LINKS.bali.kundalini.map(item => ({ name: item.label, link: buildPath("kundalini", item.path) })) },
-        { category: "SHORT COURSES", items: PROGRAM_LINKS.bali["short-courses"].map(item => ({ name: item.label, link: buildPath("short-courses", item.path) })) },
-        { category: "SPECIALIZATION", items: PROGRAM_LINKS.bali.specialization.map(item => ({ name: item.label, link: buildPath("specialization", item.path) })) },
+        { category: "Multi-Style YTTC", items: PROGRAM_LINKS.bali.multiStyle.map(item => ({ name: item.label, link: buildPath("bali", item.path, "programs") })) },
+        { category: "KUNDALINI YTTC", items: PROGRAM_LINKS.bali.kundalini.map(item => ({ name: item.label, link: buildPath("bali", item.path, "programs") })) },
+        { category: "SHORT COURSES", items: PROGRAM_LINKS.bali.shortCourses.map(item => ({ name: item.label, link: buildPath("bali", item.path, "programs") })) },
+        { category: "SPECIALIZATION", items: PROGRAM_LINKS.bali.specialization.map(item => ({ name: item.label, link: buildPath("bali", item.path, "programs") })) },
+        { category: "LOCATION", items: [
+            { name: "Rishikesh", link: "/programs/rishikesh" },
+            { name: "Mysore", link: "/programs/mysuru" }
+          ]
+        }
       ]
     },
     wellness: {
       title: "Wellness Retreats",
       columns: [
-        { category: "Yoga Retreats", items: RETREAT_LINKS.bali.map(item => ({ name: item.label, link: buildPath("retreats", item.path) })) },
-        { category: "Meditation & Sound", items: RETREAT_LINKS.bali.map(item => ({ name: item.label, link: buildPath("retreats", item.path) })) },
+        { 
+          category: "Yoga Retreats", 
+          items: [
+            { name: RETREAT_LINKS.bali[0].label, link: buildPath("bali", RETREAT_LINKS.bali[0].path, "retreats") },
+            { name: RETREAT_LINKS.bali[3].label, link: buildPath("bali", RETREAT_LINKS.bali[3].path, "retreats") },
+            { name: RETREAT_LINKS.bali[4].label, link: buildPath("bali", RETREAT_LINKS.bali[4].path, "retreats") }
+          ] 
+        },
+        { 
+          category: "Meditation & Sound", 
+          items: [
+            { name: RETREAT_LINKS.bali[1].label, link: buildPath("bali", RETREAT_LINKS.bali[1].path, "retreats") },
+            { name: RETREAT_LINKS.bali[2].label, link: buildPath("bali", RETREAT_LINKS.bali[2].path, "retreats") }
+          ] 
+        },
+        { category: "LOCATION", items: [
+            { name: "Rishikesh", link: "/programs/rishikesh" },
+            { name: "Mysore", link: "/programs/mysuru" }
+          ]
+        }
       ]
     }
   };
@@ -199,15 +221,17 @@ const Header = () => {
                   width: '95%',
                   maxWidth: 
                     MENU_CONTENT[activeDropdown].columns.length === 2 ? '640px' :
-                    MENU_CONTENT[activeDropdown].columns.length === 3 ? '900px' : '1200px'
+                    MENU_CONTENT[activeDropdown].columns.length === 3 ? '900px' :
+                    MENU_CONTENT[activeDropdown].columns.length === 4 ? '1200px' : '1400px'
                 }}
               >
                 <div className="px-6 py-10 xl:px-10 xl:py-12">
                   <div 
                     className={`grid ${
                       MENU_CONTENT[activeDropdown].columns.length === 2 ? 'grid-cols-2' :
-                      MENU_CONTENT[activeDropdown].columns.length === 3 ? 'grid-cols-3' : 'grid-cols-4'
-                    } gap-x-8 xl:gap-x-12 gap-y-8`}
+                      MENU_CONTENT[activeDropdown].columns.length === 3 ? 'grid-cols-3' :
+                      MENU_CONTENT[activeDropdown].columns.length === 4 ? 'grid-cols-4' : 'grid-cols-5'
+                    } gap-x-6 xl:gap-x-8 gap-y-8`}
                   >
                     {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
                       <div key={idx} className="flex flex-col min-w-0">
