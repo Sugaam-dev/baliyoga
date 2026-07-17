@@ -1,3 +1,4 @@
+import { PROGRAM_PRICES } from "../../programPrices";
 export const courseData = {
   heroSection: {
     colors: {
@@ -18,7 +19,7 @@ export const courseData = {
       highlight: "5 Days ",
       subtitle:
         "5-day Acro Yoga teacher training in Bali — yoga, acrobatics, Thai massage & YACEP certification",
-      price: "$799",
+      price: PROGRAM_PRICES.shortcourses.acroyoga,
       priceNote: "Includes stay, meals & YACEP certificate",
       bgImage:
         "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1600&q=80",

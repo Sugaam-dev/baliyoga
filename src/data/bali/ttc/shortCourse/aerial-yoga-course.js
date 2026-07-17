@@ -1,3 +1,4 @@
+import { PROGRAM_PRICES } from "../../programPrices";
 export const courseData = {
   heroSection: {
     colors: {
@@ -18,7 +19,7 @@ export const courseData = {
       highlight: "5 Days ",
       subtitle:
         "5-day aerial yoga teacher training in Bali — hammock techniques, alignment, safety & YACEP certification",
-      price: "$550",
+      price: PROGRAM_PRICES.shortcourses.aerialyoga,
       priceNote: "Includes stay, meals & YACEP certificate",
       bgImage:
         "https://images.unsplash.com/photo-1547153760-18fc86324498?w=1600&q=80",

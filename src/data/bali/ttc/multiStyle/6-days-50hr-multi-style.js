@@ -1,3 +1,4 @@
+import { PROGRAM_PRICES } from "../../programPrices";
 export const courseData = {
   heroSection: {
     colors: {
@@ -18,7 +19,7 @@ export const courseData = {
       highlight: "6-Day 50-Hour ",
       subtitle:
         "An immersive experience to transform your body, mind, and teaching journey",
-      price: "$650",
+      price: PROGRAM_PRICES.multiStyle["50hr"],
       priceNote: "Includes stay, meals & certification",
       bgImage:
         "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=80",
