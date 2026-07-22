@@ -4,6 +4,62 @@ import { Check, ArrowRight, ShieldCheck, Mail, MessageSquare, AlertCircle, Copy,
 import { getCart, removeFromCart, updateQuantity, clearCart } from "../../utils/cart";
 import { locationDataMap } from "../../data/locationDataMap";
 
+import { ROOM_PRICES_BALI } from "../../data/bali/programPrices";
+import { ROOM_PRICES_RISHIKESH } from "../../data/rishikesh/programPricesRishikesh";
+import { ROOM_PRICES_MYSORE } from "../../data/mysore/programPricesMysore";
+
+const generateBatches = (durationDays) => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const currentMonth = today.getMonth();
+  const currentYear = today.getFullYear();
+  
+  const months = [];
+  for (let i = 0; i < 8; i++) {
+    const d = new Date(currentYear, currentMonth + i, 1);
+    const monthIndex = d.getMonth();
+    const year = d.getFullYear();
+    const name = d.toLocaleString('en-US', { month: 'long', year: 'numeric' });
+    const startDay = monthIndex === 0 ? 5 : 1; // Course starts on 5th in January, 1st in others
+    months.push({ name, year, monthIndex, startDay });
+  }
+  
+  const getSuffix = (day) => {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+      case 1:  return 'st';
+      case 2:  return 'nd';
+      case 3:  return 'rd';
+      default: return 'th';
+    }
+  };
+
+  return months
+    .map(m => {
+      const startDate = new Date(m.year, m.monthIndex, m.startDay);
+      const endDate = new Date(startDate);
+      endDate.setDate(startDate.getDate() + durationDays - 1);
+      return { startDate, endDate };
+    })
+    .filter(batch => batch.startDate >= today)
+    .slice(0, 6)
+    .map(batch => {
+      const { startDate, endDate } = batch;
+      const startDayStr = `${startDate.getDate()}${getSuffix(startDate.getDate())}`;
+      const endDayStr = `${endDate.getDate()}${getSuffix(endDate.getDate())}`;
+      
+      const startMonthStr = startDate.toLocaleString('en-US', { month: 'short' });
+      const endMonthStr = endDate.toLocaleString('en-US', { month: 'short' });
+      
+      if (startDate.getMonth() === endDate.getMonth()) {
+        return `${startDayStr} To ${endDayStr} ${startMonthStr} ${startDate.getFullYear()}`;
+      } else {
+        return `${startDayStr} ${startMonthStr} To ${endDayStr} ${endMonthStr} ${endDate.getFullYear()}`;
+      }
+    });
+};
+
 export default function CheckoutPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -14,6 +70,9 @@ export default function CheckoutPage() {
   const [directCourse, setDirectCourse] = useState(null);
   const [selectedRoom, setSelectedRoom] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState("");
+  const [isDateDropdownOpen, setIsDateDropdownOpen] = useState(false);
+  const [availableBatches, setAvailableBatches] = useState([]);
   
   // Cart-mode state
   const [cart, setCart] = useState([]);
@@ -80,6 +139,26 @@ export default function CheckoutPage() {
         // Pre-select room option
         const initialRoom = state.roomType || (rooms[0]?.type || "6 Shared Room");
         setSelectedRoom(initialRoom);
+
+        // Resolve dynamic pricing and batches
+        let pricingInfo = null;
+        if (state.location) {
+          const locKey = state.location.toLowerCase();
+          if (locKey === "bali") {
+            pricingInfo = ROOM_PRICES_BALI[slugKey];
+          } else if (locKey === "rishikesh") {
+            pricingInfo = ROOM_PRICES_RISHIKESH[slugKey];
+          } else if (locKey === "mysuru" || locKey === "mysore") {
+            pricingInfo = ROOM_PRICES_MYSORE[slugKey];
+          }
+        }
+
+        const durationDays = pricingInfo?.durationDays || 25;
+        const generated = generateBatches(durationDays);
+        setAvailableBatches(generated);
+
+        const initialDate = state.selectedDate || (generated[0] || "");
+        setSelectedDate(initialDate);
       }
     } else {
       // Fallback to Cart Mode
@@ -180,7 +259,7 @@ export default function CheckoutPage() {
     let summaryStr = "";
 
     if (isDirectBooking && directCourse) {
-      summaryStr = `*Course/Retreat*: ${directCourse.title}\n- *Accommodation Option*: ${selectedRoom}\n- *Price Info*: ${totalStr}\n`;
+      summaryStr = `*Course/Retreat*: ${directCourse.title}\n- *Accommodation Option*: ${selectedRoom}\n- *Selected Dates*: ${selectedDate || "Not Specified"}\n- *Price Info*: ${totalStr}\n`;
     } else {
       cart.forEach((item, idx) => {
         summaryStr += `${idx + 1}. *${item.title}*\n`;
@@ -284,6 +363,49 @@ Please share the schedule, payment options, and general availability details. Th
                             >
                               <span>{r.type}</span>
                               <span className="text-xs font-bold text-emerald-600">{r.price}</span>
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Batch Date Selector */}
+                  {availableBatches.length > 0 && (
+                    <div className="space-y-2 relative">
+                      <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider">Select Batch / Start Date</label>
+                      
+                      {/* Dropdown Trigger Button */}
+                      <button
+                        type="button"
+                        onClick={() => setIsDateDropdownOpen(!isDateDropdownOpen)}
+                        className="w-full flex items-center justify-between border border-stone-200 rounded-xl px-4 py-3 bg-stone-50 hover:bg-stone-100/50 transition-all text-sm font-semibold text-gray-800 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#1A2456] relative z-10"
+                      >
+                        <span className="text-[#1A2456]">{selectedDate}</span>
+                        <ChevronDown size={16} className={`text-stone-500 transition-transform duration-200 ${isDateDropdownOpen ? 'rotate-180' : ''}`} />
+                      </button>
+
+                      {/* Transparent Overlay to close dropdown when clicking outside */}
+                      {isDateDropdownOpen && (
+                        <div className="fixed inset-0 z-0" onClick={() => setIsDateDropdownOpen(false)} />
+                      )}
+
+                      {/* Dropdown Options Menu */}
+                      {isDateDropdownOpen && (
+                        <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-stone-200/80 rounded-xl shadow-xl z-20 overflow-hidden py-1.5 animate-fadeIn">
+                          {availableBatches.map((batch, i) => (
+                            <button
+                              key={i}
+                              type="button"
+                              onClick={() => {
+                                setSelectedDate(batch);
+                                setIsDateDropdownOpen(false);
+                              }}
+                              className={`w-full flex items-center justify-between px-4 py-2.5 text-sm transition-colors text-left hover:bg-stone-50 cursor-pointer ${
+                                selectedDate === batch ? 'bg-[#1A2456]/5 text-[#1A2456] font-bold' : 'text-gray-700 font-medium'
+                              }`}
+                            >
+                              <span>{batch}</span>
                             </button>
                           ))}
                         </div>
@@ -436,6 +558,9 @@ Please share the schedule, payment options, and general availability details. Th
                   
                   <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider block mt-4">Selected Room</span>
                   <span className="font-semibold text-gray-700 block mt-0.5">{selectedRoom}</span>
+
+                  <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider block mt-4">Selected Dates</span>
+                  <span className="font-semibold text-gray-700 block mt-0.5">{selectedDate || "Not Selected"}</span>
                 </div>
               ) : (
                 // Cart Summary

@@ -17,6 +17,7 @@ import Facilities from './pages/meditation/Facilities';
 import TermsAndConditions from './pages/term&condition/term-condition';
 import FounderPage from "./pages/founder/FounderPage";
 import LocationLandingPage from "./pages/programsCard/LocationLandingPage";
+
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
                    <Route path='facilities' element={<Facilities/>} />                    
                    <Route path='contact' element={<Contact/>} /> 
                    <Route path='checkout' element={<CheckoutPage />} />
+                   <Route path='holiday-packages' element={<Retreat />} />
                     
                      <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
                      <Route path="/founder" element={<FounderPage/>}/>

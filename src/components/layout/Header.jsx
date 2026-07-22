@@ -7,16 +7,26 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileExpandedSection, setMobileExpandedSection] = useState(null);
+  const [mobileExpandedCategories, setMobileExpandedCategories] = useState([]);
 
   const location = useLocation();
   const navRef = useRef(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const toggleMobileCategory = (categoryName) => {
+    setMobileExpandedCategories(prev =>
+      prev.includes(categoryName)
+        ? prev.filter(c => c !== categoryName)
+        : [...prev, categoryName]
+    );
+  };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
     setMobileExpandedSection(null);
+    setMobileExpandedCategories([]);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -33,6 +43,13 @@ const Header = () => {
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+    setMobileExpandedSection(null);
+    setMobileExpandedCategories([]);
+  }, [location]);
 
   useEffect(() => {
     document.documentElement.style.overflowX = 'hidden';
@@ -104,7 +121,9 @@ const Header = () => {
     { label: 'About', path: '/about' },
     { label: 'Yoga Teacher Training', path: '/yoga-teacher-training', type: 'ytt' },
     { label: 'Wellness Retreats', path: '/wellness-retreats', type: 'wellness' },
+
     { label: 'Bali Activities', path: '/bali-activities' },
+
     { label: 'Holiday Packages', path: '/holiday-packages' },
     { label: 'Facilities', path: '/facilities' },
     { label: 'Contact', path: '/contact' },
@@ -121,7 +140,7 @@ const Header = () => {
         }}
       >
         <nav className="w-full relative bg-white z-[1002]">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-2 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[2000px]:max-w-[1920px]">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-0.5 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[2000px]:max-w-[1920px]">
 
             {/* Logo */}
             <Link
@@ -137,7 +156,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Nav Links */}
-            <ul className="hidden lg:flex items-center justify-end flex-1 gap-1 xl:gap-3 2xl:gap-5 m-0 p-0 list-none">
+            <ul className="hidden lg:flex items-center justify-end flex-1 gap-1 xl:gap-2 2xl:gap-3 m-0 p-0 list-none">
               {navItems.map((item) => {
                 const hasDropdown = !!item.type;
                 const isCurrentActive = activeDropdown === item.type;
@@ -153,7 +172,7 @@ const Header = () => {
                     {hasDropdown ? (
                       <button
                         onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
-                        className={`flex items-center gap-1.5 px-2 text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[17px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
+                        className={`flex items-center gap-1.5 px-1.5 xl:px-2 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
                           isParentHighlighted ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
@@ -171,11 +190,12 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.path}
-                        className={`relative flex items-center px-2 text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[17px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
+                        className={`relative flex items-center px-1.5 xl:px-2 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
                           isLinkActive ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                         onMouseEnter={() => setActiveDropdown(null)}
+                        onClick={() => setActiveDropdown(null)}
                       >
                         {item.label}
                       </Link>
@@ -189,6 +209,7 @@ const Header = () => {
             <div className="flex items-center gap-2 xl:gap-4 shrink-0">
               <a
                 href="#apply"
+                onClick={() => setActiveDropdown(null)}
                 className="hidden lg:inline-block border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white transition-all duration-300 px-5 py-2.5 text-xs tracking-[0.15em] font-bold rounded-full shadow-sm hover:shadow-md"
               >
                 APPLY NOW
@@ -325,35 +346,55 @@ const Header = () => {
                           className={`overflow-hidden transition-all duration-300 ${isSectionOpen ? 'max-h-[2000px] pb-4' : 'max-h-0'}`}
                         >
                           <div className="rounded-lg overflow-hidden" style={{ backgroundColor: '#0f1919' }}>
-                            <div className="px-5 py-6 flex flex-col gap-6">
-                              {MENU_CONTENT[item.type].columns.map((col, cIdx) => (
-                                <div key={cIdx}>
-                                  <h4
-                                    className="text-[13px] font-bold uppercase tracking-[0.05em] pb-3 mb-3 border-b"
-                                    style={{ color: '#e5a93b', borderColor: 'rgba(229,169,59,0.3)' }}
-                                  >
-                                    {col.category}
-                                  </h4>
-                                  <ul className="space-y-3 list-none p-0 m-0">
-                                    {col.items.map((sub, sIdx) => {
-                                      const isSubActive = location.pathname === sub.link;
-                                      return (
-                                        <li key={sIdx}>
-                                          <Link
-                                            to={sub.link}
-                                            onClick={closeMenu}
-                                            className={`block text-[13px] font-normal uppercase tracking-wide leading-snug transition-colors duration-200 ${
-                                              isSubActive ? 'text-[#e5a93b] font-semibold' : 'text-white'
-                                            }`}
-                                          >
-                                            {sub.name}
-                                          </Link>
-                                        </li>
-                                      );
-                                    })}
-                                  </ul>
-                                </div>
-                              ))}
+                            <div className="px-5 py-4 flex flex-col gap-1">
+                              {MENU_CONTENT[item.type].columns.map((col, cIdx) => {
+                                const isCategoryOpen = mobileExpandedCategories.includes(col.category);
+                                const isSubItemActive = col.items.some(sub => location.pathname === sub.link);
+                                const isCategoryHighlighted = isCategoryOpen || isSubItemActive;
+
+                                return (
+                                  <div key={cIdx} className="border-b last:border-b-0 py-2.5 border-stone-800/60">
+                                    <button
+                                      onClick={() => toggleMobileCategory(col.category)}
+                                      className="w-full flex justify-between items-center py-1.5 text-[14px] font-semibold uppercase tracking-wider text-stone-300 hover:text-[#e5a93b] text-left cursor-pointer transition-colors duration-200"
+                                      style={{ color: isCategoryHighlighted ? '#e5a93b' : '' }}
+                                    >
+                                      <span>{col.category}</span>
+                                      <svg
+                                        className={`w-3.5 h-3.5 transform transition-transform duration-200 ${isCategoryOpen ? 'rotate-180 text-[#e5a93b]' : 'text-stone-400'}`}
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                                      </svg>
+                                    </button>
+                                    
+                                    <div
+                                      className={`overflow-hidden transition-all duration-300 ${isCategoryOpen ? 'max-h-[500px] mt-2.5 pb-1.5' : 'max-h-0'}`}
+                                    >
+                                      <ul className="space-y-3 list-none p-0 m-0 pl-3">
+                                        {col.items.map((sub, sIdx) => {
+                                          const isSubActive = location.pathname === sub.link;
+                                          return (
+                                            <li key={sIdx}>
+                                              <Link
+                                                to={sub.link}
+                                                onClick={closeMenu}
+                                                className={`block text-[13px] font-normal uppercase tracking-wide leading-snug transition-colors duration-200 ${
+                                                  isSubActive ? 'text-[#e5a93b] font-semibold' : 'text-stone-300 hover:text-[#e5a93b]'
+                                                }`}
+                                              >
+                                                {sub.name}
+                                              </Link>
+                                            </li>
+                                          );
+                                        })}
+                                      </ul>
+                                    </div>
+                                  </div>
+                                );
+                              })}
                             </div>
                           </div>
                         </div>

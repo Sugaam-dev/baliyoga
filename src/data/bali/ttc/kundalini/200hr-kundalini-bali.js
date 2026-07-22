@@ -708,18 +708,34 @@ export const courseData = {
 
       rooms: [
         {
-          type: "6 Sharing Room (Females Only)",
+          type: "6 Sharing Room",
           tag: "Budget",
-          tagBg: "#A05060",
+          tagBg: "#7BAF8A",
           price: "$1,299",
           img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80",
-          desc: "Comfortable female-only shared rooms with AC, comfortable beds and personal storage in a peaceful location.",
+          desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
-            "Females only",
             "Air conditioning",
-            "Personal storage",
+            "Shared washroom",
             "WiFi",
+            "Clean towels & bed sheets",
+            "Daily cleaning",
+          ],
+        },
+        {
+          type: "4 Sharing Room",
+          tag: "Comfort",
+          tagBg: "#E5A93B",
+          price: "$1,499",
+          img: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80",
+          desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
+          features: [
+            "4-bed sharing",
+            "Air conditioning",
+            "Shared washroom",
+            "WiFi",
+            "Clean towels & bed sheets",
             "Daily cleaning",
           ],
         },
@@ -743,7 +759,7 @@ export const courseData = {
           type: "Private Room",
           tag: "Luxury",
           tagBg: "#C4756A",
-          price: "$2,199",
+          price: "$2,399",
           img: "https://www.livehome3d.com/assets/img/articles/rooms-in-house/stylish-guest-room@2x.jpg",
           desc: "Private room with all modern amenities for a focused and comfortable 20-day Kundalini stay.",
           features: [
@@ -756,7 +772,6 @@ export const courseData = {
           ],
         },
       ],
-
       amenities: [
         { icon: "waves", label: "Pool" },
         { icon: "heart", label: "Meditation Room" },

@@ -708,18 +708,34 @@ export const courseData = {
 
       rooms: [
         {
-          type: "6 Sharing Room (Females Only)",
+          type: "6 Sharing Room",
           tag: "Budget",
-          tagBg: "#9B5E4A",
-          price: "$2,499",
+          tagBg: "#7BAF8A",
+          price: "$2,999",
           img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80",
-          desc: "Comfortable female-only shared rooms with AC, private bathroom and WiFi for the full two-month program.",
+          desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
-            "Females only",
             "Air conditioning",
-            "Private bathroom",
+            "Shared washroom",
             "WiFi",
+            "Clean towels & bed sheets",
+            "Daily cleaning",
+          ],
+        },
+        {
+          type: "4 Sharing Room",
+          tag: "Comfort",
+          tagBg: "#E5A93B",
+          price: "$3,299",
+          img: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80",
+          desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
+          features: [
+            "4-bed sharing",
+            "Air conditioning",
+            "Shared washroom",
+            "WiFi",
+            "Clean towels & bed sheets",
             "Daily cleaning",
           ],
         },
@@ -727,7 +743,7 @@ export const courseData = {
           type: "2 Sharing Room",
           tag: "Popular",
           tagBg: "#7A4A38",
-          price: "$3,599",
+          price: "$3,699",
           img: "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=1200&q=80",
           desc: "Twin sharing room with wide balcony, private bathroom, AC and comfortable Balinese ambience.",
           features: [
@@ -743,7 +759,7 @@ export const courseData = {
           type: "Private Room",
           tag: "Luxury",
           tagBg: "#C8874A",
-          price: "$4,799",
+          price: "$4,299",
           img: "https://www.livehome3d.com/assets/img/articles/rooms-in-house/stylish-guest-room@2x.jpg",
           desc: "Private room with wide balcony, all modern amenities for a focused and elegant two-month stay.",
           features: [
@@ -756,7 +772,6 @@ export const courseData = {
           ],
         },
       ],
-
       amenities: [
         { icon: "waves", label: "Pool" },
         { icon: "heart", label: "Spa" },

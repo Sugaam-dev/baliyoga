@@ -602,41 +602,23 @@ export const MysoreSingingBowlSoundHealingData = {
           "Select your preferred configuration option inside a dedicated center built to support full educational absorption.",
   
         rooms: [
-          {
-            type: "Shared Room Structure",
-            tag: "Standard Value Inclusion",
-            tagBg: "#A0522D",
-            price: "$300 USD",
-            img: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
-            desc: "Clean shared practitioner quarters housing private bathrooms, filtered water lines, and study desk boundaries.",
-            features: [
-              "Twin roommate setting",
-              "Private attached bathroom",
-              "Comfortable clean bedding",
-              "Fast wireless Wi-Fi link",
-              "Storage clothing wardrobes",
-              "Regular space maintenance loops",
-            ],
-          },
-          {
-            type: "Non-Residential Tier",
-            tag: "Practice Only Bracket",
-            tagBg: "#1C3144",
-            price: "$250 USD",
-            img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
-            desc: "Access all dynamic on-site instruction hours, instrument masterclasses, and certified evaluation loops while living outside.",
-            features: [
-              "Full course materials access",
-              "All practical training blocks",
-              "On-site demonstration seats",
-              "YACEP continuing registries",
-              "Flexible out-living capability",
-              "Full library access metrics",
-            ],
-          },
-        ],
-  
-        amenities: [
+        {
+          type: "Course Fee",
+          tag: "Standard",
+          tagBg: "#1A2456",
+          price: "$250",
+          img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+          desc: "Complete course access, materials, and internationally recognized certification.",
+          features: [
+            "Full training",
+            "Certification",
+            "Props & Mats",
+            "Course manual",
+            "Teacher guidance",
+          ],
+        },
+      ],
+      amenities: [
           { icon: "waves", label: "Massive Practice Shalas" },
           { icon: "heart", label: "Specialist Treatment Spaces" },
           { icon: "leaf", label: "Fully Furnished Class Shalas" },

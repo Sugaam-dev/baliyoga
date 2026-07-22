@@ -739,24 +739,7 @@ export const courseData = {
             "Quiet stay",
           ],
         },
-        {
-          type: "Private Room (No Meals)",
-          tag: "Flexible",
-          tagBg: "#C8964A",
-          price: "$1,150",
-          img: "https://www.livehome3d.com/assets/img/articles/rooms-in-house/stylish-guest-room@2x.jpg",
-          desc: "Private room option without meals for those who prefer flexibility in dining.",
-          features: [
-            "Private room",
-            "No meals included",
-            "King bed",
-            "Independent schedule",
-            "AC & WiFi",
-            "Premium stay",
-          ],
-        },
       ],
-
       amenities: [
         { icon: "waves", label: "Pool" },
         { icon: "heart", label: "Spa" },

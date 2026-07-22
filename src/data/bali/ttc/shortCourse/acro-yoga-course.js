@@ -756,7 +756,6 @@ export const courseData = {
           ],
         },
       ],
-
       amenities: [
         { icon: "sparkles", label: "Yoga Studio" },
         { icon: "heart", label: "Garden Area" },
