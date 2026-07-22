@@ -708,7 +708,7 @@ export const courseData = {
 
       rooms: [
         {
-          type: "6 Shared Room",
+          type: "6 Sharing Room",
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$1,299",
@@ -724,10 +724,26 @@ export const courseData = {
           ],
         },
         {
-          type: "2 Shared Room",
+          type: "4 Sharing Room",
+          tag: "Comfort",
+          tagBg: "#E5A93B",
+          price: "$1,499",
+          img: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80",
+          desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
+          features: [
+            "4-bed sharing",
+            "Air conditioning",
+            "Shared washroom",
+            "WiFi",
+            "Clean towels & bed sheets",
+            "Daily cleaning",
+          ],
+        },
+        {
+          type: "2 Sharing Room",
           tag: "Popular",
           tagBg: "#5B4FCF",
-          price: "$1,699",
+          price: "$1,899",
           img: "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=1200&q=80",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
@@ -743,7 +759,7 @@ export const courseData = {
           type: "Private Room",
           tag: "Luxury",
           tagBg: "#C8964A",
-          price: "$2,299",
+          price: "$2,399",
           img: "https://www.livehome3d.com/assets/img/articles/rooms-in-house/stylish-guest-room@2x.jpg",
           desc: "Private room with all modern amenities for a luxurious and focused 20-day stay.",
           features: [
@@ -756,7 +772,6 @@ export const courseData = {
           ],
         },
       ],
-
       amenities: [
         { icon: "waves", label: "Pool" },
         { icon: "heart", label: "Spa" },

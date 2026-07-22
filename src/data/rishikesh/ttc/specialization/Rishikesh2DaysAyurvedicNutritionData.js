@@ -615,41 +615,23 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
           "Select your preferred room configuration tier to look after personal recovery boundaries between lectures.",
   
         rooms: [
-          {
-            type: "2 Shared Room Layout",
-            tag: "Standard Inclusion Track",
-            tagBg: "#606C38",
-            price: "$150 Tuition Base",
-            img: "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80",
-            desc: "Clean shared practitioner quarters housing private bathrooms and fast wireless internet feeds.",
-            features: [
-              "Twin roommate setup",
-              "Private attached washroom",
-              "Comfortable clean bedding",
-              "Fast wireless Wi-Fi link",
-              "Storage clothing wardrobes",
-              "Regular space maintenance",
-            ],
-          },
-          {
-            type: "Private Solo Sanctuary",
-            tag: "Sovereign Upgrade Tier",
-            tagBg: "#2F3E22",
-            price: "$150 + Custom Stay Upgrade",
-            img: "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&q=80",
-            desc: "100% individual structural privacy, maximizing long hours of quiet text study and independent sleep cycles.",
-            features: [
-              "Total single room isolation",
-              "Private en-suite plumbing",
-              "Premium quality bedding layout",
-              "Fast wireless Wi-Fi feed",
-              "Isolated quiet parameters",
-              "Premium natural view lines",
-            ],
-          },
-        ],
-  
-        amenities: [
+        {
+          type: "Course Fee",
+          tag: "Standard",
+          tagBg: "#1A2456",
+          price: "$150",
+          img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+          desc: "Complete course access, materials, and internationally recognized certification.",
+          features: [
+            "Full training",
+            "Certification",
+            "Props & Mats",
+            "Course manual",
+            "Teacher guidance",
+          ],
+        },
+      ],
+      amenities: [
           { icon: "waves", label: "Three Large Practice Shalas" },
           { icon: "heart", label: "Specialist Treatment Areas" },
           { icon: "leaf", label: "Quiet Study Common Spaces" },

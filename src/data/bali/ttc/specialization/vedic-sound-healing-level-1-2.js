@@ -708,19 +708,19 @@ export const courseData = {
 
       rooms: [
         {
-          type: "No Food & Stay",
-          tag: "Course Only",
-          tagBg: "#5A3A90",
+          type: "Without Food & Stay",
+          tag: "Tuition Only",
+          tagBg: "#888888",
           price: "$350",
-          img: "https://images.unsplash.com/photo-1604881991720-f91add269bed?w=1200&q=80",
-          desc: "Course-only option — attend all sound healing sessions from 5:00 PM to 8:00 PM without accommodation or meals.",
+          img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+          desc: "Course tuition and certification fee only, excluding overnight stay and meals.",
           features: [
-            "Evening sessions only",
-            "5:00 PM – 8:00 PM daily",
-            "All training materials",
-            "YACEP certificate",
-            "No accommodation",
-            "No meals",
+            "Full Course Access",
+            "Certification Included",
+            "Study Materials",
+            "Teacher Support",
+            "No Lodging Included",
+            "No Meals Included",
           ],
         },
         {
@@ -756,7 +756,6 @@ export const courseData = {
           ],
         },
       ],
-
       amenities: [
         { icon: "music", label: "Healing Hall" },
         { icon: "heart", label: "Garden Area" },

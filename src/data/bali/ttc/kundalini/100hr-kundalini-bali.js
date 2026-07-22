@@ -739,24 +739,7 @@ export const courseData = {
             "Quiet & peaceful",
           ],
         },
-        {
-          type: "Private Room (No Meals)",
-          tag: "Flexible",
-          tagBg: "#C8874A",
-          price: "$1,699",
-          img: "https://www.livehome3d.com/assets/img/articles/rooms-in-house/stylish-guest-room@2x.jpg",
-          desc: "Private room without meals — enjoy Bali's local restaurants and food culture independently.",
-          features: [
-            "Private room",
-            "No meals included",
-            "AC & WiFi",
-            "Private washroom",
-            "Flexible dining",
-            "Premium stay",
-          ],
-        },
       ],
-
       amenities: [
         { icon: "waves", label: "Pool" },
         { icon: "heart", label: "Spa" },

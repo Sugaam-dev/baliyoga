@@ -19,7 +19,7 @@ const ScheduleRow = ({ item }) => (
  * Allows users to toggle between the Syllabus and the Daily Schedule on the same block.
  */
 export default function ProgramDetailsSection({ curriculumData, scheduleData }) {
-  const [activeTab, setActiveTab] = useState("curriculum"); // "curriculum" | "schedule"
+  const [activeTab, setActiveTab] = useState("schedule"); // "curriculum" | "schedule"
 
   if (!curriculumData && !scheduleData) return null;
 
@@ -50,17 +50,18 @@ export default function ProgramDetailsSection({ curriculumData, scheduleData }) 
         <div className="flex justify-center mb-12">
           <div className="bg-stone-200/50 p-1.5 rounded-full inline-flex border border-stone-200">
             <button
-              onClick={() => setActiveTab("curriculum")}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer border-0 ${activeTab === "curriculum" ? "bg-[#1A2456] text-white shadow-sm" : "text-gray-600 hover:text-gray-800"}`}
-            >
-              <BookOpen size={16} /> Course Syllabus
-            </button>
-            <button
               onClick={() => setActiveTab("schedule")}
               className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer border-0 ${activeTab === "schedule" ? "bg-[#1A2456] text-white shadow-sm" : "text-gray-600 hover:text-gray-800"}`}
             >
               <Clock size={16} /> Daily Schedule
             </button>
+            <button
+              onClick={() => setActiveTab("curriculum")}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer border-0 ${activeTab === "curriculum" ? "bg-[#1A2456] text-white shadow-sm" : "text-gray-600 hover:text-gray-800"}`}
+            >
+              <BookOpen size={16} /> Course Syllabus
+            </button>
+          
           </div>
         </div>
 

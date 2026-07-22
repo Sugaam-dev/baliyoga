@@ -708,19 +708,35 @@ export const courseData = {
 
       rooms: [
         {
-          type: "6 Sharing Room (Females Only)",
+          type: "6 Sharing Room",
           tag: "Budget",
-          tagBg: "#4A50A0",
+          tagBg: "#7BAF8A",
           price: "$2,599",
-          img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80",
-          desc: "Spacious female-only shared rooms with AC, attached bathrooms and personal storage in a serene Ubud campus.",
+          img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80",
+          desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
-            "Females only",
             "Air conditioning",
-            "Attached bathroom",
-            "24-hr hot & cold water",
-            "Free WiFi",
+            "Shared washroom",
+            "WiFi",
+            "Clean towels & bed sheets",
+            "Daily cleaning",
+          ],
+        },
+        {
+          type: "4 Sharing Room",
+          tag: "Comfort",
+          tagBg: "#E5A93B",
+          price: "$2,999",
+          img: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80",
+          desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
+          features: [
+            "4-bed sharing",
+            "Air conditioning",
+            "Shared washroom",
+            "WiFi",
+            "Clean towels & bed sheets",
+            "Daily cleaning",
           ],
         },
         {
@@ -756,7 +772,6 @@ export const courseData = {
           ],
         },
       ],
-
       amenities: [
         { icon: "waves", label: "Swimming Pool" },
         { icon: "heart", label: "Meditation Room" },
