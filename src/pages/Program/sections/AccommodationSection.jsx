@@ -3,6 +3,56 @@ import { CheckCircle, ArrowRight, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { getIcon } from "./icons";
 
+// Room Images
+import privateRoomImg from "../../../assets/rooms/privateRoom.jpg";
+import twoSharedRoomImg from "../../../assets/rooms/twoSharedRoom.jpg";
+import fourSharedRoomImg from "../../../assets/rooms/fourSharedRoom.jpg";
+import sixSharedRoomImg from "../../../assets/rooms/sixSharedRoom.jpg";
+
+const getRoomImage = (type, fallbackImg) => {
+  if (!type) return fallbackImg;
+  const lower = type.toLowerCase();
+  
+  if (lower.includes("private")) {
+    return privateRoomImg;
+  }
+  if (
+    lower.includes("2 sharing") || 
+    lower.includes("two shared") || 
+    lower.includes("twoshared") || 
+    lower.includes("twin") || 
+    lower.includes("double") ||
+    lower.includes("2 shared") ||
+    lower.includes("2-shared")
+  ) {
+    return twoSharedRoomImg;
+  }
+  if (
+    lower.includes("4 sharing") || 
+    lower.includes("four shared") || 
+    lower.includes("fourshared") || 
+    lower.includes("quad") ||
+    lower.includes("4 shared") ||
+    lower.includes("4-shared")
+  ) {
+    return fourSharedRoomImg;
+  }
+  if (
+    lower.includes("6 sharing") || 
+    lower.includes("six shared") || 
+    lower.includes("sixshared") || 
+    lower.includes("6 shared") ||
+    lower.includes("6-shared")
+  ) {
+    return sixSharedRoomImg;
+  }
+  if (lower.includes("4/6")) {
+    return fourSharedRoomImg;
+  }
+  
+  return fallbackImg;
+};
+
 /**
  * Expects: data = courseData.accommodationSection.content
  */
@@ -108,7 +158,7 @@ const AccommodationSection = ({ data, onBookClick }) => {
 
           {/* Room image */}
           <div className="rounded-2xl overflow-hidden min-h-[250px] h-[clamp(250px,40vw,420px)] shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
-            <img src={room.img} alt={room.type} loading="lazy" className="w-full h-full object-cover" />
+            <img src={getRoomImage(room.type, room.img)} alt={room.type} loading="lazy" className="w-full h-full object-cover" />
           </div>
 
           {/* Content card */}
