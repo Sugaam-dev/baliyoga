@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CheckCircle, ArrowRight, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getIcon } from "./icons";
 
 // Room Images
@@ -57,6 +57,8 @@ const getRoomImage = (type, fallbackImg) => {
  * Expects: data = courseData.accommodationSection.content
  */
 const AccommodationSection = ({ data, onBookClick }) => {
+  const { location } = useParams();
+  const isBali = location?.toLowerCase() === "bali";
   const [activeRoom, setActiveRoom] = useState(0);
   const [showArrow, setShowArrow] = useState(false);
   const scrollRef = useRef(null);
@@ -158,7 +160,7 @@ const AccommodationSection = ({ data, onBookClick }) => {
 
           {/* Room image */}
           <div className="rounded-2xl overflow-hidden min-h-[250px] h-[clamp(250px,40vw,420px)] shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
-            <img src={getRoomImage(room.type, room.img)} alt={room.type} loading="lazy" className="w-full h-full object-cover" />
+            <img src={isBali ? getRoomImage(room.type, room.img) : room.img} alt={room.type} loading="lazy" className="w-full h-full object-cover" />
           </div>
 
           {/* Content card */}

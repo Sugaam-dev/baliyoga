@@ -1,9 +1,32 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Star, MapPin, Clock, CheckCircle, Info, ChevronRight } from "lucide-react";
+import { useParams } from "react-router-dom";
 import { getIcon } from "./icons";
 import MobileCarousel from "../../../components/shared/MobileCarousel";
 
+// Food Images
+import breakFastImg from "../../../assets/foods/breakFast.jpg";
+import lunchImg from "../../../assets/foods/lunch.jpg";
+import dinnerImg from "../../../assets/foods/dinner.jpg";
+
+const getMealImage = (title, fallbackImg, isBali) => {
+  if (!isBali || !title) return fallbackImg;
+  const lower = title.toLowerCase();
+  if (lower.includes("breakfast")) {
+    return breakFastImg;
+  }
+  if (lower.includes("lunch")) {
+    return lunchImg;
+  }
+  if (lower.includes("dinner")) {
+    return dinnerImg;
+  }
+  return fallbackImg;
+};
+
 export default function ExperienceSection({ foodData, excursionData, locationData, massageData }) {
+  const { location: locParam } = useParams();
+  const isBali = locParam?.toLowerCase() === "bali";
   const [activeTab, setActiveTab] = useState("food");
   const [showArrow, setShowArrow] = useState(false);
   const scrollRef = useRef(null);
@@ -153,7 +176,7 @@ export default function ExperienceSection({ foodData, excursionData, locationDat
                   <div key={i} className="bg-stone-50 rounded-3xl overflow-hidden border border-stone-100 flex flex-col shadow-sm h-full justify-between">
                     <div>
                       <div className="h-44 relative">
-                        <img src={meal.img} alt={meal.title} className="w-full h-full object-cover" />
+                        <img src={getMealImage(meal.title, meal.img, isBali)} alt={meal.title} className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                         <div className="absolute bottom-4 left-4 text-white">
                           <span className="text-xs font-semibold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded backdrop-blur-sm">{meal.time}</span>
@@ -188,6 +211,11 @@ export default function ExperienceSection({ foodData, excursionData, locationDat
                   </span>
                 ))}
               </div>
+
+              {/* Disclaimer */}
+              <p className="text-[11px] text-gray-500 italic text-center mt-3">
+                * Note: Meal selections and featured dishes are subject to change according to seasonality and ingredient availability.
+              </p>
             </div>
           )}
 
