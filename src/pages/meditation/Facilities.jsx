@@ -50,19 +50,19 @@ export default function Facilities() {
       {/* ================= GUIDED MEDITATION ================= */}
       <section className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 py-8 md:py-10 grid md:grid-cols-2 gap-12 items-center">
         
-        <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
+        <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-3 aspect-[4/3] w-full flex-shrink-0">
           <img
             src={guidedImg}
             alt="Guided Meditation Classes"
-            className="w-full h-auto object-contain transform group-hover:scale-105 transition duration-500"
+            className="w-full h-full object-cover rounded-xl transform group-hover:scale-[1.03] transition duration-500"
           />
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2.5xl font-serif font-semibold mb-4 text-[#1c2e24]">
             Guided Meditation Classes
           </h3>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-stone-600 leading-relaxed max-w-xl">
             Experience structured meditation sessions led by experienced
             teachers. These classes help calm the mind, enhance focus, and
             deepen awareness through breath, visualization, and mantra-based
@@ -78,10 +78,10 @@ export default function Facilities() {
         <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2.5xl font-serif font-semibold mb-4 text-[#1c2e24]">
               Pranayama & Breathwork
             </h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-stone-600 leading-relaxed max-w-xl">
               Harness the power of breath to energize the body and calm the
               nervous system. Our pranayama sessions teach classical breathing
               techniques to improve lung capacity, mental clarity, and
@@ -89,11 +89,11 @@ export default function Facilities() {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
+          <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-3 aspect-[4/3] w-full flex-shrink-0">
             <img
               src={pranayamaImg}
               alt="Pranayama & Breathwork"
-              className="w-full h-auto object-contain transform group-hover:scale-105 transition duration-500"
+              className="w-full h-full object-cover rounded-xl transform group-hover:scale-[1.03] transition duration-500"
             />
           </div>
 
@@ -104,19 +104,19 @@ export default function Facilities() {
       {/* ================= YOGA NIDRA ================= */}
       <section className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 py-8 md:py-10 grid md:grid-cols-2 gap-12 items-center">
 
-        <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
+        <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-3 aspect-[4/3] w-full flex-shrink-0">
           <img
             src={nidraImg}
             alt="Yoga Nidra"
-            className="w-full h-auto object-contain transform group-hover:scale-105 transition duration-500"
+            className="w-full h-full object-cover rounded-xl transform group-hover:scale-[1.03] transition duration-500"
           />
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2.5xl font-serif font-semibold mb-4 text-[#1c2e24]">
             Yoga Nidra (Yogic Sleep)
           </h3>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-stone-600 leading-relaxed max-w-xl">
             Enter a state between wakefulness and sleep where profound healing
             happens. Yoga Nidra promotes deep relaxation, stress relief, and
             subconscious transformation.
@@ -131,21 +131,21 @@ export default function Facilities() {
         <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2.5xl font-serif font-semibold mb-4 text-[#1c2e24]">
               Silent Retreats
             </h3>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-stone-600 leading-relaxed max-w-xl">
               Immerse yourself in silence and reconnect with your inner self.
               Our silent retreats provide a peaceful sanctuary for deep
               reflection, meditation, and spiritual growth.
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
+          <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-3 aspect-[4/3] w-full flex-shrink-0">
             <img
               src={silentImg}
               alt="Silent Retreats"
-              className="w-full h-auto object-contain transform group-hover:scale-105 transition duration-500"
+              className="w-full h-full object-cover rounded-xl transform group-hover:scale-[1.03] transition duration-500"
             />
           </div>
 
@@ -156,19 +156,19 @@ export default function Facilities() {
       {/* ================= MINDFULNESS PRACTICES ================= */}
       <section className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 py-8 md:py-10 grid md:grid-cols-2 gap-12 items-center">
 
-        <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
+        <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-3 aspect-[4/3] w-full flex-shrink-0">
           <img
             src={mindfulnessImg}
             alt="Mindfulness Practices"
-            className="w-full h-auto object-contain transform group-hover:scale-105 transition duration-500"
+            className="w-full h-full object-cover rounded-xl transform group-hover:scale-[1.03] transition duration-500"
           />
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold mb-4">
+          <h3 className="text-2.5xl font-serif font-semibold mb-4 text-[#1c2e24]">
             Mindfulness Practices
           </h3>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-stone-600 leading-relaxed max-w-xl">
             Cultivate presence in daily life through mindful awareness
             techniques. These practices encourage conscious breathing,
             emotional regulation, and inner peace beyond the meditation mat.
