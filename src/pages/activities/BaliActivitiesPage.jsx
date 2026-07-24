@@ -72,7 +72,7 @@ export default function BaliActivitiesPage() {
       </section>
 
       {/* Main Grid Layout */}
-      <section className="py-16 px-6 md:px-12 max-w-7xl mx-auto">
+      <section className="py-8 md:py-10 px-6 md:px-12 max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto">
         <div className="text-center mb-14">
           <SectionHeading 
             title="Included" 

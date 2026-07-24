@@ -82,7 +82,7 @@ const TrustBanner = () => {
       ref={bannerRef} 
       className="w-full bg-white border-y border-stone-200/60 py-6 md:py-8 px-4 sm:px-6 md:px-12 selection:bg-[#a6734c]/10 selection:text-[#a6734c] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+      <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
         
         {/* Left Side: Stats and Ratings (Fixed sizes and tabular-nums to prevent shifting) */}
         <div className="flex flex-row items-center justify-center lg:justify-start w-full lg:w-auto gap-6 sm:gap-10 md:gap-14">

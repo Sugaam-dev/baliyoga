@@ -94,7 +94,7 @@ export default function YogaTrainingPage({ pageData, selectedBatch, setSelectedB
   const courses = generateBatches(durationDays, roomsList);
 
   return (
-    <div className="w-full bg-[#FAF8F5] text-stone-850 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="w-full bg-[#FAF8F5] text-stone-850 py-8 md:py-10 px-4 sm:px-6 lg:px-8 font-sans">
       {/* Header Section */}
       <div className="max-w-4xl mx-auto text-center mb-12">
         <span className="text-[#C8A96A] font-semibold tracking-wider uppercase text-xs bg-[#C8A96A]/10 border border-[#C8A96A]/20 px-4 py-1.5 rounded-full">
@@ -109,7 +109,7 @@ export default function YogaTrainingPage({ pageData, selectedBatch, setSelectedB
       </div>
 
       {/* Main Interactive Grid Layout */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Batch Selector (Left Sidebar) */}
         <div className="lg:col-span-4 bg-white p-6 rounded-3xl border border-stone-200/60 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
           <h3 className="text-lg font-bold mb-4 text-[#1A2456] flex items-center justify-between">

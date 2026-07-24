@@ -13,7 +13,7 @@ export default function Facilities() {
     <div className="bg-[#f8f5f0] text-gray-800">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative py-32 text-white">
+      <section className="relative py-8 md:py-10 md:py-10 md:py-12 text-white">
 
         {/* Background Image */}
         <img
@@ -34,7 +34,7 @@ export default function Facilities() {
 
 
       {/* ================= INTRO SECTION ================= */}
-      <section className="max-w-5xl mx-auto px-6 py-20 text-center">
+      <section className="max-w-5xl mx-auto px-6 py-10 md:py-12 text-center">
         <h2 className="text-3xl md:text-4xl font-semibold mb-6">
           Discover Inner Stillness
         </h2>
@@ -48,7 +48,7 @@ export default function Facilities() {
 
 
       {/* ================= GUIDED MEDITATION ================= */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 py-8 md:py-10 grid md:grid-cols-2 gap-12 items-center">
         
         <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
           <img
@@ -74,8 +74,8 @@ export default function Facilities() {
 
 
       {/* ================= PRANAYAMA ================= */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-white py-8 md:py-10">
+        <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
             <h3 className="text-2xl font-semibold mb-4">
@@ -102,7 +102,7 @@ export default function Facilities() {
 
 
       {/* ================= YOGA NIDRA ================= */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 py-8 md:py-10 grid md:grid-cols-2 gap-12 items-center">
 
         <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
           <img
@@ -127,8 +127,8 @@ export default function Facilities() {
 
 
       {/* ================= SILENT RETREATS ================= */}
-      <section className="bg-white py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-white py-8 md:py-10">
+        <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
           <div>
             <h3 className="text-2xl font-semibold mb-4">
@@ -154,7 +154,7 @@ export default function Facilities() {
 
 
       {/* ================= MINDFULNESS PRACTICES ================= */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 py-8 md:py-10 grid md:grid-cols-2 gap-12 items-center">
 
         <div className="overflow-hidden rounded-2xl shadow-lg group bg-white p-4">
           <img
@@ -179,7 +179,7 @@ export default function Facilities() {
 
 
       {/* ================= CTA SECTION ================= */}
-      <section className="bg-[#efe7dc] py-16 text-center">
+      <section className="bg-[#efe7dc] py-8 md:py-10 text-center">
         <h2 className="text-3xl font-semibold mb-6">
           Begin Your Meditation Journey
         </h2>

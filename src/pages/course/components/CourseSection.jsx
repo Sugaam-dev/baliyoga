@@ -5,7 +5,7 @@
 // export function CourseSection({ title, subtitle, courses, bg, decoration }) {
 //   return (
 //     <section
-//       className={`relative overflow-hidden py-20 ${
+//       className={`relative overflow-hidden py-10 md:py-12 ${
 //         bg === "beige" ? "bg-[#e6d6c3]/40" : "bg-white"
 //       }`}
 //     >
@@ -27,7 +27,7 @@
 //         />
 //       )}
 
-//       <div className="relative max-w-6xl mx-auto px-6 space-y-12">
+//       <div className="relative max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 space-y-12">
 //         <div className="text-center space-y-4">
 //           <h2 className="text-3xl md:text-4xl font-semibold">
 //             {title}
@@ -65,10 +65,10 @@ export function CourseSection({
       className={`
         relative
         overflow-hidden
-        py-20
-        sm:py-24
+        py-10 md:py-12
+        sm:py-12 md:py-8 md:py-10
         lg:py-28
-        xl:py-32
+        xl:py-8 md:py-10 md:py-10 md:py-12
         ${
           bg === "beige"
             ? "bg-gradient-to-br from-[#1f2a24] via-[#2f3d33] to-[#4d3a2f]"

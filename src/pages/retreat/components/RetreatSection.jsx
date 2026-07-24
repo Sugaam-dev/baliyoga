@@ -1,7 +1,7 @@
 export default function RetreatSection({ title, description, items, bg }) {
   return (
-    <section className={`py-20 ${bg === "white" ? "bg-white" : "bg-[#e6d6c3]/40"}`}>
-      <div className="max-w-6xl mx-auto px-6 space-y-12">
+    <section className={`py-10 md:py-12 ${bg === "white" ? "bg-white" : "bg-[#e6d6c3]/40"}`}>
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 space-y-12">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-semibold">{title}</h2>
           <p className="text-stone-600 max-w-2xl mx-auto">

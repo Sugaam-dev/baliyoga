@@ -97,7 +97,7 @@ const AccommodationSection = ({ data, onBookClick }) => {
   };
 
   return (
-    <section className="bg-[#1A2456] text-white py-14 lg:py-24 px-4">
+    <section className="bg-[#1A2456] text-white py-8 lg:py-8 md:py-10 px-4">
       <style>{`
         .room-scroll::-webkit-scrollbar { display: none; }
         @keyframes roomArrowPulse {
@@ -106,7 +106,7 @@ const AccommodationSection = ({ data, onBookClick }) => {
         }
       `}</style>
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto">
 
         {/* Header */}
         <div className="mb-8 text-center max-w-2xl mx-auto">

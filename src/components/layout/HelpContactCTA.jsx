@@ -15,7 +15,7 @@ const HelpContactCTA = () => {
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[50%] bg-[#c38b5f]/15 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[50%] bg-[#1c2e24]/30 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="relative z-10 py-10 md:py-14 px-6 md:px-12 max-w-7xl mx-auto">
+      <div className="relative z-10 py-6 md:py-10 px-6 md:px-12 max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-16">
           
           {/* LEFT CONTENT BLOCK */}

@@ -27,7 +27,7 @@ const leadershipCards = [
 const Certifications = () => {
   return (
     <div className="w-full bg-[#faf8f5] text-stone-850 antialiased selection:bg-[#c38b5f]/10 selection:text-[#c38b5f]">
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-14">
+      <div className="w-full max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12 py-6 md:py-10">
         
         {/* SECTION 1: MEET THE FOUNDER */}
         <section className="relative w-full mb-12 md:mb-16">
@@ -37,7 +37,7 @@ const Certifications = () => {
             <div className="lg:col-span-5 relative w-full max-w-md lg:max-w-none mx-auto">
               <ScrollReveal>
                 <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
-                  <div className="relative h-[480px] sm:h-[550px] lg:h-[580px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da] isolate transform translate-z-0">
+                  <div className="relative h-[480px] sm:h-[550px] lg:h-[580px] 2xl:h-[650px] min-[1920px]:h-[720px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da] isolate transform translate-z-0">
                     <img
                       src={founderImg}
                       alt="Yogi Ranjan - Founder"

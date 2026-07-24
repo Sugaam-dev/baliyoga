@@ -2,8 +2,8 @@ import VideoCard from "./VideoCard";
 
 export default function VideoGallery({ sections }) {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6 space-y-16">
+    <section className="py-10 md:py-12 bg-white">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 space-y-16">
         {sections.map((section, index) => (
           <div key={index} className="space-y-8">
             <h2 className="text-3xl font-semibold text-center">

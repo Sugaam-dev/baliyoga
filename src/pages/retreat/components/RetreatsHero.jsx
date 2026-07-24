@@ -2,7 +2,7 @@ import bali3 from "../../../assets/images/home/bali3.jpg";
 
 export default function RetreatsHero() {
   return (
-    <section className="relative py-32 text-white">
+    <section className="relative py-8 md:py-10 md:py-10 md:py-12 text-white">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

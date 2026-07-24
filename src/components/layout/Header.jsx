@@ -140,7 +140,7 @@ const Header = () => {
         }}
       >
         <nav className="w-full relative bg-white z-[1002]">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-0.5 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[2000px]:max-w-[1920px]">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-0.5 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px]">
 
             {/* Logo */}
             <Link

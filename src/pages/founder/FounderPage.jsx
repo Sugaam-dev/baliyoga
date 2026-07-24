@@ -87,13 +87,7 @@ const FounderPage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950/60 via-stone-950/50 to-stone-950/80" />
 
-        <Link
-          to="/"
-          className="absolute top-6 left-6 sm:left-10 flex items-center gap-2 text-white/80 hover:text-white text-xs font-bold uppercase tracking-widest no-underline transition-colors duration-200 group"
-        >
-          <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform duration-200" />
-          Back to Home
-        </Link>
+
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <ScrollReveal>
@@ -111,7 +105,7 @@ const FounderPage = () => {
       </section>
 
       {/* ── MAIN CONTENT: full-width, minimal side gap ── */}
-      <div className="w-full px-3 sm:px-5 md:px-8 py-12 md:py-16 flex flex-col gap-4">
+      <div className="w-full max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12 py-10 md:py-12 flex flex-col gap-8">
 
         {/* ── TOP ROW: Name/Photo | Certifications | Stats (vertical stack) — matches sketch ── */}
         <ScrollReveal>
@@ -124,25 +118,24 @@ const FounderPage = () => {
   </p>
             <div className="h-px w-full bg-stone-100 mb-6" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-              {/* Photo — large, left side, full height */}
-              {/* Photo — exactly matches right column height, no gap, no overflow */}
-<div className="relative h-full">
-  <div className="absolute inset-0 border border-stone-200/60 p-2 rounded-[28px]">
-    <div className="relative w-full h-full rounded-[20px] overflow-hidden shadow-lg bg-[#efe7da]">
-      <img
-        src={founderImg}
-        alt="Yogi Ranjan"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      />
-    </div>
-  </div>
-</div>
-                
+              {/* Photo — large, left side */}
+              <div className="lg:col-span-5 w-full max-w-md lg:max-w-none mx-auto flex-shrink-0">
+                <div className="border border-stone-200/60 p-2.5 rounded-[36px]">
+                  <div className="relative h-[320px] sm:h-[420px] md:h-[480px] lg:h-[520px] w-full rounded-[28px] overflow-hidden shadow-lg bg-[#efe7da]">
+                    <img
+                      src={founderImg}
+                      alt="Yogi Ranjan"
+                      className="w-full h-full object-cover object-[center_15%]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/10 via-transparent to-transparent"></div>
+                  </div>
+                </div>
+              </div>
 
               {/* Right side: Certifications (2-col grid) on top, Stats (2x2 grid) below */}
-              <div className="flex flex-col gap-6">
+              <div className="lg:col-span-7 flex flex-col gap-6 w-full">
 
                 <div className="flex-1 flex flex-col">
                   <h3 className="text-stone-900 font-serif text-base font-semibold mb-4 flex items-center gap-2">

@@ -42,13 +42,13 @@ const UpcomingBatches = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-10 md:py-14 px-6 md:px-12 border-b border-stone-200/50">
+    <section className="relative overflow-hidden bg-white py-6 md:py-10 px-6 md:px-12 border-b border-stone-200/50">
       
       {/* Background Blurs */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-orange-200/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-200/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto w-full">
         
         {/* Heading using SectionHeading */}
         <ScrollReveal>

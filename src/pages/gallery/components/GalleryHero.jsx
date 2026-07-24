@@ -2,7 +2,7 @@ import bali2 from "../../../assets/images/home/bali2.jpg";
 
 export default function GalleryHero() {
   return (
-    <section className="relative py-32 text-white">
+    <section className="relative py-8 md:py-10 md:py-10 md:py-12 text-white">
       
       {/* Background */}
       <div className="absolute inset-0">

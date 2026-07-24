@@ -2,8 +2,8 @@ import bali1 from "../../../assets/images/home/bali1.jpg";
 
 export default function GuestWorkshopSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6 space-y-12">
+    <section className="py-12 md:py-8 md:py-10 bg-white">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 space-y-12">
         <h2 className="text-3xl font-semibold text-center">
           Guest Teacher Workshops
         </h2>

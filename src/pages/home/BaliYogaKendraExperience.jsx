@@ -35,7 +35,7 @@ const BaliYogaKendraExperience = () => {
       <div className="absolute top-[-120px] left-[-100px] w-[350px] h-[350px] bg-orange-200/10 blur-3xl rounded-full"></div>
       <div className="absolute bottom-[-120px] right-[-100px] w-[350px] h-[350px] bg-green-200/10 blur-3xl rounded-full"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-10 md:py-14">
+      <div className="relative z-10 max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-4 sm:px-6 md:px-12 py-6 md:py-10">
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           

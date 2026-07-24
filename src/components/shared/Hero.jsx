@@ -73,8 +73,10 @@ function HeroSection() {
                 </div>
 
                 {/* Left content overlaid directly on top of the blended canvas */}
-                <div className="relative z-10 h-full w-[38%] flex flex-col justify-center pt-24 pb-24 pl-10 xl:pl-16 2xl:pl-24 pr-4">
-                  <LeftContent />
+                <div className="relative z-10 h-full max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto w-full px-4 sm:px-6 lg:px-6 xl:px-10 flex items-center">
+                  <div className="w-[45%] lg:w-[40%] xl:w-[38%] flex flex-col justify-center pt-24 pb-24 pr-4">
+                    <LeftContent />
+                  </div>
                 </div>
 
               </div>

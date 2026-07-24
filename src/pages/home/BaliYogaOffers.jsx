@@ -40,7 +40,7 @@ const BaliYogaOffers = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white py-10 md:py-14 border-b border-stone-200/50">
+    <section className="relative overflow-hidden bg-white py-6 md:py-10 border-b border-stone-200/50">
       {/* Background Gradient - White type */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-[#FAF8F5] z-0"></div>
 
@@ -48,7 +48,7 @@ const BaliYogaOffers = () => {
       <div className="absolute top-[-100px] left-[-100px] w-[320px] h-[320px] bg-stone-300/20 blur-3xl rounded-full"></div>
       <div className="absolute bottom-[-120px] right-[-100px] w-[320px] h-[320px] bg-slate-300/20 blur-3xl rounded-full"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+      <div className="relative z-10 max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12">
         {/* Heading using SectionHeading */}
         <ScrollReveal>
           <div className="relative">

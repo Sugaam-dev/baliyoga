@@ -211,7 +211,7 @@ const LocationLandingPage = () => {
       </section>
 
       {/* Thin dynamic divider */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+      <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12">
         <div className={`h-px bg-gradient-to-r from-transparent ${theme.dividerAccent} to-transparent`} />
       </div>
 
@@ -282,7 +282,7 @@ const LocationLandingPage = () => {
       </section>
 
       {/* ───────── CTA FOOTER ───────── */}
-      <section className={`relative w-full bg-gradient-to-r ${theme.ctaGradient} py-20 px-7 md:px-[60px] overflow-hidden`}>
+      <section className={`relative w-full bg-gradient-to-r ${theme.ctaGradient} py-10 md:py-12 px-7 md:px-[60px] overflow-hidden`}>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.06),transparent_55%)] pointer-events-none" />
         <div className="relative max-w-[1160px] mx-auto flex items-center justify-between gap-10 flex-wrap md:flex-nowrap">
           <div>

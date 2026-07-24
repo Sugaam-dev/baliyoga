@@ -47,7 +47,7 @@ const HeroSection = ({ data, onBookClick }) => {
         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,36,86,0.55)] to-[rgba(26,36,86,0.9)]" />
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-3xl mx-auto px-5 py-16 text-center text-white">
+        <div className="relative z-10 w-full max-w-3xl mx-auto px-5 py-8 md:py-10 text-center text-white">
 
           {/* Location */}
           <div className={`inline-flex items-center gap-1.5 text-[#C8A96A] text-sm mb-4 transition-all duration-500 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
@@ -90,7 +90,7 @@ const HeroSection = ({ data, onBookClick }) => {
       </div>
 
       {/* ── BELOW HERO ── */}
-      <div className="max-w-6xl mx-auto px-5 py-16">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-5 py-8 md:py-10">
 
     
 

@@ -66,8 +66,8 @@ export default function ExperienceSection({ foodData, excursionData, locationDat
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-8 md:py-10 lg:py-12 md:py-8 md:py-10 bg-white">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-4">
 
         {/* Section Header */}
         <div className="text-center mb-12">

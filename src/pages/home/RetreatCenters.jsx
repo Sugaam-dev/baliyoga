@@ -6,8 +6,8 @@ import retreatImg from "../../assets/images/home/bali1.jpg";
 
 const RetreatCenters = () => {
   return (
-    <section className="bg-white py-10 md:py-14 overflow-hidden border-b border-stone-200/50">
-      <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
+    <section className="bg-white py-6 md:py-10 overflow-hidden border-b border-stone-200/50">
+      <div className="mx-auto w-full max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] px-6 md:px-12">
         
         {/* HEADING */}
         <ScrollReveal>

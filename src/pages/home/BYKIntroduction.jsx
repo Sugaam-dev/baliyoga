@@ -8,7 +8,7 @@ const BYKIntroduction = () => {
       <div className="absolute top-[-120px] right-[-120px] w-[400px] h-[400px] bg-[#c38b5f]/8 blur-3xl rounded-full pointer-events-none" />
       <div className="absolute bottom-[-120px] left-[-120px] w-[400px] h-[400px] bg-[#1c2e24]/6 blur-3xl rounded-full pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 sm:px-10 lg:px-20 py-14 md:py-20 lg:py-24">
+      <div className="relative z-10 w-full max-w-[1600px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-5 sm:px-10 lg:px-20 py-8 md:py-10 md:py-10 md:py-12 lg:py-12 md:py-8 md:py-10">
 
         {/* Heading */}
         <ScrollReveal>

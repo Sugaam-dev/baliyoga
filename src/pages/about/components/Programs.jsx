@@ -24,8 +24,8 @@ export default function Programs({
   subtitle = "Each training integrates yoga philosophy, asana alignment, anatomy, meditation, pranayama, teaching methodology, and spiritual development to create a well-rounded educational experience.",
 }) {
   return (
-    <section className="bg-white py-14 sm:py-16 md:py-20 border-b border-stone-200/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-8 sm:py-10 md:py-12 border-b border-stone-200/50">
+      <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section heading ── */}
         <ScrollReveal>

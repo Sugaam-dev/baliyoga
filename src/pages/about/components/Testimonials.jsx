@@ -4,7 +4,7 @@ import ScrollReveal from "../../../components/shared/ScrollReveal";
 
 export default function Testimonials() {
   return (
-    <section className="bg-[#1c2e24] py-16 sm:py-20">
+    <section className="bg-[#1c2e24] py-8 sm:py-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <ScrollReveal>
           <span className="uppercase tracking-[0.25em] text-[11px] font-bold text-[#c38b5f] mb-4 inline-block">

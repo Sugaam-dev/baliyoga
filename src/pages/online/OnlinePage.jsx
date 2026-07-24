@@ -47,7 +47,7 @@
 //       </section>
 
 //       {/* ================= SCHEDULE & BOOKING ================= */}
-//       <section className="py-16 px-4 md:px-12 bg-white">
+//       <section className="py-8 md:py-10 px-4 md:px-12 bg-white">
 //         <div className="text-center mb-12">
 //           <h2 className="text-3xl md:text-4xl font-serif mb-3">
 //             Schedule & Booking
@@ -68,7 +68,7 @@
 
 //       {/* ================= ONLINE LEARNING ================= */}
 //      {/* ================= ONLINE LEARNING ================= */}
-// <section className="py-16 px-4 md:px-12 bg-[#e6d6c3]/40">
+// <section className="py-8 md:py-10 px-4 md:px-12 bg-[#e6d6c3]/40">
 //   <div className="text-center mb-12">
 //     <h2 className="text-3xl md:text-4xl font-serif mb-3">
 //       Online Learning
@@ -131,7 +131,7 @@ export default function OnlinePage() {
     <div className="w-full overflow-x-hidden">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative py-32 text-white">
+      <section className="relative py-8 md:py-10 md:py-10 md:py-12 text-white">
         
         {/* Background Image */}
         <img
@@ -167,7 +167,7 @@ export default function OnlinePage() {
 
 
       {/* ================= SCHEDULE & BOOKING ================= */}
-      <section className="py-16 px-4 md:px-12 bg-white">
+      <section className="py-8 md:py-10 px-4 md:px-12 bg-white">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif mb-3">
             Schedule & Booking
@@ -189,7 +189,7 @@ export default function OnlinePage() {
 
 
       {/* ================= ONLINE LEARNING ================= */}
-      <section className="py-16 px-4 md:px-12 bg-[#e6d6c3]/40">
+      <section className="py-8 md:py-10 px-4 md:px-12 bg-[#e6d6c3]/40">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif mb-3">
             Online Learning

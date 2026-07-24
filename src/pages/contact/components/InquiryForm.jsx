@@ -1,6 +1,6 @@
 export default function InquiryForm() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 md:py-8 md:py-10 bg-white">
       <div className="max-w-4xl mx-auto px-6 space-y-10">
 
         <h2 className="text-3xl font-medium text-center">

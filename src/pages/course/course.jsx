@@ -179,7 +179,7 @@ export default function CoursesPage() {
     <HeroSection />
 
     {/* INTRO SECTION */}
-    <section className="relative z-10 py-20 sm:py-24 lg:py-28 px-6">
+    <section className="relative z-10 py-10 sm:py-12 lg:py-8 md:py-10 px-6">
       <div className="max-w-[1200px] mx-auto text-center">
 
         <p
@@ -410,7 +410,7 @@ export default function CoursesPage() {
   //     <div className="relative z-10">
 
   //       {/* INTRO TEXT */}
-  //       <section className="py-20 md:py-28 px-6">
+  //       <section className="py-10 md:py-8 md:py-10 px-6">
   //         <div className="max-w-[1100px] mx-auto text-center">
   //           <p className="uppercase tracking-[6px] text-[#7a8b72] text-sm mb-5">
   //             Sacred Learning Journey

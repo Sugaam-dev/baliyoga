@@ -57,8 +57,8 @@ const activities = [
 
 const AdditionalActivities = () => {
   return (
-    <div className="bg-[#FAF8F5] py-10 md:py-14 border-b border-stone-200/50">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="bg-[#FAF8F5] py-6 md:py-10 border-b border-stone-200/50">
+      <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12">
 
         {/* HEADER */}
         <SectionHeading 

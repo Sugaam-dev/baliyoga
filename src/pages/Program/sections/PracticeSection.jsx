@@ -17,8 +17,8 @@ const PracticeSection = ({ data }) => {
   const { eyebrow, title, highlight, subtitle, practices = [], specialTitle, specialHighlight, specials = [] } = data;
 
   return (
-    <section className="py-12 lg:py-16 px-2.5">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 lg:py-8 md:py-10 px-2.5">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto">
 
         {/* Header */}
         <div className="text-center mb-14">

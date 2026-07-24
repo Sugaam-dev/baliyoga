@@ -54,8 +54,8 @@ const destinations = [
 
 const WhereToTrain = () => {
   return (
-    <section className="w-full bg-white py-10 sm:py-14 md:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+    <section className="w-full bg-white py-10 sm:py-8 md:py-10 md:py-10 md:py-12">
+      <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-4 sm:px-6 md:px-12">
         <ScrollReveal>
           <SectionHeading
             title="Where Would You Like To"

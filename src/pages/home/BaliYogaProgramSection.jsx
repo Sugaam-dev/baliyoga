@@ -123,11 +123,11 @@ const BaliYogaProgramSection = () => {
   return (
     <>
       {/* MAIN SECTION */}
-      <section className="relative w-full overflow-hidden bg-[#FAF8F5] py-10 md:py-14 border-b border-stone-200/50">
+      <section className="relative w-full overflow-hidden bg-[#FAF8F5] py-6 md:py-10 border-b border-stone-200/50">
         <div className="absolute left-[-120px] top-[-100px] h-[280px] w-[280px] rounded-full bg-orange-200/10 blur-3xl" />
         <div className="absolute bottom-[-120px] right-[-100px] h-[320px] w-[320px] rounded-full bg-green-200/10 blur-3xl" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-6 md:px-12">
+        <div className="relative mx-auto w-full max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] px-6 md:px-12">
           {/* Heading using SectionHeading */}
           <SectionHeading 
             title="Begin Your" 

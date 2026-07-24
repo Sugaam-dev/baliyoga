@@ -295,7 +295,7 @@ Please share the schedule, payment options, and general availability details. Th
   };
 
   return (
-    <main className="min-h-screen bg-stone-50 text-stone-800 py-12 lg:py-20 animate-fadeIn">
+    <main className="min-h-screen bg-stone-50 text-stone-800 py-12 lg:py-10 md:py-12 animate-fadeIn">
       <div className="max-w-4xl mx-auto px-4">
         
         {/* Header Title */}

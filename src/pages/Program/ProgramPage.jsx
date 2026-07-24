@@ -95,7 +95,7 @@ const ProgramPage = ({ data }) => {
 
   if (!pageData) {
     return (
-      <div className="w-full py-20 text-center">
+      <div className="w-full py-10 md:py-12 text-center">
         <h2 className="text-2xl font-semibold">Course Not Found</h2>
         <p className="mt-2 text-gray-600">We couldn't find the requested program. Check the URL and try again.</p>
       </div>

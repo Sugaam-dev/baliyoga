@@ -3,8 +3,8 @@ import guideImg from "../../assets/mountain.jpg";
 
 const DestinationComparisonGuide = () => {
   return (
-    <div className="bg-[#FAF8F5] py-10 md:py-14 px-4 border-b border-stone-200/50">
-      <div className="mx-auto w-full max-w-7xl bg-[#FAF8F5]/90 backdrop-blur-md border border-[#e6dccf] rounded-[32px] px-6 sm:px-8 lg:px-12 py-8 sm:py-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)]">
+    <div className="bg-[#FAF8F5] py-6 md:py-10 px-4 border-b border-stone-200/50">
+      <div className="mx-auto w-full max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] bg-[#FAF8F5]/90 backdrop-blur-md border border-[#e6dccf] rounded-[32px] px-6 sm:px-8 lg:px-12 py-8 sm:py-10 shadow-[0_10px_40px_rgba(0,0,0,0.06)]">
         
         {/* RESPONSIVE GRID LAYOUT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

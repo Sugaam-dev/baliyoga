@@ -5,13 +5,13 @@ import { MdEmail } from "react-icons/md";
 
 const FooterNavigation = () => {
   return (
-    <div className="relative bg-gradient-to-r from-[#1b3328] via-[#234637] to-[#1b3328] text-white py-14 sm:py-16 lg:py-20 px-4 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-[#1b3328] via-[#234637] to-[#1b3328] text-white py-8 md:py-10 sm:py-8 md:py-10 lg:py-10 md:py-12 px-4 overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-orange-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-300/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[95%] sm:max-w-[92%] lg:max-w-[90%] 2xl:max-w-[1800px] grid gap-12 md:grid-cols-2 lg:grid-cols-4 xl:gap-16">
+      <div className="relative z-10 mx-auto w-full max-w-[95%] sm:max-w-[92%] lg:max-w-[90%] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] grid gap-12 md:grid-cols-2 lg:grid-cols-4 xl:gap-16">
         
         {/* LOGO */}
         <div>

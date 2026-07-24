@@ -12,8 +12,8 @@ export default function HighlightsSection({ communityData, promoData }) {
   const promoFeatures = promoData?.content?.features || [];
 
   return (
-    <section className="bg-stone-50 py-16 lg:py-24">
-      <div className="max-w-6xl mx-auto px-4 space-y-16">
+    <section className="bg-stone-50 py-8 md:py-10 lg:py-12 md:py-8 md:py-10">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-4 space-y-16">
         
         {/* Dynamic Grid: Trust Stats & Package Inclusions */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

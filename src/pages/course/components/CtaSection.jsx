@@ -1,6 +1,6 @@
 // export function CTASection() {
 //   return (
-//     <section className="w-full py-12 md:py-20 bg-gradient-to-r from-primary/10 to-accent/10 border-y border-border">
+//     <section className="w-full py-12 md:py-10 md:py-12 bg-gradient-to-r from-primary/10 to-accent/10 border-y border-border">
 //       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 //         <div className="max-w-3xl mx-auto text-center space-y-6">
 //           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
@@ -43,10 +43,10 @@ export function CTASection() {
         relative
         overflow-hidden
 
-        py-20
-        sm:py-24
+        py-10 md:py-12
+        sm:py-12 md:py-8 md:py-10
         lg:py-28
-        xl:py-32
+        xl:py-8 md:py-10 md:py-10 md:py-12
 
         bg-gradient-to-br
         from-[#1f2a24]
@@ -125,9 +125,9 @@ export function CTASection() {
             sm:px-10
             lg:px-16
 
-            py-14
-            sm:py-16
-            lg:py-20
+            py-8 md:py-10
+            sm:py-8 md:py-10
+            lg:py-10 md:py-12
 
             text-center
           "

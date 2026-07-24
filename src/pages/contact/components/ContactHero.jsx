@@ -2,7 +2,7 @@ import bali1 from "../../../assets/images/home/bali1.jpg";
 
 export default function ContactHero() {
   return (
-    <section className="relative py-32 text-white">
+    <section className="relative py-8 md:py-10 md:py-10 md:py-12 text-white">
 
       {/* Background */}
       <div className="absolute inset-0">

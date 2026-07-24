@@ -1,7 +1,7 @@
 export default function LocationSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="py-12 md:py-8 md:py-10 bg-white">
+      <div className="max-w-6xl min-[1600px]:max-w-[1320px] min-[1920px]:max-w-[1520px] min-[2500px]:max-w-[2000px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* Map */}
         <div className="rounded-2xl overflow-hidden shadow-sm">

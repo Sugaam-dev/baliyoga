@@ -17,7 +17,7 @@ const FaqSection = ({ data }) => {
   if (faqs.length === 0) return null;
 
   return (
-    <section className="bg-white py-14 lg:py-20 px-4">
+    <section className="bg-white py-8 md:py-10 lg:py-10 md:py-12 px-4">
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
