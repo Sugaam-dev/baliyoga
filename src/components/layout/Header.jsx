@@ -140,7 +140,7 @@ const Header = () => {
         }}
       >
         <nav className="w-full relative bg-white z-[1002]">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-0.5 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px]">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-0.5 min-[1920px]:py-2 min-[2500px]:py-3 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px]">
 
             {/* Logo */}
             <Link
@@ -156,7 +156,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Nav Links */}
-            <ul className="hidden lg:flex items-center justify-end flex-1 gap-1 xl:gap-2 2xl:gap-3 m-0 p-0 list-none">
+            <ul className="hidden lg:flex items-center justify-end flex-1 gap-1 xl:gap-2 2xl:gap-3 min-[1920px]:gap-5 min-[2500px]:gap-8 m-0 p-0 list-none">
               {navItems.map((item) => {
                 const hasDropdown = !!item.type;
                 const isCurrentActive = activeDropdown === item.type;
@@ -172,14 +172,14 @@ const Header = () => {
                     {hasDropdown ? (
                       <button
                         onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
-                        className={`flex items-center gap-1.5 px-1.5 xl:px-2 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
+                        className={`flex items-center gap-1.5 px-1.5 xl:px-2 min-[1920px]:px-3 min-[2500px]:px-4 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] min-[1920px]:text-[17px] min-[2500px]:text-[20px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
                           isParentHighlighted ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                       >
                         {item.label}
                         <svg
-                          className={`w-3.5 h-3.5 shrink-0 transition-transform duration-300 ${isCurrentActive || isLinkActive ? 'rotate-180 text-[#c38b5f]' : 'text-stone-500 group-hover:text-[#c38b5f]'}`}
+                          className={`w-3.5 h-3.5 min-[1920px]:w-4 min-[1920px]:h-4 min-[2500px]:w-[18px] min-[2500px]:h-[18px] shrink-0 transition-transform duration-300 ${isCurrentActive || isLinkActive ? 'rotate-180 text-[#c38b5f]' : 'text-stone-500 group-hover:text-[#c38b5f]'}`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -190,7 +190,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.path}
-                        className={`relative flex items-center px-1.5 xl:px-2 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
+                        className={`relative flex items-center px-1.5 xl:px-2 min-[1920px]:px-3 min-[2500px]:px-4 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] min-[1920px]:text-[17px] min-[2500px]:text-[20px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
                           isLinkActive ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
@@ -210,7 +210,7 @@ const Header = () => {
               <a
                 href="#apply"
                 onClick={() => setActiveDropdown(null)}
-                className="hidden lg:inline-block border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white transition-all duration-300 px-5 py-2.5 text-xs tracking-[0.15em] font-bold rounded-full shadow-sm hover:shadow-md"
+                className="hidden lg:inline-block border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white transition-all duration-300 px-5 py-2.5 min-[1920px]:px-6 min-[1920px]:py-3 min-[2500px]:px-8 min-[2500px]:py-3.5 text-xs min-[1920px]:text-[13px] min-[2500px]:text-sm tracking-[0.15em] font-bold rounded-full shadow-sm hover:shadow-md"
               >
                 APPLY NOW
               </a>
@@ -246,7 +246,7 @@ const Header = () => {
                     MENU_CONTENT[activeDropdown].columns.length === 4 ? '1200px' : '1400px'
                 }}
               >
-                <div className="px-6 py-10 xl:px-10 xl:py-12">
+                <div className="px-6 py-10 xl:px-10 xl:py-12 min-[1920px]:px-12 min-[1920px]:py-14 min-[2500px]:px-16 min-[2500px]:py-16">
                   <div 
                     className={`grid ${
                       MENU_CONTENT[activeDropdown].columns.length === 2 ? 'grid-cols-2' :
@@ -257,7 +257,7 @@ const Header = () => {
                     {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
                       <div key={idx} className="flex flex-col min-w-0">
                         <h4
-                          className="text-[14px] xl:text-[16px] font-bold uppercase tracking-[0.05em] pb-3 mb-3 border-b border-gray-700"
+                          className="text-[14px] xl:text-[16px] min-[1920px]:text-[18px] min-[2500px]:text-[20px] font-bold uppercase tracking-[0.05em] pb-3 mb-3 border-b border-gray-700"
                           style={{ color: '#e5a93b' }}
                         >
                           {col.category}
@@ -270,7 +270,7 @@ const Header = () => {
                                 <Link
                                   to={sub.link}
                                   onClick={() => setActiveDropdown(null)}
-                                  className={`block text-[13px] xl:text-[14px] font-normal transition-colors duration-200 uppercase tracking-wide leading-tight ${
+                                  className={`block text-[13px] xl:text-[14px] min-[1920px]:text-[15px] min-[2500px]:text-[17px] font-normal transition-colors duration-200 uppercase tracking-wide leading-tight ${
                                     isSubActive ? 'text-[#e5a93b] font-semibold' : 'text-white hover:text-[#e5a93b]'
                                   }`}
                                 >
@@ -437,7 +437,7 @@ const Header = () => {
       </header>
 
       {/* Header Layout Spacer */}
-      <div className="w-full pt-[52px] sm:pt-[60px] lg:pt-[80px] xl:pt-[96px]" aria-hidden="true" />
+      <div className="w-full pt-[52px] sm:pt-[60px] lg:pt-[80px] xl:pt-[96px] min-[1920px]:pt-[112px] min-[2500px]:pt-[128px]" aria-hidden="true" />
     </>
   );
 };

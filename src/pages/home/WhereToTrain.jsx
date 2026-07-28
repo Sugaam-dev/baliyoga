@@ -5,12 +5,25 @@ import SectionHeading from "../../components/shared/SectionHeading";
 import baliImg from "../../assets/images/home/bali1.jpg";
 import rishikeshImg from "../../assets/images/home/bali2.jpg";
 import mysoreImg from "../../assets/images/home/bali3.jpg"; // TODO: replace with a real Mysore image
-import { LANDING_LOCATION_DATA } from "../programsCard/LandingPageData";
+import { PROGRAM_LINKS, RETREAT_LINKS } from "../../data/locations";
 
-const getProgramCount = (locationKey) => {
-  const locData = LANDING_LOCATION_DATA[locationKey.toLowerCase()];
-  if (!locData || !locData.programsByCategoryId) return 0;
-  return Object.values(locData.programsByCategoryId).reduce((sum, list) => sum + (list?.length || 0), 0);
+const getCounts = (locationKey) => {
+  const slug = locationKey.toLowerCase() === "mysore" ? "mysuru" : locationKey.toLowerCase();
+  
+  // Programs Count
+  const pData = PROGRAM_LINKS[slug] || {};
+  let programCount = 0;
+  for (const cat in pData) {
+    if (Array.isArray(pData[cat])) {
+      programCount += pData[cat].length;
+    }
+  }
+  
+  // Retreats Count
+  const rData = RETREAT_LINKS[slug] || [];
+  const retreatCount = Array.isArray(rData) ? rData.length : 0;
+  
+  return { programCount, retreatCount };
 };
 
 const destinations = [
@@ -23,7 +36,7 @@ const destinations = [
     description:
       "Nestled among sacred rice terraces and whispering temples, our Bali programs offer the most immersive yoga teacher training experience in Southeast Asia.",
     badges: ["Multi-Style YTTC", "Kundalini YTTC", "Short Courses", "Specialization & Retreats"],
-    programCount: getProgramCount("bali"),
+    counts: getCounts("bali"),
     link: "/programs/bali",
   },
   {
@@ -35,7 +48,7 @@ const destinations = [
     description:
       "Perched on the banks of the sacred Ganges, beneath the eternal Himalayas — Rishikesh is where yoga was born for the world.",
     badges: ["Multi-Style YTTC", "Kundalini YTTC", "Short Courses", "Specialization & Retreats"],
-    programCount: getProgramCount("rishikesh"),
+    counts: getCounts("rishikesh"),
     link: "/programs/rishikesh",
   },
   {
@@ -47,7 +60,7 @@ const destinations = [
     description:
       "Home of Ashtanga Vinyasa, Mysore blends royal heritage with disciplined practice — where generations of teachers have trained under the lineage of Sri K. Pattabhi Jois.",
     badges: ["Multi-Style YTTC", "Kundalini YTTC", "Short Courses", "Specialization & Retreats"],
-    programCount: getProgramCount("mysuru"),
+    counts: getCounts("mysuru"),
     link: "/programs/mysuru",
   },
 ];
@@ -100,8 +113,8 @@ const WhereToTrain = () => {
 
                   {/* Bottom row: program count + button */}
                   <div className="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
-                    <span className="text-xs font-bold uppercase tracking-wider text-stone-500">
-                      {dest.programCount} Programs
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#1c2e24]">
+                      {dest.counts.programCount} Programs &bull; {dest.counts.retreatCount} Retreats
                     </span>
                     <Link
                       to={dest.link}
