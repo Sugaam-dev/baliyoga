@@ -9,7 +9,7 @@ import BaliYogaKendraExperience from "./BaliYogaKendraExperience";
 import BaliYogaEssenceSlider from "./BaliYogaEssenceSlider";
 import BaliYogaRetreatsGrid from "./BaliYogaRetreatsGrid";
 import RetreatCenters from "./RetreatCenters";
-import BaliYogaProgramSection from "./BaliYogaProgramSection";
+// import BaliYogaProgramSection from "./BaliYogaProgramSection";
 import BaliYogaOffers from "./BaliYogaOffers";
 import BaliYogaGallery from "./BaliYogaGallery";
 import TestimonialsSection from "./TestimonialsSection";
@@ -57,7 +57,7 @@ export default function Home() {
       <RetreatCenters />
       
       {/* 10. Program Inclusions, Schedule & Pricing */}
-      <BaliYogaProgramSection />
+      {/* <BaliYogaProgramSection /> */}
       
       {/* 11. Special Discount Offers */}
       <BaliYogaOffers />

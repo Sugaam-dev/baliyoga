@@ -140,23 +140,31 @@ const Header = () => {
         }}
       >
         <nav className="w-full relative bg-white z-[1002]">
-          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-0.5 min-[1920px]:py-2 min-[2500px]:py-3 flex justify-between items-center gap-2 xl:gap-3 max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px]">
+          <div className="w-full mx-auto px-4 sm:px-6 lg:px-6 xl:px-10 py-1.5 xl:py-2 min-[1920px]:py-3 min-[2500px]:py-4 flex justify-between items-center gap-2 xl:gap-4 2xl:gap-6 min-[2500px]:gap-8 max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px]">
 
             {/* Logo */}
             <Link
               to="/"
-              className="relative z-[1002] flex items-center transition-transform duration-300 hover:scale-105 shrink-0"
+              className="relative z-[1002] flex items-center gap-2 sm:gap-3 transition-transform duration-300 hover:scale-105 shrink-0"
               onClick={closeMenu}
             >
               <img
                 src="/logo.png"
                 alt="Bali Yoga Kendra Logo"
-                className="h-10 sm:h-12 md:h-14 lg:h-16 xl:h-20 2xl:h-24 w-auto object-contain block max-w-[120px] sm:max-w-[150px] lg:max-w-[180px]"
+                className="h-9 sm:h-10 md:h-11 lg:h-12 xl:h-13 2xl:h-18 min-[1920px]:h-22 min-[2500px]:h-26 w-auto object-contain block max-w-[90px] sm:max-w-[110px] lg:max-w-[130px] xl:max-w-[145px] 2xl:max-w-[180px] min-[1920px]:max-w-[220px]"
               />
+              <span className="flex flex-col leading-tight">
+                <span className="text-xs sm:text-sm lg:text-base xl:text-[17px] 2xl:text-xl min-[1920px]:text-2xl min-[2500px]:text-3xl font-extrabold tracking-wider text-[#182222] font-serif uppercase whitespace-nowrap">
+                  Bali Yoga
+                </span>
+                <span className="text-[9px] sm:text-[10px] lg:text-[10px] xl:text-[11.5px] 2xl:text-xs min-[1920px]:text-base min-[2500px]:text-xl font-bold tracking-[0.22em] text-[#c38b5f] font-serif uppercase whitespace-nowrap">
+                  Kendra
+                </span>
+              </span>
             </Link>
 
             {/* Desktop Nav Links */}
-            <ul className="hidden lg:flex items-center justify-end flex-1 gap-1 xl:gap-2 2xl:gap-3 min-[1920px]:gap-5 min-[2500px]:gap-8 m-0 p-0 list-none">
+            <ul className="hidden lg:flex items-center justify-end flex-1 gap-0.5 lg:gap-0.5 xl:gap-1 2xl:gap-3 min-[1920px]:gap-5 min-[2500px]:gap-8 m-0 p-0 list-none">
               {navItems.map((item) => {
                 const hasDropdown = !!item.type;
                 const isCurrentActive = activeDropdown === item.type;
@@ -172,14 +180,14 @@ const Header = () => {
                     {hasDropdown ? (
                       <button
                         onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
-                        className={`flex items-center gap-1.5 px-1.5 xl:px-2 min-[1920px]:px-3 min-[2500px]:px-4 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] min-[1920px]:text-[17px] min-[2500px]:text-[20px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
-                          isParentHighlighted ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
+                        className={`flex items-center gap-1 px-0.5 lg:px-1 xl:px-1.5 2xl:px-2.5 min-[1920px]:px-3.5 min-[2500px]:px-5 text-[11px] lg:text-[11.5px] xl:text-[12.5px] 2xl:text-[15px] min-[1920px]:text-[18px] min-[2500px]:text-[22px] font-semibold tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
+                          isParentHighlighted ? 'text-[#c38b5f]' : 'text-stone-700 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                       >
                         {item.label}
                         <svg
-                          className={`w-3.5 h-3.5 min-[1920px]:w-4 min-[1920px]:h-4 min-[2500px]:w-[18px] min-[2500px]:h-[18px] shrink-0 transition-transform duration-300 ${isCurrentActive || isLinkActive ? 'rotate-180 text-[#c38b5f]' : 'text-stone-500 group-hover:text-[#c38b5f]'}`}
+                          className={`w-3 h-3 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 min-[1920px]:w-4.5 min-[1920px]:h-4.5 shrink-0 transition-transform duration-300 ${isCurrentActive || isLinkActive ? 'rotate-180 text-[#c38b5f]' : 'text-stone-500 group-hover:text-[#c38b5f]'}`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -190,8 +198,8 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.path}
-                        className={`relative flex items-center px-1.5 xl:px-2 min-[1920px]:px-3 min-[2500px]:px-4 text-[13px] lg:text-[13.5px] xl:text-[14.5px] 2xl:text-[16px] min-[1920px]:text-[17px] min-[2500px]:text-[20px] font-medium tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
-                          isLinkActive ? 'text-[#c38b5f]' : 'text-stone-600 hover:text-[#c38b5f]'
+                        className={`relative flex items-center px-0.5 lg:px-1 xl:px-1.5 2xl:px-2.5 min-[1920px]:px-3.5 min-[2500px]:px-5 text-[11px] lg:text-[11.5px] xl:text-[12.5px] 2xl:text-[15px] min-[1920px]:text-[18px] min-[2500px]:text-[22px] font-semibold tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
+                          isLinkActive ? 'text-[#c38b5f]' : 'text-stone-700 hover:text-[#c38b5f]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                         onMouseEnter={() => setActiveDropdown(null)}
@@ -206,11 +214,11 @@ const Header = () => {
             </ul>
 
             {/* Right side Actions */}
-            <div className="flex items-center gap-2 xl:gap-4 shrink-0">
+            <div className="flex items-center gap-2 xl:gap-3 shrink-0 ml-1 xl:ml-2">
               <a
                 href="#apply"
                 onClick={() => setActiveDropdown(null)}
-                className="hidden lg:inline-block border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white transition-all duration-300 px-5 py-2.5 min-[1920px]:px-6 min-[1920px]:py-3 min-[2500px]:px-8 min-[2500px]:py-3.5 text-xs min-[1920px]:text-[13px] min-[2500px]:text-sm tracking-[0.15em] font-bold rounded-full shadow-sm hover:shadow-md"
+                className="hidden lg:inline-flex items-center justify-center whitespace-nowrap shrink-0 border-2 border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white transition-all duration-300 px-3 py-1.5 lg:px-3 lg:py-1.5 xl:px-4 xl:py-2 2xl:px-5.5 2xl:py-2.5 min-[1920px]:px-7 min-[1920px]:py-3.5 text-[10.5px] lg:text-[11px] xl:text-xs 2xl:text-sm min-[1920px]:text-base tracking-[0.12em] 2xl:tracking-[0.15em] font-extrabold rounded-full shadow-sm hover:shadow-md"
               >
                 APPLY NOW
               </a>
@@ -299,8 +307,16 @@ const Header = () => {
             className="px-5 py-3 flex items-center justify-between border-b-2 shrink-0"
             style={{ borderColor: '#e5a93b' }}
           >
-            <Link to="/" onClick={closeMenu}>
-              <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+            <Link to="/" onClick={closeMenu} className="flex items-center gap-2.5">
+              <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+              <span className="flex flex-col leading-tight">
+                <span className="text-sm font-extrabold tracking-wider text-white font-serif uppercase whitespace-nowrap">
+                  Bali Yoga
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.2em] text-[#e5a93b] font-serif uppercase whitespace-nowrap">
+                  Kendra
+                </span>
+              </span>
             </Link>
             <button
               onClick={closeMenu}
@@ -437,7 +453,7 @@ const Header = () => {
       </header>
 
       {/* Header Layout Spacer */}
-      <div className="w-full pt-[52px] sm:pt-[60px] lg:pt-[80px] xl:pt-[96px] min-[1920px]:pt-[112px] min-[2500px]:pt-[128px]" aria-hidden="true" />
+      <div className="w-full pt-[50px] sm:pt-[56px] lg:pt-[64px] xl:pt-[70px] min-[1920px]:pt-[80px] min-[2500px]:pt-[96px]" aria-hidden="true" />
     </>
   );
 };

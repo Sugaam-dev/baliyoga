@@ -134,7 +134,7 @@ const BaliYogaOffers = () => {
 
                       {/* Button */}
                       <a 
-                        href="#contact"
+                        href="/contact"
                         className="w-full bg-[#FAF8F5] text-stone-850 hover:bg-[#c38b5f] hover:text-[#FAF8F5] py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm no-underline"
                       >
                         {offer.button}
