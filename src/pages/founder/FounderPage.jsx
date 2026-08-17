@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArrowLeft, Award, Globe, Heart, Star, BookOpen, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 import founderImg from "../../assets/images/home/ranjan_sir.jpg";
 import baliTemple from "../../assets/images/home/bali2.jpg";
+import certificate1 from "../../assets/images/certificates/certificate1.png";
+import certificate2 from "../../assets/images/certificates/certificate2.png";
+import certificate3 from "../../assets/images/certificates/certificate3.png";
+import certificate4 from "../../assets/images/certificates/certificate4.png";
 
 const credentials = [
   "E-RYT 500 — Yoga Alliance Registered Senior Teacher",
@@ -74,7 +78,27 @@ const journeySections = [
   },
 ];
 
+const certificates = [
+  {
+    image: certificate1,
+    title: "Certificate 1",
+  },
+  {
+    image: certificate2,
+    title: "Certificate 2",
+  },
+  {
+    image: certificate3,
+    title: "Certificate 3",
+  },
+  {
+    image: certificate4,
+    title: "Certificate 4",
+  },
+];
+
 const FounderPage = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
   return (
     <div className="w-full bg-[#FAF8F5] min-h-screen antialiased">
 
@@ -173,6 +197,195 @@ const FounderPage = () => {
             </div>
           </div>
         </ScrollReveal>
+
+                {/* ── CERTIFICATES ── */}
+        <ScrollReveal>
+          <section className="bg-white border border-stone-200/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm">
+
+            {/* Heading */}
+            <div className="text-center mb-7">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <Award className="w-5 h-5 text-[#c38b5f]" />
+
+                <h2 className="text-stone-900 font-serif text-2xl sm:text-3xl font-semibold">
+                  Certificates
+                </h2>
+              </div>
+
+              <p className="text-stone-500 text-sm">
+                Click on any certificate to view it in full size
+              </p>
+            </div>
+
+            {/* Certificate Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
+              {certificates.map((certificate, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedCertificate(certificate.image)}
+                  className="group cursor-pointer"
+                >
+                  <div
+                    className="
+                      bg-[#faf8f5]
+                      border border-stone-200/60
+                      rounded-2xl
+                      p-2
+                      overflow-hidden
+                      shadow-sm
+                      transition-all
+                      duration-300
+                      group-hover:-translate-y-1
+                      group-hover:shadow-lg
+                    "
+                  >
+                    <div className="relative w-full h-[150px] sm:h-[190px] md:h-[220px] lg:h-[240px] bg-white rounded-xl overflow-hidden">
+
+                      <img
+                        src={certificate.image}
+                        alt={certificate.title}
+                        className="
+                          w-full
+                          h-full
+                          object-contain
+                          p-2
+                          transition-transform
+                          duration-500
+                          group-hover:scale-105
+                        "
+                      />
+
+                      {/* Hover Overlay */}
+                      <div
+                        className="
+                          absolute
+                          inset-0
+                          bg-stone-900/0
+                          group-hover:bg-stone-900/20
+                          transition-all
+                          duration-300
+                          flex
+                          items-center
+                          justify-center
+                        "
+                      >
+                        <span
+                          className="
+                            opacity-0
+                            group-hover:opacity-100
+                            bg-white
+                            text-stone-800
+                            px-4
+                            py-2
+                            rounded-full
+                            text-xs
+                            font-bold
+                            uppercase
+                            tracking-wider
+                            shadow-md
+                            transition-all
+                            duration-300
+                          "
+                        >
+                          View
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <p className="text-center text-xs sm:text-sm text-stone-600 font-medium mt-3">
+                    {certificate.title}
+                  </p>
+                </div>
+              ))}
+
+            </div>
+
+          </section>
+        </ScrollReveal>
+
+
+        {/* ── CERTIFICATE ZOOM MODAL ── */}
+        {selectedCertificate && (
+          <div
+            className="
+              fixed
+              inset-0
+              z-[9999]
+              bg-black/85
+              flex
+              items-center
+              justify-center
+              p-4
+              sm:p-8
+            "
+            onClick={() => setSelectedCertificate(null)}
+          >
+
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={() => setSelectedCertificate(null)}
+              className="
+                absolute
+                top-4
+                right-5
+                sm:top-6
+                sm:right-8
+                w-10
+                h-10
+                rounded-full
+                bg-white/10
+                hover:bg-white/20
+                text-white
+                text-3xl
+                flex
+                items-center
+                justify-center
+                transition-all
+                duration-300
+                z-[10000]
+              "
+              aria-label="Close certificate"
+            >
+              ×
+            </button>
+
+            {/* Certificate Image */}
+            <div
+              className="
+                relative
+                max-w-[95vw]
+                max-h-[92vh]
+                flex
+                items-center
+                justify-center
+              "
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedCertificate}
+                alt="Certificate enlarged"
+                className="
+                  max-w-[95vw]
+                  max-h-[90vh]
+                  w-auto
+                  h-auto
+                  object-contain
+                  bg-white
+                  p-2
+                  sm:p-3
+                  rounded-lg
+                  shadow-2xl
+                "
+              />
+            </div>
+
+          </div>
+        )}
+
 
         {/* Full bio — wide, minimal side margin */}
         <ScrollReveal>
