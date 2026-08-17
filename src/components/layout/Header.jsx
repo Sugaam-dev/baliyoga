@@ -124,8 +124,6 @@ const Header = () => {
 
     { label: 'Bali Activities', path: '/bali-activities' },
 
-    { label: 'Holiday Packages', path: '/holiday-packages' },
-    { label: 'Facilities', path: '/facilities' },
     { label: 'Contact', path: '/contact' },
   ];
 
