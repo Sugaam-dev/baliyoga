@@ -591,11 +591,11 @@ import yoga4 from "../../assets/images/home/Bali_Yoga_Kendra_Banner_4.webp";
 import yoga5 from "../../assets/images/home/Bali_Yoga_Kendra_Banner_5.webp";
 
 // Mobile Images (You can import your mobile-specific assets here)
-import mobileYoga1 from "../../assets/images/home/mobile/Bali_Yoga_Kendra_mobile_1.webp";
-import mobileYoga2 from "../../assets/images/home/mobile/Bali_Yoga_Kendra_Mobile_2.webp";
-import mobileYoga3 from "../../assets/images/home/mobile/Bali_Yoga_Kendra_Mobile_3.webp";
-import mobileYoga4 from "../../assets/images/home/mobile/Bali_Yoga_Kendra_Mobile_4.webp";
-import mobileYoga5 from "../../assets/images/home/mobile/Bali_Yoga_Kendra_Mobile_5.webp";
+import mobileYoga1 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_1.webp";
+import mobileYoga2 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_2.webp";
+import mobileYoga3 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_3.webp";
+import mobileYoga4 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_4.webp";
+import mobileYoga5 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_5.webp";
 
 function HeroSection() {
   // Dynamically inject Google Fonts for both Montserrat (Heading) and Playfair Display (Subtitle)
