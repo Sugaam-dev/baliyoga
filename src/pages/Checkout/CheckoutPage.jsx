@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Check, ArrowRight, ShieldCheck, Mail, MessageSquare, AlertCircle, Copy, CheckCircle2, ChevronRight, ChevronDown, QrCode, ShoppingBag, Trash2, Plus, Minus } from "lucide-react";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+import { isValidPhoneNumber } from "libphonenumber-js";
 import { getCart, removeFromCart, updateQuantity, clearCart } from "../../utils/cart";
 import { locationDataMap } from "../../data/locationDataMap";
 
@@ -133,7 +136,8 @@ export default function CheckoutPage() {
           slug: state.slug,
           title,
           rooms,
-          price: programData.heroSection?.hero?.price || "$1,299"
+          price: programData.heroSection?.hero?.price || "$1,299",
+          location: state.location
         });
 
         // Pre-select room option
@@ -194,7 +198,18 @@ export default function CheckoutPage() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errs.email = "Invalid email format";
     }
-    if (!formData.phone.trim()) errs.phone = "Phone number is required";
+    
+    const phoneVal = formData.phone?.trim() || "";
+    if (!phoneVal) {
+      errs.phone = "Phone number is required";
+    } else {
+      const digitsOnly = phoneVal.replace(/\D/g, "");
+      if (digitsOnly.length <= 3) {
+        errs.phone = "Phone number is required";
+      } else if (!isValidPhoneNumber(phoneVal)) {
+        errs.phone = "Please enter a valid phone number for this country.";
+      }
+    }
     
     setErrors(errs);
     return Object.keys(errs).length === 0;
@@ -259,7 +274,7 @@ export default function CheckoutPage() {
     let summaryStr = "";
 
     if (isDirectBooking && directCourse) {
-      summaryStr = `*Course/Retreat*: ${directCourse.title}\n- *Accommodation Option*: ${selectedRoom}\n- *Selected Dates*: ${selectedDate || "Not Specified"}\n- *Price Info*: ${totalStr}\n`;
+      summaryStr = `*Course/Retreat*: ${directCourse.title}\n- *Location*: ${directCourse.location || "Not Specified"}\n- *Accommodation Option*: ${selectedRoom}\n- *Selected Dates*: ${selectedDate || "Not Specified"}\n- *Price Info*: ${totalStr}\n`;
     } else {
       cart.forEach((item, idx) => {
         summaryStr += `${idx + 1}. *${item.title}*\n`;
@@ -296,6 +311,48 @@ Please share the schedule, payment options, and general availability details. Th
 
   return (
     <main className="min-h-screen bg-stone-50 text-stone-800 py-12 lg:py-10 md:py-12 animate-fadeIn">
+      <style>{`
+        /* Remove default borders and backgrounds from react-international-phone */
+        .react-international-phone-input-container {
+          border: none !important;
+          background: transparent !important;
+          width: 100% !important;
+        }
+        .react-international-phone-country-selector-button {
+          border: none !important;
+          background: transparent !important;
+          padding: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          cursor: pointer;
+        }
+        .react-international-phone-input {
+          border: none !important;
+          background: transparent !important;
+          width: 100% !important;
+          outline: none !important;
+          padding: 12px 16px !important;
+          font-family: inherit !important;
+          font-size: 0.875rem !important;
+          color: #1c1917 !important;
+        }
+        .react-international-phone-country-selector-dropdown {
+          z-index: 1050 !important;
+          border-radius: 12px !important;
+          border: 1px solid #e7e5e4 !important;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+          padding: 6px 0 !important;
+          background-color: white !important;
+        }
+        .react-international-phone-country-selector-dropdown__list-item {
+          padding: 10px 16px !important;
+          font-family: inherit !important;
+          font-size: 0.875rem !important;
+        }
+        .react-international-phone-country-selector-dropdown__list-item:hover {
+          background-color: #f5f5f4 !important;
+        }
+      `}</style>
       <div className="max-w-4xl mx-auto px-4">
         
         {/* Header Title */}
@@ -319,6 +376,11 @@ Please share the schedule, payment options, and general availability details. Th
                   <div className="border-b border-stone-100 pb-4">
                     <span className="text-[#C8A96A] text-xs font-bold uppercase tracking-wider">Course Selection</span>
                     <h2 className="text-xl font-bold text-[#1A2456] mt-1">{directCourse.title}</h2>
+                    {directCourse.location && (
+                      <p className="text-xs text-stone-500 mt-1.5 capitalize">
+                        Location: {directCourse.location}
+                      </p>
+                    )}
                   </div>
 
                   {/* Room Type Selector */}
@@ -514,14 +576,18 @@ Please share the schedule, payment options, and general availability details. Th
 
                 <div className="space-y-1">
                   <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider">Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="+1 (555) 000-0000"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className={`w-full border rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#1A2456] ${errors.phone ? "border-red-500 bg-red-50/10" : "border-stone-200 bg-stone-50"}`}
-                  />
+                  <div className={`flex items-center w-full border rounded-xl focus-within:bg-white focus-within:ring-2 focus-within:ring-[#1A2456] focus-within:border-transparent transition-all overflow-hidden ${errors.phone ? "border-red-500 bg-red-50/10" : "border-stone-200 bg-stone-50"}`}>
+                    <PhoneInput
+                      defaultCountry="in"
+                      value={formData.phone}
+                      onChange={(phone) => setFormData(prev => ({ ...prev, phone }))}
+                      className="w-full flex"
+                      inputClassName="react-international-phone-input"
+                      countrySelectorStyleProps={{
+                        buttonClassName: "react-international-phone-country-selector-button"
+                      }}
+                    />
+                  </div>
                   {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
                 </div>
               </div>
@@ -555,6 +621,13 @@ Please share the schedule, payment options, and general availability details. Th
                 <div>
                   <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider block">Course Title</span>
                   <span className="font-semibold text-[#1A2456] block leading-snug mt-0.5">{directCourse.title}</span>
+                  
+                  {directCourse.location && (
+                    <>
+                      <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider block mt-4">Location</span>
+                      <span className="font-semibold text-gray-700 block mt-0.5 capitalize">{directCourse.location}</span>
+                    </>
+                  )}
                   
                   <span className="text-gray-400 text-[10px] uppercase font-bold tracking-wider block mt-4">Selected Room</span>
                   <span className="font-semibold text-gray-700 block mt-0.5">{selectedRoom}</span>
