@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Send, CheckCircle2, User, Mail, Phone, BookOpen, MessageSquare } from "lucide-react";
+import { Send, CheckCircle2, User, Mail, Phone,MapPin, BookOpen, MessageSquare } from "lucide-react";
 
 export default function InquiryForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    location: "",
     subject: "Yoga Teacher Training (YTT)",
     message: "",
   });
@@ -18,7 +19,7 @@ export default function InquiryForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    if (!formData.name || !formData.email ||!formData.location|| !formData.message) return;
     setIsSubmitted(true);
   };
 
@@ -117,6 +118,28 @@ export default function InquiryForm() {
                   </div>
                 </div>
               </div>
+              
+             {/* Location */}
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                 Location
+                </label>
+                <div className="relative">
+                  <MapPin className="w-5 h-5 text-stone-400 absolute left-4 top-3.5 pointer-events-none" />
+                  <select
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full pl-12 pr-4 py-3.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-medium text-stone-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#c38b5f] transition-all appearance-none cursor-pointer"
+                  >
+                    <option>Bali</option>
+                    <option>Rishikesh</option>
+                    <option>Mysuru</option>
+                    <option>Changmai</option>
+                  </select>
+                </div>
+              </div>    
+
 
               {/* Subject Selector */}
               <div>
