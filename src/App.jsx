@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import Home from "./pages/home/Home";
@@ -17,13 +17,24 @@ import Facilities from './pages/meditation/Facilities';
 import TermsAndConditions from './pages/term&condition/term-condition';
 import FounderPage from "./pages/founder/FounderPage";
 import LocationLandingPage from "./pages/programsCard/LocationLandingPage";
+import { fetchAndApplyDynamicPrices } from "./utils/dynamicPrices";
 
 function App() {
+  const [pricesUpdated, setPricesUpdated] = useState(0);
+
+  useEffect(() => {
+    fetchAndApplyDynamicPrices().then((success) => {
+      if (success) {
+        setPricesUpdated((prev) => prev + 1);
+      }
+    });
+  }, []);
+
   return (
     <>
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
+        <Routes key={pricesUpdated}>
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
                    <Route path='about' element={<About/>} />

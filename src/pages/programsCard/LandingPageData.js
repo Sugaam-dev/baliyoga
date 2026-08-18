@@ -44,7 +44,7 @@ export const LANDING_LOCATION_DATA = {
       ytt: [
         { name: "6 Days 50hr Multi-Style YTTC", duration: "6 Days", price: PROGRAM_PRICES.multiStyle["50hr"], slug: "50hr", badge: "UBUD STAY", hours: "50", certification: "YACEP" },
         { name: "10 Days 100hr Multi-Style YTTC", duration: "10 Days", price: PROGRAM_PRICES.multiStyle["100hr"], slug: "100hr", badge: "ISLAND IMMERSION", hours: "100", certification: "Yoga Alliance" },
-        { name: "20 Days 200hr Multi-Style YTTC", duration: "20 Days", price: PROGRAM_PRICES.multiStyle["200hr"], slug: "20hr", badge: "BEST VALUE", hours: "200", certification: "RYT-200" },
+        { name: "20 Days 200hr Multi-Style YTTC", duration: "20 Days", price: PROGRAM_PRICES.multiStyle["200hr"], slug: "200hr", badge: "BEST VALUE", hours: "200", certification: "RYT-200" },
         { name: "300hr Multi-Style YTTC", duration: "26 Days", price: PROGRAM_PRICES.multiStyle["300hr"], slug: "300hr", badge: "DEEP PRACTICE", hours: "300", certification: "RYT-300" },
         { name: "500hr Multi-Style YTTC", duration: "56 Days", price: PROGRAM_PRICES.multiStyle["500hr"], slug: "500hr", badge: "ULTIMATE MASTERY", hours: "500", certification: "RYT-500" }
       ],

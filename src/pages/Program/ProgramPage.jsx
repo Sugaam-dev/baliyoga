@@ -15,9 +15,44 @@ import { ROOM_PRICES_BALI } from "../../data/bali/programPrices";
 import { ROOM_PRICES_RISHIKESH } from "../../data/rishikesh/programPricesRishikesh";
 import { ROOM_PRICES_MYSORE } from "../../data/mysore/programPricesMysore";
 
-const generateBatches = (durationDays) => {
+import { DYNAMIC_BATCHES } from "../../utils/dynamicPrices";
+
+const generateBatches = (durationDays, locationKey, courseKey) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
+
+  const customKey = `${locationKey?.toLowerCase()}_${courseKey?.toLowerCase()}`;
+  const customBatches = DYNAMIC_BATCHES[customKey];
+
+  const getSuffix = (day) => {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+      case 1:  return 'st';
+      case 2:  return 'nd';
+      case 3:  return 'rd';
+      default: return 'th';
+    }
+  };
+
+  const formatBatch = (startDate, endDate) => {
+    const startDayStr = `${startDate.getDate()}${getSuffix(startDate.getDate())}`;
+    const endDayStr = `${endDate.getDate()}${getSuffix(endDate.getDate())}`;
+    const startMonthStr = startDate.toLocaleString('en-US', { month: 'short' });
+    const endMonthStr = endDate.toLocaleString('en-US', { month: 'short' });
+    
+    if (startDate.getMonth() === endDate.getMonth()) {
+      return `${startDayStr} To ${endDayStr} ${startMonthStr} ${startDate.getFullYear()}`;
+    } else {
+      return `${startDayStr} ${startMonthStr} To ${endDayStr} ${endMonthStr} ${endDate.getFullYear()}`;
+    }
+  };
+
+  if (customBatches && customBatches.length > 0) {
+    return customBatches
+      .filter(b => b.startDate >= today)
+      .map(b => b.dateText || formatBatch(b.startDate, b.endDate))
+      .slice(0, 6);
+  }
 
   const currentMonth = today.getMonth();
   const currentYear = today.getFullYear();
@@ -31,16 +66,6 @@ const generateBatches = (durationDays) => {
     const startDay = monthIndex === 0 ? 5 : 1; // Course starts on 5th in January, 1st in others
     months.push({ name, year, monthIndex, startDay });
   }
-  
-  const getSuffix = (day) => {
-    if (day > 3 && day < 21) return 'th';
-    switch (day % 10) {
-      case 1:  return 'st';
-      case 2:  return 'nd';
-      case 3:  return 'rd';
-      default: return 'th';
-    }
-  };
 
   return months
     .map(m => {
@@ -51,20 +76,7 @@ const generateBatches = (durationDays) => {
     })
     .filter(batch => batch.startDate >= today)
     .slice(0, 6)
-    .map(batch => {
-      const { startDate, endDate } = batch;
-      const startDayStr = `${startDate.getDate()}${getSuffix(startDate.getDate())}`;
-      const endDayStr = `${endDate.getDate()}${getSuffix(endDate.getDate())}`;
-      
-      const startMonthStr = startDate.toLocaleString('en-US', { month: 'short' });
-      const endMonthStr = endDate.toLocaleString('en-US', { month: 'short' });
-      
-      if (startDate.getMonth() === endDate.getMonth()) {
-        return `${startDayStr} To ${endDayStr} ${startMonthStr} ${startDate.getFullYear()}`;
-      } else {
-        return `${startDayStr} ${startMonthStr} To ${endDayStr} ${endMonthStr} ${endDate.getFullYear()}`;
-      }
-    });
+    .map(batch => formatBatch(batch.startDate, batch.endDate));
 };
 
 // Generic dynamic course page.
@@ -78,6 +90,7 @@ const ProgramPage = ({ data }) => {
   if (!pageData) {
     const locKey = locParam?.toLowerCase();
     const slugKey = courseParam?.toLowerCase();
+
     const isRetreat = locationPath.toLowerCase().startsWith("/retreats/");
     const targetCats = isRetreat 
       ? ["retreats"] 
@@ -118,7 +131,7 @@ const ProgramPage = ({ data }) => {
 
   // Pre-calculate batch dates
   const durationDays = pricingInfo?.durationDays || 25;
-  const batches = generateBatches(durationDays);
+  const batches = generateBatches(durationDays, locParam, courseParam);
 
   const handleOpenCheckout = (roomType) => {
     const isRetreat = locationPath.toLowerCase().startsWith("/retreats/");
@@ -135,20 +148,54 @@ const ProgramPage = ({ data }) => {
 
   // Construct dynamic accommodation content by pulling room details from the course file and prices from the price file
   let accommodationData = pageData.accommodationSection?.content;
-  if (accommodationData?.rooms && pricingInfo?.rooms) {
+  if (accommodationData?.rooms && pricingInfo?.rooms && pricingInfo.rooms.length > 0) {
+    const hardcodedRooms = accommodationData.rooms;
     accommodationData = {
       ...accommodationData,
-      rooms: accommodationData.rooms.map(originalRoom => {
-        const matchedPrice = pricingInfo.rooms.find(
-          room => room.type?.toLowerCase().replace(/\s+/g, '') === originalRoom.type?.toLowerCase().replace(/\s+/g, '')
+      rooms: pricingInfo.rooms.map(sheetRoom => {
+        const normalise = s => s?.toLowerCase().replace(/\s+/g, "") || "";
+        const sheetTypeLower = sheetRoom.type?.toLowerCase() || "";
+        
+        // 1. Try exact normalized match
+        let hardcoded = hardcodedRooms.find(
+          hr => normalise(hr.type) === normalise(sheetRoom.type)
         );
-        if (matchedPrice) {
-          return {
-            ...originalRoom,
-            price: `$${matchedPrice.current}`
-          };
+        
+        // 2. Try substring match on standard terms
+        if (!hardcoded) {
+          if (sheetTypeLower.includes("private")) {
+            hardcoded = hardcodedRooms.find(hr => hr.type?.toLowerCase().includes("private"));
+          } else if (sheetTypeLower.includes("6 sharing") || sheetTypeLower.includes("6-bed") || sheetTypeLower.includes("6 sharing room")) {
+            hardcoded = hardcodedRooms.find(hr => hr.type?.toLowerCase().includes("6 sharing") || hr.type?.toLowerCase().includes("6-bed") || hr.type?.toLowerCase().includes("6 sharing room"));
+          } else if (sheetTypeLower.includes("4 sharing") || sheetTypeLower.includes("4-bed") || sheetTypeLower.includes("4 sharing room")) {
+            hardcoded = hardcodedRooms.find(hr => hr.type?.toLowerCase().includes("4 sharing") || hr.type?.toLowerCase().includes("4-bed") || hr.type?.toLowerCase().includes("4 sharing room"));
+          } else if (sheetTypeLower.includes("2 sharing") || sheetTypeLower.includes("twin") || sheetTypeLower.includes("double") || sheetTypeLower.includes("2 sharing room")) {
+            hardcoded = hardcodedRooms.find(hr => hr.type?.toLowerCase().includes("2 sharing") || hr.type?.toLowerCase().includes("twin") || hr.type?.toLowerCase().includes("double") || hr.type?.toLowerCase().includes("2 sharing room"));
+          } else if (sheetTypeLower.includes("sharing") || sheetTypeLower.includes("shared")) {
+            hardcoded = hardcodedRooms.find(hr => hr.type?.toLowerCase().includes("sharing") || hr.type?.toLowerCase().includes("shared") || hr.type?.toLowerCase().includes("shared room"));
+          }
         }
-        return originalRoom;
+        
+        // 3. Fall back to matching position index if any
+        if (!hardcoded) {
+          const idx = pricingInfo.rooms.indexOf(sheetRoom);
+          if (idx >= 0 && idx < hardcodedRooms.length) {
+            hardcoded = hardcodedRooms[idx];
+          }
+        }
+        
+        // 4. Absolute fallback to the first available hardcoded room
+        if (!hardcoded && hardcodedRooms.length > 0) {
+          hardcoded = hardcodedRooms[0];
+        }
+
+        return {
+          ...(hardcoded || {}),
+          type: sheetRoom.type,
+          price: `$${sheetRoom.current}`,
+          note: sheetRoom.note || hardcoded?.note || "",
+          popular: sheetRoom.popular,
+        };
       })
     };
   }
