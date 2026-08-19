@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.kundalini["50hr"],
       priceNote: "Includes stay, meals & YACEP certificate",
       bgImage:
-        "https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600&q=80",
+        "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
       buttonText: "Book Now",
         url:"/contact",
     },
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&q=80",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
       eyebrow: "Bali Yoga Kendra Experience",
       title: "Join our",
       highlight: "kundalini awakening",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
         food:
-          "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=80",
+          "/images/external/general/unsplash_photo-1552196563-55cd4e45efb3.jpg",
         stay:
-          "https://t4.ftcdn.net/jpg/02/75/39/23/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
+          "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Kundalini Kriya Yoga",
           desc: "Dynamic fixed sequences of postures, mudras, bandhas & mantras for expanding awareness and unblocking chakras",
           icon: "sparkles",
-          img: "https://wallpapers.com/images/hd/yoga-background-2rmnmb16t7q2lj98.jpg",
+          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.jpg",
         },
         {
           label: "Chakra Meditation",
           desc: "Chakra meditation with 3rd eye focus, Nasikagra Drishti & Shambavi Mudra for clarity and spiritual energy",
           icon: "sun",
-          img: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
         },
         {
           label: "Pranayama & Hatha Yoga",
           desc: "Activate Ida, Pingla & Sushumna Nadis through cleansing breath practices and chakra-focused Hatha postures",
           icon: "feather",
-          img: "https://a-static.besthdwallpaper.com/morning-yoga-wallpaper-2160x1440-78799_40.jpg",
+          img: "/images/external/general/morning-yoga-wallpaper-2160x1440-78799_40.jpg",
         },
       ],
       specialTitle: "Why Choose",
@@ -354,7 +354,7 @@ export const courseData = {
         "A structured daily routine from morning Sadhana to evening practice — with two breaks for breakfast and lunch.",
 
       image:
-        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
 
       morning: [
         { time: "06:00 AM", activity: "Morning Sadhana & Kundalini Kriya", icon: "sparkles" },
@@ -409,7 +409,7 @@ export const courseData = {
           title: "Breakfast",
           icon: "sun",
           time: "09:00 – 10:00",
-          img: "https://static.vecteezy.com/system/resources/thumbnails/065/445/650/small/isolated-traditional-indian-thali-meal-free-photo.jpg",
+          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
           desc: "Vibrant sattvic morning foods to energize your Kundalini practice day.",
           items: [
             "Fresh tropical fruits",
@@ -423,7 +423,7 @@ export const courseData = {
           title: "Lunch",
           icon: "coffee",
           time: "01:00 – 02:00",
-          img: "https://static.vecteezy.com/system/resources/thumbnails/065/445/650/small/isolated-traditional-indian-thali-meal-free-photo.jpg",
+          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
           desc: "Balanced sattvic meals to fuel your afternoon chakra practices.",
           items: [
             "Rice bowls",
@@ -437,7 +437,7 @@ export const courseData = {
           title: "Dinner",
           icon: "moon",
           time: "06:30 – 07:30",
-          img: "https://t4.ftcdn.net/jpg/02/75/39/23/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
+          img: "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
           desc: "Light and calming evening sattvic meals for inner restoration.",
           items: [
             "Lentil dishes",
@@ -499,7 +499,7 @@ export const courseData = {
           tagBg: "#5C8A6B",
           duration: "Half Day",
           icon: "leaf",
-          img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1501785888041-af3ef285b470.jpg",
           desc: "Famous green rice terraces of Ubud.",
           highlights: ["Rice fields", "Scenic views", "Nature walk"],
         },
@@ -509,7 +509,7 @@ export const courseData = {
           tagBg: "#C8874A",
           duration: "2 Hours",
           icon: "trees",
-          img: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1546182990-dffeafbe841d.jpg",
           desc: "Jungle sanctuary with ancient temples and monkeys.",
           highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
         },
@@ -519,7 +519,7 @@ export const courseData = {
           tagBg: "#8B3A3A",
           duration: "Full Day",
           icon: "mountain",
-          img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1500530855697-b586d89ba3ee.jpg",
           desc: "Sunrise volcano trek with stunning lake views.",
           highlights: ["Sunrise", "Volcano hike", "Lake view"],
         },
@@ -529,7 +529,7 @@ export const courseData = {
           tagBg: "#1E1040",
           duration: "Half Day",
           icon: "waves",
-          img: "https://wallpaperaccess.com/full/139164.jpg",
+          img: "/images/external/general/139164.jpg",
           desc: "Iconic ocean temple with breathtaking sunset views.",
           highlights: ["Ocean temple", "Sunset", "Coastal walk"],
         },
@@ -539,7 +539,7 @@ export const courseData = {
           tagBg: "#6B4A7A",
           duration: "3 Hours",
           icon: "camera",
-          img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.jpg",
           desc: "Explore local markets, art galleries & Balinese culture.",
           highlights: ["Local markets", "Art & craft", "Cultural walk"],
         },
@@ -637,7 +637,7 @@ export const courseData = {
         reviews: 184,
         isPopular: true,
         isPaid: true,
-        image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
       },
       {
         id: 2,
@@ -648,7 +648,7 @@ export const courseData = {
         reviews: 92,
         isPopular: false,
         isPaid: true,
-        image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
       },
       {
         id: 3,
@@ -659,7 +659,7 @@ export const courseData = {
         reviews: 210,
         isPopular: false,
         isPaid: false,
-        image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
       },
       {
         id: 4,
@@ -670,7 +670,7 @@ export const courseData = {
         reviews: 145,
         isPopular: false,
         isPaid: true,
-        image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
       },
       {
         id: 5,
@@ -681,7 +681,7 @@ export const courseData = {
         reviews: 76,
         isPopular: true,
         isPaid: false,
-        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
       }
     ]
   }
@@ -712,7 +712,7 @@ export const courseData = {
           tag: "Included",
           tagBg: "#7B5EA7",
           price: "$650",
-          img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
           desc: "Comfortable shared rooms surrounded by rice fields and tropical nature in spiritual Ubud.",
           features: [
             "Twin sharing",
@@ -728,7 +728,7 @@ export const courseData = {
           tag: "Upgrade",
           tagBg: "#4A2E7A",
           price: "$750",
-          img: "https://images.unsplash.com/photo-1501183638710-841dd1904471?w=1200&q=80",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
           desc: "Private room with peaceful Balinese ambience and quiet spiritual vibe.",
           features: [
             "Private ensuite",

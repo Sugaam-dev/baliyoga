@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import Home from "./pages/home/Home";
-import About from './pages/about/About';
-import Course from './pages/course/course';
-import Gallery from './pages/gallery/gallery';
-import Retreat from './pages/retreat/retreat';
-import Contact from './pages/contact/Contact';
-import OnlinePage from './pages/online/OnlinePage';
 import ScrollToTop from './components/shared/ScrollToTop';
-
-import ProgramPage from './pages/Program/ProgramPage';
-import CheckoutPage from './pages/Checkout/CheckoutPage';
-
-import Facilities from './pages/meditation/Facilities';
-import TermsAndConditions from './pages/term&condition/term-condition';
-import FounderPage from "./pages/founder/FounderPage";
-import LocationLandingPage from "./pages/programsCard/LocationLandingPage";
 import { fetchAndApplyDynamicPrices } from "./utils/dynamicPrices";
+
+const About = React.lazy(() => import('./pages/about/About'));
+const Course = React.lazy(() => import('./pages/course/course'));
+const Gallery = React.lazy(() => import('./pages/gallery/gallery'));
+const Retreat = React.lazy(() => import('./pages/retreat/retreat'));
+const Contact = React.lazy(() => import('./pages/contact/Contact'));
+const OnlinePage = React.lazy(() => import('./pages/online/OnlinePage'));
+const ProgramPage = React.lazy(() => import('./pages/Program/ProgramPage'));
+const CheckoutPage = React.lazy(() => import('./pages/Checkout/CheckoutPage'));
+const Facilities = React.lazy(() => import('./pages/meditation/Facilities'));
+const TermsAndConditions = React.lazy(() => import('./pages/term&condition/term-condition'));
+const FounderPage = React.lazy(() => import('./pages/founder/FounderPage'));
+const LocationLandingPage = React.lazy(() => import('./pages/programsCard/LocationLandingPage'));
+
+function ProgramPageWrapper() {
+  const { pathname } = useLocation();
+  return <ProgramPage key={pathname.toLowerCase()} />;
+}
+
+function LocationLandingPageWrapper() {
+  const { pathname } = useLocation();
+  return <LocationLandingPage key={pathname.toLowerCase()} />;
+}
 
 function App() {
   const [pricesUpdated, setPricesUpdated] = useState(0);
@@ -49,9 +58,9 @@ function App() {
                     
                      <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
                      <Route path="/founder" element={<FounderPage/>}/>
-                     <Route path="/programs/:location" element={<LocationLandingPage />} />
-                      <Route path="/programs/:location/:course" element={<ProgramPage />} />
-                      <Route path="/retreats/:location/:course" element={<ProgramPage />} />
+                     <Route path="/programs/:location" element={<LocationLandingPageWrapper />} />
+                      <Route path="/programs/:location/:course" element={<ProgramPageWrapper />} />
+                      <Route path="/retreats/:location/:course" element={<ProgramPageWrapper />} />
                     {/* <Route path='6-days-50-hour-multi-style-yoga-training-in-bali' element={<YogaTeacherTraining/>} /> */}
                     {/* <Route path='ytt/6-days-50hr-multi-style' element={<YogaTeacherTraining/>} /> */}
 

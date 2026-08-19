@@ -1,8 +1,6 @@
 import { PROGRAM_PRICES, ROOM_PRICES_BALI } from "../data/bali/programPrices";
 import { PROGRAM_PRICES_RISHIKESH, ROOM_PRICES_RISHIKESH } from "../data/rishikesh/programPricesRishikesh";
 import { PROGRAM_PRICES_MYSORE, ROOM_PRICES_MYSORE } from "../data/mysore/programPricesMysore";
-import { locationDataMap } from "../data/locationDataMap";
-import { LANDING_LOCATION_DATA } from "../pages/programsCard/LandingPageData";
 
 const UNIFIED_PRICE_MAP = {
   bali: {
@@ -175,7 +173,10 @@ function getUpdatedProgramPrice(mappedLoc, key) {
   return null;
 }
 
-function applyDynamicPricesToDataMaps() {
+async function applyDynamicPricesToDataMaps() {
+  const { locationDataMap } = await import("../data/locationDataMap");
+  const { LANDING_LOCATION_DATA } = await import("../pages/programsCard/LandingPageData");
+
   const mappings = [
     { locKeys: ["bali"], mappedLoc: "bali" },
     { locKeys: ["rishikesh"], mappedLoc: "rishikesh" },
@@ -373,7 +374,7 @@ export async function fetchAndApplyDynamicPrices() {
     }
 
     // Propagate updated prices into static maps
-    applyDynamicPricesToDataMaps();
+    await applyDynamicPricesToDataMaps();
 
     console.log("[Dynamic Pricing] Dynamic price calculations populated successfully.");
     return true;

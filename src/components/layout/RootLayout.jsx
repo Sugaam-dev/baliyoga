@@ -19,7 +19,9 @@ function RootLayout() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.18, ease: "easeOut" }}
         >
-          <Outlet/>
+          <React.Suspense fallback={<div className="flex items-center justify-center min-h-[50vh] text-navy font-medium">Loading...</div>}>
+            <Outlet/>
+          </React.Suspense>
         </motion.div>
       </main>
       <Footer/>

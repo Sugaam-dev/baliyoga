@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.shortcourses.prenatalyoga,
       priceNote: "Includes stay, meals & Yoga Alliance certificate",
       bgImage:
-        "https://images.squarespace-cdn.com/content/v1/5abdee1596d455819877579b/1648274019067-I2YJFHCOB685D1D9ZXL2/1.jpg",
+        "/images/external/massages/1.jpg",
       buttonText: "Book Now",
         url:"/contact",
     },
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "https://images.unsplash.com/photo-1518611012118-f2fbdc7a1c1b?w=1600&q=80",
+        "/images/external/heroes/unsplash_photo-1506126613408-eca07ce68773.jpg",
       eyebrow: "Bali Yoga Kendra Experience",
       title: "Join our",
       highlight: "prenatal yoga journey",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "https://yogajala.com/wp-content/uploads/3-49.jpg",
+          "/images/external/general/3-49.jpg",
         food:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80",
+          "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
         stay:
-          "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
+          "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Prenatal Asana & Sequencing",
           desc: "Prenatal Vinyasa Flow, safe posture modifications, trimester-specific sequencing and post-natal yoga practices",
           icon: "heart",
-          img: "https://wallpaperbat.com/img/499607-yoga-background.jpg",
+          img: "/images/external/heroes/499607-yoga-background.jpg",
         },
         {
           label: "Pregnancy Breathwork & Meditation",
           desc: "Pregnancy breathing techniques for labor, meditation, Yoga Nidra, mantra & mudra specifically for expectant mothers",
           icon: "wind",
-          img: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
         },
         {
           label: "Anatomy, Ayurveda & Healing",
           desc: "Pregnancy anatomy & physiology, Ayurvedic nutrition, massage, healing practices, birth & delivery awareness",
           icon: "feather",
-          img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.jpg",
         },
       ],
       specialTitle: "Why Choose",
@@ -354,7 +354,7 @@ export const courseData = {
         "A well-rounded daily program — check in 20th at 2:00 PM, classes begin 21st, checkout 26th at 10:00 AM. All classes are mandatory.",
 
       image:
-        "https://yogajala.com/wp-content/uploads/3-49.jpg",
+        "/images/external/general/3-49.jpg",
 
       morning: [
         { time: "06:00 AM", activity: "Prenatal Vinyasa Flow", icon: "sun" },
@@ -409,7 +409,7 @@ export const courseData = {
           title: "Breakfast",
           icon: "sun",
           time: "09:00 – 10:00",
-          img: "https://www.cookwithkushi.com/wp-content/uploads/2021/11/easy_vegetarian_indian_breakfast_recipes.jpg",
+          img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.jpg",
           desc: "Nourishing Ayurvedic breakfast — fresh fruits, grains and herbal teas to energize your morning practice.",
           items: [
             "Fresh tropical fruits",
@@ -423,7 +423,7 @@ export const courseData = {
           title: "Lunch",
           icon: "coffee",
           time: "01:00 – 02:30",
-          img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
           desc: "Balanced Ayurvedic vegetarian lunch to sustain your afternoon prenatal training sessions.",
           items: [
             "Rice & lentil bowls",
@@ -437,7 +437,7 @@ export const courseData = {
           title: "Dinner",
           icon: "moon",
           time: "06:30 – 07:30",
-          img: "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1547592180-85f173990554.jpg",
           desc: "Light calming evening vegetarian meals — Sundays explore Ubud's local restaurants freely.",
           items: [
             "Lentil soups",
@@ -489,7 +489,7 @@ export const courseData = {
           tagBg: "#A04060",
           duration: "Half Day",
           icon: "globe",
-          img: "https://wallpaperaccess.com/full/139108.jpg",
+          img: "/images/external/general/139108.jpg",
           desc: "Sacred purification temple with holy spring pools.",
           highlights: ["Holy water ritual", "Ancient temple", "Spiritual cleansing"],
         },
@@ -499,7 +499,7 @@ export const courseData = {
           tagBg: "#5C8A6B",
           duration: "Half Day",
           icon: "leaf",
-          img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.jpg",
           desc: "UNESCO iconic green rice terraces of Ubud.",
           highlights: ["Terraced fields", "Scenic views", "Nature walk"],
         },
@@ -509,7 +509,7 @@ export const courseData = {
           tagBg: "#8A6010",
           duration: "2 Hours",
           icon: "trees",
-          img: "https://images.unsplash.com/photo-1567745576352-e404ee640705?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.jpg",
           desc: "Jungle sanctuary with ancient temples and wild monkeys.",
           highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
         },
@@ -519,7 +519,7 @@ export const courseData = {
           tagBg: "#8B3A3A",
           duration: "Full Day",
           icon: "mountain",
-          img: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.jpg",
           desc: "Sunrise volcano trek with stunning lake and crater views.",
           highlights: ["Sunrise trek", "Volcano hike", "Lake view"],
         },
@@ -529,7 +529,7 @@ export const courseData = {
           tagBg: "#3D1030",
           duration: "Half Day",
           icon: "waves",
-          img: "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80",
+          img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.jpg",
           desc: "Iconic sea temple perched on rock with stunning sunset views.",
           highlights: ["Ocean temple", "Sunset views", "Coastal walk"],
         },
@@ -539,7 +539,7 @@ export const courseData = {
           tagBg: "#6A4A20",
           duration: "3 Hours",
           icon: "camera",
-          img: "https://wallpaperaccess.com/full/139108.jpg",
+          img: "/images/external/general/139108.jpg",
           desc: "Explore local markets, art galleries & Balinese handicrafts.",
           highlights: ["Local markets", "Art & craft", "Shopping"],
         },
@@ -637,7 +637,7 @@ export const courseData = {
         reviews: 184,
         isPopular: true,
         isPaid: true,
-        image: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
       },
       {
         id: 2,
@@ -648,7 +648,7 @@ export const courseData = {
         reviews: 92,
         isPopular: false,
         isPaid: true,
-        image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
       },
       {
         id: 3,
@@ -659,7 +659,7 @@ export const courseData = {
         reviews: 210,
         isPopular: false,
         isPaid: false,
-        image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
       },
       {
         id: 4,
@@ -670,7 +670,7 @@ export const courseData = {
         reviews: 145,
         isPopular: false,
         isPaid: true,
-        image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
       },
       {
         id: 5,
@@ -681,7 +681,7 @@ export const courseData = {
         reviews: 76,
         isPopular: true,
         isPaid: false,
-        image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80"
+        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
       }
     ]
   }
@@ -712,7 +712,7 @@ export const courseData = {
           tag: "Course Only",
           tagBg: "#A04060",
           price: "$499",
-          img: "https://yogajala.com/wp-content/uploads/3-49.jpg",
+          img: "/images/external/general/3-49.jpg",
           desc: "Course-only option — attend all prenatal yoga training sessions without accommodation or meals included.",
           features: [
             "Course access only",
@@ -728,7 +728,7 @@ export const courseData = {
           tag: "Included",
           tagBg: "#C86A8A",
           price: "$650",
-          img: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=80",
+          img: "/images/external/general/unsplash_photo-1631049307264-da0ec9d70304.jpg",
           desc: "Comfortable shared rooms with AC, garden access and outdoor lounge for relaxation and socializing.",
           features: [
             "Twin sharing",
@@ -744,7 +744,7 @@ export const courseData = {
           tag: "Upgrade",
           tagBg: "#6A1845",
           price: "$750",
-          img: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1200&q=80",
+          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.jpg",
           desc: "Private room with AC, peaceful atmosphere and all modern amenities for a focused prenatal yoga stay.",
           features: [
             "Private room",

@@ -20,7 +20,7 @@ const TestimonialsSection = () => {
       name: "James L.",
       country: "United States",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1500648767791-00dcc994a43e.jpg",
       review:
         "I came for certification, but I found my purpose. The teachers are authentic and truly inspiring.",
     },
@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
       name: "Clara R.",
       country: "Germany",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1438761681033-6461ffad8d80.jpg",
       review:
         "The perfect blend of tradition, practice and transformation. I highly recommend Bali Yoga Kendra.",
     },
@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
       name: "Marco D.",
       country: "Italy",
       image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1506794778202-cad84cf45f1d.jpg",
       review:
         "An unforgettable experience! I leave not just as a teacher, but as a more conscious human being.",
     },
@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
       name: "Emma K.",
       country: "Canada",
       image:
-        "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1488426862026-3ee34a7d66df.jpg",
       review:
         "Every sunrise meditation felt magical. The peaceful Bali atmosphere made learning deeply transformative.",
     },
@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
       name: "Daniel S.",
       country: "Spain",
       image:
-        "https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1504593811423-6dd665756598.jpg",
       review:
         "Beautiful people, beautiful culture, and a yoga experience that touched my soul completely.",
     },
@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
       name: "Olivia T.",
       country: "France",
       image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1544005313-94ddf0286df2.jpg",
       review:
         "The retreat center, the nature and the teaching quality exceeded all my expectations.",
     },
@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
       name: "Ryan J.",
       country: "Singapore",
       image:
-        "https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=400&auto=format&fit=crop",
+        "/images/external/general/unsplash_photo-1504257432389-52343af06ae3.jpg",
       review:
         "I gained confidence, clarity and lifelong friendships during this beautiful yoga journey.",
     },
