@@ -17,6 +17,8 @@ const Facilities = React.lazy(() => import('./pages/meditation/Facilities'));
 const TermsAndConditions = React.lazy(() => import('./pages/term&condition/term-condition'));
 const FounderPage = React.lazy(() => import('./pages/founder/FounderPage'));
 const LocationLandingPage = React.lazy(() => import('./pages/programsCard/LocationLandingPage'));
+const BaliActivitiesPage = React.lazy(() => import('./pages/activities/BaliActivitiesPage'));
+const BaliActivityDetailPage = React.lazy(() => import('./pages/activities/BaliActivityDetailPage'));
 
 function ProgramPageWrapper() {
   const { pathname } = useLocation();
@@ -55,6 +57,8 @@ function App() {
                    <Route path='contact' element={<Contact/>} /> 
                    <Route path='checkout' element={<CheckoutPage />} />
                    <Route path='holiday-packages' element={<Retreat />} />
+                   <Route path='bali-activities' element={<BaliActivitiesPage />} />
+                   <Route path='bali-activities/:slug' element={<BaliActivityDetailPage />} />
                     
                      <Route path='terms-and-conditions' element={<TermsAndConditions/>} />
                      <Route path="/founder" element={<FounderPage/>}/>

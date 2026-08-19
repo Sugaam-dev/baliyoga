@@ -1,125 +1,60 @@
 import React from "react";
-import { Music, Wind, Compass, Waves, Heart, Sparkles, Calendar } from "lucide-react";
-import SectionHeading from "../../components/shared/SectionHeading";
-
-// Image imports matching the home activities component
-import img1 from "../../assets/images/home/bali1.jpg";
-import img2 from "../../assets/images/home/bali2.jpg";
-import img3 from "../../assets/images/home/bali3.jpg";
-import img4 from "../../assets/images/home/bali4.jpg";
-import img5 from "../../assets/images/home/bali5.jpg";
-import img6 from "../../assets/images/home/bali6.jpg";
-
-const activities = [
-  {
-    title: "Sound Healing",
-    desc: "Experience deep relaxation and energetic balance through healing vibrations and therapeutic sound baths at the Pyramids of Chi.",
-    img: img1,
-    icon: <Music className="w-5 h-5 text-[#c38b5f] flex-shrink-0" />,
-  },
-  {
-    title: "Acro Yoga",
-    desc: "Build trust, strength & connection through playful and supportive partner dynamics and balances under expert instruction.",
-    img: img2,
-    icon: <Heart className="w-5 h-5 text-[#c38b5f] flex-shrink-0" />,
-  },
-  {
-    title: "Kirtan Session",
-    desc: "Join soulful chanting and immerse yourself in the sacred vibrations of devotional music, mantra, and community connection.",
-    img: img3,
-    icon: <Wind className="w-5 h-5 text-[#c38b5f] flex-shrink-0" />,
-  },
-  {
-    title: "Nature Walk",
-    desc: "Reconnect with nature, practice walking meditation, and quiet your mind with mindful walks through Ubud's lush green rice fields.",
-    img: img4,
-    icon: <Compass className="w-5 h-5 text-[#c38b5f] flex-shrink-0" />,
-  },
-  {
-    title: "Yin Yoga",
-    desc: "Release deep-seated physical and emotional tension and find internal stillness in calming, long-held restorative postures.",
-    img: img5,
-    icon: <Sparkles className="w-5 h-5 text-[#c38b5f] flex-shrink-0" />,
-  },
-  {
-    title: "Waterfall Visit",
-    desc: "Refresh your spirit, purify your energetic field, and connect with water spirits under Bali's sacred and hidden jungle waterfalls.",
-    img: img6,
-    icon: <Waves className="w-5 h-5 text-[#c38b5f] flex-shrink-0" />,
-  },
-];
+import ActivitiesCarousel from "../../components/shared/ActivitiesCarousel";
+import heroBg from "../../assets/images/home/Bali_Yoga_Kendra_Banner_1.webp";
 
 export default function BaliActivitiesPage() {
   return (
     <main className="bg-[#FAF8F5] min-h-screen text-stone-850 pb-20">
-      {/* Hero Banner Section */}
-      <section className="relative bg-[#1A2456] text-white pt-32 pb-24 px-6 md:px-12 text-center overflow-hidden">
-        {/* Subtle decorative overlays */}
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#c38b5f]/10 blur-3xl rounded-full pointer-events-none" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#7BAF8A]/5 blur-3xl rounded-full pointer-events-none" />
+      
+      {/* 1. Tall Premium Hero Banner Section (With light black overlay, text moved down) */}
+      <section className="relative h-[55vh] md:h-[65vh] min-h-[400px] flex items-end justify-center text-white overflow-hidden pb-12 md:pb-20">
+        {/* Background Image & Light Black Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroBg} 
+            alt="Sacred Bali Excursions" 
+            className="w-full h-full object-cover object-center" 
+          />
+          {/* Light Black Overlay */}
+          <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+        </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-          <span className="text-[#C8A96A] font-bold tracking-[0.2em] uppercase text-xs bg-white/10 border border-white/20 px-4.5 py-2 rounded-full">
-            Spiritual & Cultural Excursions
-          </span>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif leading-tight">
+        {/* Hero Title (Pushed downwards by flex items-end alignment) */}
+        <div className="relative z-10 max-w-5xl mx-auto text-center px-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-extrabold text-white leading-tight uppercase tracking-wider drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)]">
             Sacred Bali Activities
           </h1>
-          <p className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Enhance your teacher training or retreat with unforgettable spiritual ceremonies, nature explorations, and community healing arts in the heart of paradise.
-          </p>
         </div>
       </section>
 
-      {/* Main Grid Layout */}
-      <section className="py-8 md:py-10 px-6 md:px-12 max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto">
-        <div className="text-center mb-14">
-          <SectionHeading 
-            title="Included" 
-            highlight="Experiences" 
-            subtitle="These curated activities are integrated into our programs to provide a complete holistic immersion."
-          />
+      {/* 2. Premium Spacious Description Section (Wider paragraph layout) */}
+      <section className="py-20 md:py-28 px-6 md:px-12 bg-white">
+        <div className="max-w-6xl mx-auto text-center space-y-8">
+          <span className="text-[#c38b5f] text-xs sm:text-sm font-bold uppercase tracking-[0.25em] block">
+            Handpicked Spiritual & Cultural Experiences
+          </span>
+          
+          <p className="text-stone-650 text-base sm:text-lg md:text-xl leading-loose font-sans font-light max-w-5xl mx-auto">
+            Discover the very best of Bali with our handpicked selection of premium tours and unforgettable activities. From private sightseeing tours and cultural experiences to thrilling adventures, island escapes, and water sports, we offer exceptional travel experiences designed for every type of traveler. With trusted local expertise, personalized service, seamless bookings, and the best prices, we ensure every journey is comfortable, memorable, and hassle-free. Explore Bali with confidence and create unforgettable memories through world-class service, exclusive experiences, and unbeatable value.
+          </p>
+          
+          {/* Elegant decorative line */}
+          <div className="flex items-center justify-center gap-4 pt-6">
+            <span className="w-16 sm:w-24 h-px bg-gradient-to-r from-transparent to-[#c38b5f]" />
+            <i className="text-[#c38b5f] text-lg not-italic font-serif">&#10022;</i>
+            <span className="w-16 sm:w-24 h-px bg-gradient-to-l from-transparent to-[#c38b5f]" />
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {activities.map((act, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-[24px] overflow-hidden border border-stone-200/50 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                {/* Image Container */}
-                <div className="h-[240px] w-full overflow-hidden relative">
-                  <img
-                    src={act.img}
-                    alt={act.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm p-2.5 rounded-2xl shadow-sm text-stone-850 flex items-center justify-center">
-                    {act.icon}
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6.5 space-y-3">
-                  <h3 className="text-xl font-bold text-[#1A2456] font-serif">
-                    {act.title}
-                  </h3>
-                  <p className="text-stone-600 text-sm leading-relaxed">
-                    {act.desc}
-                  </p>
-                </div>
-              </div>
-
-              {/* Bottom Card Element */}
-              <div className="px-6.5 pb-6 pt-2 flex items-center gap-2 text-xs font-semibold text-[#c38b5f]">
-                <Calendar size={14} className="text-[#c38b5f]" />
-                <span>Scheduled Weekly Excursion</span>
-              </div>
-            </div>
-          ))}
-        </div>
+      {/* 3. Reusable Carousel Section (Reduced spacing, with Heading enabled) */}
+      <section className="py-2 md:py-4 bg-[#FAF8F5]">
+        <ActivitiesCarousel 
+          showHeading={true}
+          title="Curated Bali"
+          highlight="Activities"
+          subtitle="Explore the tours and excursions available to book for your Bali stay."
+        />
       </section>
     </main>
   );
