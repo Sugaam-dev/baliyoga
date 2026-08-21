@@ -26,7 +26,7 @@ function HeroSection() {
 
   useEffect(() => {
     // Enable Swiper transitions smoothly after initial static render
-    const timer = setTimeout(() => setMounted(true), 1200);
+    const timer = setTimeout(() => setMounted(true), 3500);
     return () => clearTimeout(timer);
   }, []);
 
