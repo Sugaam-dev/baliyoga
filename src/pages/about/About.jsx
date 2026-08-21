@@ -9,18 +9,18 @@ import SacredDestinations from "./components/SacredDestinations";
 import Lifestyle from "./components/Lifestyle";
 import Testimonials from "./components/Testimonials";
 
-import storyImg from "../../assets/images/about/home-hero.jpg";
-import lifestyleImg from "../../assets/images/about/jbz00ii9peh5jqjjyna2.jpg";
-import ourImg from "../../assets/images/about/about.jpg";
+import storyImg from "../../assets/images/about/home-hero.webp";
+import lifestyleImg from "../../assets/images/about/jbz00ii9peh5jqjjyna2.webp";
+import ourImg from "../../assets/images/about/about.webp";
 
-import teacher1 from "../../assets/images/about/SrinathSir.jpeg";
-import teacher2 from "../../assets/images/about/Sahana.jpeg";
-import teacher3 from "../../assets/images/about/RaviSir.jpeg";
-import teacher4 from "../../assets/images/about/Minu.jpeg";
-import teacher5 from "../../assets/images/about/Hrishanth.jpeg";
-import teacher6 from "../../assets/images/about/Charanya.jpeg";
-import teacher7 from "../../assets/images/about/vinayaksir.jpeg";
-import teacher8 from "../../assets/images/about/Anulasha.png";
+import teacher1 from "../../assets/images/about/SrinathSir.webp";
+import teacher2 from "../../assets/images/about/Sahana.webp";
+import teacher3 from "../../assets/images/about/RaviSir.webp";
+import teacher4 from "../../assets/images/about/Minu.webp";
+import teacher5 from "../../assets/images/about/Hrishanth.webp";
+import teacher6 from "../../assets/images/about/Charanya.webp";
+import teacher7 from "../../assets/images/about/vinayaksir.webp";
+import teacher8 from "../../assets/images/about/Anulasha.webp";
 
 export default function About() {
   const teachers = [

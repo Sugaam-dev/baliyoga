@@ -1,7 +1,7 @@
-import img100 from "../../../assets/images/home/yoga-teacher-training-bali.jpg";
-import img200 from "../../../assets/images/home/Ubud-Yoga-Photography-3-1.jpg";
-import img300 from "../../../assets/images/home/bali-yoga-teacher-training-check-list-NAMASTSHAY.jpg";
-import img500 from "../../../assets/images/home/Yoga-session-at-the-Bali-Green-Retreat.jpg";
+import img100 from "../../../assets/images/home/yoga-teacher-training-bali.webp";
+import img200 from "../../../assets/images/home/Ubud-Yoga-Photography-3-1.webp";
+import img300 from "../../../assets/images/home/bali-yoga-teacher-training-check-list-NAMASTSHAY.webp";
+import img500 from "../../../assets/images/home/Yoga-session-at-the-Bali-Green-Retreat.webp";
 import { PROGRAM_PRICES } from "../../../data/bali/programPrices";
 
 export const programs = [

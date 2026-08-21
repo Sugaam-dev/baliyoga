@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 import SectionHeading from "../../components/shared/SectionHeading";
-import baliImg from "../../assets/images/home/bali1.jpg";
-import rishikeshImg from "../../assets/images/home/bali2.jpg";
-import mysoreImg from "../../assets/images/home/bali3.jpg"; // TODO: replace with a real Mysore image
+import baliImg from "../../assets/images/home/bali1.webp";
+import rishikeshImg from "../../assets/images/home/bali2.webp";
+import mysoreImg from "../../assets/images/home/bali3.webp"; // TODO: replace with a real Mysore image
 import { PROGRAM_LINKS, RETREAT_LINKS } from "../../data/locations";
 
 const getCounts = (locationKey) => {

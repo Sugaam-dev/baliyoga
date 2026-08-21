@@ -4,7 +4,7 @@ import { PROGRAM_PRICES_MYSORE } from "../../data/mysore/programPricesMysore";
 
 import baliHero from "../../assets/images/home/bali1.webp";
 import rishikeshHero from "../../assets/images/home/bali2.webp";
-import mysoreHero from "../../assets/images/home/bali3.webp"; // Fallback to bali3.jpg as per WhereToTrain.jsx
+import mysoreHero from "../../assets/images/home/bali3.webp"; // Fallback to bali3.webp as per WhereToTrain.jsx
 
 export const LANDING_PROGRAM_CATEGORIES = [
   { id: "ytt", icon: "🧘", label: "Multi-Style YTTC" },

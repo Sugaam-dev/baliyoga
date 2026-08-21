@@ -5,9 +5,9 @@ import SectionHeading from "../../components/shared/SectionHeading";
 import MobileCarousel from "../../components/shared/MobileCarousel";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 
-import yogaTeacherImg from "../../assets/images/home/yoga-teacher-training-bali.jpg";
-import yogaRetreatImg from "../../assets/images/home/yoga.jpg";
-import soundHealingImg from "../../assets/images/home/yoga0.jpg";
+import yogaTeacherImg from "../../assets/images/home/yoga-teacher-training-bali.webp";
+import yogaRetreatImg from "../../assets/images/home/yoga.webp";
+import soundHealingImg from "../../assets/images/home/yoga0.webp";
 
 const BaliYogaOffers = () => {
   const offers = [

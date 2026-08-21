@@ -3,16 +3,16 @@ import SectionHeading from "../../components/shared/SectionHeading";
 import MobileCarousel from "../../components/shared/MobileCarousel";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 
-import gallery1 from "../../assets/images/home/bali-yoga-teacher-training-check-list-NAMASTSHAY.jpg";
-import gallery2 from "../../assets/images/home/Yoga-session-at-the-Bali-Green-Retreat.jpg";
-import gallery3 from "../../assets/images/home/yogagallery.jpg";
-import gallery4 from "../../assets/images/home/alchemyyoga.jpg";
-import gallery5 from "../../assets/images/home/yoga-teacher-training-bali.jpg";
-import gallery6 from "../../assets/images/home/Ubud-Yoga-Photography-3-1.jpg";
-import gallery7 from "../../assets/images/home/4-Days-Yoga-Retreat-In-Canggu-Bali.jpg";
-import gallery8 from "../../assets/images/home/the-istana-1.jpg";
-import gallery9 from "../../assets/images/home/shutterstock_314587241.jpg";
-import gallery10 from "../../assets/images/home/baligallery.jpg";
+import gallery1 from "../../assets/images/home/bali-yoga-teacher-training-check-list-NAMASTSHAY.webp";
+import gallery2 from "../../assets/images/home/Yoga-session-at-the-Bali-Green-Retreat.webp";
+import gallery3 from "../../assets/images/home/yogagallery.webp";
+import gallery4 from "../../assets/images/home/alchemyyoga.webp";
+import gallery5 from "../../assets/images/home/yoga-teacher-training-bali.webp";
+import gallery6 from "../../assets/images/home/Ubud-Yoga-Photography-3-1.webp";
+import gallery7 from "../../assets/images/home/4-Days-Yoga-Retreat-In-Canggu-Bali.webp";
+import gallery8 from "../../assets/images/home/the-istana-1.webp";
+import gallery9 from "../../assets/images/home/shutterstock_314587241.webp";
+import gallery10 from "../../assets/images/home/baligallery.webp";
 
 const galleryList = [
   gallery1,

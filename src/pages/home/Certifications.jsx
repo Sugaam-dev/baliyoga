@@ -4,7 +4,7 @@ import { Sparkles, Users, Compass } from "lucide-react";
 import SectionHeading from "../../components/shared/SectionHeading";
 import MobileCarousel from "../../components/shared/MobileCarousel";
 import ScrollReveal from "../../components/shared/ScrollReveal";
-import founderImg from "../../assets/images/home/balitemple.JPEG";
+import founderImg from "../../assets/images/home/balitemple.webp";
 
 const leadershipCards = [
   {

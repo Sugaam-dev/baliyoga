@@ -1,4 +1,4 @@
-import bali2 from "../../../assets/images/home/bali2.jpg";
+import bali2 from "../../../assets/images/home/bali2.webp";
 
 export default function GalleryHero() {
   return (

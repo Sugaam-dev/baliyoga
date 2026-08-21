@@ -1,4 +1,4 @@
-import bali3 from "../../../assets/images/home/bali3.jpg";
+import bali3 from "../../../assets/images/home/bali3.webp";
 
 export default function RetreatsHero() {
   return (

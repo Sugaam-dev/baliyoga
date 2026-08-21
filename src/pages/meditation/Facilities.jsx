@@ -1,12 +1,12 @@
 import React from "react";
 
 // ================= IMAGES =================
-import heroImg from "../../assets/images/meditation/sunset-meditation.jpg";
-import guidedImg from "../../assets/images/meditation/sunset-meditation.jpg";
-import pranayamaImg from "../../assets/images/meditation/meditation.jpg";
-import nidraImg from "../../assets/images/meditation/meditation.jpg";
-import silentImg from "../../assets/images/meditation/hero.jpg";
-import mindfulnessImg from "../../assets/images/meditation/hero.jpg";
+import heroImg from "../../assets/images/meditation/sunset-meditation.webp";
+import guidedImg from "../../assets/images/meditation/sunset-meditation.webp";
+import pranayamaImg from "../../assets/images/meditation/meditation.webp";
+import nidraImg from "../../assets/images/meditation/meditation.webp";
+import silentImg from "../../assets/images/meditation/hero.webp";
+import mindfulnessImg from "../../assets/images/meditation/hero.webp";
 
 export default function Facilities() {
   return (

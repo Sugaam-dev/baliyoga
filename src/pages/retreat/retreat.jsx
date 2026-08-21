@@ -4,13 +4,13 @@ import RetreatCard from "./components/RetreatCard";
 import GuestWorkshopSection from "./components/GuestWorkshopSection";
 
 // Bali images
-import bali1 from "../../assets/images/home/bali1.jpg";
-import bali2 from "../../assets/images/home/bali2.jpg";
-import bali3 from "../../assets/images/home/bali3.jpg";
+import bali1 from "../../assets/images/home/bali1.webp";
+import bali2 from "../../assets/images/home/bali2.webp";
+import bali3 from "../../assets/images/home/bali3.webp";
 
 // Yoga assets
-import yoga0 from "../../assets/yoga0.jpg";
-import yoga1 from "../../assets/yoga1.jpg";
+import yoga0 from "../../assets/yoga0.webp";
+import yoga1 from "../../assets/yoga1.webp";
 
 export default function Retreat() {
   const baliRetreats = [

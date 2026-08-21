@@ -1,7 +1,7 @@
 
 
 
-import bali1 from "../../../assets/images/home/bali1.jpg";
+import bali1 from "../../../assets/images/home/bali1.webp";
 
 export function HeroSection() {
   return (

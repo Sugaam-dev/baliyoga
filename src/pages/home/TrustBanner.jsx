@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Importing local images from your project's images folder
-import yogaAllianceLogo from "../../assets/images/home/yogaicon.jpg"; 
-import rys100 from "../../assets/images/home/100.jpg";
-import rys200 from "../../assets/images/home/200.jpg";
-import rys300 from "../../assets/images/home/300yy.jpg";
-import rys500 from "../../assets/images/home/yoga500.jpg";
-import yacep from "../../assets/images/home/YACEP.jpg";
+import yogaAllianceLogo from "../../assets/images/home/yogaicon.webp"; 
+import rys100 from "../../assets/images/home/100.webp";
+import rys200 from "../../assets/images/home/200.webp";
+import rys300 from "../../assets/images/home/300yy.webp";
+import rys500 from "../../assets/images/home/yoga500.webp";
+import yacep from "../../assets/images/home/YACEP.webp";
 
 const TrustBanner = () => {
   const certificates = [

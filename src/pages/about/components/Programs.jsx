@@ -108,11 +108,10 @@ export default function Programs({
                     </div>
                     <Link
                       to={p.link}
-                      aria-label={`Read more about ${p.title}`}
                       className="inline-flex items-center gap-2 text-stone-700 text-xs font-bold uppercase tracking-wider hover:gap-3 hover:text-[#854417] transition-all duration-300 no-underline self-start"
                     >
-                      Read More
-                      <ArrowRight size={14} className="text-[#854417]" />
+                      <span>View {p.hours}hr Program</span>
+                      <ArrowRight size={14} className="text-[#854417]" aria-hidden="true" />
                     </Link>
                   </div>
 

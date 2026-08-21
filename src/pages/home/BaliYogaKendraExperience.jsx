@@ -1,7 +1,7 @@
 import React from "react";
 import { Sparkles, Flower2, CheckCircle2, ArrowRight } from "lucide-react";
 import ScrollReveal from "../../components/shared/ScrollReveal";
-import baliMeditation from "../../assets/images/home/yogagallery.jpg";
+import baliMeditation from "../../assets/images/home/yogagallery.webp";
 
 const BaliYogaKendraExperience = () => {
   const features = [

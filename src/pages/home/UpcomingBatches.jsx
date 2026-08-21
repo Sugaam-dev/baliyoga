@@ -5,10 +5,10 @@ import SectionHeading from "../../components/shared/SectionHeading";
 import MobileCarousel from "../../components/shared/MobileCarousel";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 
-import img1 from "../../assets/hill.jpg";
-import img2 from "../../assets/hill1.jpg";
-import img3 from "../../assets/hill2.jpg";
-import img4 from "../../assets/hill3.jpg";
+import img1 from "../../assets/hill.webp";
+import img2 from "../../assets/hill1.webp";
+import img3 from "../../assets/hill2.webp";
+import img4 from "../../assets/hill3.webp";
 
 const UpcomingBatches = () => {
   const batches = [

@@ -2,10 +2,10 @@ import React from "react";
 import ScrollReveal from "../../../components/shared/ScrollReveal";
 import SectionHeading from "../../../components/shared/SectionHeading";
 
-import rishikeshImg from "../../../assets/images/home/bali1.jpg";
-import mysoreImg from "../../../assets/images/home/bali2.jpg";
-import chiangMaiImg from "../../../assets/images/home/bali3.jpg";
-import baliImg from "../../../assets/images/home/balitemple.JPEG";
+import rishikeshImg from "../../../assets/images/home/bali1.webp";
+import mysoreImg from "../../../assets/images/home/bali2.webp";
+import chiangMaiImg from "../../../assets/images/home/bali3.webp";
+import baliImg from "../../../assets/images/home/balitemple.webp";
 
 const locations = [
   { city: "Rishikesh, India", desc: "The Yoga Capital of the World. Study amidst the sacred energy of the Himalayas and the River Ganges.", img: rishikeshImg },

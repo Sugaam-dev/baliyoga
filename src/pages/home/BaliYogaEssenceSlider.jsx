@@ -10,13 +10,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // Import images
-import bali1 from "../../assets/images/home/bali1.jpg";
-import bali2 from "../../assets/images/home/bali2.jpg";
-import bali3 from "../../assets/images/home/bali3.jpg";
-import bali4 from "../../assets/images/home/bali4.jpg";
-import bali5 from "../../assets/images/home/bali5.jpg";
-import bali6 from "../../assets/images/home/bali6.jpg";
-import bali7 from "../../assets/images/home/bali7.jpg";
+import bali1 from "../../assets/images/home/bali1.webp";
+import bali2 from "../../assets/images/home/bali2.webp";
+import bali3 from "../../assets/images/home/bali3.webp";
+import bali4 from "../../assets/images/home/bali4.webp";
+import bali5 from "../../assets/images/home/bali5.webp";
+import bali6 from "../../assets/images/home/bali6.webp";
+import bali7 from "../../assets/images/home/bali7.webp";
 
 const galleryImages = [
   {

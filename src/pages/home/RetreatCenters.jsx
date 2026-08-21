@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRight, Compass, Sparkles } from "lucide-react";
 import SectionHeading from "../../components/shared/SectionHeading";
 import ScrollReveal from "../../components/shared/ScrollReveal";
-import retreatImg from "../../assets/images/home/bali1.jpg";
+import retreatImg from "../../assets/images/home/bali1.webp";
 
 const RetreatCenters = () => {
   return (

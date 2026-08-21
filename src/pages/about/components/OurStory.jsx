@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollReveal from "../../../components/shared/ScrollReveal";
-import ranjanImg from "../../../assets/images/about/ranjan_sir.jpg";
+import ranjanImg from "../../../assets/images/about/ranjan_sir.webp";
 
 export default function OurStory({ ourImg }) {
   return (
