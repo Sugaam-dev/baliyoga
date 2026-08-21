@@ -34,11 +34,21 @@ function App() {
   const [pricesUpdated, setPricesUpdated] = useState(0);
 
   useEffect(() => {
-    fetchAndApplyDynamicPrices().then((success) => {
-      if (success) {
-        setPricesUpdated((prev) => prev + 1);
-      }
-    });
+    const runFetch = () => {
+      fetchAndApplyDynamicPrices().then((success) => {
+        if (success) {
+          setPricesUpdated((prev) => prev + 1);
+        }
+      });
+    };
+
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      const id = window.requestIdleCallback(runFetch, { timeout: 3500 });
+      return () => window.cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(runFetch, 2500);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   return (

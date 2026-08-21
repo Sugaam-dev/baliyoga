@@ -285,18 +285,6 @@ import mobileYoga4 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_4.webp
 import mobileYoga5 from "../../assets/images/home/Bali_Yoga_Kendra_mobile_5.webp";
 
 function HeroSection() {
-  // Dynamically inject Google Fonts for both Montserrat (Heading) and Playfair Display (Subtitle)
-  useEffect(() => {
-    const fontId = "google-fonts-hero";
-    if (!document.getElementById(fontId)) {
-      const link = document.createElement("link");
-      link.id = fontId;
-      link.rel = "stylesheet";
-      link.href = "https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Playfair+Display:ital,wght@1,400&display=swap";
-      document.head.appendChild(link);
-    }
-  }, []);
-
   const desktopImages = [
     { url: yoga1, alt: "Yoga Retreat Bali Desktop 1" },
     { url: yoga2, alt: "Yoga Meditation Bali Desktop 2" },
