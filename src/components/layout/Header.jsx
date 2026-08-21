@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { PROGRAM_LINKS, RETREAT_LINKS, buildPath } from '../../data/locations';
@@ -148,7 +148,7 @@ const Header = () => {
               aria-label="Bali Yoga Kendra Home"
             >
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Bali Yoga Kendra Logo"
                 className="h-9 sm:h-10 md:h-11 lg:h-12 xl:h-13 2xl:h-18 min-[1920px]:h-22 min-[2500px]:h-26 w-auto object-contain block max-w-[90px] sm:max-w-[110px] lg:max-w-[130px] xl:max-w-[145px] 2xl:max-w-[180px] min-[1920px]:max-w-[220px]"
               />
@@ -308,7 +308,7 @@ const Header = () => {
             style={{ borderColor: '#e5a93b' }}
           >
             <Link to="/" onClick={closeMenu} className="flex items-center gap-2.5">
-              <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
+              <img src="/logo.webp" alt="Logo" className="h-10 w-auto" />
               <span className="flex flex-col leading-tight">
                 <span className="text-sm font-extrabold tracking-wider text-white font-serif uppercase whitespace-nowrap">
                   Bali Yoga

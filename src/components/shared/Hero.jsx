@@ -339,6 +339,9 @@ function HeroSection() {
                       src={image.url}
                       alt={image.alt}
                       loading={index === 0 ? "eager" : "lazy"}
+                      fetchpriority={index === 0 ? "high" : "auto"}
+                      width="1400"
+                      height="820"
                       className="w-full h-full object-cover"
                     />
                     <div 
@@ -390,6 +393,9 @@ function HeroSection() {
                     src={image.url}
                     alt={image.alt}
                     loading={index === 0 ? "eager" : "lazy"}
+                    fetchpriority={index === 0 ? "high" : "auto"}
+                    width="900"
+                    height="1093"
                     className="w-full object-cover"
                     style={{
                       height: "45vw",

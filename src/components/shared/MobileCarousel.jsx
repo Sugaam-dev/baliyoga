@@ -117,10 +117,14 @@ const MobileCarousel = ({ items, renderItem, className = "", gridClass = "" }) =
                 type="button"
                 onClick={() => goToSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer border-0 ${
-                  activeDotIndex === idx ? "w-6 bg-[#1A2456]" : "w-1.5 bg-stone-300"
-                }`}
-              />
+                className={`p-2 flex items-center justify-center cursor-pointer border-0 bg-transparent min-w-[24px] min-h-[24px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1A2456]`}
+              >
+                <span
+                  className={`block h-1.5 rounded-full transition-all duration-300 ${
+                    activeDotIndex === idx ? "w-6 bg-[#1A2456]" : "w-1.5 bg-stone-300"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}

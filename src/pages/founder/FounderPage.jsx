@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { ArrowLeft, Award, Globe, Heart, Star, BookOpen, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/shared/ScrollReveal";
 import founderImg from "../../assets/images/home/ranjan_sir.jpg";
-import baliTemple from "../../assets/images/home/bali2.jpg";
+import baliTemple from "../../assets/images/home/bali2.webp";
 import certificate1 from "../../assets/images/certificates/certificate1.png";
 import certificate2 from "../../assets/images/certificates/certificate2.png";
 import certificate3 from "../../assets/images/certificates/certificate3.png";

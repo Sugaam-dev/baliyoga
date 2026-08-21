@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -16,7 +16,7 @@ const FooterNavigation = () => {
         {/* LOGO */}
         <div>
           <img
-            src="/logo.png"
+            src="/logo.webp"
             alt="Bali Yoga"
             className="w-36 mb-5"
           />

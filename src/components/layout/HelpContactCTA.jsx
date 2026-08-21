@@ -1,6 +1,6 @@
-import React from "react";
+﻿import React from "react";
 import { FaUserTie, FaWhatsapp, FaPassport, FaCreditCard } from "react-icons/fa";
-import bgImg from "../../assets/guide.jpg";
+import bgImg from "../../assets/guide.webp";
 
 const HelpContactCTA = () => {
   return (
@@ -87,9 +87,9 @@ const HelpContactCTA = () => {
                 </div>
 
                 {/* Title */}
-                <h4 className="text-sm font-bold tracking-wide mb-1 text-white">
+                <p className="text-sm font-bold tracking-wide mb-1 text-white">
                   {item.title}
-                </h4>
+                </p>
 
                 {/* Desc */}
                 <p className="text-[11px] sm:text-xs text-stone-400">
