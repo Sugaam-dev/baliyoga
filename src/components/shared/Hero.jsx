@@ -294,7 +294,7 @@ function HeroSection() {
   ];
 
   const mobileImages = [
-    { url: mobileYoga1, alt: "Yoga Retreat Bali Mobile 1" },
+    { url: "/hero-mobile.webp", alt: "Yoga Retreat Bali Mobile 1" },
     { url: mobileYoga2, alt: "Yoga Meditation Bali Mobile 2" },
     { url: mobileYoga3, alt: "Yoga Retreat Bali Mobile 3" },
     { url: mobileYoga4, alt: "Yoga Meditation Bali Mobile 4" },
