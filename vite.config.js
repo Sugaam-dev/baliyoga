@@ -64,6 +64,15 @@ export default defineConfig({
           console.log('[copy-external-images] Copied src/images/external to dist/images/external');
         }
       }
+    },
+    {
+      name: 'async-css',
+      transformIndexHtml(html) {
+        return html.replace(
+          /<link rel="stylesheet" crossorigin href="(\/assets\/style-[^"]+\.css)">/g,
+          '<link rel="preload" as="style" href="$1" onload="this.onload=null;this.rel=\'stylesheet\'"><noscript><link rel="stylesheet" href="$1"></noscript>'
+        );
+      }
     }
   ],
   build: {
