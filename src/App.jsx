@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import Home from "./pages/home/Home";
 import ScrollToTop from './components/shared/ScrollToTop';
-import { fetchAndApplyDynamicPrices } from "./utils/dynamicPrices";
 
 const About = React.lazy(() => import('./pages/about/About'));
 const Course = React.lazy(() => import('./pages/course/course'));
@@ -35,18 +34,20 @@ function App() {
 
   useEffect(() => {
     const runFetch = () => {
-      fetchAndApplyDynamicPrices().then((success) => {
-        if (success) {
-          setPricesUpdated((prev) => prev + 1);
-        }
+      import("./utils/dynamicPrices").then((m) => {
+        m.fetchAndApplyDynamicPrices().then((success) => {
+          if (success) {
+            setPricesUpdated((prev) => prev + 1);
+          }
+        });
       });
     };
 
     if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(runFetch, { timeout: 3500 });
+      const id = window.requestIdleCallback(runFetch, { timeout: 4000 });
       return () => window.cancelIdleCallback(id);
     } else {
-      const timer = setTimeout(runFetch, 2500);
+      const timer = setTimeout(runFetch, 3000);
       return () => clearTimeout(timer);
     }
   }, []);
