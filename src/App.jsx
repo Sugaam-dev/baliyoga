@@ -30,33 +30,11 @@ function LocationLandingPageWrapper() {
 }
 
 function App() {
-  const [pricesUpdated, setPricesUpdated] = useState(0);
-
-  useEffect(() => {
-    const runFetch = () => {
-      import("./utils/dynamicPrices").then((m) => {
-        m.fetchAndApplyDynamicPrices().then((success) => {
-          if (success) {
-            setPricesUpdated((prev) => prev + 1);
-          }
-        });
-      });
-    };
-
-    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-      const id = window.requestIdleCallback(runFetch, { timeout: 4000 });
-      return () => window.cancelIdleCallback(id);
-    } else {
-      const timer = setTimeout(runFetch, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
   return (
     <>
       <BrowserRouter>
         <ScrollToTop />
-        <Routes key={pricesUpdated}>
+        <Routes>
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
                    <Route path='about' element={<About/>} />

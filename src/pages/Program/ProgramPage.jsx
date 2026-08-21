@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { locationDataMap } from "../../data/locationDataMap";
 
@@ -15,7 +15,7 @@ import { ROOM_PRICES_BALI } from "../../data/bali/programPrices";
 import { ROOM_PRICES_RISHIKESH } from "../../data/rishikesh/programPricesRishikesh";
 import { ROOM_PRICES_MYSORE } from "../../data/mysore/programPricesMysore";
 
-import { DYNAMIC_BATCHES } from "../../utils/dynamicPrices";
+import { DYNAMIC_BATCHES, fetchAndApplyDynamicPrices } from "../../utils/dynamicPrices";
 
 const generateBatches = (durationDays, locationKey, courseKey) => {
   const today = new Date();
@@ -85,6 +85,13 @@ const ProgramPage = ({ data }) => {
   const navigate = useNavigate();
   const locationPath = useLocation().pathname;
   const [selectedBatch, setSelectedBatch] = useState(0);
+  const [, setBatchesUpdated] = useState(0);
+
+  useEffect(() => {
+    fetchAndApplyDynamicPrices().then((success) => {
+      if (success) setBatchesUpdated((prev) => prev + 1);
+    });
+  }, [locParam, courseParam]);
 
   let pageData = data;
   if (!pageData) {

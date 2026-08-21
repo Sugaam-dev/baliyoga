@@ -11,7 +11,7 @@ import { ROOM_PRICES_BALI } from "../../data/bali/programPrices";
 import { ROOM_PRICES_RISHIKESH } from "../../data/rishikesh/programPricesRishikesh";
 import { ROOM_PRICES_MYSORE } from "../../data/mysore/programPricesMysore";
 
-import { DYNAMIC_BATCHES } from "../../utils/dynamicPrices";
+import { DYNAMIC_BATCHES, fetchAndApplyDynamicPrices } from "../../utils/dynamicPrices";
 
 const generateBatches = (durationDays, locationKey, courseKey) => {
   const today = new Date();
@@ -78,6 +78,13 @@ const generateBatches = (durationDays, locationKey, courseKey) => {
 export default function CheckoutPage() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [, setPricesLoaded] = useState(0);
+
+  useEffect(() => {
+    fetchAndApplyDynamicPrices().then((success) => {
+      if (success) setPricesLoaded((prev) => prev + 1);
+    });
+  }, []);
 
   // ── Mode Identification ──
   // If state has category and slug, it's a direct single program checkout
