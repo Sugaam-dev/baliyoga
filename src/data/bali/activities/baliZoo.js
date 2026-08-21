@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/bali_zoo.jpg";
+import imgLocal from "../../../assets/images/activities/bali_zoo.webp";
 
 const baliZoo = {
   slug: "bali-zoo",

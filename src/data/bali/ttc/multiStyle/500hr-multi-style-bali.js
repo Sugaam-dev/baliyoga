@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.multiStyle["500hr"],
       priceNote: "Includes stay, meals & RYT-500 certification",
       bgImage:
-        "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+        "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
       buttonText: "Book Now",
         url:"/contact",
     },
@@ -37,9 +37,9 @@ export const courseData = {
     ],
 
     certificates: [
-      { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.png", label: "500 Hrs" },
-      { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.png", label: "RYT-500" },
-      { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.png", label: "Yoga Alliance" },
+      { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.webp", label: "500 Hrs" },
+      { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.webp", label: "RYT-500" },
+      { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.webp", label: "Yoga Alliance" },
     ],
 
     content: {
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
       eyebrow: "Bali Yoga Kendra Experience",
       title: "Join our",
       highlight: "ultimate",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         food:
-          "/images/external/general/unsplash_photo-1552196563-55cd4e45efb3.jpg",
+          "/images/external/general/unsplash_photo-1552196563-55cd4e45efb3.webp",
         stay:
-          "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
+          "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.webp",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Ashtanga Primary & Intermediate",
           desc: "Full standing, intermediate & finishing series — the deepest Ashtanga practice with self-mastery sessions",
           icon: "sun",
-          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.jpg",
+          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.webp",
         },
         {
           label: "Hatha, Vinyasa & Classical Dance",
           desc: "Advanced Hatha postures, classical dance, Sadhna, Yoga Sadhna & Kundalini practices",
           icon: "wind",
-          img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         },
         {
           label: "Yin Yoga, Pranayama & Meditation",
           desc: "Exclusive 50-hour Yin Yoga module, advanced Pranayama, Kriyas, Yoga Nidra & deep Mantra practices",
           icon: "feather",
-          img: "/images/external/general/morning-yoga-wallpaper-2160x1440-78799_40.jpg",
+          img: "/images/external/general/morning-yoga-wallpaper-2160x1440-78799_40.webp",
         },
       ],
       specialTitle: "Why Choose",
@@ -354,7 +354,7 @@ export const courseData = {
         "A demanding but instructional daily routine — last 5 days dedicated to Yin Yoga from 03:00 PM to 07:30 PM.",
 
       image:
-        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
 
       morning: [
         { time: "05:30 AM", activity: "Self Practice & Self Awareness", icon: "moon" },
@@ -409,7 +409,7 @@ export const courseData = {
           title: "Breakfast",
           icon: "sun",
           time: "09:00 – 10:00",
-          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
+          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.webp",
           desc: "Vibrant sattvic morning foods to energize your intensive practice day.",
           items: [
             "Seasonal fresh fruits",
@@ -423,7 +423,7 @@ export const courseData = {
           title: "Lunch",
           icon: "coffee",
           time: "01:15 – 02:15",
-          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
+          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.webp",
           desc: "Balanced organic vegetarian meals following yogic dietary principles.",
           items: [
             "Rice bowls",
@@ -437,7 +437,7 @@ export const courseData = {
           title: "Dinner",
           icon: "moon",
           time: "07:00 – 08:00",
-          img: "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
+          img: "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.webp",
           desc: "Light evening sattvic meals — Sundays enjoy Ubud's local restaurants freely.",
           items: [
             "Lentil dishes",
@@ -499,7 +499,7 @@ export const courseData = {
           tagBg: "#5C8A6B",
           duration: "Half Day",
           icon: "leaf",
-          img: "/images/external/general/unsplash_photo-1501785888041-af3ef285b470.jpg",
+          img: "/images/external/general/unsplash_photo-1501785888041-af3ef285b470.webp",
           desc: "Famous green rice terraces of Ubud.",
           highlights: ["Rice fields", "Scenic views", "Nature walk"],
         },
@@ -509,7 +509,7 @@ export const courseData = {
           tagBg: "#C8874A",
           duration: "2 Hours",
           icon: "trees",
-          img: "/images/external/general/unsplash_photo-1546182990-dffeafbe841d.jpg",
+          img: "/images/external/general/unsplash_photo-1546182990-dffeafbe841d.webp",
           desc: "Jungle sanctuary with ancient temples and monkeys.",
           highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
         },
@@ -519,7 +519,7 @@ export const courseData = {
           tagBg: "#8B3A3A",
           duration: "Full Day",
           icon: "mountain",
-          img: "/images/external/general/unsplash_photo-1500530855697-b586d89ba3ee.jpg",
+          img: "/images/external/general/unsplash_photo-1500530855697-b586d89ba3ee.webp",
           desc: "Sunrise volcano trek with stunning lake views.",
           highlights: ["Sunrise", "Volcano hike", "Lake view"],
         },
@@ -529,7 +529,7 @@ export const courseData = {
           tagBg: "#3D1A18",
           duration: "Half Day",
           icon: "waves",
-          img: "/images/external/general/139164.jpg",
+          img: "/images/external/general/139164.webp",
           desc: "Iconic ocean temple with breathtaking sunset views.",
           highlights: ["Ocean temple", "Sunset", "Coastal walk"],
         },
@@ -539,7 +539,7 @@ export const courseData = {
           tagBg: "#6B4A2A",
           duration: "Half Day",
           icon: "compass",
-          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.jpg",
+          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.webp",
           desc: "Every Thursday — visit ashrams, temples, herbal gardens & beach yoga.",
           highlights: ["Ashram visits", "Herbal gardens", "Beach yoga"],
         },
@@ -637,7 +637,7 @@ export const courseData = {
         reviews: 184,
         isPopular: true,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
       },
       {
         id: 2,
@@ -648,7 +648,7 @@ export const courseData = {
         reviews: 92,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
       },
       {
         id: 3,
@@ -659,7 +659,7 @@ export const courseData = {
         reviews: 210,
         isPopular: false,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
       },
       {
         id: 4,
@@ -670,7 +670,7 @@ export const courseData = {
         reviews: 145,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
       },
       {
         id: 5,
@@ -681,7 +681,7 @@ export const courseData = {
         reviews: 76,
         isPopular: true,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
       }
     ]
   }
@@ -712,7 +712,7 @@ export const courseData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$2,999",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -728,7 +728,7 @@ export const courseData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$3,299",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -744,7 +744,7 @@ export const courseData = {
           tag: "Popular",
           tagBg: "#7A4A38",
           price: "$3,699",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with wide balcony, private bathroom, AC and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -760,7 +760,7 @@ export const courseData = {
           tag: "Luxury",
           tagBg: "#C8874A",
           price: "$4,299",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with wide balcony, all modern amenities for a focused and elegant two-month stay.",
           features: [
             "Private room",

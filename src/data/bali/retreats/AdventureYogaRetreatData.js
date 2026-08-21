@@ -18,7 +18,7 @@ export const AdventureYogaRetreatData = {
         subtitle: "Combine the thrill of adventure with the serenity of yoga in Bali's most spiritual destination",
         price: "$1099",
         priceNote: "All-inclusive: accommodation, meals, activities & yoga sessions",
-        bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+        bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
         buttonText: "Book Now",
         url: "/contact",
       },
@@ -33,8 +33,8 @@ export const AdventureYogaRetreatData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "7 Days" },
-        { img: "/images/cirtificats/yoga.png", label: "Adventure" }
+        { img: "/images/cirtificats/yoga.webp", label: "7 Days" },
+        { img: "/images/cirtificats/yoga.webp", label: "Adventure" }
       ],
   
       content: {
@@ -56,7 +56,7 @@ export const AdventureYogaRetreatData = {
         },
     
         content: {
-          bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreath Bali Retreat",
           title: "Join our",
           highlight: "adventure & yoga retreat",
@@ -119,11 +119,11 @@ export const AdventureYogaRetreatData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.jpg",
+              "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.webp",
             food:
-              "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+              "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
             stay:
-              "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg",
+              "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           },
         },
       }
@@ -151,19 +151,19 @@ export const AdventureYogaRetreatData = {
             label: "Yoga & Breathwork",
             desc: "Morning Hatha yoga, pranayama and detox breathwork to cleanse the body, breath and mind each day",
             icon: "sun",
-            img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.jpg",
+            img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.webp",
           },
           {
             label: "Shat Karma & Panchakarma",
             desc: "Traditional yogic cleansing processes — remove deep-rooted toxins, balance doshas and restore digestive fire",
             icon: "leaf",
-            img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           },
           {
             label: "Ayurveda & Wellness Therapy",
             desc: "Customized Ayurvedic massage, rejuvenation therapy, Yoga Nidra and spiritual philosophy talks",
             icon: "heart",
-            img: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg",
+            img: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           },
         ],
         specialTitle: "Why Join",
@@ -339,7 +339,7 @@ export const AdventureYogaRetreatData = {
           title: "A Day at",
           highlight: "Your Adventure Retreat",
           subtitle: "Each day combines thrilling outdoor activities with peaceful yoga sessions.",
-          image: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          image: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           morning: [
             { time: "07:00 - 09:00", activity: "APMB / Rice Field Walk", icon: "sun" },
             { time: "09:30 - 10:30", activity: "Breakfast", icon: "coffee" },
@@ -385,7 +385,7 @@ export const AdventureYogaRetreatData = {
               title: "Breakfast",
               icon: "sun",
               time: "09:00 – 10:00",
-              img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.jpg",
+              img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.webp",
               desc: "Light and energizing sattvic breakfast after your morning yoga and detox practices.",
               items: [
                 "Fresh tropical fruits",
@@ -399,7 +399,7 @@ export const AdventureYogaRetreatData = {
               title: "Lunch",
               icon: "coffee",
               time: "01:00 – 02:00",
-              img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+              img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
               desc: "Nourishing Ayurvedic vegetarian lunch to support your afternoon wellness therapies.",
               items: [
                 "Detox rice bowls",
@@ -413,7 +413,7 @@ export const AdventureYogaRetreatData = {
               title: "Dinner",
               icon: "moon",
               time: "06:30 – 07:30",
-              img: "/images/external/general/unsplash_photo-1547592180-85f173990554.jpg",
+              img: "/images/external/general/unsplash_photo-1547592180-85f173990554.webp",
               desc: "Light calming sattvic evening meals to support deep rest and overnight healing.",
               items: [
                 "Lentil soups",
@@ -465,7 +465,7 @@ export const AdventureYogaRetreatData = {
               tagBg: "#4A7A30",
               duration: "Half Day",
               icon: "globe",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Sacred purification temple — perfect complement to your inner cleansing retreat.",
               highlights: ["Holy water ritual", "Sacred energy", "Spiritual cleansing"],
             },
@@ -475,7 +475,7 @@ export const AdventureYogaRetreatData = {
               tagBg: "#7AAA5A",
               duration: "Half Day",
               icon: "leaf",
-              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.jpg",
+              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.webp",
               desc: "Serene green rice terraces — ideal for mindful walking and reconnection with nature.",
               highlights: ["Peaceful walks", "Scenic views", "Nature therapy"],
             },
@@ -485,7 +485,7 @@ export const AdventureYogaRetreatData = {
               tagBg: "#6A8A30",
               duration: "2 Hours",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.jpg",
+              img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.webp",
               desc: "Lush jungle sanctuary with ancient temples and playful wild monkeys.",
               highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
             },
@@ -495,7 +495,7 @@ export const AdventureYogaRetreatData = {
               tagBg: "#8B4A2A",
               duration: "Full Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.jpg",
+              img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.webp",
               desc: "Sunrise volcano trek — energizing and grounding for your retreat journey.",
               highlights: ["Sunrise energy", "Volcano hike", "Lake views"],
             },
@@ -505,7 +505,7 @@ export const AdventureYogaRetreatData = {
               tagBg: "#1A2E10",
               duration: "Half Day",
               icon: "waves",
-              img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.jpg",
+              img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.webp",
               desc: "Iconic ocean temple with breathtaking sunset — deeply calming for retreat guests.",
               highlights: ["Sunset healing", "Ocean energy", "Cultural depth"],
             },
@@ -515,7 +515,7 @@ export const AdventureYogaRetreatData = {
               tagBg: "#5A7A3A",
               duration: "Flexible",
               icon: "camera",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Explore Ubud's cafes for authentic Balinese food and local markets on free afternoons.",
               highlights: ["Local cuisine", "Art & craft", "Self-discovery"],
             },
@@ -613,7 +613,7 @@ export const AdventureYogaRetreatData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -624,7 +624,7 @@ export const AdventureYogaRetreatData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -635,7 +635,7 @@ export const AdventureYogaRetreatData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -646,7 +646,7 @@ export const AdventureYogaRetreatData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -657,7 +657,7 @@ export const AdventureYogaRetreatData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -685,7 +685,7 @@ export const AdventureYogaRetreatData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$1,099",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -701,7 +701,7 @@ export const AdventureYogaRetreatData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$1,299",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

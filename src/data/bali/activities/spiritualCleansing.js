@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/spiritual_cleansing.jpg";
+import imgLocal from "../../../assets/images/activities/spiritual_cleansing.webp";
 
 const spiritualCleansing = {
   slug: "spiritual-cleansing-shamanic-healing",

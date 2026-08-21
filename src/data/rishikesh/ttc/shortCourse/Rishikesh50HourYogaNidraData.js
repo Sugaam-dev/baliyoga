@@ -23,7 +23,7 @@ export const Rishikesh50HourYogaNidraData = {
         price: PROGRAM_PRICES_RISHIKESH.shortcourses["nidra"],
         priceNote: "Includes cozy ashram accommodation, 3 daily vegetarian meals, specialized script manuals, and 50-hour certification",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll Course With Us",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Rishikesh50HourYogaNidraData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "50 Hrs Nidra" },
-        { img: "/images/cirtificats/yoga.png", label: "Conscious Sleep" },
-        { img: "/images/cirtificats/yoga.png", label: "WPYS Verified" }
+        { img: "/images/cirtificats/yoga.webp", label: "50 Hrs Nidra" },
+        { img: "/images/cirtificats/yoga.webp", label: "Conscious Sleep" },
+        { img: "/images/cirtificats/yoga.webp", label: "WPYS Verified" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const Rishikesh50HourYogaNidraData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Conscious Sleep Architecture",
           title: "Join our",
           highlight: "authentic healing space",
@@ -129,11 +129,11 @@ export const Rishikesh50HourYogaNidraData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const Rishikesh50HourYogaNidraData = {
             label: "Rotation of Body Consciousness",
             desc: "Learn precise techniques to channel nervous system currents across physical zones, triggering immediate relaxation responses.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           },
           {
             label: "Sankalpa & Script Mastery",
             desc: "Understand the blueprint mechanics behind powerful resolution setting, voice modulation training, and custom script design.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Subtle Energy & Visualizations",
             desc: "Execute advanced variations including the Golden Egg method, Inner Flame tracking, and meeting sages inside deep alpha layers.",
             icon: "feather",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
         ],
         specialTitle: "Lineage Inclusions",
@@ -312,7 +312,7 @@ export const Rishikesh50HourYogaNidraData = {
             "Living according to our timeline rules speeds up internal healing, pushing your body blocks into alignment.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "06:00 AM", activity: "Asana Warm-Ups for Yoga Nidra Readiness", icon: "moon" },
@@ -364,7 +364,7 @@ export const Rishikesh50HourYogaNidraData = {
               title: "Morning Tissue Repair",
               icon: "sun",
               time: "09:15 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Clean unprocessed morning matrices that deliver easy energy fields without burdening filtration paths.",
               items: [
                 "Seasonal fresh hill fruits",
@@ -378,7 +378,7 @@ export const Rishikesh50HourYogaNidraData = {
               title: "Midday Balanced Dhal",
               icon: "coffee",
               time: "01:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Nutrient-dense grains paired with traditional lentils to fuel heavy technical study blocks.",
               items: [
                 "Traditional Indian rice bowls",
@@ -392,7 +392,7 @@ export const Rishikesh50HourYogaNidraData = {
               title: "Twilight Metabolic Rest",
               icon: "moon",
               time: "06:30 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Light vegetable compositions designed to support quiet evening meditation loops safely.",
               items: [
                 "Clear organic vegetable broths",
@@ -444,7 +444,7 @@ export const Rishikesh50HourYogaNidraData = {
               tagBg: "#2C3E50",
               duration: "Evening Block",
               icon: "globe",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Watch breathtaking twilight light offerings and mantra chanting right down on the river steps.",
               highlights: ["Mantra chanting choruses", "River beach seating", "Timeless divine currents"],
             },
@@ -454,7 +454,7 @@ export const Rishikesh50HourYogaNidraData = {
               tagBg: "#34495E",
               duration: "3 Hours Outing",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Explore historic artisan walking bridge sectors lined with spiritual scriptural marketplaces.",
               highlights: ["Artisan marketplace counters", "Vibrant local energy", "Ancient bridge paths"],
             },
@@ -464,7 +464,7 @@ export const Rishikesh50HourYogaNidraData = {
               tagBg: "#C8874A",
               duration: "Half Day Run",
               icon: "sparkles",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Step inside high-vibration quiet settings dedicated strictly to absolute sensory withdrawal tracks.",
               highlights: ["Total quiet parameters", "Deep lineage traces", "Pure internal listening"],
             },
@@ -555,7 +555,7 @@ export const Rishikesh50HourYogaNidraData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -566,7 +566,7 @@ export const Rishikesh50HourYogaNidraData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -577,7 +577,7 @@ export const Rishikesh50HourYogaNidraData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -588,7 +588,7 @@ export const Rishikesh50HourYogaNidraData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -599,7 +599,7 @@ export const Rishikesh50HourYogaNidraData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -629,7 +629,7 @@ export const Rishikesh50HourYogaNidraData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$500",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -645,7 +645,7 @@ export const Rishikesh50HourYogaNidraData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$700",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

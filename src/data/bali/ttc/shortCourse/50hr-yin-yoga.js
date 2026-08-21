@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.shortcourses.yinyoga,
       priceNote: "Includes stay, meals & Yoga Alliance certificate",
       bgImage:
-        "/images/external/general/unsplash_photo-1588286840104-8957b019727f.jpg",
+        "/images/external/general/unsplash_photo-1588286840104-8957b019727f.webp",
       buttonText: "Book Now",
         url:"/contact",
     },
@@ -37,9 +37,9 @@ export const courseData = {
     ],
 
     certificates: [
-      { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.png", label: "Yin Yoga" },
-      { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.png", label: "Certified" },
-      { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.png", label: "Yoga Alliance" },
+      { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.webp", label: "Yin Yoga" },
+      { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.webp", label: "Certified" },
+      { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.webp", label: "Yoga Alliance" },
     ],
 
     content: {
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+        "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
       eyebrow: "Bali Yoga Kendra Experience",
       title: "Join our",
       highlight: "Yin Yoga awakening",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
         food:
-          "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+          "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
         stay:
-          "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg",
+          "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Yin Yoga Asana & Sequencing",
           desc: "Child's pose, Dragon, Butterfly, Caterpillar, Half Saddle & Square pose — with props, modifications and sequencing",
           icon: "feather",
-          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.jpg",
+          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.webp",
         },
         {
           label: "Meridians & Methodology",
           desc: "Meridian points, Tao, Yin & Yang organs, chakras and Nadis — with teaching methodology and class planning",
           icon: "sparkles",
-          img: "/images/external/general/unsplash_photo-1593811167562-9cef47bfc4d7.jpg",
+          img: "/images/external/general/unsplash_photo-1593811167562-9cef47bfc4d7.webp",
         },
         {
           label: "Yoga Nidra, Pranayama & Meditation",
           desc: "Yin pranayama, mantra, mudra, Yoga Nidra and mindfulness practices to complement deep Yin stretching",
           icon: "wind",
-          img: "/images/external/rooms/unsplash_photo-1604881991720-f91add269bed.jpg",
+          img: "/images/external/rooms/unsplash_photo-1604881991720-f91add269bed.webp",
         },
       ],
       specialTitle: "Why Choose",
@@ -354,7 +354,7 @@ export const courseData = {
         "5 days of classroom sessions and practical training — check in 20th after 2pm, classes begin 21st, full class 25th, checkout 26th at 10:00 AM.",
 
       image:
-        "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+        "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
 
       morning: [
         { time: "06:30 AM", activity: "Hatha Yoga", icon: "sun" },
@@ -409,7 +409,7 @@ export const courseData = {
           title: "Fruits & Tea",
           icon: "sun",
           time: "08:45 – 09:30",
-          img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.jpg",
+          img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.webp",
           desc: "Fresh fruits and herbal teas to gently energize your morning Yin practice.",
           items: [
             "Fresh tropical fruits",
@@ -423,7 +423,7 @@ export const courseData = {
           title: "Brunch",
           icon: "coffee",
           time: "11:45 – 13:00",
-          img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+          img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
           desc: "Nourishing Ayurvedic vegetarian brunch to sustain your afternoon Yin sessions.",
           items: [
             "Rice bowls",
@@ -437,7 +437,7 @@ export const courseData = {
           title: "Dinner",
           icon: "moon",
           time: "06:00 – 07:00",
-          img: "/images/external/general/unsplash_photo-1547592180-85f173990554.jpg",
+          img: "/images/external/general/unsplash_photo-1547592180-85f173990554.webp",
           desc: "Light and calming evening meals — Sundays explore Ubud's local restaurants freely.",
           items: [
             "Lentil soups",
@@ -489,7 +489,7 @@ export const courseData = {
           tagBg: "#2E7A55",
           duration: "Half Day",
           icon: "globe",
-          img: "/images/external/general/139108.jpg",
+          img: "/images/external/general/139108.webp",
           desc: "Sacred purification temple with holy spring pools.",
           highlights: ["Holy water ritual", "Ancient temple", "Spiritual cleansing"],
         },
@@ -499,7 +499,7 @@ export const courseData = {
           tagBg: "#3A9A72",
           duration: "Half Day",
           icon: "leaf",
-          img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.jpg",
+          img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.webp",
           desc: "UNESCO iconic green rice terraces of Ubud.",
           highlights: ["Terraced fields", "Scenic views", "Nature walk"],
         },
@@ -509,7 +509,7 @@ export const courseData = {
           tagBg: "#8A6010",
           duration: "2 Hours",
           icon: "trees",
-          img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.jpg",
+          img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.webp",
           desc: "Jungle sanctuary with ancient temples and wild monkeys.",
           highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
         },
@@ -519,7 +519,7 @@ export const courseData = {
           tagBg: "#8B3A3A",
           duration: "Full Day",
           icon: "mountain",
-          img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.jpg",
+          img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.webp",
           desc: "Sunrise volcano trek with stunning lake and crater views.",
           highlights: ["Sunrise trek", "Volcano hike", "Lake view"],
         },
@@ -529,7 +529,7 @@ export const courseData = {
           tagBg: "#0D2E20",
           duration: "Half Day",
           icon: "waves",
-          img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.jpg",
+          img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.webp",
           desc: "Iconic sea temple perched on rock with stunning sunset views.",
           highlights: ["Ocean temple", "Sunset views", "Coastal walk"],
         },
@@ -539,7 +539,7 @@ export const courseData = {
           tagBg: "#5A7A30",
           duration: "3 Hours",
           icon: "camera",
-          img: "/images/external/general/139108.jpg",
+          img: "/images/external/general/139108.webp",
           desc: "Explore local markets, art galleries & Balinese handicrafts.",
           highlights: ["Local markets", "Art & craft", "Shopping"],
         },
@@ -637,7 +637,7 @@ export const courseData = {
         reviews: 184,
         isPopular: true,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
       },
       {
         id: 2,
@@ -648,7 +648,7 @@ export const courseData = {
         reviews: 92,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
       },
       {
         id: 3,
@@ -659,7 +659,7 @@ export const courseData = {
         reviews: 210,
         isPopular: false,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
       },
       {
         id: 4,
@@ -670,7 +670,7 @@ export const courseData = {
         reviews: 145,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
       },
       {
         id: 5,
@@ -681,7 +681,7 @@ export const courseData = {
         reviews: 76,
         isPopular: true,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
       }
     ]
   }
@@ -712,7 +712,7 @@ export const courseData = {
           tag: "Course Only",
           tagBg: "#2E7A55",
           price: "$499",
-          img: "/images/external/general/unsplash_photo-1588286840104-8957b019727f.jpg",
+          img: "/images/external/general/unsplash_photo-1588286840104-8957b019727f.webp",
           desc: "Course-only option — attend all Yin Yoga training sessions without accommodation or meals included.",
           features: [
             "Course access only",
@@ -728,7 +728,7 @@ export const courseData = {
           tag: "Included",
           tagBg: "#3A9A72",
           price: "$650",
-          img: "/images/external/general/unsplash_photo-1631049307264-da0ec9d70304.jpg",
+          img: "/images/external/general/unsplash_photo-1631049307264-da0ec9d70304.webp",
           desc: "Comfortable shared rooms with AC, garden access and outdoor lounge for relaxation and socializing.",
           features: [
             "Twin sharing",
@@ -744,7 +744,7 @@ export const courseData = {
           tag: "Upgrade",
           tagBg: "#1A5038",
           price: "$750",
-          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.jpg",
+          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.webp",
           desc: "Private room with AC, peaceful atmosphere and all modern amenities for a focused Yin Yoga stay.",
           features: [
             "Private room",

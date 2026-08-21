@@ -23,7 +23,7 @@ export const Mysore200HourAshtangaHathaData = {
         price: PROGRAM_PRICES_MYSORE.multiStyle["200hrAshtanga"],
         priceNote: "Shared room tier ($900 without food and accommodation options); fully certified under international Yoga Alliance standards",
         bgImage:
-          "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+          "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
         buttonText: "BOOK NOW",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Mysore200HourAshtangaHathaData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "RYT 200 Registered" },
-        { img: "/images/cirtificats/yoga.png", label: "Ashtanga Primary" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance" }
+        { img: "/images/cirtificats/yoga.webp", label: "RYT 200 Registered" },
+        { img: "/images/cirtificats/yoga.webp", label: "Ashtanga Primary" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const Mysore200HourAshtangaHathaData = {
     
         content: {
           bgImage:
-            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           eyebrow: "Yoga With Srinatha Lineage",
           title: "Join our",
           highlight: "authentic Mysore style collective",
@@ -129,11 +129,11 @@ export const Mysore200HourAshtangaHathaData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+              "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const Mysore200HourAshtangaHathaData = {
             label: "Ashtanga Primary Series",
             desc: "Master an intelligent, creative sequence utilizing focal Drishti points, internal locks (Bandhas), and correct execution speeds.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
           {
             label: "Conscious Pranayama Control",
             desc: "Refine your vital life force via traditional Nadi Shodhan, Sithali, Ujjayi, Kapalabhati, Bhastrika, and Bramari breath sciences.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Vedanta & Meditation Labs",
             desc: "Step through Patanjali's sequencing tiers: mental purification, sensory withdrawal (Pratyahara), focal hold (Dharana), and true Dhyana meditation.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Lineage Strengths",
@@ -352,7 +352,7 @@ export const Mysore200HourAshtangaHathaData = {
             "Surrendering completely to our schedule optimizes your inner change. All classes are fully mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "06:00 AM - 07:30 AM", activity: "Traditional Hatha Yoga Practice", icon: "moon" },
@@ -404,7 +404,7 @@ export const Mysore200HourAshtangaHathaData = {
               title: "Morning Tissue Prep",
               icon: "sun",
               time: "09:00 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh assemblies designed carefully to supply clean energy fields without slowing filtration paths.",
               items: [
                 "Seasonal fresh local fruits",
@@ -418,7 +418,7 @@ export const Mysore200HourAshtangaHathaData = {
               title: "Midday Balanced Fuel",
               icon: "coffee",
               time: "02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Nutrient-dense grains paired with traditional lentils to supply comprehensive, equal energy distribution.",
               items: [
                 "Traditional Indian rice bowls",
@@ -432,7 +432,7 @@ export const Mysore200HourAshtangaHathaData = {
               title: "Twilight Metabolic Rest",
               icon: "moon",
               time: "08:00 PM",
-              img: "/images/external/general/pure-veg-restaurants-in-goa-edited-1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/pure-veg-restaurants-in-goa-edited-1.webp", // Vegetarian Sattvic Asset
               desc: "Light vegetable compositions designed to support twilight silent meditation loops safely.",
               items: [
                 "Clear organic vegetable broths",
@@ -483,7 +483,7 @@ export const Mysore200HourAshtangaHathaData = {
               tagBg: "#A0522D",
               duration: "Weekend Outing",
               icon: "globe",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Explore iconic lineage landmarks, historical palaces, and traditional centers matching your study records.",
               highlights: ["Lineage palace grounds", "Traditional craft blocks", "Ancient energy grids"],
             },
@@ -493,7 +493,7 @@ export const Mysore200HourAshtangaHathaData = {
               tagBg: "#CD853F",
               duration: "Half Day",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Visit highly dynamic regional mountain temple boundaries to ground your internal meditation blocks.",
               highlights: ["Mantra chant exposures", "Scenic hilltop lookouts", "Deep inner reflection blocks"],
             },
@@ -578,7 +578,7 @@ export const Mysore200HourAshtangaHathaData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -589,7 +589,7 @@ export const Mysore200HourAshtangaHathaData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -600,7 +600,7 @@ export const Mysore200HourAshtangaHathaData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -611,7 +611,7 @@ export const Mysore200HourAshtangaHathaData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -622,7 +622,7 @@ export const Mysore200HourAshtangaHathaData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -652,7 +652,7 @@ export const Mysore200HourAshtangaHathaData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$850",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -668,7 +668,7 @@ export const Mysore200HourAshtangaHathaData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$950",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -684,7 +684,7 @@ export const Mysore200HourAshtangaHathaData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$1,200",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -700,7 +700,7 @@ export const Mysore200HourAshtangaHathaData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$1,500",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

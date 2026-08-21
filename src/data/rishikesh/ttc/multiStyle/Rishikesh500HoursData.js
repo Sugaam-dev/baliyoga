@@ -20,7 +20,7 @@ export const Rishikesh500HoursData = {
   subtitle: "500-hour yoga teacher training in Rishikesh — 200 + 300 hours combined, RYT-500 & lifetime Himalayan mastery",
   price: PROGRAM_PRICES_RISHIKESH.multiStyle["500hr"],
   priceNote: "Includes stay, meals & RYT-500 certification",
-  bgImage: "/images/external/heroes/unsplash_photo-1506905925346-21bda4d32df4.jpg",
+  bgImage: "/images/external/heroes/unsplash_photo-1506905925346-21bda4d32df4.webp",
         buttonText: "Book Now",
           url:"/contact",
       },
@@ -36,8 +36,8 @@ export const Rishikesh500HoursData = {
   
       certificates: [
         { img: "/images/cirtificats/500.webp", label: "500 Hrs" },
-        { img: "/images/cirtificats/yoga.png", label: "Certified" },
-        { img: "/images/cirtificats/YACEP.png", label: "Yoga Alliance" }
+        { img: "/images/cirtificats/yoga.webp", label: "Certified" },
+        { img: "/images/cirtificats/YACEP.webp", label: "Yoga Alliance" }
       ],
   
       content: {
@@ -60,7 +60,7 @@ export const Rishikesh500HoursData = {
         },
     
         content: {
-         bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+         bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
     eyebrow: "Ombreathe Experience",
     title: "Join our",
     highlight: "ultimate",
@@ -101,9 +101,9 @@ export const Rishikesh500HoursData = {
       { icon: "compass", title: "Ganga Sadhna & Excursions", sub: "Classical Dance, Satsung, Silence & tours" },
     ],
     images: {
-      main: "/images/external/general/unsplash_photo-1506905925346-21bda4d32df4.jpg",
-      food: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
-      stay: "/images/external/rooms/unsplash_photo-1531761535209-180857e963b9.jpg",
+      main: "/images/external/general/unsplash_photo-1506905925346-21bda4d32df4.webp",
+      food: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.webp",
+      stay: "/images/external/rooms/unsplash_photo-1531761535209-180857e963b9.webp",
     },
         },
       }
@@ -130,19 +130,19 @@ export const Rishikesh500HoursData = {
       label: "Ashtanga Primary & Intermediate Series",
       desc: "Standing, intermediate & finishing postures — complete Ashtanga series across Month 1 foundation and Month 2 advanced",
       icon: "sun",
-      img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+      img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
     },
     {
       label: "Classical Dance, Chakras & Mantra Diksha",
       desc: "Classical Indian Dance, Ganga Beach Sadhna, Chakra study, Mantra Diksha, Satsung & Silence in Month 2",
       icon: "wind",
-      img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.jpg",
+      img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.webp",
     },
     {
       label: "Yoga Therapy, Ayurveda & Teaching Mastery",
       desc: "Yoga Therapy, Ayurveda, advanced alignment & adjustment, Bandha, Mudra & complete teaching methodology",
       icon: "feather",
-      img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+      img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
     },
   ],
   specialTitle: "Why Choose",
@@ -237,7 +237,7 @@ export const Rishikesh500HoursData = {
     title: "Daily Flow of",
     highlight: "500-Hour Training",
     subtitle: "Two months of structured daily practice — same daily schedule throughout both months. All classes mandatory.",
-    image: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+    image: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
     morning: [
       { time: "05:00 AM", activity: "Yoga Sadhana", icon: "moon" },
       { time: "06:15 AM", activity: "Pranayama & Meditation", icon: "wind" },
@@ -285,7 +285,7 @@ export const Rishikesh500HoursData = {
         title: "Breakfast",
         icon: "sun",
         time: "09:00 – 09:45",
-        img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
+        img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.webp",
         desc: "Nourishing yogic breakfast after your morning Sadhana and Hatha yoga practice.",
         items: ["Seasonal fresh fruits", "Herbal teas", "Traditional Indian dishes", "Juices & filtered water"],
       },
@@ -294,7 +294,7 @@ export const Rishikesh500HoursData = {
         title: "Lunch",
         icon: "coffee",
         time: "01:00 – 02:00",
-        img: "/images/external/general/unsplash_photo-1547592180-85f173990554.jpg",
+        img: "/images/external/general/unsplash_photo-1547592180-85f173990554.webp",
         desc: "Traditional Ayurvedic Indian vegetarian lunch — easy to digest and energizing for afternoon practice.",
         items: ["Rice & chapatti", "Lentil dal", "Seasonal vegetable dishes", "Yogic diet staples"],
       },
@@ -303,7 +303,7 @@ export const Rishikesh500HoursData = {
         title: "Dinner",
         icon: "moon",
         time: "06:00 – 07:00",
-        img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.jpg",
+        img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.webp",
         desc: "Light sattvic evening meals before Ganga beach meditation — Sundays explore local Rishikesh restaurants.",
         items: ["Lentil soups", "Vegetable dishes", "Chapatti & rice", "Herbal teas"],
       },
@@ -347,7 +347,7 @@ export const Rishikesh500HoursData = {
               tagBg: "#4A7A2A",
               duration: "Half Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1626621341517-bbf3d9990a23.jpg",
+              img: "/images/external/general/unsplash_photo-1626621341517-bbf3d9990a23.webp",
               desc: "Himalayan temple with breathtaking sunrise views over the mountains.",
               highlights: ["Sunrise views", "Himalayan temple", "Spiritual energy"],
             },
@@ -357,7 +357,7 @@ export const Rishikesh500HoursData = {
               tagBg: "#C8874A",
               duration: "Half Day",
               icon: "globe",
-              img: "/images/external/heroes/499607-yoga-background.jpg",
+              img: "/images/external/heroes/499607-yoga-background.webp",
               desc: "Historic ashram where The Beatles studied Transcendental Meditation in 1968.",
               highlights: ["Historic ashram", "Street art", "Meditation history"],
             },
@@ -367,7 +367,7 @@ export const Rishikesh500HoursData = {
               tagBg: "#1E2D0E",
               duration: "2 Hours",
               icon: "sparkles",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Famous Ganga Aarti ceremony at one of India's largest ashrams.",
               highlights: ["Ganga Aarti", "Sacred ceremony", "Ashram visit"],
             },
@@ -377,7 +377,7 @@ export const Rishikesh500HoursData = {
               tagBg: "#6A4A20",
               duration: "Half Day",
               icon: "leaf",
-              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.jpg",
+              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.webp",
               desc: "Ancient meditation cave where sage Vashishta practiced yoga.",
               highlights: ["Ancient cave", "Meditation site", "Spiritual history"],
             },
@@ -387,7 +387,7 @@ export const Rishikesh500HoursData = {
               tagBg: "#2E5018",
               duration: "Daily",
               icon: "waves",
-              img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+              img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
               desc: "Evening meditation and Kirtan on the sacred banks of the Ganges river.",
               highlights: ["Sacred Ganges", "Evening Kirtan", "Sunset meditation"],
             },
@@ -397,7 +397,7 @@ export const Rishikesh500HoursData = {
               tagBg: "#4A6A20",
               duration: "Half Day",
               icon: "book",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Study tours to different ashrams and temples in and around Rishikesh.",
               highlights: ["Ashram visits", "Temple tours", "Yogic culture"],
             },
@@ -495,7 +495,7 @@ export const Rishikesh500HoursData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -506,7 +506,7 @@ export const Rishikesh500HoursData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -517,7 +517,7 @@ export const Rishikesh500HoursData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -528,7 +528,7 @@ export const Rishikesh500HoursData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -539,7 +539,7 @@ export const Rishikesh500HoursData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -567,7 +567,7 @@ export const Rishikesh500HoursData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$2,299",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -583,7 +583,7 @@ export const Rishikesh500HoursData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$2,499",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -599,7 +599,7 @@ export const Rishikesh500HoursData = {
           tag: "Popular",
           tagBg: "#104040",
           price: "$2,899",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Twin sharing room with private bathroom, wardrobe, study desk and clean comfortable environment for 2 months.",
           features: [
             "Twin sharing",
@@ -615,7 +615,7 @@ export const Rishikesh500HoursData = {
           tag: "Upgrade",
           tagBg: "#2A9090",
           price: "$3,599",
-          img: "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+          img: "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           desc: "Private room with private bathroom, all modern amenities and peaceful Himalayan ambience for 2 months.",
           features: [
             "Private room",

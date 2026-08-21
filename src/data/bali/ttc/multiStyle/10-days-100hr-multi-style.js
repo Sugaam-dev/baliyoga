@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.multiStyle["100hr"],
       priceNote: "Includes stay, meals & certification",
       bgImage:
-        "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+        "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
       buttonText: "Book Now",
         url:"/contact",
     },
@@ -37,9 +37,9 @@ export const courseData = {
     ],
 
     certificates: [
-      { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.png", label: "100 Hrs" },
-      { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.png", label: "Certified" },
-      { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.png", label: "Yoga Alliance" },
+      { img: "https://www.ombreathe.in/static/media/200.197061cc4d2bc369826c.webp", label: "100 Hrs" },
+      { img: "https://www.ombreathe.in/static/media/yoga.562f46cb59ea00ca8753.webp", label: "Certified" },
+      { img: "https://www.ombreathe.in/static/media/YACEP.50cf2e991c78fbe3a13d.webp", label: "Yoga Alliance" },
     ],
 
     content: {
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
       eyebrow: "Bali Yoga Kendra Experience",
       title: "Join our",
       highlight: "transformative",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         food:
-          "/images/external/general/unsplash_photo-1552196563-55cd4e45efb3.jpg",
+          "/images/external/general/unsplash_photo-1552196563-55cd4e45efb3.webp",
         stay:
-          "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
+          "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.webp",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Hatha Yoga",
           desc: "Traditional postures, sun salutations, backbends & alignment fundamentals rooted in classical texts",
           icon: "sun",
-          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.jpg",
+          img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.webp",
         },
         {
           label: "Ashtanga & Vinyasa Flow",
           desc: "Dynamic fixed sequences and flowing movements connecting breath & movement for strength and focus",
           icon: "wind",
-          img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         },
         {
           label: "Pranayama & Meditation",
           desc: "Breathing practices, Shatkarma cleansing, bandhas, mudras, yoga nidra & meditation for clarity",
           icon: "feather",
-          img: "/images/external/general/morning-yoga-wallpaper-2160x1440-78799_40.jpg",
+          img: "/images/external/general/morning-yoga-wallpaper-2160x1440-78799_40.webp",
         },
       ],
       specialTitle: "Why Choose",
@@ -354,7 +354,7 @@ export const courseData = {
         "A structured daily routine designed to balance multi style practice, theory, and relaxation for complete transformation.",
 
       image:
-        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
 
       morning: [
         { time: "05:30 AM", activity: "Self Practice & Self Awareness", icon: "moon" },
@@ -409,7 +409,7 @@ export const courseData = {
           title: "Breakfast",
           icon: "sun",
           time: "09:00 – 10:00",
-          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
+          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.webp",
           desc: "Start your day with vibrant, nourishing organic sattvic foods.",
           items: [
             "Fresh tropical fruits",
@@ -423,7 +423,7 @@ export const courseData = {
           title: "Lunch",
           icon: "coffee",
           time: "01:15 – 02:15",
-          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.jpg",
+          img: "/images/external/foods/isolated-traditional-indian-thali-meal-free-photo.webp",
           desc: "Balanced organic meals to fuel your practice and energy.",
           items: [
             "Rice bowls",
@@ -437,7 +437,7 @@ export const courseData = {
           title: "Dinner",
           icon: "moon",
           time: "07:00 – 08:30",
-          img: "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.jpg",
+          img: "/images/external/general/360_F_275392381_9upAWW5Rdsa4UE0CV6gRu2CwUETjzbKy.webp",
           desc: "Light and calming evening sattvic meals for recovery.",
           items: [
             "Lentil dishes",
@@ -499,7 +499,7 @@ export const courseData = {
           tagBg: "#7BAF8A",
           duration: "Half Day",
           icon: "leaf",
-          img: "/images/external/general/unsplash_photo-1501785888041-af3ef285b470.jpg",
+          img: "/images/external/general/unsplash_photo-1501785888041-af3ef285b470.webp",
           desc: "Famous green rice terraces of Ubud.",
           highlights: ["Rice fields", "Scenic views", "Nature walk"],
         },
@@ -509,7 +509,7 @@ export const courseData = {
           tagBg: "#C8964A",
           duration: "2 Hours",
           icon: "trees",
-          img: "/images/external/general/unsplash_photo-1546182990-dffeafbe841d.jpg",
+          img: "/images/external/general/unsplash_photo-1546182990-dffeafbe841d.webp",
           desc: "Jungle sanctuary with ancient temples and monkeys.",
           highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
         },
@@ -519,7 +519,7 @@ export const courseData = {
           tagBg: "#C0444A",
           duration: "Full Day",
           icon: "mountain",
-          img: "/images/external/general/unsplash_photo-1500530855697-b586d89ba3ee.jpg",
+          img: "/images/external/general/unsplash_photo-1500530855697-b586d89ba3ee.webp",
           desc: "Sunrise volcano trek with stunning lake views.",
           highlights: ["Sunrise", "Volcano hike", "Lake view"],
         },
@@ -529,7 +529,7 @@ export const courseData = {
           tagBg: "#2E3A87",
           duration: "Half Day",
           icon: "waves",
-          img: "/images/external/general/139164.jpg",
+          img: "/images/external/general/139164.webp",
           desc: "Iconic ocean temple with breathtaking sunset views.",
           highlights: ["Ocean temple", "Sunset", "Coastal walk"],
         },
@@ -539,7 +539,7 @@ export const courseData = {
           tagBg: "#9A7D2E",
           duration: "3 Hours",
           icon: "camera",
-          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.jpg",
+          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.webp",
           desc: "Explore local markets, art galleries & Balinese culture.",
           highlights: ["Local markets", "Art & craft", "Cultural walk"],
         },
@@ -641,7 +641,7 @@ export const courseData = {
           tag: "Included",
           tagBg: "#7BAF8A",
           price: "$999",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable shared rooms with AC, private washroom and modern amenities in the heart of Ubud.",
           features: [
             "Twin sharing",
@@ -657,7 +657,7 @@ export const courseData = {
           tag: "Upgrade",
           tagBg: "#5B4FCF",
           price: "$1,299",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Private room with AC, private washroom and luxurious Balinese ambience.",
           features: [
             "Private ensuite",

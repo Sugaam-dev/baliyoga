@@ -23,7 +23,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
         price: PROGRAM_PRICES_RISHIKESH.specializations["Rishikesh2DaysAyurvedicNutritionData"],
         priceNote: "Baseline tuition rate without on-site housing and food; runs 10th-11th & 21st-22nd every month",
         bgImage:
-          "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+          "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
         buttonText: "Get Your Yoga Certification Course Today",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "Ayurvedic Diet" },
-        { img: "/images/cirtificats/yoga.png", label: "Sattvic Cooking" },
-        { img: "/images/cirtificats/yoga.png", label: "WPYS Certification" }
+        { img: "/images/cirtificats/yoga.webp", label: "Ayurvedic Diet" },
+        { img: "/images/cirtificats/yoga.webp", label: "Sattvic Cooking" },
+        { img: "/images/cirtificats/yoga.webp", label: "WPYS Certification" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
     
         content: {
           bgImage:
-            "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+            "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
           eyebrow: "Conscious Culinary Science",
           title: "Join our",
           highlight: "mindful nutrition matrix",
@@ -129,11 +129,11 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             label: "Constitutional Profiling",
             desc: "Identify individual physical baselines, tracing how lifestyle and age affect raw body templates.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           },
           {
             label: "Three Gunas Classification",
             desc: "Categorize cooking resources cleanly across traditional Sattvic, Rajasic, and Tamasic food boundaries.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Therapeutic Meal Design",
             desc: "Formulate strategic dynamic diet matrices constructed to alleviate common daily healthcare disorders.",
             icon: "feather",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
         ],
         specialTitle: "Target Profiles",
@@ -312,7 +312,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             "Every single hourly segment is utilized to build deep clarity across your operational kitchen tracks.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "06:00 AM - 07:30 AM", activity: "Holistic Hatha Yoga, Pranayama & Meditation", icon: "moon" },
@@ -364,7 +364,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
               title: "Morning Pure Micronutrients",
               icon: "sun",
               time: "09:00 AM – 10:00 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh morning fruit selections and unrefined porridge lines to ease filtration loads.",
               items: [
                 "Fresh seasonal hill fruits",
@@ -378,7 +378,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
               title: "Midday Operational Dhal",
               icon: "coffee",
               time: "01:00 PM – 02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Complete Ayurvedic plates combining seasonal green items with traditional lentils.",
               items: [
                 "Traditional Ayurvedic Khichdi",
@@ -392,7 +392,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
               title: "Twilight Digestion Rest",
               icon: "moon",
               time: "06:00 PM – 07:00 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Light vegetable compositions designed to support twilight silent meditation loops.",
               items: [
                 "Clear organic vegetable broths",
@@ -443,7 +443,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
               tagBg: "#606C38",
               duration: "Day Tracking",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1502082553048-f009c37129b9.jpg",
+              img: "/images/external/general/unsplash_photo-1502082553048-f009c37129b9.webp",
               desc: "Walk safely along the mountain forest directly behind our ashram boundary line.",
               highlights: ["Pristine mountain air", "Wild peacocks & deer sightings", "Quiet mental tracking"],
             },
@@ -453,7 +453,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
               tagBg: "#D4A373",
               duration: "200 Meters Away",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "White-sand riverbanks ideal for sitting quietly to internalize your daily training modules.",
               highlights: ["White sandy riverbanks", "Vibrating spiritual energy", "Deep emotional clearing"],
             },
@@ -544,7 +544,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -555,7 +555,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -566,7 +566,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -577,7 +577,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -588,7 +588,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -618,7 +618,7 @@ export const Rishikesh2DaysAyurvedicNutritionData = {
           tag: "Standard",
           tagBg: "#1A2456",
           price: "$150",
-          img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           desc: "Complete course access, materials, and internationally recognized certification.",
           features: [
             "Full training",

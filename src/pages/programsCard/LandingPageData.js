@@ -2,7 +2,7 @@
 import { PROGRAM_PRICES_RISHIKESH } from "../../data/rishikesh/programPricesRishikesh";
 import { PROGRAM_PRICES_MYSORE } from "../../data/mysore/programPricesMysore";
 
-import baliHero from "../../assets/images/home/bali1.jpg";
+import baliHero from "../../assets/images/home/bali1.webp";
 import rishikeshHero from "../../assets/images/home/bali2.webp";
 import mysoreHero from "../../assets/images/home/bali3.webp"; // Fallback to bali3.jpg as per WhereToTrain.jsx
 

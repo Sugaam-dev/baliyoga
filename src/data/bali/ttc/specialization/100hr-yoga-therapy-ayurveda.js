@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.specializations.Bali100HourYogaTherapyAyurvedaData,
       priceNote: "Includes 9 nights lodging, organic plant-based meals, excursions, and dual YACEP & Yoga Therapy Foundation certifications",
       bgImage:
-        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
       buttonText: "Enroll Course With Us",
       url: "/contact",
     },
@@ -37,9 +37,9 @@ export const courseData = {
     ],
 
     certificates: [
-      { img: "/images/external/general/unsplash_photo-1607004468138-e7e23ea26947.jpg", label: "YACEP Verified" },
+      { img: "/images/external/general/unsplash_photo-1607004468138-e7e23ea26947.webp", label: "YACEP Verified" },
       { img: "https://images.unsplash.com/photo-1524863380900-a1f5d95732e1?w=150&q=80", label: "Yoga Therapist" },
-      { img: "/images/external/general/unsplash_photo-1599447421416-3414500d18a5.jpg", label: "Yoga Alliance USA" },
+      { img: "/images/external/general/unsplash_photo-1599447421416-3414500d18a5.webp", label: "Yoga Alliance USA" },
     ],
 
     content: {
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+        "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
       eyebrow: "Bali Yoga Kendra",
       title: "Join our",
       highlight: "healing force in the world",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+          "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
         food:
-          "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+          "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
         stay:
-          "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+          "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Naturopathy & Elemental Healing",
           desc: "Apply direct therapeutic mud setups, water fasting protocols, hydrotherapy tricks, and heliotherapy solar alignment.",
           icon: "sparkles",
-          img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.jpg",
+          img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.webp",
         },
         {
           label: "Clinical Anatomy & Custom Flow",
           desc: "Analyze therapeutic physical anatomy, sequence disease-specific Vinyasa layouts, and maintain absolute safety parameters from injury.",
           icon: "wind",
-          img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+          img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
         },
         {
           label: "Psychotherapy & Vibrational Waves",
           desc: "Combine yogic psychology with color therapy, mindfulness stress reduction, red light setups, and deep singing bowl sound frequencies.",
           icon: "feather",
-          img: "/images/external/general/c1-e1756205578471.jpg",
+          img: "/images/external/general/c1-e1756205578471.webp",
         },
       ],
       specialTitle: "What Sets",
@@ -334,7 +334,7 @@ export const courseData = {
         "Nurture your soul and trust the process — comprehensive clinical wellness unfolds systematically within stillness.",
 
       image:
-        "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+        "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
 
       morning: [
         { time: "06:00 AM - 07:15 AM", activity: "Therapeutic Yoga Flow (Disease-Specific Loops)", icon: "moon" },
@@ -390,7 +390,7 @@ export const courseData = {
           title: "Morning Cleansing Fuel",
           icon: "sun",
           time: "09:00 AM – 10:00 AM",
-          img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+          img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
           desc: "Cell-cleansing fruit assets and dynamic detox juices structured to lighten physiological stress levels.",
           items: [
             "Organic detox raw juices",
@@ -404,7 +404,7 @@ export const courseData = {
           title: "Midday Vitality Restoration",
           icon: "coffee",
           time: "01:30 PM – 02:30 PM",
-          img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+          img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
           desc: "Hearty, high-nutrient vegetarian dishes connecting your intelligence to seasonal environmental rhythms.",
           items: [
             "Balanced plant-based creations",
@@ -418,7 +418,7 @@ export const courseData = {
           title: "Calming Restorative Supper",
           icon: "moon",
           time: "07:00 PM – 08:00 PM",
-          img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg",
+          img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp",
           desc: "Light therapeutic recipes designed to keep energy channels completely open during sleep hours.",
           items: [
             "Clear digestible plant soups",
@@ -469,7 +469,7 @@ export const courseData = {
           tagBg: "#227073",
           duration: "Half Day",
           icon: "globe",
-          img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+          img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
           desc: "Experience the sacred ancient Balinese water purification ritual to cleanly wash body, mind, and soul.",
           highlights: ["Holy water pools", "Spiritual purification", "Ancestral temple lines"],
         },
@@ -479,7 +479,7 @@ export const courseData = {
           tagBg: "#3B8E91",
           duration: "5 Min Walk",
           icon: "trees",
-          img: "/images/external/general/unsplash_photo-1502082553048-f009c37129b9.jpg",
+          img: "/images/external/general/unsplash_photo-1502082553048-f009c37129b9.webp",
           desc: "Tropical jungle sanctuary backing our school, blending wildlife encounters with spiritual temple structures.",
           highlights: ["Lush jungle tracks", "Cultural heritage sites", "Mindful forest bathing"],
         },
@@ -570,7 +570,7 @@ export const courseData = {
         reviews: 184,
         isPopular: true,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
       },
       {
         id: 2,
@@ -581,7 +581,7 @@ export const courseData = {
         reviews: 92,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
       },
       {
         id: 3,
@@ -592,7 +592,7 @@ export const courseData = {
         reviews: 210,
         isPopular: false,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
       },
       {
         id: 4,
@@ -603,7 +603,7 @@ export const courseData = {
         reviews: 145,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
       },
       {
         id: 5,
@@ -614,7 +614,7 @@ export const courseData = {
         reviews: 76,
         isPopular: true,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
       }
     ]
   }
@@ -645,7 +645,7 @@ export const courseData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$899",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -661,7 +661,7 @@ export const courseData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$1,299",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -677,7 +677,7 @@ export const courseData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$1,499",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

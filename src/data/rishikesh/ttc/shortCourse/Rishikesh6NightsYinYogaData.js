@@ -23,7 +23,7 @@ export const Rishikesh6NightsYinYogaData = {
         price: PROGRAM_PRICES_RISHIKESH.shortcourses["yinyoga"],
         priceNote: "Includes free Dehradun airport pickup, 6 nights ashram lodging, delicious vegetarian meals, and official YACEP credentials",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Rishikesh6NightsYinYogaData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/YACEP.png", label: "YACEP Continuing" },
-        { img: "/images/cirtificats/yoga.png", label: "Meridian System" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance USA" }
+        { img: "/images/cirtificats/YACEP.webp", label: "YACEP Continuing" },
+        { img: "/images/cirtificats/yoga.webp", label: "Meridian System" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance USA" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const Rishikesh6NightsYinYogaData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "The Architecture of Mindful Calmness",
           title: "Join our",
           highlight: "rejuvenating path of stillness",
@@ -129,11 +129,11 @@ export const Rishikesh6NightsYinYogaData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const Rishikesh6NightsYinYogaData = {
             label: "Yin Asana Floor Dynamics",
             desc: "Execute long-held floor postures safely, targeting archetypal setups to affect underlying connective fascia networks.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.jpg",
+            img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.webp",
           },
           {
             label: "Skeletal Compression Mastery",
             desc: "Analyze skeletal segments, identify biological variation parameters, and track compression vs tension theories.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Merdian System Mapping",
             desc: "Track traditional Chinese energy channel flows, meridian points, and nadis in relation to classical Indian Hatha elements.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Lineage Foundation",
@@ -312,7 +312,7 @@ export const Rishikesh6NightsYinYogaData = {
             "Surrendering completely to the daily schedule maximizes your transformation indicators. All regular sessions are fully mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "05:00 AM - 06:00 AM", activity: "Yoga Sadhana Practice (Self-Guided)", icon: "moon" },
@@ -366,7 +366,7 @@ export const Rishikesh6NightsYinYogaData = {
               title: "Morning Tissue Prep",
               icon: "sun",
               time: "09:00 AM – 09:45 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh morning fruit tracks and warm teas configured cleanly to keep your systems light.",
               items: [
                 "Seasonal fresh hill fruits",
@@ -380,7 +380,7 @@ export const Rishikesh6NightsYinYogaData = {
               title: "Midday Operational Dhal",
               icon: "coffee",
               time: "01:00 PM – 02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Traditional complete Indian preparations combining seasonal garden vegetables with rich lentils.",
               items: [
                 "Traditional Indian rice bowls",
@@ -394,7 +394,7 @@ export const Rishikesh6NightsYinYogaData = {
               title: "Twilight Metabolic Rest",
               icon: "moon",
               time: "06:00 PM – 07:00 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Light vegetable compositions designed to support quiet evening meditation loops.",
               items: [
                 "Clear organic vegetable broths",
@@ -445,7 +445,7 @@ export const Rishikesh6NightsYinYogaData = {
               tagBg: "#4A5A6A",
               duration: "Sunday Outing",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.jpg",
+              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.webp",
               desc: "High alpine trek offering panoramic sunset/sunrise vistas over snow peak layers.",
               highlights: ["Himalayan ranges vista", "Clean crisp mountain air", "Spiritual energy spaces"],
             },
@@ -455,7 +455,7 @@ export const Rishikesh6NightsYinYogaData = {
               tagBg: "#6E8294",
               duration: "Half Day Run",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Walk through historic stone meditation caves nested safely within jungle boundaries.",
               highlights: ["Contemplation stone pods", "Vintage graffiti art walls", "Serene eco walks"],
             },
@@ -546,7 +546,7 @@ export const Rishikesh6NightsYinYogaData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -557,7 +557,7 @@ export const Rishikesh6NightsYinYogaData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -568,7 +568,7 @@ export const Rishikesh6NightsYinYogaData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -579,7 +579,7 @@ export const Rishikesh6NightsYinYogaData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -590,7 +590,7 @@ export const Rishikesh6NightsYinYogaData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -620,7 +620,7 @@ export const Rishikesh6NightsYinYogaData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$599",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -636,7 +636,7 @@ export const Rishikesh6NightsYinYogaData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$799",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

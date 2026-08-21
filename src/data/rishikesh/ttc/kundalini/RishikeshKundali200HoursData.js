@@ -23,7 +23,7 @@ export const RishikeshKundali200HoursData = {
         price: PROGRAM_PRICES_RISHIKESH.kundalini["200hr"],
         priceNote: "Includes 24 nights room accommodation, fresh vegetarian meals, airport taxi pick-up, and RYT-200 credentials",
         bgImage:
-          "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+          "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
         buttonText: "Get Your Yoga Certification Course Today",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const RishikeshKundali200HoursData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/200.png", label: "200 Hrs Kundalini" },
-        { img: "/images/cirtificats/yoga.png", label: "Free Live Classes" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance RYT" }
+        { img: "/images/cirtificats/200.webp", label: "200 Hrs Kundalini" },
+        { img: "/images/cirtificats/yoga.webp", label: "Free Live Classes" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance RYT" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const RishikeshKundali200HoursData = {
     
         content: {
           bgImage:
-            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           eyebrow: "Ombreathe Core Lineage",
           title: "Join our",
           highlight: "passionate energy community",
@@ -129,11 +129,11 @@ export const RishikeshKundali200HoursData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.jpg",
+              "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Clear Vegetarian Sattvic Image URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Clear Vegetarian Sattvic Image URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const RishikeshKundali200HoursData = {
             label: "Muladhara & Swadhistan Base",
             desc: "Balance the physical foundation root before guiding reproductive energy away from external desire blocks.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            img: "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           },
           {
             label: "Manipura & Anahata Core",
             desc: "Ignite your personal power seat below the navel before expanding emotional balances into states of pure bliss.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Vishuddhi, Ajna & Sahasrara Highs",
             desc: "Refine throat communication paths, unlock third-eye wisdom stillness, and touch crown trance limits under absolute guide parameters.",
             icon: "feather",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
         ],
         specialTitle: "What Makes Our",
@@ -332,7 +332,7 @@ export const RishikeshKundali200HoursData = {
             "Living by the schedule teaches deep control, pushing your cognitive layers into fresh perspectives.",
     
           image:
-            "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
     
           morning: [
             { time: "05:00 AM - 06:00 AM", activity: "Kundalini Sadhana Session", icon: "moon" },
@@ -386,7 +386,7 @@ export const RishikeshKundali200HoursData = {
               title: "Morning Pure Nutrition",
               icon: "sun",
               time: "09:00 AM – 09:45 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Pure Vegetarian Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Pure Vegetarian Asset
               desc: "Light vegetable profiles and seasonal fruits that supply easy, clean energy fields.",
               items: [
                 "Fresh regional hill fruits",
@@ -400,7 +400,7 @@ export const RishikeshKundali200HoursData = {
               title: "Midday Balanced Diet",
               icon: "coffee",
               time: "01:00 PM – 02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Pure Vegetarian Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Pure Vegetarian Asset
               desc: "Traditional Indian preparations mapping cleanly to all six environmental tastes.",
               items: [
                 "Ayurvedic wellness Khichdi",
@@ -465,7 +465,7 @@ export const RishikeshKundali200HoursData = {
               tagBg: "#1E5E5A",
               duration: "Half Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.jpg",
+              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.webp",
               desc: "High alpine sunrise trek overlooking snow peak terrains and ancient regional temples.",
               highlights: ["Himalayan vistas", "Sunrise integration", "Pure clean air"],
             },
@@ -475,7 +475,7 @@ export const RishikeshKundali200HoursData = {
               tagBg: "#2C8580",
               duration: "3 Hours",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Historic stone structures and meditation caves wrapped within serene forest environments.",
               highlights: ["Contemplation caves", "Graffiti visual arts", "Eco jungle strolls"],
             },
@@ -485,7 +485,7 @@ export const RishikeshKundali200HoursData = {
               tagBg: "#C8874A",
               duration: "Evening Block",
               icon: "sparkles",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Watch beautiful devotional light ceremonies held right along the holy river steps.",
               highlights: ["Ganga Aarti seating", "Mantra vocal choruses", "Sacred river vibrations"],
             },
@@ -495,7 +495,7 @@ export const RishikeshKundali200HoursData = {
               tagBg: "#8B3A3A",
               duration: "Half Day",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Deep cave layout used across millennia for intense sensory withdrawal and quiet practices.",
               highlights: ["Absolute sound silence", "Pristine sandy beaches", "Deep internal listening"],
             },
@@ -586,7 +586,7 @@ export const RishikeshKundali200HoursData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -597,7 +597,7 @@ export const RishikeshKundali200HoursData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -608,7 +608,7 @@ export const RishikeshKundali200HoursData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -619,7 +619,7 @@ export const RishikeshKundali200HoursData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -630,7 +630,7 @@ export const RishikeshKundali200HoursData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -660,7 +660,7 @@ export const RishikeshKundali200HoursData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$999",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -676,7 +676,7 @@ export const RishikeshKundali200HoursData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$1,099",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -692,7 +692,7 @@ export const RishikeshKundali200HoursData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$1,399",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -708,7 +708,7 @@ export const RishikeshKundali200HoursData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$1,699",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

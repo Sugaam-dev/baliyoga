@@ -23,7 +23,7 @@ export const RishikeshPrenatalYogaData = {
         price: PROGRAM_PRICES_RISHIKESH.shortcourses["prenatalyoga"],
         priceNote: "Includes free Dehradun airport pickup, 5 nights stay, organic meals, Ayurveda consultation, and Yoga Alliance RPYT certification",
         bgImage:
-          "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const RishikeshPrenatalYogaData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "85 Hrs RPYT" },
-        { img: "/images/cirtificats/yoga.png", label: "Garbha Samskara" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance" }
+        { img: "/images/cirtificats/yoga.webp", label: "85 Hrs RPYT" },
+        { img: "/images/cirtificats/yoga.webp", label: "Garbha Samskara" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const RishikeshPrenatalYogaData = {
     
         content: {
           bgImage:
-            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           eyebrow: "Pioneers of Maternal Yoga Education",
           title: "Join our",
           highlight: "blissful prenatal community",
@@ -129,11 +129,11 @@ export const RishikeshPrenatalYogaData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const RishikeshPrenatalYogaData = {
             label: "Maternal Asana Mechanics",
             desc: "Execute standing, seated, and prenatal sun salutations utilizing block modifications and props safely.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.jpg",
+            img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.webp",
           },
           {
             label: "Womb Communication Labs",
             desc: "Master classical Garbha Samskara practices, visualization, pregnancy Yoga Nidra, and mantra loops for inner connection.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Labor and Postpartum Support",
             desc: "Track the physical stages of delivery, pelvic floor sequencing, behavior guides, and traditional recovery parameters.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Pillars of Integrity",
@@ -332,7 +332,7 @@ export const RishikeshPrenatalYogaData = {
             "Every single session carries real structural importance for your growth. All regular classes are fully mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "06:00 AM - 07:00 AM", activity: "Pre-Natal Modified Asana Practice", icon: "moon" },
@@ -385,7 +385,7 @@ export const RishikeshPrenatalYogaData = {
               title: "Morning Nourishment",
               icon: "sun",
               time: "09:15 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh morning fruit tracks and organic juices crafted cleanly to support early body lightness metrics.",
               items: [
                 "Seasonal fresh hill fruits",
@@ -399,7 +399,7 @@ export const RishikeshPrenatalYogaData = {
               title: "Midday Complete Dhal",
               icon: "coffee",
               time: "01:30 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Nutrient-dense grains paired with traditional lentils to supply comprehensive, balanced energy.",
               items: [
                 "Traditional Indian rice bowls",
@@ -413,7 +413,7 @@ export const RishikeshPrenatalYogaData = {
               title: "Calming Evening Supper",
               icon: "moon",
               time: "08:00 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Light, ultra-digestible properties keeping circulatory channels unburdened during night rest loops.",
               items: [
                 "Clear organic vegetable broths",
@@ -464,7 +464,7 @@ export const RishikeshPrenatalYogaData = {
               tagBg: "#7D4F4F",
               duration: "Weekend Outing",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.jpg",
+              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.webp",
               desc: "Timeless high mountain temple tour offering panoramic views over the Himalayan forest layers.",
               highlights: ["Himalayan peaks vista", "Fresh crisp air fields", "Spiritual grounding loops"],
             },
@@ -474,7 +474,7 @@ export const RishikeshPrenatalYogaData = {
               tagBg: "#A17171",
               duration: "Half Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Curated trekking journey exploring Tapovan Nilakantha cave networks safely.",
               highlights: ["Pristine mountain streams", "Ancient cave meditations", "Jungle paths exploration"],
             },
@@ -565,7 +565,7 @@ export const RishikeshPrenatalYogaData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -576,7 +576,7 @@ export const RishikeshPrenatalYogaData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -587,7 +587,7 @@ export const RishikeshPrenatalYogaData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -598,7 +598,7 @@ export const RishikeshPrenatalYogaData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -609,7 +609,7 @@ export const RishikeshPrenatalYogaData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -639,7 +639,7 @@ export const RishikeshPrenatalYogaData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$599",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -655,7 +655,7 @@ export const RishikeshPrenatalYogaData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$799",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

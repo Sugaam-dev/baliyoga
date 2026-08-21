@@ -2,12 +2,12 @@
 import { ArrowLeft, Award, Globe, Heart, Star, BookOpen, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/shared/ScrollReveal";
-import founderImg from "../../assets/images/home/ranjan_sir.jpg";
+import founderImg from "../../assets/images/home/ranjan_sir.webp";
 import baliTemple from "../../assets/images/home/bali2.webp";
-import certificate1 from "../../assets/images/certificates/certificate1.png";
-import certificate2 from "../../assets/images/certificates/certificate2.png";
-import certificate3 from "../../assets/images/certificates/certificate3.png";
-import certificate4 from "../../assets/images/certificates/certificate4.png";
+import certificate1 from "../../assets/images/certificates/certificate1.webp";
+import certificate2 from "../../assets/images/certificates/certificate2.webp";
+import certificate3 from "../../assets/images/certificates/certificate3.webp";
+import certificate4 from "../../assets/images/certificates/certificate4.webp";
 
 const credentials = [
   "E-RYT 500 — Yoga Alliance Registered Senior Teacher",

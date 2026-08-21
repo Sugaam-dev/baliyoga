@@ -21,7 +21,7 @@ export const Rishikesh15DaysYogaRetreatData = {
         price: "$599",
         priceNote: "Shared Double Luxury Room package rate ($749 single private room space limited time offer); includes free Dehradun airport pickup, welcome kit, daily excursions, art therapy sessions, and official retreat participation validation.",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -36,9 +36,9 @@ export const Rishikesh15DaysYogaRetreatData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "15 Days Retreat" },
-        { img: "/images/cirtificats/yoga.png", label: "Multi-Style Yoga" },
-        { img: "/images/cirtificats/yoga.png", label: "Ombreathe Validation" }
+        { img: "/images/cirtificats/yoga.webp", label: "15 Days Retreat" },
+        { img: "/images/cirtificats/yoga.webp", label: "Multi-Style Yoga" },
+        { img: "/images/cirtificats/yoga.webp", label: "Ombreathe Validation" }
       ],
   
       content: {
@@ -63,7 +63,7 @@ export const Rishikesh15DaysYogaRetreatData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe Sanctuary",
           title: "Welcome to a",
           highlight: "sanctuary for holistic well-being",
@@ -127,11 +127,11 @@ export const Rishikesh15DaysYogaRetreatData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -159,19 +159,19 @@ export const Rishikesh15DaysYogaRetreatData = {
             label: "Multi-Style Posture Labs",
             desc: "Master dynamic sequences spanning classical Hatha alignment, fluid Ashtanga flows, and precise Iyengar prop metrics.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
           },
           {
             label: "Guided Introspection States",
             desc: "Engage in systematic morning and evening meditation blocks to foster profound mindfulness and mental quietude.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Alternative Healing Integration",
             desc: "Unlock inner blocks via dedicated vibrational sound healing systems and expressive art therapy practical blocks.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Retreat Pillars",
@@ -298,7 +298,7 @@ export const Rishikesh15DaysYogaRetreatData = {
             "Living appropriately according to the timetable teaches intense mental mastery. Every class is completely mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "Day 1", activity: "Arrival, Ashram Check-in and General Orientation Ceremony", icon: "sun" },
@@ -347,7 +347,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               title: "Morning Vitality Cleanse",
               icon: "sun",
               time: "Morning Slot",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
               desc: "Organic breakfast items designed cleanly to eliminate internal pollutants and maximize physical stamina parameters.",
               items: [
                 "Fresh seasonal hill fruits",
@@ -360,7 +360,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               title: "Tasty Traditional Midday Meal",
               icon: "coffee",
               time: "Noon Slot",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
               desc: "Tasty traditional Indian meals cooked completely vegetarian using local, organic ingredients to optimize digestion indexes.",
               items: [
                 "Traditional Indian lentils & beans",
@@ -373,7 +373,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               title: "Ultra-Digestible Rest Supper",
               icon: "moon",
               time: "Evening Slot",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg",
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp",
               desc: "Light vegetarian selections compiled to settle your body systems prior to evening sound healing practices.",
               items: [
                 "Clear organic vegetable broths",
@@ -421,7 +421,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               tagBg: "#1E5154",
               duration: "Included Excursion",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Explore historic, serene mountain pathways and quiet forest paths to ground your sensory tracking layers.",
               highlights: ["Pristine mountain vistas", "Clean fresh alpine air flows", "Mindful outdoor walking"],
             },
@@ -431,7 +431,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               tagBg: "#367B80",
               duration: "Curated Event",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Navigate the thrilling currents of the holy river Ganges, introducing an energetic balance into your stillness.",
               highlights: ["River current navigation", "High-vibration water flow", "Exciting group alignment"],
             },
@@ -441,7 +441,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               tagBg: "#C8874A",
               duration: "Short Foot Walk",
               icon: "sparkles",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Immerse yourself within the nearby local markets just a 3 to 5-minute walk from our main school gates.",
               highlights: ["Local herbal suppliers", "Traditional tea counters", "Spiritual book arrays"],
             },
@@ -532,7 +532,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               reviews: 184,
               isPopular: true,
               isPaid: false,
-              image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+              image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
             },
             {
               id: 2,
@@ -543,7 +543,7 @@ export const Rishikesh15DaysYogaRetreatData = {
               reviews: 98,
               isPopular: false,
               isPaid: false,
-              image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+              image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
             },
           ]
         }
@@ -573,7 +573,7 @@ export const Rishikesh15DaysYogaRetreatData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$599",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -589,7 +589,7 @@ export const Rishikesh15DaysYogaRetreatData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$799",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

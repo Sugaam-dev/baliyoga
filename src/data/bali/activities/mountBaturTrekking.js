@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/mount_batur.jpg";
+import imgLocal from "../../../assets/images/activities/mount_batur.webp";
 
 const mountBaturTrekking = {
   slug: "mount-batur-trekking",

@@ -21,7 +21,7 @@ export const Rishikesh200HoursData = {
   price: PROGRAM_PRICES_RISHIKESH.multiStyle["200hr"],
         priceNote: "Includes stay, meals & certification",
         bgImage:
-          "/images/external/general/329294-magnificent-yoga-wallpaper-ralph-smart-infinite-waters-diving-deep.jpg",
+          "/images/external/general/329294-magnificent-yoga-wallpaper-ralph-smart-infinite-waters-diving-deep.webp",
         buttonText: "Book Now",
           url:"/contact",
       },
@@ -36,9 +36,9 @@ export const Rishikesh200HoursData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/200.png", label: "200 Hrs" },
-        { img: "/images/cirtificats/yoga.png", label: "Certified" },
-        { img: "/images/cirtificats/YACEP.png", label: "Yoga Alliance" }
+        { img: "/images/cirtificats/200.webp", label: "200 Hrs" },
+        { img: "/images/cirtificats/yoga.webp", label: "Certified" },
+        { img: "/images/cirtificats/YACEP.webp", label: "Yoga Alliance" }
       ],
   
       content: {
@@ -63,7 +63,7 @@ export const Rishikesh200HoursData = {
     
         content: {
           bgImage:
-            "/images/external/general/329294-magnificent-yoga-wallpaper-ralph-smart-infinite-waters-diving-deep.jpg",
+            "/images/external/general/329294-magnificent-yoga-wallpaper-ralph-smart-infinite-waters-diving-deep.webp",
       eyebrow: "Ombreathe Experience",
     title: "Join our",
     highlight: "transformative",
@@ -126,11 +126,11 @@ export const Rishikesh200HoursData = {
           ],
           images: {
             main:
-              "/images/external/heroes/499607-yoga-background.jpg",
+              "/images/external/heroes/499607-yoga-background.webp",
             food:
-              "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+              "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
             stay:
-              "/images/external/general/unsplash_photo-1626621341517-bbf3d9990a23.jpg",
+              "/images/external/general/unsplash_photo-1626621341517-bbf3d9990a23.webp",
           },
         },
       }
@@ -158,19 +158,19 @@ export const Rishikesh200HoursData = {
             label: "Hatha & Ashtanga Yoga",
             desc: "200+ postures — traditional Hatha yoga and Ashtanga practice with deep alignment and adjustment",
             icon: "sun",
-            img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.jpg",
+            img: "/images/external/heroes/yoga-background-2rmnmb16t7q2lj98.webp",
           },
           {
             label: "Pranayama & Meditation",
             desc: "Yoga Sadhana, breathing techniques, Yoga Nidra, Bandha, Mudra & evening Ganga beach meditation",
             icon: "wind",
-            img: "/images/external/general/unsplash_photo-1593811167562-9cef47bfc4d7.jpg",
+            img: "/images/external/general/unsplash_photo-1593811167562-9cef47bfc4d7.webp",
           },
           {
             label: "Philosophy & Teaching",
             desc: "Mantra chanting, yoga philosophy, anatomy, alignment & teaching methodology from Himalayan masters",
             icon: "feather",
-            img: "/images/external/rooms/unsplash_photo-1604881991720-f91add269bed.jpg",
+            img: "/images/external/rooms/unsplash_photo-1604881991720-f91add269bed.webp",
           },
         ],
         specialTitle: "Why Choose",
@@ -343,7 +343,7 @@ export const Rishikesh200HoursData = {
           subtitle: "A structured daily routine from early morning Yoga Sadhana to evening Ganga beach meditation — all classes are mandatory.",
     
           image:
-            "/images/external/heroes/499607-yoga-background.jpg",
+            "/images/external/heroes/499607-yoga-background.webp",
     
           morning: [
             { time: "05:00 AM", activity: "Yoga Sadhana", icon: "moon" },
@@ -397,7 +397,7 @@ export const Rishikesh200HoursData = {
               title: "Breakfast",
               icon: "sun",
               time: "09:00 – 09:45",
-              img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.jpg",
+              img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.webp",
               desc: "Nourishing yogic breakfast after your morning Sadhana and Hatha yoga practice.",
               items: [
                 "Seasonal fresh fruits",
@@ -411,7 +411,7 @@ export const Rishikesh200HoursData = {
               title: "Lunch",
               icon: "coffee",
               time: "01:00 – 02:00",
-              img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+              img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
               desc: "Traditional Ayurvedic Indian vegetarian lunch — easy to digest and energizing.",
               items: [
                 "Rice & chapatti",
@@ -425,7 +425,7 @@ export const Rishikesh200HoursData = {
               title: "Dinner",
               icon: "moon",
               time: "06:00 – 07:00",
-              img: "/images/external/general/unsplash_photo-1547592180-85f173990554.jpg",
+              img: "/images/external/general/unsplash_photo-1547592180-85f173990554.webp",
               desc: "Light sattvic evening meals before Ganga beach meditation — Sundays explore local Rishikesh restaurants.",
               items: [
                 "Lentil soups",
@@ -477,7 +477,7 @@ export const Rishikesh200HoursData = {
               tagBg: "#4A7A2A",
               duration: "Half Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1626621341517-bbf3d9990a23.jpg",
+              img: "/images/external/general/unsplash_photo-1626621341517-bbf3d9990a23.webp",
               desc: "Himalayan temple with breathtaking sunrise views over the mountains.",
               highlights: ["Sunrise views", "Himalayan temple", "Spiritual energy"],
             },
@@ -487,7 +487,7 @@ export const Rishikesh200HoursData = {
               tagBg: "#C8874A",
               duration: "Half Day",
               icon: "globe",
-              img: "/images/external/heroes/499607-yoga-background.jpg",
+              img: "/images/external/heroes/499607-yoga-background.webp",
               desc: "Historic ashram where The Beatles studied Transcendental Meditation in 1968.",
               highlights: ["Historic ashram", "Street art", "Meditation history"],
             },
@@ -497,7 +497,7 @@ export const Rishikesh200HoursData = {
               tagBg: "#1E2D0E",
               duration: "2 Hours",
               icon: "sparkles",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Famous Ganga Aarti ceremony at one of India's largest ashrams.",
               highlights: ["Ganga Aarti", "Sacred ceremony", "Ashram visit"],
             },
@@ -507,7 +507,7 @@ export const Rishikesh200HoursData = {
               tagBg: "#6A4A20",
               duration: "Half Day",
               icon: "leaf",
-              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.jpg",
+              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.webp",
               desc: "Ancient meditation cave where sage Vashishta practiced yoga.",
               highlights: ["Ancient cave", "Meditation site", "Spiritual history"],
             },
@@ -517,7 +517,7 @@ export const Rishikesh200HoursData = {
               tagBg: "#2E5018",
               duration: "Daily",
               icon: "waves",
-              img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+              img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
               desc: "Evening meditation and Kirtan on the sacred banks of the Ganges river.",
               highlights: ["Sacred Ganges", "Evening Kirtan", "Sunset meditation"],
             },
@@ -527,7 +527,7 @@ export const Rishikesh200HoursData = {
               tagBg: "#4A6A20",
               duration: "Half Day",
               icon: "book",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Study tours to different ashrams and temples in and around Rishikesh.",
               highlights: ["Ashram visits", "Temple tours", "Yogic culture"],
             },
@@ -625,7 +625,7 @@ export const Rishikesh200HoursData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -636,7 +636,7 @@ export const Rishikesh200HoursData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -647,7 +647,7 @@ export const Rishikesh200HoursData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -658,7 +658,7 @@ export const Rishikesh200HoursData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -669,7 +669,7 @@ export const Rishikesh200HoursData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -698,7 +698,7 @@ export const Rishikesh200HoursData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$999",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -714,7 +714,7 @@ export const Rishikesh200HoursData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$1,099",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -730,7 +730,7 @@ export const Rishikesh200HoursData = {
           tag: "Popular",
           tagBg: "#2E5018",
           price: "$1,399",
-          img: "/images/external/general/unsplash_photo-1631049307264-da0ec9d70304.jpg",
+          img: "/images/external/general/unsplash_photo-1631049307264-da0ec9d70304.webp",
           desc: "Twin sharing room with private bathroom, wardrobe, study desk and clean comfortable environment.",
           features: [
             "Twin sharing",
@@ -746,7 +746,7 @@ export const Rishikesh200HoursData = {
           tag: "Upgrade",
           tagBg: "#C8874A",
           price: "$1,699",
-          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.jpg",
+          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.webp",
           desc: "Private room with private bathroom, all modern amenities and peaceful Himalayan ambience.",
           features: [
             "Private room",

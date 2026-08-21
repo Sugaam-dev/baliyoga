@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/gwk_cultural_park.jpg";
+import imgLocal from "../../../assets/images/activities/gwk_cultural_park.webp";
 
 const gwkCulturalPark = {
   slug: "gwk-cultural-park",

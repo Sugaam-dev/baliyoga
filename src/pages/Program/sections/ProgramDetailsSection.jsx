@@ -132,7 +132,7 @@ export default function ProgramDetailsSection({ curriculumData, scheduleData }) 
               {/* Left sidebar info or image */}
               <div className="lg:col-span-5 rounded-3xl overflow-hidden shadow-md relative min-h-[250px] lg:h-auto">
                 <img 
-                  src={schedule.image || "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg"} 
+                  src={schedule.image || "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp"} 
                   alt="Daily Schedule" 
                   className="absolute inset-0 w-full h-full object-cover"
                 />

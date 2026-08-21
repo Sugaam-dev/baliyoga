@@ -1,5 +1,5 @@
 import React from "react";
-import guideImg from "../../assets/mountain.jpg";
+import guideImg from "../../assets/mountain.webp";
 
 const DestinationComparisonGuide = () => {
   return (

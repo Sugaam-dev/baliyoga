@@ -23,7 +23,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
         price: PROGRAM_PRICES_RISHIKESH.specializations["Rishikesh18DaysYogaTherapyWellnessData"],
         priceNote: "Shared room baseline rate ($1499 for private rooms); covers 18 days residential lodging, free Dehradun airport pickup, meals, and global RYT-200 registry credentials",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/200.png", label: "200 Hr Therapy" },
-        { img: "/images/cirtificats/yoga.png", label: "Naturopathy Core" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance RYT" }
+        { img: "/images/cirtificats/200.webp", label: "200 Hr Therapy" },
+        { img: "/images/cirtificats/yoga.webp", label: "Naturopathy Core" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance RYT" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe",
           title: "Begin your",
           highlight: "holistic clinical journey",
@@ -129,11 +129,11 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             label: "Yoga Therapy & Flow",
             desc: "Sequence disease-specific Hatha and Vinyasa layouts, integrate pranayama controls, and use alignment tips for structural poses.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
           },
           {
             label: "Elemental Naturopathy Labs",
             desc: "Master hands-on mud application, water fasting hydrotherapy steps, dry body friction, and fasting-based biological detoxes.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Vedic & Sound Healing",
             desc: "Perform sacred fire rituals (Yajna), mantra vocal repetitions, mindfulness stress reduction, and singing bowl sound wave integrations.",
             icon: "feather",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
         ],
         specialTitle: "Campus Features",
@@ -332,7 +332,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             "Living properly by surrendering to the whole program creates a great chance for permanent personal change.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "05:00 AM", activity: "Yoga Sadhana Practice Base", icon: "moon" },
@@ -387,7 +387,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
               title: "Morning Tissue Repair",
               icon: "sun",
               time: "09:00 AM – 10:00 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh, light morning fruit assemblies and organic juices crafted to ease metabolic filtration loads.",
               items: [
                 "Seasonal fresh hill fruits",
@@ -401,7 +401,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
               title: "Midday Dosha Balancing",
               icon: "coffee",
               time: "01:00 PM – 02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Nutrient-dense grains paired with traditional lentils to supply equal energy distribution parameters.",
               items: [
                 "Traditional Ayurvedic Khichdi pots",
@@ -415,7 +415,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
               title: "Twilight Metabolic Rest",
               icon: "moon",
               time: "06:45 PM – 07:30 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Light, ultra-digestible properties keeping cognitive and circulatory channels unburdened during night rest.",
               items: [
                 "Clear organic vegetable broths",
@@ -467,7 +467,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
               tagBg: "#2C3E50",
               duration: "Weekend Outing",
               icon: "globe",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Visit powerful historical temples and regional ashrams to absorb timeless spiritual connotations.",
               highlights: ["Vedic chant exposure", "Ancient architectural view", "Spiritual energy zones"],
             },
@@ -477,7 +477,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
               tagBg: "#34495E",
               duration: "River Excursion",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Spend quiet time on pristine white sand riverbanks, reducing stress naturally in both body and mind.",
               highlights: ["White sand river beach", "Himalayan breeze breathing", "Absolute mental resting"],
             },
@@ -568,7 +568,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -579,7 +579,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -590,7 +590,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -601,7 +601,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -612,7 +612,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -642,7 +642,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$1,099",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -658,7 +658,7 @@ export const Rishikesh18DaysYogaTherapyWellnessData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$1,399",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

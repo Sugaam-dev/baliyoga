@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/west_nusa_penida.jpg";
+import imgLocal from "../../../assets/images/activities/west_nusa_penida.webp";
 
 const westNusaPenida = {
   slug: "west-nusa-penida",

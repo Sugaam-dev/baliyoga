@@ -23,7 +23,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
         price: PROGRAM_PRICES_RISHIKESH.specializations["Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData"],
         priceNote: "Shared room configuration baseline rate ($1999 for private deluxe singles); includes 24 nights stay, all meals, and official dual certifications",
         bgImage:
-          "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+          "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
         buttonText: "Enroll Course With Us",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/200.png", label: "200 Hr Instructor" },
-        { img: "/images/cirtificats/yoga.png", label: "Ayurveda Massage" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance RYT" }
+        { img: "/images/cirtificats/200.webp", label: "200 Hr Instructor" },
+        { img: "/images/cirtificats/yoga.webp", label: "Ayurveda Massage" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance RYT" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
     
         content: {
           bgImage:
-            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           eyebrow: "Conscious Self-Mastery Architecture",
           title: "Join our",
           highlight: "vibrational alignment fusion",
@@ -129,11 +129,11 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+              "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             label: "Multistyle Posture Systems",
             desc: "Master classical foundations across alignment-based Hatha, intelligent Vinyasa flows, and rigorous Ashtanga tracking.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
           {
             label: "Kundalini Prana Activation",
             desc: "Execute precise kriya paths, breath control systems, and specific mantra chanting sequences to safely awake dormant pranic powers.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Ayurvedic Massage Application",
             desc: "Acquire full proficiency in classical Abhyangam procedure protocols, using magical healing oils across marma acupressure lines.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Lineage Security",
@@ -312,7 +312,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             "Living properly within our ashram format yields deep clarity index shifts. All regular classes are fully mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "05:00 AM - 06:00 AM", activity: "Kundalini Sadhana Energy Inception", icon: "moon" },
@@ -366,7 +366,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
               title: "Morning Vitality Block",
               icon: "sun",
               time: "09:00 AM – 09:45 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Clean unprocessed morning matrices delivering light energy fields without slowing filtration paths.",
               items: [
                 "Seasonal fresh hill fruits",
@@ -380,7 +380,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
               title: "Midday Balanced Dhal",
               icon: "coffee",
               time: "01:00 PM – 02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Nutrient-dense grains paired with traditional lentils to supply comprehensive, balanced energy.",
               items: [
                 "Traditional Indian rice bowls",
@@ -394,7 +394,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
               title: "Twilight Metabolic Rest",
               icon: "moon",
               time: "06:00 PM – 07:00 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Light vegetable compositions designed to support twilight silent meditation loops safely.",
               items: [
                 "Clear organic vegetable broths",
@@ -446,7 +446,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
               tagBg: "#3E504B",
               duration: "Evening Block",
               icon: "globe",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Participate in breathtaking twilight light rituals and corporate kirtan chanting on the holy river steps.",
               highlights: ["Mantra chanting loops", "Vibrational alignments", "River beach seating"],
             },
@@ -456,7 +456,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
               tagBg: "#5A736C",
               duration: "3 Hours Outing",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Walk across ancient walking sectors lined with local textbook counters and gemstone marketplace vendors.",
               highlights: ["Artisan counters walk", "Spiritual local atmosphere", "Historic bridge paths"],
             },
@@ -466,7 +466,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
               tagBg: "#C8874A",
               duration: "Half Day Run",
               icon: "sparkles",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Step directly inside high-vibration quiet settings optimized for deep silent contemplation.",
               highlights: ["Absolute sensory silence", "Deep lineage traces", "Pure internal listening"],
             },
@@ -557,7 +557,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -568,7 +568,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -579,7 +579,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -590,7 +590,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -601,7 +601,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -631,7 +631,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$1,199",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -647,7 +647,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$1,399",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -663,7 +663,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$1,599",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -679,7 +679,7 @@ export const Rishikesh200HourMultiStyleKundaliniAyurvedaMassageData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$1,999",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

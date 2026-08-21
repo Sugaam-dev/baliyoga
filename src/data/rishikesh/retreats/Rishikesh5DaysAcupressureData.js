@@ -21,7 +21,7 @@ export const Rishikesh5DaysAcupressureData = {
         price: "$500",
         priceNote: "Shared room configuration base rate ($650 for private room single spaces). Tiers adjust depending on scheduled monthly calendar selections; includes complete practical training manuals and authorized course certification metrics.",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -36,9 +36,9 @@ export const Rishikesh5DaysAcupressureData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "Acupressurist" },
-        { img: "/images/cirtificats/yoga.png", label: "Acupressure Therapy" },
-        { img: "/images/cirtificats/yoga.png", label: "Ombreathe Certified" }
+        { img: "/images/cirtificats/yoga.webp", label: "Acupressurist" },
+        { img: "/images/cirtificats/yoga.webp", label: "Acupressure Therapy" },
+        { img: "/images/cirtificats/yoga.webp", label: "Ombreathe Certified" }
       ],
   
       content: {
@@ -63,7 +63,7 @@ export const Rishikesh5DaysAcupressureData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe",
           title: "Join our",
           highlight: "journey of conscious touch",
@@ -127,11 +127,11 @@ export const Rishikesh5DaysAcupressureData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -159,19 +159,19 @@ export const Rishikesh5DaysAcupressureData = {
             label: "Meridian Flow Integration",
             desc: "Understand major meridian pathways and the flow of energy (Qi or Prana) across the physical framework.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
           },
           {
             label: "Yin-Yang Balance Systems",
             desc: "Regulate bodily systems, alleviate fatigue, and master general internal regulation through targeted pressure sets.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Symptomatic Point Application",
             desc: "Apply thumbs, fingers, and palms directly to specific nodes to trigger autonomous relaxation and pain management.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Holistic Core Benefits",
@@ -319,7 +319,7 @@ export const Rishikesh5DaysAcupressureData = {
             "Living appropriately according to the timetable teaches intense mental mastery. Full participation ensures technical precision.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "Morning Slot", activity: "Yoga, Meditative Pranayama, and Deep Meditation Block", icon: "sun" },
@@ -365,7 +365,7 @@ export const Rishikesh5DaysAcupressureData = {
               title: "Morning Vitality Block",
               icon: "sun",
               time: "08:00 AM – 09:00 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
               desc: "Fresh seasonal fruits, porridges, and warm infusion teas configured carefully to boost physical stamina indices.",
               items: [
                 "Fresh seasonal hill fruits",
@@ -378,7 +378,7 @@ export const Rishikesh5DaysAcupressureData = {
               title: "Mindful Midday Assembly",
               icon: "coffee",
               time: "12:00 PM – 01:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
               desc: "Complete Ayurvedic plates combining lentils, dense grains, and green vegetables to flourish naturally.",
               items: [
                 "Traditional Indian lentils & beans",
@@ -391,7 +391,7 @@ export const Rishikesh5DaysAcupressureData = {
               title: "Ultra-Digestible Reset Supper",
               icon: "moon",
               time: "06:30 PM – 07:30 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg",
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp",
               desc: "Light selections designed to settle the biological system before evening deep relaxation practices.",
               items: [
                 "Clear organic vegetable broths",
@@ -439,7 +439,7 @@ export const Rishikesh5DaysAcupressureData = {
               tagBg: "#1E5154",
               duration: "Included Trip",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Experience high-vibration devotional fire rituals and traditional singing metrics along the sacred riverbanks.",
               highlights: ["Absolute sound silence elements", "Riverside kirtan metrics", "Ancestral energy fields"],
             },
@@ -449,7 +449,7 @@ export const Rishikesh5DaysAcupressureData = {
               tagBg: "#367B80",
               duration: "Curated Path",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Walk across historic suspension bridge settings encased carefully by mountain wilderness structures.",
               highlights: ["Panoramic hill view lines", "Traditional tea houses", "Pristine walking routes"],
             },
@@ -459,7 +459,7 @@ export const Rishikesh5DaysAcupressureData = {
               tagBg: "#C8874A",
               duration: "Silent Excursion",
               icon: "sparkles",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Practice interior observation paths within historical spaces dedicated entirely to unbothered reflection fields.",
               highlights: ["Sensory withdrawal setups", "Deep emotional clearing", "Himalayan energy alignments"],
             },
@@ -544,7 +544,7 @@ export const Rishikesh5DaysAcupressureData = {
               reviews: 120,
               isPopular: true,
               isPaid: false,
-              image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+              image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
             },
           ]
         }
@@ -574,7 +574,7 @@ export const Rishikesh5DaysAcupressureData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$500",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -590,7 +590,7 @@ export const Rishikesh5DaysAcupressureData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$700",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

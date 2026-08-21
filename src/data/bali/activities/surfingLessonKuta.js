@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/surfing_lesson.jpg";
+import imgLocal from "../../../assets/images/activities/surfing_lesson.webp";
 
 const surfingLessonKuta = {
   slug: "surfing-lesson-kuta",

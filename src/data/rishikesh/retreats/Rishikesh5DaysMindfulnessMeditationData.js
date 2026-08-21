@@ -21,7 +21,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
         price: "$650",
         priceNote: "Shared room configuration rate ($799 for private room single spaces); includes free Dehradun airport pickup and dual online-offline curriculum accessibility",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -36,9 +36,9 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "50 Hrs Master" },
-        { img: "/images/cirtificats/yoga.png", label: "Mindfulness Coach" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance USA" }
+        { img: "/images/cirtificats/yoga.webp", label: "50 Hrs Master" },
+        { img: "/images/cirtificats/yoga.webp", label: "Mindfulness Coach" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance USA" }
       ],
   
       content: {
@@ -63,7 +63,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe",
           title: "Join our",
           highlight: "journey of timeless awareness",
@@ -127,11 +127,11 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -159,19 +159,19 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             label: "6 Lineages Integration",
             desc: "Practice direct, highly precise modules derived from traditional Himalayan, Kriya Yoga, Transcendental, Vipassana, Kundalini, and Tantra frameworks.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
           },
           {
             label: "Active vs Passive Systems",
             desc: "Balance dynamic physical movements, meditative posture labs, and breath controls with passive silent reflection states.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Therapeutic Health Applications",
             desc: "Apply advanced mindfulness tools as targeted remedies for holistic healing, deep nervous system reset, and sleep regulation.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Lineage Sources",
@@ -320,7 +320,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             "Living appropriately according to the timetable teaches intense mental mastery. Every class is completely mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "03:00 AM", activity: "Wake-Up Block and Personal Daily Ashram Rituals", icon: "moon" },
@@ -381,7 +381,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
               title: "Morning Tissue Repair",
               icon: "sun",
               time: "08:00 AM – 09:00 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh morning fruits, detox juices, and warm teas configured carefully to boost physical stamina indices.",
               items: [
                 "Fresh seasonal hill fruits",
@@ -395,7 +395,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
               title: "Mindful Eating Midday Block",
               icon: "coffee",
               time: "12:00 PM – 01:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Complete Ayurvedic plates combining all essential five elements and six flavors to flourish naturally.",
               items: [
                 "Traditional Indian lentils & beans",
@@ -409,7 +409,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
               title: "Mindful Supper Rest",
               icon: "moon",
               time: "06:30 PM – 07:30 PM",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
               desc: "Ultra-digestible light selections designed to settle the biological system before evening prayers.",
               items: [
                 "Clear organic vegetable broths",
@@ -461,7 +461,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
               tagBg: "#1E5154",
               duration: "Included Trip",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Step directly inside high-vibration mountain chambers used across thousands of years for sensory isolation.",
               highlights: ["Absolute sound silence", "Pure lineage charges", "Pristine white sand riverbanks"],
             },
@@ -471,7 +471,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
               tagBg: "#367B80",
               duration: "Curated Path",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Practice silent observation paths within historical spaces dedicated entirely to unbothered reflection fields.",
               highlights: ["Sensory withdrawal setups", "Deep emotional clearing", "Himalayan energy alignments"],
             },
@@ -481,7 +481,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
               tagBg: "#C8874A",
               duration: "Brahma Muhurta Snan",
               icon: "sparkles",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Perform morning sound cleansing rituals and twilight mantra chanting along the white sand steps.",
               highlights: ["Ganga Snan bath options", "Riverside kirtan metrics", "Timeless ancestral energy fields"],
             },
@@ -572,7 +572,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -583,7 +583,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -594,7 +594,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -605,7 +605,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -616,7 +616,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -646,7 +646,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$650",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -662,7 +662,7 @@ export const Rishikesh5DaysMindfulnessMeditationData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$850",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

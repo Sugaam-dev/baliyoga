@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/uluwatu_kecak.jpg";
+import imgLocal from "../../../assets/images/activities/uluwatu_kecak.webp";
 
 const uluwatuKecakDance = {
   slug: "uluwatu-kecak-dance",

@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/monkey_forest.jpg";
+import imgLocal from "../../../assets/images/activities/monkey_forest.webp";
 
 const monkeyForestUbud = {
   slug: "monkey-forest-ubud",

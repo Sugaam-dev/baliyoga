@@ -5,9 +5,9 @@ import { getIcon } from "./icons";
 import MobileCarousel from "../../../components/shared/MobileCarousel";
 
 // Food Images
-import breakFastImg from "../../../assets/foods/breakFast.jpg";
-import lunchImg from "../../../assets/foods/lunch.jpg";
-import dinnerImg from "../../../assets/foods/dinner.jpg";
+import breakFastImg from "../../../assets/foods/breakFast.webp";
+import lunchImg from "../../../assets/foods/lunch.webp";
+import dinnerImg from "../../../assets/foods/dinner.webp";
 
 const getMealImage = (title, fallbackImg, isBali) => {
   if (!isBali || !title) return fallbackImg;

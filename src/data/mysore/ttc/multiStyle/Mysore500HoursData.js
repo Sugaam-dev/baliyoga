@@ -23,7 +23,7 @@ export const Mysore500HoursData = {
         price: PROGRAM_PRICES_MYSORE.multiStyle["500hr"],
         priceNote: "Shared room configuration baseline rate ($1900 without food and accommodation options); master level certified under Yoga Alliance standards",
         bgImage:
-          "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+          "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
         buttonText: "BOOK NOW",
         url: "/contact",
       },
@@ -38,9 +38,9 @@ export const Mysore500HoursData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "Master RYT 500" },
-        { img: "/images/cirtificats/yoga.png", label: "Complete Series" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance USA" }
+        { img: "/images/cirtificats/yoga.webp", label: "Master RYT 500" },
+        { img: "/images/cirtificats/yoga.webp", label: "Complete Series" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance USA" }
       ],
   
       content: {
@@ -66,7 +66,7 @@ export const Mysore500HoursData = {
     
         content: {
           bgImage:
-            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+            "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
           eyebrow: "Master Level Training Hub",
           title: "Join our",
           highlight: "traditional Yognagari lineage",
@@ -130,11 +130,11 @@ export const Mysore500HoursData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -162,19 +162,19 @@ export const Mysore500HoursData = {
             label: "Ashtanga Full Series Loop",
             desc: "Master primary to intermediate series layouts developed by K. Pattabhi Jois, including sun salutations A/B, standing, seated, and finishing tracks.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.jpg",
+            img: "/images/external/general/unsplash_photo-1517838277536-f5f99be501cd.webp",
           },
           {
             label: "Conscious Energy Pacing",
             desc: "Gain absolute control over your inner life force, practicing advanced breathing scripts to distribute prana to every part of your brain structure.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Profound Philosophy Integration",
             desc: "Decode ancient Vedanta scriptures, nadis, and chakra theories alongside deep analytical checks of Patanjali's Yoga Sutras.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Lineage Strengths",
@@ -353,7 +353,7 @@ export const Mysore500HoursData = {
             "Every class contains real properties layer importance to help you grow organically. Complete attendance remains required.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "06:00 AM - 07:30 AM", activity: "Traditional Hatha Yoga Practice Session", icon: "moon" },
@@ -405,7 +405,7 @@ export const Mysore500HoursData = {
               title: "Morning Tissue Prep",
               icon: "sun",
               time: "09:00 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
               desc: "Fresh assemblies designed carefully to supply clean energy fields without slowing filtration paths.",
               items: [
                 "Seasonal fresh local fruits",
@@ -419,7 +419,7 @@ export const Mysore500HoursData = {
               title: "Midday Balanced Fuel",
               icon: "coffee",
               time: "02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
               desc: "Nutrient-dense grains paired with traditional lentils to supply comprehensive, equal energy distribution.",
               items: [
                 "Traditional Indian rice bowls",
@@ -433,7 +433,7 @@ export const Mysore500HoursData = {
               title: "Twilight Metabolic Rest",
               icon: "moon",
               time: "08:00 PM",
-              img: "/images/external/general/pure-veg-restaurants-in-goa-edited-1.jpg", // Vegetarian Sattvic Asset
+              img: "/images/external/general/pure-veg-restaurants-in-goa-edited-1.webp", // Vegetarian Sattvic Asset
               desc: "Light vegetable compositions designed to support twilight silent meditation loops safely.",
               items: [
                 "Clear organic vegetable broths",
@@ -485,7 +485,7 @@ export const Mysore500HoursData = {
               tagBg: "#A0522D",
               duration: "Weekend Outing",
               icon: "globe",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Explore iconic lineage landmarks, historical palaces, and traditional centers matching your study records.",
               highlights: ["Lineage palace grounds", "Traditional craft blocks", "Ancient energy grids"],
             },
@@ -495,7 +495,7 @@ export const Mysore500HoursData = {
               tagBg: "#CD853F",
               duration: "Half Day",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Visit highly dynamic regional mountain temple boundaries to ground your internal meditation blocks.",
               highlights: ["Mantra chant exposures", "Scenic hilltop lookouts", "Deep inner reflection blocks"],
             },
@@ -580,7 +580,7 @@ export const Mysore500HoursData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -591,7 +591,7 @@ export const Mysore500HoursData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -602,7 +602,7 @@ export const Mysore500HoursData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -613,7 +613,7 @@ export const Mysore500HoursData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -624,7 +624,7 @@ export const Mysore500HoursData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -654,7 +654,7 @@ export const Mysore500HoursData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$1,990",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -670,7 +670,7 @@ export const Mysore500HoursData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$2,190",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -686,7 +686,7 @@ export const Mysore500HoursData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$2,500",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -702,7 +702,7 @@ export const Mysore500HoursData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$3,200",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

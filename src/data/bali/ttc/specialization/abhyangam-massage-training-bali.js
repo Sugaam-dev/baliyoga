@@ -22,7 +22,7 @@ export const courseData = {
       price: PROGRAM_PRICES.specializations.BaliAyurveda5HoursAbhyangamData,
       priceNote: "Flexible tiers up to $650 depending on personal lodging preference; includes YACEP certification",
       bgImage:
-        "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+        "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
       buttonText: "Enroll This Course Now",
       url: "/contact",
     },
@@ -37,9 +37,9 @@ export const courseData = {
     ],
 
     certificates: [
-      { img: "/images/external/general/unsplash_photo-1607004468138-e7e23ea26947.jpg", label: "5 Hrs Abhyangam" },
+      { img: "/images/external/general/unsplash_photo-1607004468138-e7e23ea26947.webp", label: "5 Hrs Abhyangam" },
       { img: "https://images.unsplash.com/photo-1524863380900-a1f5d95732e1?w=150&q=80", label: "Myofascial Release" },
-      { img: "/images/external/general/unsplash_photo-1599447421416-3414500d18a5.jpg", label: "YACEP Certification" },
+      { img: "/images/external/general/unsplash_photo-1599447421416-3414500d18a5.webp", label: "YACEP Certification" },
     ],
 
     content: {
@@ -65,7 +65,7 @@ export const courseData = {
 
     content: {
       bgImage:
-        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+        "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
       eyebrow: "Fast-Track Bodywork Specialization",
       title: "Join our",
       highlight: "ancient ritual of unity",
@@ -129,11 +129,11 @@ export const courseData = {
       ],
       images: {
         main:
-          "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+          "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
         food:
-          "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset URL
+          "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset URL
         stay:
-          "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+          "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
       },
     },
   },
@@ -162,19 +162,19 @@ export const courseData = {
           label: "Myo-Restorative Fist Work",
           desc: "Utilize hands and closed fists to locate and target deep tissue restrictions in superficial muscle matrices.",
           icon: "sparkles",
-          img: "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+          img: "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
         },
         {
           label: "Myo-Releasing Forearm Sweeps",
           desc: "Employ long rhythmic massage movements with the forearm and elbow regions to fast-track deep physical release.",
           icon: "wind",
-          img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+          img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
         },
         {
           label: "Regional Isolation Balancing",
           desc: "Isolate individual coordination tracks covering the neck, upper shoulders, head, and facial muscular regions.",
           icon: "feather",
-          img: "/images/external/general/c1-e1756205578471.jpg",
+          img: "/images/external/general/c1-e1756205578471.webp",
         },
       ],
       specialTitle: "Lineage Features",
@@ -314,7 +314,7 @@ export const courseData = {
         "Our structured daily flow perfectly balances active physical training with deep interiorizing calm practices.",
 
       image:
-        "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+        "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
 
       morning: [
         { time: "06:00 AM - 07:30 AM", activity: "Holistic Hatha Yoga, Pranayama & Meditation", icon: "moon" },
@@ -367,7 +367,7 @@ export const courseData = {
           title: "Morning Tissue Prep",
           icon: "sun",
           time: "09:00 AM – 10:00 AM",
-          img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg", // Vegetarian Sattvic Asset
+          img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp", // Vegetarian Sattvic Asset
           desc: "Light unprocessed morning assemblies structured to ease metabolic filtration loads.",
           items: [
             "Fresh regional harvest fruits",
@@ -381,7 +381,7 @@ export const courseData = {
           title: "Midday Balanced Fuel",
           icon: "coffee",
           time: "01:00 PM – 02:00 PM",
-          img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg", // Vegetarian Sattvic Asset
+          img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp", // Vegetarian Sattvic Asset
           desc: "Nutrient-dense grains paired with traditional lentils to supply equal energy distribution parameters.",
           items: [
             "Traditional Ayurvedic Khichdi pots",
@@ -395,7 +395,7 @@ export const courseData = {
           title: "Twilight Metabolic Rest",
           icon: "moon",
           time: "06:30 PM – 07:30 PM",
-          img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg", // Vegetarian Sattvic Asset
+          img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp", // Vegetarian Sattvic Asset
           desc: "Light, ultra-digestible properties keeping cognitive and circulatory channels unburdened during night rest.",
           items: [
             "Clear organic vegetable broths",
@@ -446,7 +446,7 @@ export const courseData = {
           tagBg: "#E67E22",
           duration: "Day Outing",
           icon: "globe",
-          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.jpg",
+          img: "/images/external/general/unsplash_photo-1507525428034-b723cf961d3e.webp",
           desc: "Relax your cognitive layers completely along gorgeous Balinese sandy beach settings.",
           highlights: ["Tropical ocean breezes", "Nervous system calming", "Natural restoration"],
         },
@@ -456,7 +456,7 @@ export const courseData = {
           tagBg: "#D35400",
           duration: "2 Hours",
           icon: "trees",
-          img: "/images/external/general/unsplash_photo-1502082553048-f009c37129b9.jpg",
+          img: "/images/external/general/unsplash_photo-1502082553048-f009c37129b9.webp",
           desc: "Walk through beautiful tropical landscapes and serene regional heritage zones.",
           highlights: ["Silent jungle tracks", "High spiritual charges", "Distraction-free resting"],
         },
@@ -547,7 +547,7 @@ export const courseData = {
         reviews: 184,
         isPopular: true,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+        image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
       },
       {
         id: 2,
@@ -558,7 +558,7 @@ export const courseData = {
         reviews: 92,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+        image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
       },
       {
         id: 3,
@@ -569,7 +569,7 @@ export const courseData = {
         reviews: 210,
         isPopular: false,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+        image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
       },
       {
         id: 4,
@@ -580,7 +580,7 @@ export const courseData = {
         reviews: 145,
         isPopular: false,
         isPaid: true,
-        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+        image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
       },
       {
         id: 5,
@@ -591,7 +591,7 @@ export const courseData = {
         reviews: 76,
         isPopular: true,
         isPaid: false,
-        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+        image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
       }
     ]
   }
@@ -622,7 +622,7 @@ export const courseData = {
           tag: "Standard",
           tagBg: "#1A2456",
           price: "$250",
-          img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           desc: "Complete course access, materials, and internationally recognized certification.",
           features: [
             "Full training",

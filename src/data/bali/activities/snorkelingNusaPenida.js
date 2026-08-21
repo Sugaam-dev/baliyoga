@@ -1,4 +1,4 @@
-import imgLocal from "../../../assets/images/activities/snorkeling_nusa_penida.jpg";
+import imgLocal from "../../../assets/images/activities/snorkeling_nusa_penida.webp";
 
 const snorkelingNusaPenida = {
   slug: "snorkeling-nusa-penida",

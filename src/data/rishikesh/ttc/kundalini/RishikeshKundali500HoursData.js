@@ -23,7 +23,7 @@ export const RishikeshKundali500HoursData = {
         price: PROGRAM_PRICES_RISHIKESH.kundalini["500hr"],
         priceNote: "Includes free Dehradun airport pickup, 58 nights lodging, all meals, and RYT-500 certification support",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -39,8 +39,8 @@ export const RishikeshKundali500HoursData = {
   
       certificates: [
         { img: "/images/cirtificats/500.webp", label: "500 Hrs Master" },
-        { img: "/images/cirtificats/yoga.png", label: "1 Year Live Classes" },
-        { img: "/images/cirtificats/yoga.png", label: "Yoga Alliance RYT-500" }
+        { img: "/images/cirtificats/yoga.webp", label: "1 Year Live Classes" },
+        { img: "/images/cirtificats/yoga.webp", label: "Yoga Alliance RYT-500" }
       ],
   
       content: {
@@ -65,7 +65,7 @@ export const RishikeshKundali500HoursData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe Experience",
           title: "Join our",
           highlight: "complete two-month immersion",
@@ -129,11 +129,11 @@ export const RishikeshKundali500HoursData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1502134249126-9f3755a50d78.jpg",
+              "/images/external/general/unsplash_photo-1502134249126-9f3755a50d78.webp",
             food:
-              "/images/external/general/unsplash_photo-1498837167922-ddd27525d352.jpg",
+              "/images/external/general/unsplash_photo-1498837167922-ddd27525d352.webp",
             stay:
-              "/images/external/general/unsplash_photo-1566073771259-6a8506099945.jpg",
+              "/images/external/general/unsplash_photo-1566073771259-6a8506099945.webp",
           },
         },
       }
@@ -161,19 +161,19 @@ export const RishikeshKundali500HoursData = {
             label: "100+ Classical Postures",
             desc: "Complete immersion inside traditional Hatha postures and extensive Ashtanga Primary & Intermediate series layouts.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.jpg",
+            img: "/images/external/general/unsplash_photo-1575052814086-f385e2e2ad1b.webp",
           },
           {
             label: "Advanced Alignment Labs",
             desc: "Understand systemic muscle alignment roles based on body regions to lower strain and track energetic koshas.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Teaching and Adjustment Dynamics",
             desc: "Acquire high confidence using props safely, balancing prana channels, and running advanced student corrections.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "What Makes Our",
@@ -352,7 +352,7 @@ export const RishikeshKundali500HoursData = {
             "Living properly by surrendering to the whole program creates a great chance for permanent personal change.",
     
           image:
-            "/images/external/general/unsplash_photo-1470240731273-7821a6eeb6bd.jpg",
+            "/images/external/general/unsplash_photo-1470240731273-7821a6eeb6bd.webp",
     
           morning: [
             { time: "05:00 AM - 06:00 AM", activity: "Yoga Sadhana", icon: "moon" },
@@ -406,7 +406,7 @@ export const RishikeshKundali500HoursData = {
               title: "Morning Vitality",
               icon: "sun",
               time: "09:00 AM – 09:45 AM",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
               desc: "Fresh, light micronutrients that deliver energy without burdening digestive processes.",
               items: [
                 "Green organic hill vegetables",
@@ -420,7 +420,7 @@ export const RishikeshKundali500HoursData = {
               title: "Midday Balanced Dhal",
               icon: "coffee",
               time: "01:00 PM – 02:00 PM",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
               desc: "Rich complex proteins and elements ensuring systemic saturation for heavy afternoon sets.",
               items: [
                 "Ayurvedic balanced Khichdi",
@@ -485,7 +485,7 @@ export const RishikeshKundali500HoursData = {
               tagBg: "#8D6E63",
               duration: "Half Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.jpg",
+              img: "/images/external/general/unsplash_photo-1464822759023-fed622ff2c3b.webp",
               desc: "High altitude temple trek offering views over snow peaks and awe-inspiring energy fields.",
               highlights: ["Himalayan sunrise", "Shakti temple history", "Mountain air freshness"],
             },
@@ -495,7 +495,7 @@ export const RishikeshKundali500HoursData = {
               tagBg: "#A1887F",
               duration: "3 Hours",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Jungle eco-sanctuary housing historic stone meditation domes covered in local arts.",
               highlights: ["Contemplation stone huts", "Jungle paths", "Vintage artistic walls"],
             },
@@ -505,7 +505,7 @@ export const RishikeshKundali500HoursData = {
               tagBg: "#C8874A",
               duration: "Evening",
               icon: "sparkles",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Watch magnificent choral rituals and light offerings right down on the river steps.",
               highlights: ["Ganga Aarti choruses", "River beach kirtan", "Vedic chant practices"],
             },
@@ -515,7 +515,7 @@ export const RishikeshKundali500HoursData = {
               tagBg: "#8B3A3A",
               duration: "Half Day",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "TIMELess, deep river cave layout holding ancient meditative charges for over thousands of years.",
               highlights: ["Absolute sensory silence", "White sand beach breaks", "Lineage energy traces"],
             },
@@ -606,7 +606,7 @@ export const RishikeshKundali500HoursData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -617,7 +617,7 @@ export const RishikeshKundali500HoursData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -628,7 +628,7 @@ export const RishikeshKundali500HoursData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -639,7 +639,7 @@ export const RishikeshKundali500HoursData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -650,7 +650,7 @@ export const RishikeshKundali500HoursData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -680,7 +680,7 @@ export const RishikeshKundali500HoursData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$2,299",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -696,7 +696,7 @@ export const RishikeshKundali500HoursData = {
           tag: "Comfort",
           tagBg: "#E5A93B",
           price: "$2,499",
-          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.jpg",
+          img: "/images/external/general/unsplash_photo-1555854877-bab0e564b8d5.webp",
           desc: "Spacious 4-bed shared rooms with AC, washroom and modern conveniences.",
           features: [
             "4-bed sharing",
@@ -712,7 +712,7 @@ export const RishikeshKundali500HoursData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$2,899",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -728,7 +728,7 @@ export const RishikeshKundali500HoursData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$3,599",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

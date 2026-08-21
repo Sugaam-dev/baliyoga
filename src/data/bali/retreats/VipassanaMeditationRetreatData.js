@@ -19,7 +19,7 @@ export const VipassanaMeditationRetreatData = {
           "A blend of traditional Vipassana, Neo Vipassana, and Himalayan Vipassana to release emotional blockages and awaken inner clarity",
         price: "$99",
         priceNote: "4/6 sharing room, 4-day retreat — sattvic meals included",
-        bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+        bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
         buttonText: "Book Now",
         url: "/contact",
       },
@@ -34,8 +34,8 @@ export const VipassanaMeditationRetreatData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "4 Days" },
-        { img: "/images/cirtificats/yoga.png", label: "Vipassana" }
+        { img: "/images/cirtificats/yoga.webp", label: "4 Days" },
+        { img: "/images/cirtificats/yoga.webp", label: "Vipassana" }
       ],
   
       content: {
@@ -58,7 +58,7 @@ export const VipassanaMeditationRetreatData = {
         },
     
         content: {
-          bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          bgImage: "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe Retreat",
           title: "Join our",
           highlight: "Vipassana retreat",
@@ -121,11 +121,11 @@ export const VipassanaMeditationRetreatData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.jpg",
+              "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.webp",
             food:
-              "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+              "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
             stay:
-              "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg",
+              "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           },
         },
       }
@@ -153,19 +153,19 @@ export const VipassanaMeditationRetreatData = {
             label: "Yoga & Breathwork",
             desc: "Morning Hatha yoga, pranayama and detox breathwork to cleanse the body, breath and mind each day",
             icon: "sun",
-            img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.jpg",
+            img: "/images/external/general/unsplash_photo-1571019613454-1cb2f99b2d8b.webp",
           },
           {
             label: "Shat Karma & Panchakarma",
             desc: "Traditional yogic cleansing processes — remove deep-rooted toxins, balance doshas and restore digestive fire",
             icon: "leaf",
-            img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            img: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           },
           {
             label: "Ayurveda & Wellness Therapy",
             desc: "Customized Ayurvedic massage, rejuvenation therapy, Yoga Nidra and spiritual philosophy talks",
             icon: "heart",
-            img: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg",
+            img: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           },
         ],
         specialTitle: "Why Join",
@@ -341,7 +341,7 @@ export const VipassanaMeditationRetreatData = {
           title: "Check-In &",
           highlight: "Check-Out",
           subtitle: "Check in after 1pm on the 20th, check out before 11am on the 23rd.",
-          image: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+          image: "/images/external/general/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           morning: [
             { time: "Day 1", activity: "Arrival & Check-in (after 1pm)", icon: "sun" },
             { time: "Days 2-3", activity: "Vipassana practices, silence, breathwork", icon: "wind" },
@@ -383,7 +383,7 @@ export const VipassanaMeditationRetreatData = {
               title: "Breakfast",
               icon: "sun",
               time: "09:00 – 10:00",
-              img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.jpg",
+              img: "/images/external/foods/easy_vegetarian_indian_breakfast_recipes.webp",
               desc: "Light and energizing sattvic breakfast after your morning yoga and detox practices.",
               items: [
                 "Fresh tropical fruits",
@@ -397,7 +397,7 @@ export const VipassanaMeditationRetreatData = {
               title: "Lunch",
               icon: "coffee",
               time: "01:00 – 02:00",
-              img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.jpg",
+              img: "/images/external/general/unsplash_photo-1512621776951-a57141f2eefd.webp",
               desc: "Nourishing Ayurvedic vegetarian lunch to support your afternoon wellness therapies.",
               items: [
                 "Detox rice bowls",
@@ -411,7 +411,7 @@ export const VipassanaMeditationRetreatData = {
               title: "Dinner",
               icon: "moon",
               time: "06:30 – 07:30",
-              img: "/images/external/general/unsplash_photo-1547592180-85f173990554.jpg",
+              img: "/images/external/general/unsplash_photo-1547592180-85f173990554.webp",
               desc: "Light calming sattvic evening meals to support deep rest and overnight healing.",
               items: [
                 "Lentil soups",
@@ -463,7 +463,7 @@ export const VipassanaMeditationRetreatData = {
               tagBg: "#4A7A30",
               duration: "Half Day",
               icon: "globe",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Sacred purification temple — perfect complement to your inner cleansing retreat.",
               highlights: ["Holy water ritual", "Sacred energy", "Spiritual cleansing"],
             },
@@ -473,7 +473,7 @@ export const VipassanaMeditationRetreatData = {
               tagBg: "#7AAA5A",
               duration: "Half Day",
               icon: "leaf",
-              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.jpg",
+              img: "/images/external/general/unsplash_photo-1558618666-fcd25c85cd64.webp",
               desc: "Serene green rice terraces — ideal for mindful walking and reconnection with nature.",
               highlights: ["Peaceful walks", "Scenic views", "Nature therapy"],
             },
@@ -483,7 +483,7 @@ export const VipassanaMeditationRetreatData = {
               tagBg: "#6A8A30",
               duration: "2 Hours",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.jpg",
+              img: "/images/external/general/unsplash_photo-1567745576352-e404ee640705.webp",
               desc: "Lush jungle sanctuary with ancient temples and playful wild monkeys.",
               highlights: ["Wild monkeys", "Temple ruins", "Jungle walk"],
             },
@@ -493,7 +493,7 @@ export const VipassanaMeditationRetreatData = {
               tagBg: "#8B4A2A",
               duration: "Full Day",
               icon: "mountain",
-              img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.jpg",
+              img: "/images/external/general/unsplash_photo-1555400038-63f5ba517a47.webp",
               desc: "Sunrise volcano trek — energizing and grounding for your retreat journey.",
               highlights: ["Sunrise energy", "Volcano hike", "Lake views"],
             },
@@ -503,7 +503,7 @@ export const VipassanaMeditationRetreatData = {
               tagBg: "#1A2E10",
               duration: "Half Day",
               icon: "waves",
-              img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.jpg",
+              img: "/images/external/general/unsplash_photo-1537996194471-e657df975ab4.webp",
               desc: "Iconic ocean temple with breathtaking sunset — deeply calming for retreat guests.",
               highlights: ["Sunset healing", "Ocean energy", "Cultural depth"],
             },
@@ -513,7 +513,7 @@ export const VipassanaMeditationRetreatData = {
               tagBg: "#5A7A3A",
               duration: "Flexible",
               icon: "camera",
-              img: "/images/external/general/139108.jpg",
+              img: "/images/external/general/139108.webp",
               desc: "Explore Ubud's cafes for authentic Balinese food and local markets on free afternoons.",
               highlights: ["Local cuisine", "Art & craft", "Self-discovery"],
             },
@@ -611,7 +611,7 @@ export const VipassanaMeditationRetreatData = {
             reviews: 184,
             isPopular: true,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+            image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
           },
           {
             id: 2,
@@ -622,7 +622,7 @@ export const VipassanaMeditationRetreatData = {
             reviews: 92,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+            image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
           },
           {
             id: 3,
@@ -633,7 +633,7 @@ export const VipassanaMeditationRetreatData = {
             reviews: 210,
             isPopular: false,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.jpg"
+            image: "/images/external/general/unsplash_photo-1519699047748-de8e457a634e.webp",
           },
           {
             id: 4,
@@ -644,7 +644,7 @@ export const VipassanaMeditationRetreatData = {
             reviews: 145,
             isPopular: false,
             isPaid: true,
-            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.jpg"
+            image: "/images/external/general/unsplash_photo-1515377905703-c4788e51af15.webp",
           },
           {
             id: 5,
@@ -655,7 +655,7 @@ export const VipassanaMeditationRetreatData = {
             reviews: 76,
             isPopular: true,
             isPaid: false,
-            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.jpg"
+            image: "/images/external/general/unsplash_photo-1540555700478-4be289fbecef.webp",
           }
         ]
       }
@@ -683,7 +683,7 @@ export const VipassanaMeditationRetreatData = {
           tag: "Budget",
           tagBg: "#7BAF8A",
           price: "$99",
-          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.jpg",
+          img: "/images/external/general/unsplash_photo-1505691938895-1758d7feb511.webp",
           desc: "Comfortable 6-bed shared rooms with AC, washroom and modern amenities.",
           features: [
             "6-bed sharing",
@@ -699,7 +699,7 @@ export const VipassanaMeditationRetreatData = {
           tag: "Popular",
           tagBg: "#2E5018",
           price: "$150",
-          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.jpg",
+          img: "/images/external/general/unsplash_photo-1618773928121-c32242e63f39.webp",
           desc: "Comfortable twin-sharing room with essential amenities.",
           features: [
             "Twin sharing",
@@ -713,7 +713,7 @@ export const VipassanaMeditationRetreatData = {
           tag: "Upgrade",
           tagBg: "#7AAA5A",
           price: "$200",
-          img: "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+          img: "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           desc: "Private room for a quieter, more personal retreat experience.",
           features: [
             "Private room",

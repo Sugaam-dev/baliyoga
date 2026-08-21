@@ -21,7 +21,7 @@ export const Rishikesh5DaysYogaRetreatData = {
         price: "$299",
         priceNote: "Shared room configuration package rate ($349 for private single room spaces); includes free Dehradun airport pickup, comprehensive welcome kit, and daily outdoor excursion modules.",
         bgImage:
-          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.jpg",
+          "/images/external/general/unsplash_photo-1506126613408-eca07ce68773.webp",
         buttonText: "Enroll This Course Now",
         url: "/contact",
       },
@@ -36,9 +36,9 @@ export const Rishikesh5DaysYogaRetreatData = {
       ],
   
       certificates: [
-        { img: "/images/cirtificats/yoga.png", label: "5 Days Retreat" },
-        { img: "/images/cirtificats/yoga.png", label: "Holistic Wellness" },
-        { img: "/images/cirtificats/yoga.png", label: "Ombreathe Presence" }
+        { img: "/images/cirtificats/yoga.webp", label: "5 Days Retreat" },
+        { img: "/images/cirtificats/yoga.webp", label: "Holistic Wellness" },
+        { img: "/images/cirtificats/yoga.webp", label: "Ombreathe Presence" }
       ],
   
       content: {
@@ -63,7 +63,7 @@ export const Rishikesh5DaysYogaRetreatData = {
     
         content: {
           bgImage:
-            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.jpg",
+            "/images/external/heroes/unsplash_photo-1544367567-0f2fcb009e0b.webp",
           eyebrow: "Ombreathe",
           title: "Join our",
           highlight: "journey of holistic well-being",
@@ -127,11 +127,11 @@ export const Rishikesh5DaysYogaRetreatData = {
           ],
           images: {
             main:
-              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.jpg",
+              "/images/external/general/unsplash_photo-1512100356356-de1b84283e18.webp",
             food:
-              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
             stay:
-              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.jpg",
+              "/images/external/general/unsplash_photo-1590490360182-c33d57733427.webp",
           },
         },
       }
@@ -159,19 +159,19 @@ export const Rishikesh5DaysYogaRetreatData = {
             label: "Invigorating Posture Labs",
             desc: "Practice active morning asana tracking, carefully balancing breath with movement to awaken your inner vitality lines.",
             icon: "sparkles",
-            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+            img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
           },
           {
             label: "Guided Introspection States",
             desc: "Engage in systematic morning and evening meditation blocks to foster profound mindfulness and mental quietude.",
             icon: "wind",
-            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.jpg",
+            img: "/images/external/excursions/indian-male-thirties-doing-yoga-temple-background-1024x1024.webp",
           },
           {
             label: "Lifestyle Optimization",
             desc: "Attend structured wellness workshops focusing on Ayurveda principles, healthy lifestyle management, and self-discovery.",
             icon: "feather",
-            img: "/images/external/general/c1-e1756205578471.jpg",
+            img: "/images/external/general/c1-e1756205578471.webp",
           },
         ],
         specialTitle: "Retreat Pillars",
@@ -297,7 +297,7 @@ export const Rishikesh5DaysYogaRetreatData = {
             "Living appropriately according to the timetable teaches intense mental mastery. Every class is completely mandatory.",
     
           image:
-            "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+            "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
     
           morning: [
             { time: "Morning Slot A", activity: "Invigorating Morning Yoga Practice (Harmonizing Breath with Movement)", icon: "sun" },
@@ -346,7 +346,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               title: "Morning Vitality Cleanse",
               icon: "sun",
               time: "Morning Slot",
-              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.jpg",
+              img: "/images/external/general/unsplash_photo-1496042399014-dc73c4f2bde1.webp",
               desc: "Organic breakfast items designed cleanly to eliminate internal pollutants and maximize physical stamina parameters.",
               items: [
                 "Fresh seasonal hill fruits",
@@ -359,7 +359,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               title: "Tasty Traditional Midday Meal",
               icon: "coffee",
               time: "Noon Slot",
-              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.jpg",
+              img: "/images/external/general/unsplash_photo-1540420773420-3366772f4999.webp",
               desc: "Traditional Indian plates cooked cleanly using local, organic ingredients to optimize digestion indexes.",
               items: [
                 "Traditional Indian lentils & beans",
@@ -372,7 +372,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               title: "Ultra-Digestible Rest Supper",
               icon: "moon",
               time: "Evening Slot",
-              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.jpg",
+              img: "/images/external/general/deccanherald%2F2024-05%2F00253cf2-c151-4695-a4db-4cf14c310868%2Ffile7v4xyryjkx3hhw9u9lr__1_.webp",
               desc: "Light vegetarian selections compiled to settle your body systems prior to evening reflection ceremonies.",
               items: [
                 "Clear organic vegetable broths",
@@ -420,7 +420,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               tagBg: "#1E5154",
               duration: "Included Excursion",
               icon: "trees",
-              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.jpg",
+              img: "/images/external/general/unsplash_photo-1545389336-cf090694435e.webp",
               desc: "Explore historic, serene mountain pathways and quiet forest paths to ground your sensory tracking layers.",
               highlights: ["Pristine mountain vistas", "Clean fresh alpine air flows", "Mindful outdoor walking"],
             },
@@ -430,7 +430,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               tagBg: "#367B80",
               duration: "Curated Event",
               icon: "globe",
-              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.jpg",
+              img: "/images/external/general/unsplash_photo-1447752875215-b2761acb3c5d.webp",
               desc: "Navigate the thrilling currents of the holy river Ganges, introducing an energetic balance into your stillness.",
               highlights: ["River current navigation", "High-vibration water flow", "Exciting group alignment"],
             },
@@ -440,7 +440,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               tagBg: "#C8874A",
               duration: "Short Foot Walk",
               icon: "sparkles",
-              img: "/images/external/heroes/Mysore-banner.jpg",
+              img: "/images/external/heroes/Mysore-banner.webp",
               desc: "Immerse yourself within the nearby local markets just a 3 to 5-minute walk from our main school gates.",
               highlights: ["Local herbal suppliers", "Traditional tea counters", "Spiritual book arrays"],
             },
@@ -531,7 +531,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               reviews: 150,
               isPopular: true,
               isPaid: false,
-              image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.jpg"
+              image: "/images/external/general/unsplash_photo-1600334129128-685c5582fd35.webp",
             },
             {
               id: 2,
@@ -542,7 +542,7 @@ export const Rishikesh5DaysYogaRetreatData = {
               reviews: 98,
               isPopular: false,
               isPaid: false,
-              image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.jpg"
+              image: "/images/external/general/unsplash_photo-1544161515-4ab6ce6db874.webp",
             },
           ]
         }
@@ -572,7 +572,7 @@ export const Rishikesh5DaysYogaRetreatData = {
           tag: "Popular",
           tagBg: "#5B4FCF",
           price: "$299",
-          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.jpg",
+          img: "/images/external/general/unsplash_photo-1501183638710-841dd1904471.webp",
           desc: "Twin sharing room with AC, private washroom and comfortable Balinese ambience.",
           features: [
             "Twin sharing",
@@ -588,7 +588,7 @@ export const Rishikesh5DaysYogaRetreatData = {
           tag: "Luxury",
           tagBg: "#C8964A",
           price: "$499",
-          img: "/images/external/rooms/stylish-guest-room@2x.jpg",
+          img: "/images/external/rooms/stylish-guest-room@2x.webp",
           desc: "Private room with all modern amenities for a luxurious and focused stay.",
           features: [
             "Private room",

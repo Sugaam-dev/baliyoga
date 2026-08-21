@@ -4,10 +4,10 @@ import { Link, useParams } from "react-router-dom";
 import { getIcon } from "./icons";
 
 // Room Images
-import privateRoomImg from "../../../assets/rooms/privateRoom.jpg";
-import twoSharedRoomImg from "../../../assets/rooms/twoSharedRoom.jpg";
-import fourSharedRoomImg from "../../../assets/rooms/fourSharedRoom.jpg";
-import sixSharedRoomImg from "../../../assets/rooms/sixSharedRoom.jpg";
+import privateRoomImg from "../../../assets/rooms/privateRoom.webp";
+import twoSharedRoomImg from "../../../assets/rooms/twoSharedRoom.webp";
+import fourSharedRoomImg from "../../../assets/rooms/fourSharedRoom.webp";
+import sixSharedRoomImg from "../../../assets/rooms/sixSharedRoom.webp";
 
 const getRoomImage = (type, fallbackImg) => {
   if (!type) return fallbackImg;
