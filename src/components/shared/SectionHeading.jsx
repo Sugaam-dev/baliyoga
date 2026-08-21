@@ -4,7 +4,7 @@ const SectionHeading = ({
   title,
   highlight,
   subtitle,
-  highlightColor = "#c38b5f",
+  highlightColor = "#854417",
   textColor = "#1c2e24",
 }) => {
   return (
@@ -29,9 +29,9 @@ const SectionHeading = ({
 
       {/* Elegant Line Divider */}
       <div className="flex items-center justify-center gap-3 mt-6">
-        <span className="w-10 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#c38b5f]" />
-        <i className="text-[#c38b5f] text-sm not-italic">&#10022;</i>
-        <span className="w-10 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#c38b5f]" />
+        <span className="w-10 sm:w-16 h-px bg-gradient-to-r from-transparent to-[#854417]" />
+        <i className="text-[#854417] text-sm not-italic">&#10022;</i>
+        <span className="w-10 sm:w-16 h-px bg-gradient-to-l from-transparent to-[#854417]" />
       </div>
     </div>
   );

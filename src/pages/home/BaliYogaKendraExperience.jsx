@@ -60,10 +60,10 @@ const BaliYogaKendraExperience = () => {
                 {/* Overlapping text directly on the image (no solid white block to cover details) */}
                 <div className="absolute bottom-6 left-6 right-6 text-white pointer-events-none">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 rounded-full bg-[#c38b5f] flex items-center justify-center text-white shadow">
+                    <div className="w-6 h-6 rounded-full bg-[#854417] flex items-center justify-center text-white shadow">
                       <Flower2 size={11} />
                     </div>
-                    <span className="uppercase tracking-[0.2em] text-[8px] sm:text-[9px] text-[#c38b5f] font-bold">
+                    <span className="uppercase tracking-[0.2em] text-[8px] sm:text-[9px] text-[#e5a93b] font-bold">
                       Healing • Nature • Transformation
                     </span>
                   </div>
@@ -84,7 +84,7 @@ const BaliYogaKendraExperience = () => {
             {/* TAG */}
             <ScrollReveal delay={0.1}>
               <div className="flex flex-wrap items-center gap-2 bg-[#f4f7f4] border border-green-200/50 text-[#1c2e24] px-4 py-1.5 rounded-[20px] text-[10px] sm:text-xs font-bold uppercase tracking-wider self-start shadow-sm max-w-full">
-                <Sparkles size={13} className="text-[#c38b5f] flex-shrink-0" />
+                <Sparkles size={13} className="text-[#854417] flex-shrink-0" />
                 <span>MORE THAN A COURSE, IT'S A TRANSFORMATION</span>
               </div>
             </ScrollReveal>
@@ -93,7 +93,7 @@ const BaliYogaKendraExperience = () => {
             <ScrollReveal delay={0.15}>
               <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-[#1c2e24] leading-tight">
                 Experience The{" "}
-                <span className="block bg-gradient-to-r from-[#c38b5f] to-[#a6734c] bg-clip-text text-transparent mt-1">
+                <span className="block bg-gradient-to-r from-[#854417] to-[#5C2E0B] bg-clip-text text-transparent mt-1">
                   Magic Of Bali
                 </span>
               </h2>
@@ -116,7 +116,7 @@ const BaliYogaKendraExperience = () => {
                     key={index}
                     className="flex items-center gap-3 bg-white/70 border border-stone-200/40 p-4 rounded-2xl shadow-sm hover:shadow-md transition duration-300"
                   >
-                    <CheckCircle2 size={18} className="text-[#c38b5f] flex-shrink-0" />
+                    <CheckCircle2 size={18} className="text-[#854417] flex-shrink-0" />
                     <p className="text-stone-700 text-sm font-semibold">
                       {item}
                     </p>
@@ -129,7 +129,8 @@ const BaliYogaKendraExperience = () => {
             <ScrollReveal delay={0.3}>
               <div className="mt-10 flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="#contact"
+                  href="/contact"
+                  aria-label="Explore Bali Yoga Kendra experience"
                   className="group bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition duration-300 flex items-center justify-center gap-2 no-underline"
                 >
                   Explore Our Experience
@@ -137,8 +138,9 @@ const BaliYogaKendraExperience = () => {
                 </a>
 
                 <a 
-                  href="#courses"
-                  className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 text-center no-underline"
+                  href="/yoga-teacher-training"
+                  aria-label="View yoga programs"
+                  className="border-2 border-[#854417] text-[#854417] hover:bg-[#854417] hover:text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider transition duration-300 text-center no-underline"
                 >
                   View Programs
                 </a>
@@ -153,10 +155,10 @@ const BaliYogaKendraExperience = () => {
                     key={index}
                     className="bg-white/80 border border-stone-200/40 rounded-2xl p-4 text-center shadow-sm hover:-translate-y-1 transition duration-300"
                   >
-                    <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] bg-clip-text text-transparent font-serif">
+                    <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1c2e24] to-[#854417] bg-clip-text text-transparent font-serif">
                       {item.number}
                     </h3>
-                    <p className="mt-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-stone-500">
+                    <p className="mt-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-stone-600">
                       {item.label}
                     </p>
                   </div>

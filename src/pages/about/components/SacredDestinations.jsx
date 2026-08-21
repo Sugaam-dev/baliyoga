@@ -19,7 +19,7 @@ export default function SacredDestinations() {
     <section className="bg-white py-8 sm:py-10 md:py-12 border-b border-stone-200/50">
       <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3">
+          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3">
             A Global Yoga Community ✦
           </span>
           <SectionHeading
@@ -40,12 +40,12 @@ export default function SacredDestinations() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent" />
-                  <h4 className="absolute bottom-3 left-4 text-white font-serif text-base font-semibold drop-shadow">
+                  <h3 className="absolute bottom-3 left-4 text-white font-serif text-base font-semibold drop-shadow">
                     {loc.city}
-                  </h4>
+                  </h3>
                 </div>
                 <div className="bg-white px-4 py-4">
-                  <p className="text-stone-500 text-sm leading-relaxed">{loc.desc}</p>
+                  <p className="text-stone-600 text-sm leading-relaxed">{loc.desc}</p>
                 </div>
               </div>
             ))}
@@ -53,7 +53,7 @@ export default function SacredDestinations() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="text-stone-400 text-sm leading-relaxed mt-8 text-center italic max-w-2xl mx-auto">
+          <p className="text-stone-600 text-sm leading-relaxed mt-8 text-center italic max-w-2xl mx-auto">
             By bringing together the spiritual wisdom of these sacred places, we offer students a truly international learning experience rooted in authentic yogic teachings.
           </p>
         </ScrollReveal>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Sparkles, BadgePercent } from "lucide-react";
 import SectionHeading from "../../components/shared/SectionHeading";
 import MobileCarousel from "../../components/shared/MobileCarousel";
@@ -54,7 +55,7 @@ const BaliYogaOffers = () => {
           <div className="relative">
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center gap-2 bg-white/80 border border-stone-200/60 text-[#1c2e24] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
-                <Sparkles size={14} className="text-[#c38b5f]" />
+                <Sparkles size={14} className="text-[#854417]" />
                 SPECIAL BALI YOGA OFFERS
               </div>
             </div>
@@ -81,7 +82,7 @@ const BaliYogaOffers = () => {
                   <img
                     src={offer.image}
                     alt={offer.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105"
                     loading="lazy"
                   />
 
@@ -126,26 +127,27 @@ const BaliYogaOffers = () => {
                             key={index}
                             className="flex items-center gap-1.5 text-stone-300 text-xs"
                           >
-                            <MapPin size={12} className="text-[#c38b5f]" />
+                            <MapPin size={12} className="text-[#e5a93b]" />
                             <span>{location}</span>
                           </div>
                         ))}
                       </div>
 
                       {/* Button */}
-                      <a 
-                        href="/contact"
-                        className="w-full bg-[#FAF8F5] text-stone-850 hover:bg-[#c38b5f] hover:text-[#FAF8F5] py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm no-underline"
+                      <Link 
+                        to="/contact"
+                        aria-label={`${offer.button} for ${offer.title}`}
+                        className="w-full bg-[#FAF8F5] text-stone-900 hover:bg-[#854417] hover:text-[#FAF8F5] py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-sm no-underline"
                       >
                         {offer.button}
-                        <ArrowRight size={14} className="text-[#c38b5f] group-hover:text-[#FAF8F5] transition" />
-                      </a>
+                        <ArrowRight size={14} className="text-[#854417] group-hover:text-[#FAF8F5] transition" />
+                      </Link>
                     </div>
 
                     {/* Bottom Label */}
-                    <div className="flex items-center justify-between text-stone-400 text-[10px] font-semibold tracking-wider uppercase">
+                    <div className="flex items-center justify-between text-stone-300 text-[10px] font-semibold tracking-wider uppercase">
                       <div className="flex items-center gap-1.5">
-                        <BadgePercent size={14} className="text-[#c38b5f]" />
+                        <BadgePercent size={14} className="text-[#e5a93b]" />
                         Limited Time Offer
                       </div>
                       <span>Verified Spot</span>

@@ -107,7 +107,7 @@ export default function InquiryForm() {
         <div className="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl border border-stone-100">
           
           <div className="text-center space-y-3 mb-10">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#c38b5f]">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#854417]">
               Admissions & Enrollment
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold font-serif text-[#182222]">
@@ -119,8 +119,8 @@ export default function InquiryForm() {
           </div>
 
           {isSubmitted ? (
-            <div className="text-center py-12 px-6 bg-[#c38b5f]/5 rounded-2xl border border-[#c38b5f]/20 space-y-4">
-              <div className="w-16 h-16 bg-[#c38b5f] text-white rounded-full flex items-center justify-center mx-auto shadow-md">
+            <div className="text-center py-12 px-6 bg-[#854417]/5 rounded-2xl border border-[#854417]/20 space-y-4">
+              <div className="w-16 h-16 bg-[#854417] text-white rounded-full flex items-center justify-center mx-auto shadow-md">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-serif font-bold text-[#182222]">
@@ -130,8 +130,9 @@ export default function InquiryForm() {
                 Your inquiry has been received successfully. Our admissions counselor will contact you via email or WhatsApp within 24 hours.
               </p>
               <button
+                type="button"
                 onClick={() => setIsSubmitted(false)}
-                className="inline-block mt-4 text-xs font-bold tracking-wider text-[#c38b5f] uppercase hover:underline"
+                className="inline-block mt-4 text-xs font-bold tracking-wider text-[#854417] uppercase hover:underline cursor-pointer"
               >
                 Send Another Inquiry
               </button>
@@ -326,7 +327,7 @@ export default function InquiryForm() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#c38b5f] text-white py-4 rounded-xl font-extrabold text-xs tracking-[0.15em] uppercase hover:bg-[#b0784c] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-[#854417] text-white py-4 rounded-xl font-extrabold text-xs tracking-[0.15em] uppercase hover:bg-[#6e3712] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Submit Inquiry</span>
                 <Send className="w-4 h-4" />

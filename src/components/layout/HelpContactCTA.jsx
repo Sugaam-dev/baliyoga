@@ -20,16 +20,16 @@ const HelpContactCTA = () => {
           
           {/* LEFT CONTENT BLOCK */}
           <div className="text-white text-center lg:text-left max-w-xl flex-shrink-0">
-            <span className="uppercase tracking-[0.25em] text-[10px] sm:text-xs text-[#c38b5f] font-bold mb-4 inline-block">
+            <span className="uppercase tracking-[0.25em] text-[10px] sm:text-xs text-[#e5a93b] font-bold mb-4 inline-block">
               Need Assistance? ✦
             </span>
 
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-light leading-tight text-white">
               Have Questions?
-              <span className="block font-normal text-[#c38b5f] mt-1">
+              <span className="block font-normal text-[#e5a93b] mt-1">
                 We’re Here to Guide You.
               </span>
-            </h3>
+            </h2>
 
             <p className="text-sm sm:text-base text-stone-300 mt-5 leading-relaxed font-sans max-w-lg">
               Connect with our admissions team anytime for guidance on yoga teacher trainings, 
@@ -41,7 +41,8 @@ const HelpContactCTA = () => {
                 href="https://wa.me/917483987568"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[#c38b5f] hover:bg-[#a6734c] text-white px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer no-underline"
+                aria-label="Chat with Bali Yoga Kendra on WhatsApp"
+                className="inline-flex items-center gap-2 bg-[#15803d] hover:bg-[#166534] text-white px-8 py-3.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer no-underline"
               >
                 Chat on WhatsApp
                 <span className="text-base">→</span>

@@ -416,7 +416,7 @@ function LeftContent() {
   return (
     <>
       {/* BADGE */}
-      <div className="flex items-center gap-2 text-[#b86b2b] text-[10px] xl:text-[11px] 2xl:text-xs font-semibold tracking-wider uppercase">
+      <div className="flex items-center gap-2 text-[#854417] text-[10px] xl:text-[11px] 2xl:text-xs font-semibold tracking-wider uppercase">
         <Award size={13} className="stroke-[2.5]" />
         A Journey That Transforms You
       </div>
@@ -435,13 +435,13 @@ function LeftContent() {
         Become a <br />
         <span className="font-extrabold">Certified Yoga</span> <br />
         Teacher in{" "}
-        <span className="text-[#b86b2b] font-extrabold">Bali</span>
+        <span className="text-[#854417] font-extrabold">Bali</span>
       </h1>
 
       {/* SUBTITLE */}
       <p
         className="
-          mt-7 text-black-600 font-bold
+          mt-7 text-stone-800 font-bold
           font-['Playfair_Display'] italic
           text-[16px] sm:text-[20px]
           lg:text-[18px] xl:text-[22px] 2xl:text-[24px]
@@ -503,6 +503,7 @@ function LeftContent() {
         {/* APPLY NOW */}
         <Link
           to="/contact"
+          aria-label="Apply now for yoga teacher training"
           className="
             group
             bg-[#26402e] hover:bg-[#182b1f]
@@ -514,6 +515,7 @@ function LeftContent() {
             font-bold tracking-wide
             shadow-md transition-all duration-300
             flex items-center justify-center gap-1.5
+            no-underline
           "
         >
           APPLY NOW
@@ -526,10 +528,11 @@ function LeftContent() {
         {/* DOWNLOAD BROCHURE */}
         <a
           href="/brochure.pdf"
+          aria-label="Download course brochure"
           className="
-            border border-[#b86b2b]
-            text-[#b86b2b] bg-transparent
-            hover:bg-[#b86b2b] hover:text-white
+            border-2 border-[#854417]
+            text-[#854417] bg-transparent
+            hover:bg-[#854417] hover:text-white
             px-4 lg:px-3 xl:px-4
             py-3 lg:py-2.5 xl:py-3
             rounded-xl
@@ -537,6 +540,7 @@ function LeftContent() {
             font-bold tracking-wide
             transition-all duration-300
             flex items-center justify-center gap-1.5
+            no-underline
           "
         >
           DOWNLOAD BROCHURE

@@ -9,7 +9,6 @@ import BaliYogaKendraExperience from "./BaliYogaKendraExperience";
 import BaliYogaEssenceSlider from "./BaliYogaEssenceSlider";
 import BaliYogaRetreatsGrid from "./BaliYogaRetreatsGrid";
 import RetreatCenters from "./RetreatCenters";
-// import BaliYogaProgramSection from "./BaliYogaProgramSection";
 import BaliYogaOffers from "./BaliYogaOffers";
 import BaliYogaGallery from "./BaliYogaGallery";
 import TestimonialsSection from "./TestimonialsSection";
@@ -17,7 +16,7 @@ import UpcomingBatches from "./UpcomingBatches";
 import WhereToTrain from "./WhereToTrain";
 export default function Home() {
   return (
-    <main className="bg-[#FAF8F5]">
+    <div className="bg-[#FAF8F5]">
       {/* 1. Hero Slide Banner */}
       <Hero />
       
@@ -56,10 +55,7 @@ export default function Home() {
       {/* 9. Retreat Center Locations */}
       <RetreatCenters />
       
-      {/* 10. Program Inclusions, Schedule & Pricing */}
-      {/* <BaliYogaProgramSection /> */}
-      
-      {/* 11. Special Discount Offers */}
+      {/* 10. Special Discount Offers */}
       <BaliYogaOffers />
       
       {/* 12. Picture Gallery Grid */}
@@ -70,6 +66,6 @@ export default function Home() {
       
       {/* 14. Upcoming Course Batches */}
       <UpcomingBatches />
-    </main>
+    </div>
   );
 }

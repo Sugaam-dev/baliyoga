@@ -145,6 +145,7 @@ const Header = () => {
               to="/"
               className="relative z-[1002] flex items-center gap-2 sm:gap-3 transition-transform duration-300 hover:scale-105 shrink-0"
               onClick={closeMenu}
+              aria-label="Bali Yoga Kendra Home"
             >
               <img
                 src="/logo.png"
@@ -155,7 +156,7 @@ const Header = () => {
                 <span className="text-xs sm:text-sm lg:text-base xl:text-[17px] 2xl:text-xl min-[1920px]:text-2xl min-[2500px]:text-3xl font-extrabold tracking-wider text-[#182222] font-serif uppercase whitespace-nowrap">
                   Bali Yoga
                 </span>
-                <span className="text-[9px] sm:text-[10px] lg:text-[10px] xl:text-[11.5px] 2xl:text-xs min-[1920px]:text-base min-[2500px]:text-xl font-bold tracking-[0.22em] text-[#c38b5f] font-serif uppercase whitespace-nowrap">
+                <span className="text-[9px] sm:text-[10px] lg:text-[10px] xl:text-[11.5px] 2xl:text-xs min-[1920px]:text-base min-[2500px]:text-xl font-bold tracking-[0.22em] text-[#854417] font-serif uppercase whitespace-nowrap">
                   Kendra
                 </span>
               </span>
@@ -179,13 +180,13 @@ const Header = () => {
                       <button
                         onClick={() => setActiveDropdown(isCurrentActive ? null : item.type)}
                         className={`flex items-center gap-1 px-0.5 lg:px-1 xl:px-1.5 2xl:px-2.5 min-[1920px]:px-3.5 min-[2500px]:px-5 text-[11px] lg:text-[11.5px] xl:text-[12.5px] 2xl:text-[15px] min-[1920px]:text-[18px] min-[2500px]:text-[22px] font-semibold tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap cursor-pointer ${
-                          isParentHighlighted ? 'text-[#c38b5f]' : 'text-stone-700 hover:text-[#c38b5f]'
+                          isParentHighlighted ? 'text-[#854417]' : 'text-stone-700 hover:text-[#854417]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                       >
                         {item.label}
                         <svg
-                          className={`w-3 h-3 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 min-[1920px]:w-4.5 min-[1920px]:h-4.5 shrink-0 transition-transform duration-300 ${isCurrentActive || isLinkActive ? 'rotate-180 text-[#c38b5f]' : 'text-stone-500 group-hover:text-[#c38b5f]'}`}
+                          className={`w-3 h-3 lg:w-3.5 lg:h-3.5 xl:w-3.5 xl:h-3.5 2xl:w-4 2xl:h-4 min-[1920px]:w-4.5 min-[1920px]:h-4.5 shrink-0 transition-transform duration-300 ${isCurrentActive || isLinkActive ? 'rotate-180 text-[#854417]' : 'text-stone-500 group-hover:text-[#854417]'}`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -197,7 +198,7 @@ const Header = () => {
                       <Link
                         to={item.path}
                         className={`relative flex items-center px-0.5 lg:px-1 xl:px-1.5 2xl:px-2.5 min-[1920px]:px-3.5 min-[2500px]:px-5 text-[11px] lg:text-[11.5px] xl:text-[12.5px] 2xl:text-[15px] min-[1920px]:text-[18px] min-[2500px]:text-[22px] font-semibold tracking-wide transition-colors duration-300 rounded-md whitespace-nowrap ${
-                          isLinkActive ? 'text-[#c38b5f]' : 'text-stone-700 hover:text-[#c38b5f]'
+                          isLinkActive ? 'text-[#854417]' : 'text-stone-700 hover:text-[#854417]'
                         }`}
                         style={{ paddingBlock: '8px' }}
                         onMouseEnter={() => setActiveDropdown(null)}
@@ -213,13 +214,14 @@ const Header = () => {
 
             {/* Right side Actions */}
             <div className="flex items-center gap-2 xl:gap-3 shrink-0 ml-1 xl:ml-2">
-              <a
-                href="#apply"
+              <Link
+                to="/contact"
                 onClick={() => setActiveDropdown(null)}
-                className="hidden lg:inline-flex items-center justify-center whitespace-nowrap shrink-0 border-2 border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white transition-all duration-300 px-3 py-1.5 lg:px-3 lg:py-1.5 xl:px-4 xl:py-2 2xl:px-5.5 2xl:py-2.5 min-[1920px]:px-7 min-[1920px]:py-3.5 text-[10.5px] lg:text-[11px] xl:text-xs 2xl:text-sm min-[1920px]:text-base tracking-[0.12em] 2xl:tracking-[0.15em] font-extrabold rounded-full shadow-sm hover:shadow-md"
+                aria-label="Apply now for yoga teacher training"
+                className="hidden lg:inline-flex items-center justify-center whitespace-nowrap shrink-0 border-2 border-[#854417] text-[#854417] hover:bg-[#854417] hover:text-white transition-all duration-300 px-3 py-1.5 lg:px-3 lg:py-1.5 xl:px-4 xl:py-2 2xl:px-5.5 2xl:py-2.5 min-[1920px]:px-7 min-[1920px]:py-3.5 text-[10.5px] lg:text-[11px] xl:text-xs 2xl:text-sm min-[1920px]:text-base tracking-[0.12em] 2xl:tracking-[0.15em] font-extrabold rounded-full shadow-sm hover:shadow-md no-underline"
               >
                 APPLY NOW
-              </a>
+              </Link>
 
               {/* Hamburger Mobile Icon */}
               <button
@@ -262,12 +264,12 @@ const Header = () => {
                   >
                     {MENU_CONTENT[activeDropdown].columns.map((col, idx) => (
                       <div key={idx} className="flex flex-col min-w-0">
-                        <h4
-                          className="text-[14px] xl:text-[16px] min-[1920px]:text-[18px] min-[2500px]:text-[20px] font-bold uppercase tracking-[0.05em] pb-3 mb-3 border-b border-gray-700"
+                        <p
+                          className="text-[14px] xl:text-[16px] min-[1920px]:text-[18px] min-[2500px]:text-[20px] font-bold uppercase tracking-[0.05em] pb-3 mb-3 border-b border-gray-700 m-0"
                           style={{ color: '#e5a93b' }}
                         >
                           {col.category}
-                        </h4>
+                        </p>
                         <ul className="space-y-3.5 list-none p-0 m-0">
                           {col.items.map((sub, itemIdx) => {
                             const isSubActive = location.pathname === sub.link;
@@ -342,7 +344,7 @@ const Header = () => {
                       <div>
                         <button
                           onClick={() => setMobileExpandedSection(isSectionOpen ? null : item.type)}
-                          className="w-full flex justify-between items-center py-4 text-[17px] font-normal uppercase tracking-wide transition-colors duration-200"
+                          className="w-full flex justify-between items-center py-4 text-[17px] font-normal uppercase tracking-wide transition-colors duration-200 cursor-pointer"
                           style={{ color: isParentActive ? '#e5a93b' : isSectionOpen ? '#e5a93b' : '#ffffff' }}
                         >
                           <span>{item.label}</span>
@@ -429,14 +431,15 @@ const Header = () => {
             </ul>
 
             <div className="mt-6 pb-6">
-              <a
-                href="#apply"
+              <Link
+                to="/contact"
                 onClick={closeMenu}
-                className="block w-full text-center py-3 text-sm tracking-[0.15em] font-semibold border transition-all duration-200"
+                aria-label="Apply now for yoga teacher training"
+                className="block w-full text-center py-3 text-sm tracking-[0.15em] font-semibold border transition-all duration-200 no-underline"
                 style={{ borderColor: '#e5a93b', color: '#e5a93b' }}
               >
                 APPLY NOW
-              </a>
+              </Link>
             </div>
           </div>
         </div>

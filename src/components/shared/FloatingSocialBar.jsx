@@ -47,6 +47,7 @@ const FloatingSocialBar = () => {
             target="_blank"
             rel="noopener noreferrer"
             title={l.label}
+            aria-label={`Open ${l.label}`}
             className={`${l.color} ${l.bg} w-9 h-9 rounded-xl flex items-center justify-center transition-transform duration-150 hover:scale-110`}
           >
             {l.icon}
@@ -70,6 +71,7 @@ const FloatingSocialBar = () => {
               target="_blank"
               rel="noopener noreferrer"
               title={l.label}
+              aria-label={`Open ${l.label}`}
               className={`${l.color} w-11 h-11 rounded-full bg-white shadow-[0_4px_14px_rgba(0,0,0,0.15)] flex items-center justify-center transition-transform duration-150 hover:scale-105`}
             >
               {l.icon}

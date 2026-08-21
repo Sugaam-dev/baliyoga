@@ -15,7 +15,7 @@ export default function WhyChoose() {
     <section className="bg-[#FAF8F5] py-8 sm:py-10 md:py-12 border-b border-stone-200/50">
       <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3">
+          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3">
             Why Choose Us ✦
           </span>
           <SectionHeading
@@ -29,10 +29,10 @@ export default function WhyChoose() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
             {whyChoose.map((item, i) => (
               <div key={i} className="bg-white border border-stone-200/40 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex items-start gap-4">
-                <span className="text-[#c38b5f] text-base mt-0.5 flex-shrink-0">✦</span>
+                <span className="text-[#854417] text-base mt-0.5 flex-shrink-0">✦</span>
                 <div>
-                  <h4 className="text-stone-900 font-serif text-base font-semibold mb-2">{item.title}</h4>
-                  <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="text-stone-900 font-serif text-base font-semibold mb-2">{item.title}</h3>
+                  <p className="text-stone-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}

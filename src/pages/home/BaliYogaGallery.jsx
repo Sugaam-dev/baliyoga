@@ -36,7 +36,7 @@ const BaliYogaGallery = () => {
         <ScrollReveal>
           <div className="relative">
             <div className="flex justify-center mb-6">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] inline-block">
+              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] inline-block">
                 Bali Yoga Kendra ✦
               </span>
             </div>
@@ -62,7 +62,7 @@ const BaliYogaGallery = () => {
                 <div className="w-full h-full overflow-hidden">
                   <img
                     src={img}
-                    alt="Yoga Gallery"
+                    alt={`Bali Yoga Kendra Gallery Photo ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -72,7 +72,7 @@ const BaliYogaGallery = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1c2e24]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none" />
 
                 {/* BOTTOM LINE */}
-                <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] group-hover:w-full transition-all duration-500 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#854417] group-hover:w-full transition-all duration-500 pointer-events-none" />
               </div>
             )}
           />

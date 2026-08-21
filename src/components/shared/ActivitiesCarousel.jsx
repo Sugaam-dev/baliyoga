@@ -34,10 +34,18 @@ const ActivitiesCarousel = ({
         <div className="relative mt-8 xl:mt-12 px-0 xl:px-4">
           
           {/* Custom Navigation Arrows for Desktop (Hidden on mobile/tablet) */}
-          <button className="activities-prev absolute left-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#c38b5f] hover:text-white hover:border-[#c38b5f] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer">
+          <button
+            type="button"
+            aria-label="Previous Activity"
+            className="activities-prev absolute left-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#854417] hover:text-white hover:border-[#854417] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer"
+          >
             <ChevronLeft size={20} />
           </button>
-          <button className="activities-next absolute right-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#c38b5f] hover:text-white hover:border-[#c38b5f] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer">
+          <button
+            type="button"
+            aria-label="Next Activity"
+            className="activities-next absolute right-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#854417] hover:text-white hover:border-[#854417] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer"
+          >
             <ChevronRight size={20} />
           </button>
 
@@ -76,7 +84,7 @@ const ActivitiesCarousel = ({
                       className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/35 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent" />
                     
                     {/* Price Badge */}
                     {item.price && (
@@ -90,13 +98,13 @@ const ActivitiesCarousel = ({
                   <div className="p-6 sm:p-8 flex flex-col justify-between flex-grow">
                     <div className="space-y-3.5">
                       {/* Location/Address */}
-                      <div className="flex items-center gap-1.5 text-stone-400 text-xs font-medium">
-                        <MapPin size={13} className="text-[#c38b5f]" />
+                      <div className="flex items-center gap-1.5 text-stone-600 text-xs font-medium">
+                        <MapPin size={13} className="text-[#854417]" />
                         <span className="truncate max-w-[250px]">{item.address.split(',')[0]}</span>
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-stone-900 font-serif font-bold text-lg leading-snug group-hover:text-[#c38b5f] transition-colors duration-300 line-clamp-2">
+                      <h3 className="text-stone-900 font-serif font-bold text-lg leading-snug group-hover:text-[#854417] transition-colors duration-300 line-clamp-2">
                         {item.title}
                       </h3>
 
@@ -110,13 +118,14 @@ const ActivitiesCarousel = ({
                     <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
                       <Link 
                         to={`/bali-activities/${item.slug}`}
-                        className="inline-flex items-center gap-2 text-[#1A2456] hover:text-[#c38b5f] font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:gap-3 cursor-pointer"
+                        aria-label={`Explore more about ${item.title}`}
+                        className="inline-flex items-center gap-2 text-[#1A2456] hover:text-[#854417] font-bold text-xs uppercase tracking-wider transition-all duration-300 hover:gap-3 cursor-pointer no-underline"
                       >
                         Explore More
-                        <ArrowRight size={14} className="text-[#c38b5f]" />
+                        <ArrowRight size={14} className="text-[#854417]" />
                       </Link>
 
-                      <div className="flex items-center gap-1 text-[11px] font-semibold text-[#c38b5f]">
+                      <div className="flex items-center gap-1 text-[11px] font-semibold text-[#854417]">
                         <Calendar size={12} />
                         <span>Available Daily</span>
                       </div>
@@ -124,14 +133,14 @@ const ActivitiesCarousel = ({
                   </div>
 
                   {/* BOTTOM LINE */}
-                  <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] group-hover:w-full transition-all duration-500" />
+                  <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#854417] group-hover:w-full transition-all duration-500" />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
           {/* Custom Pagination (Visible on all screens including mobile/tablet) */}
-          <div className="activities-pagination flex justify-center gap-2 mt-8 [--swiper-pagination-color:#c38b5f]" />
+          <div className="activities-pagination flex justify-center gap-2 mt-8 [--swiper-pagination-color:#854417]" />
         </div>
 
       </div>

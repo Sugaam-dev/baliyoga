@@ -5,10 +5,10 @@ import MobileCarousel from "../../components/shared/MobileCarousel";
 
 const retreatFeatures = [
   {
-    icon: <Flower2 size={32} className="text-[#c38b5f] group-hover:text-white transition-all duration-500" />,
+    icon: <Flower2 size={32} className="text-[#854417] group-hover:text-white transition-all duration-500" />,
     title: "12 Types of Yoga Courses",
     desc: "Our extensive yoga teacher training courses in Bali inspire deeper learning and self-discovery, including Multistyle Yoga, Kundalini Yoga, and transformative short-term programs.",
-    accent: "bg-[#c38b5f]/5 border-[#c38b5f] group-hover:bg-[#c38b5f]",
+    accent: "bg-[#854417]/5 border-[#854417] group-hover:bg-[#854417]",
   },
   {
     icon: <Leaf size={32} className="text-[#1c2e24] group-hover:text-white transition-all duration-500" />,
@@ -17,10 +17,10 @@ const retreatFeatures = [
     accent: "bg-[#1c2e24]/5 border-[#1c2e24] group-hover:bg-[#1c2e24]",
   },
   {
-    icon: <Sparkles size={32} className="text-[#c38b5f] group-hover:text-white transition-all duration-500" />,
+    icon: <Sparkles size={32} className="text-[#854417] group-hover:text-white transition-all duration-500" />,
     title: "14 Workshops",
     desc: "Join workshops that awaken your energy and elevate your life through Meditation, Yoga Nidra, Sound Healing, breathwork, and conscious yogic practices.",
-    accent: "bg-[#c38b5f]/5 border-[#c38b5f] group-hover:bg-[#c38b5f]",
+    accent: "bg-[#854417]/5 border-[#854417] group-hover:bg-[#854417]",
   },
   {
     icon: <Medal size={32} className="text-[#1c2e24] group-hover:text-white transition-all duration-500" />,
@@ -38,7 +38,7 @@ const BaliYogaRetreatsGrid = () => {
         {/* HEADING */}
         <div className="relative">
           <div className="flex justify-center mb-6">
-            <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] inline-block">
+            <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] inline-block">
               Bali Yoga Kendra ✦
             </span>
           </div>
@@ -65,7 +65,7 @@ const BaliYogaRetreatsGrid = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-[#1c2e24] font-serif text-xl font-bold leading-snug group-hover:text-[#c38b5f] transition-colors duration-300">
+                <h3 className="text-[#1c2e24] font-serif text-xl font-bold leading-snug group-hover:text-[#854417] transition-colors duration-300">
                   {item.title}
                 </h3>
 
@@ -76,7 +76,7 @@ const BaliYogaRetreatsGrid = () => {
               </div>
 
               {/* Bottom Line decoration */}
-              <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] group-hover:w-full transition-all duration-500 absolute bottom-0 left-0" />
+              <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#854417] group-hover:w-full transition-all duration-500 absolute bottom-0 left-0" />
             </div>
           )}
         />

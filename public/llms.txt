@@ -1,0 +1,14 @@
+# Bali Yoga Kendra
+
+> Yoga Alliance Certified Yoga Teacher Training & Wellness Retreats in Bali, Indonesia.
+
+Bali Yoga Kendra is an internationally recognized Yoga Alliance certified yoga school offering authentic 100 Hour, 200 Hour, 300 Hour, and 500 Hour Yoga Teacher Training Courses (TTC), holistic wellness retreats, meditation and sound healing programs in Ubud, Bali, and sister locations in Rishikesh and Mysore.
+
+## Pages & Programs
+
+- [Home](https://baliyoga.vercel.app/): Authentic Yoga Teacher Training and Retreats in Bali
+- [About Us](https://baliyoga.vercel.app/about): Our story, philosophy, and experienced master yoga teachers
+- [Yoga Teacher Training](https://baliyoga.vercel.app/yoga-teacher-training): 100h, 200h, 300h, and 500h Yoga TTC courses
+- [Wellness Retreats](https://baliyoga.vercel.app/wellness-retreats): Restorative yoga, meditation, and sound healing retreats
+- [Bali Activities](https://baliyoga.vercel.app/bali-activities): Sacred excursions and cultural experiences in Bali
+- [Contact & Admissions](https://baliyoga.vercel.app/contact): Course inquiries, admissions, and booking details

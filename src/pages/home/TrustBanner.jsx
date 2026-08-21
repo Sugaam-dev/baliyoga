@@ -89,7 +89,7 @@ const TrustBanner = () => {
           
           {/* Stat 1 */}
           <div className={`flex flex-col items-center text-center transition-all duration-700 delay-100 transform ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-1.5">
+            <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-stone-600 mb-1.5">
               Graduated Yogis
             </p>
             <div className="flex items-baseline justify-center">
@@ -97,7 +97,7 @@ const TrustBanner = () => {
               <span className="min-w-[4.2ch] inline-block text-center tabular-nums text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-850">
                 {studentCount.toLocaleString()}
               </span>
-              <span className="text-xl sm:text-2xl font-semibold text-[#c38b5f]">+</span>
+              <span className="text-xl sm:text-2xl font-semibold text-[#854417]">+</span>
             </div>
           </div>
 
@@ -106,7 +106,7 @@ const TrustBanner = () => {
 
           {/* Stat 2 */}
           <div className={`flex flex-col items-center text-center transition-all duration-700 delay-200 transform ${isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-stone-500 mb-1.5">
+            <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-stone-600 mb-1.5">
               Top Tier Reviews
             </p>
             <div className="flex items-center justify-center gap-3">

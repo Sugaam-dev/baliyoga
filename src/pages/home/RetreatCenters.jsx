@@ -13,7 +13,7 @@ const RetreatCenters = () => {
         <ScrollReveal>
           <div className="relative">
             <div className="flex justify-center mb-6">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] inline-block">
+              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] inline-block">
                 Bali Yoga Kendra ✦
               </span>
             </div>
@@ -36,16 +36,16 @@ const RetreatCenters = () => {
               </p>
 
               {/* ITEM 1 */}
-              <div className="group flex items-center justify-between rounded-2xl bg-white border border-stone-200/40 px-5 py-4 sm:px-6 sm:py-5 shadow-sm hover:shadow-md cursor-pointer hover:bg-[#c38b5f] hover:border-[#c38b5f] transition-all duration-300">
+              <div className="group flex items-center justify-between rounded-2xl bg-white border border-stone-200/40 px-5 py-4 sm:px-6 sm:py-5 shadow-sm hover:shadow-md cursor-pointer hover:bg-[#854417] hover:border-[#854417] transition-all duration-300">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 rounded-full bg-orange-50 group-hover:bg-white/20 flex items-center justify-center text-[#c38b5f] group-hover:text-white transition duration-300 flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-orange-50 group-hover:bg-white/20 flex items-center justify-center text-[#854417] group-hover:text-white transition duration-300 flex-shrink-0">
                     <Compass size={18} />
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-bold text-stone-900 group-hover:text-white transition duration-300">
                       Signature Retreats
                     </h3>
-                    <p className="text-[10px] sm:text-xs text-stone-500 mt-0.5 group-hover:text-white/80 transition duration-300">
+                    <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 group-hover:text-white/80 transition duration-300">
                       Deep healing, traditional yoga & wellness immersion
                     </p>
                   </div>
@@ -63,7 +63,7 @@ const RetreatCenters = () => {
                     <h3 className="text-sm sm:text-base font-bold text-stone-900 group-hover:text-white transition duration-300">
                       Yogi’s Garden
                     </h3>
-                    <p className="text-[10px] sm:text-xs text-stone-500 mt-0.5 group-hover:text-white/80 transition duration-300">
+                    <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 group-hover:text-white/80 transition duration-300">
                       Nature inspired mindful retreat experience
                     </p>
                   </div>
@@ -74,8 +74,9 @@ const RetreatCenters = () => {
               {/* BUTTON */}
               <div className="pt-2">
                 <a 
-                  href="#retreats"
-                  className="inline-flex items-center gap-2 rounded-full border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-7 py-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md no-underline bg-white"
+                  href="/wellness-retreats"
+                  aria-label="View all wellness retreats"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#854417] text-[#854417] hover:bg-[#854417] hover:text-white px-7 py-3 text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md no-underline bg-white"
                 >
                   ALL RETREATS
                   <ArrowRight size={14} />
@@ -89,13 +90,13 @@ const RetreatCenters = () => {
             <div className="relative flex justify-center lg:justify-end w-full max-w-xl mx-auto lg:mx-0">
               
               {/* Glow frame */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#c38b5f] to-[#1c2e24] rounded-[34px] blur opacity-10 pointer-events-none" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#854417] to-[#1c2e24] rounded-[34px] blur opacity-10 pointer-events-none" />
 
               {/* Image Box */}
               <div className="relative overflow-hidden rounded-[30px] shadow-xl group w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/3]">
                 <img
                   src={retreatImg}
-                  alt="Retreat Center"
+                  alt="Bali Yoga Retreat Center"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -104,7 +105,7 @@ const RetreatCenters = () => {
 
                 {/* Overlapping text directly on the image */}
                 <div className="absolute bottom-5 left-6 right-6 text-white pointer-events-none">
-                  <p className="uppercase tracking-[0.2em] text-[9px] sm:text-[10px] text-[#c38b5f] font-bold mb-1.5">
+                  <p className="uppercase tracking-[0.2em] text-[9px] sm:text-[10px] text-[#e5a93b] font-bold mb-1.5">
                     Transform Your Journey
                   </p>
                   <h3 className="text-white text-base sm:text-lg md:text-xl font-serif font-bold leading-tight">

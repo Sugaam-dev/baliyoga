@@ -71,7 +71,7 @@ const BaliYogaEssenceSlider = () => {
         {/* Section heading using SectionHeading */}
         <div className="relative">
           <div className="flex justify-center mb-6">
-            <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] inline-block">
+            <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] inline-block">
               Bali Yoga Kendra ✦
             </span>
           </div>
@@ -86,10 +86,18 @@ const BaliYogaEssenceSlider = () => {
         <div className="relative mt-8 xl:mt-12 px-0 xl:px-4">
           
           {/* Custom Navigation Arrows for Desktop */}
-          <button className="essence-prev absolute left-[-56px] top-[45%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#c38b5f] hover:text-white hover:border-[#c38b5f] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer">
+          <button
+            type="button"
+            aria-label="Previous Slide"
+            className="essence-prev absolute left-[-56px] top-[45%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#854417] hover:text-white hover:border-[#854417] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer"
+          >
             <ChevronLeft size={20} />
           </button>
-          <button className="essence-next absolute right-[-56px] top-[45%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#c38b5f] hover:text-white hover:border-[#c38b5f] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer">
+          <button
+            type="button"
+            aria-label="Next Slide"
+            className="essence-next absolute right-[-56px] top-[45%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#854417] hover:text-white hover:border-[#854417] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer"
+          >
             <ChevronRight size={20} />
           </button>
 
@@ -150,8 +158,9 @@ const BaliYogaEssenceSlider = () => {
 
                       {/* Action Link */}
                       <a 
-                        href="#contact"
-                        className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white hover:bg-[#c38b5f] hover:border-[#c38b5f] transition-all duration-300 self-start no-underline"
+                        href="/contact"
+                        aria-label={`Explore experience for ${item.title}`}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white hover:bg-[#854417] hover:border-[#854417] transition-all duration-300 self-start no-underline"
                       >
                         Explore Experience
                         <span className="text-sm">→</span>
@@ -160,14 +169,14 @@ const BaliYogaEssenceSlider = () => {
                   </div>
 
                   {/* Bottom Line */}
-                  <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] group-hover:w-full transition-all duration-500" />
+                  <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#854417] group-hover:w-full transition-all duration-500" />
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
           {/* Custom Pagination (Visible on all screens including mobile/tablet) */}
-          <div className="essence-pagination flex justify-center gap-2 mt-8 [--swiper-pagination-color:#c38b5f]" />
+          <div className="essence-pagination flex justify-center gap-2 mt-8 [--swiper-pagination-color:#854417]" />
         </div>
 
       </div>

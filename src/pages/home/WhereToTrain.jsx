@@ -89,7 +89,7 @@ const WhereToTrain = () => {
                   />
                 </div>
                 <div className="p-5 sm:p-6 flex flex-col flex-1">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-stone-400">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-stone-600">
                     {dest.tag}
                   </span>
                   <h3 className={`font-serif text-2xl font-semibold mt-1 mb-3 ${dest.titleColor}`}>
@@ -104,7 +104,7 @@ const WhereToTrain = () => {
                     {dest.badges.map((badge, i) => (
                       <span
                         key={i}
-                        className="text-[11px] font-medium text-stone-600 bg-stone-100 border border-stone-200 rounded-full px-3 py-1"
+                        className="text-[11px] font-medium text-stone-700 bg-stone-100 border border-stone-200 rounded-full px-3 py-1"
                       >
                         {badge}
                       </span>
@@ -118,6 +118,7 @@ const WhereToTrain = () => {
                     </span>
                     <Link
                       to={dest.link}
+                      aria-label={`Explore yoga teacher training programs in ${dest.name}`}
                       className={`inline-flex items-center gap-1 ${dest.buttonColor} text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 no-underline`}
                     >
                       Explore →

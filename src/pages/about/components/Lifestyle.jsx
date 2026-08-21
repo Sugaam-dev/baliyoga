@@ -18,7 +18,7 @@ export default function Lifestyle({ lifestyleImg }) {
       <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-4 sm:px-6 lg:px-8">
 
         <ScrollReveal>
-          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3">
+          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3">
             More Than a Yoga School ✦
           </span>
           <SectionHeading

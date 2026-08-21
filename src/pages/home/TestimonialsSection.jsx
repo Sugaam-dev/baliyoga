@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
         <ScrollReveal>
           <div className="relative">
             <div className="flex justify-center mb-6">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] inline-block">
+              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] inline-block">
                 Student Experiences ✦
               </span>
             </div>
@@ -116,7 +116,7 @@ const TestimonialsSection = () => {
                   <div>
                     {/* Quote / Star Row */}
                     <div className="mb-5 flex items-center justify-between">
-                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50/60 text-[#c38b5f]">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50/60 text-[#854417]">
                         <Quote className="h-5 w-5 fill-current" />
                       </div>
 
@@ -146,12 +146,12 @@ const TestimonialsSection = () => {
                     />
 
                     <div>
-                      <h4 className="text-sm font-bold text-stone-900">
+                      <h3 className="text-sm font-bold text-stone-900">
                         {item.name}
-                      </h4>
+                      </h3>
 
-                      <div className="mt-1 flex items-center gap-1 text-[11px] font-bold text-stone-500 uppercase tracking-wide">
-                        <MapPin className="h-3 w-3 text-[#c38b5f]" />
+                      <div className="mt-1 flex items-center gap-1 text-[11px] font-bold text-stone-600 uppercase tracking-wide">
+                        <MapPin className="h-3 w-3 text-[#854417]" />
                         {item.country}
                       </div>
                     </div>
@@ -165,8 +165,10 @@ const TestimonialsSection = () => {
         {/* Read More Button - Only visible on desktop/tablet since mobile uses all items inside carousel */}
         <div className="hidden md:flex justify-center mt-12">
           <button
+            type="button"
+            aria-label={showMore ? "Show less reviews" : "Read more student reviews"}
             onClick={() => setShowMore(!showMore)}
-            className="inline-flex items-center gap-2 border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer bg-transparent"
+            className="inline-flex items-center gap-2 border-2 border-[#854417] text-[#854417] hover:bg-[#854417] hover:text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer bg-transparent"
           >
             {showMore ? "Show Less Reviews" : "Read More Reviews"}
             {showMore ? (

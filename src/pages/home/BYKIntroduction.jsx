@@ -16,21 +16,21 @@ const BYKIntroduction = () => {
             Welcome To{" "}
             <span className="font-semibold text-stone-900">Bali Yoga Kendra</span>
             <br className="hidden sm:block" />
-            <span className="italic font-normal text-[#c38b5f]">
+            <span className="italic font-normal text-[#854417]">
               Rooted in Tradition, Rising in Wellness
             </span>
           </h2>
 
-          <p className="mt-5 text-center text-stone-500 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="mt-5 text-center text-stone-600 text-base sm:text-lg max-w-2xl mx-auto">
             Experience authentic yoga, meditation &amp; holistic living with
             expert guidance
           </p>
 
           {/* Decorative divider */}
           <div className="flex items-center justify-center gap-3 mt-7 mb-10 lg:mb-14">
-            <span className="h-px w-14 sm:w-20 bg-[#c38b5f]/40" />
-            <span className="w-1.5 h-1.5 rotate-45 bg-[#c38b5f]" />
-            <span className="h-px w-14 sm:w-20 bg-[#c38b5f]/40" />
+            <span className="h-px w-14 sm:w-20 bg-[#854417]/40" />
+            <span className="w-1.5 h-1.5 rotate-45 bg-[#854417]" />
+            <span className="h-px w-14 sm:w-20 bg-[#854417]/40" />
           </div>
         </ScrollReveal>
 

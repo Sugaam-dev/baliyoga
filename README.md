@@ -29,7 +29,8 @@ An intuitive web platform for **Bali Yoga Kendra** designed for discovering, exp
 
 - **Multi-Location Hub**: Dedicated course offerings tailored for **Bali**, **Mysuru**, **Rishikesh**, **Chiang Mai**, and **Dharamshala**.
 - **Dynamic Program Pages**: Centralized routing system mapping URLs to course data structures based on location, course type, and duration.
-- **Automated Batch Date Generator**: Computes upcoming course batch start and end dates dynamically based on duration.
+- **Google Sheets Automated Pricing & Batches**: Fetches and computes base pricing, accommodation room tiers, and upcoming course batch dates dynamically from Google Sheets CSV endpoints on app load.
+- **Sacred Bali Activities & Excursions**: Dedicated catalog showing curated local experiences and booking details (Uluwatu Kecak, Mt. Batur, Snorkeling, etc.) at `/bali-activities`.
 - **Flexible Accommodation & Pricing Matrix**: Real-time room type selection (Single, Shared, Deluxe, Private) with instant pricing adjustments.
 - **WhatsApp Inquiry & Checkout Flow**: Bypasses complex payment gateways by compiling reservation configurations directly into structured WhatsApp messages for instant support coordination.
 - **Cart & Direct Checkout Modes**: Supports single-click direct course checkout or multi-item cart management.
@@ -146,11 +147,11 @@ Baliyoga/
 │   ├── assets/             # Global visual assets (images, vectors)
 │   ├── components/         # Modular React components
 │   │   ├── layout/         # Root layout, Header, Footer
-│   │   └── shared/         # Reusable UI components (ScrollToTop, cards)
+│   │   └── shared/         # Reusable UI components (ScrollToTop, cards, carousel)
 │   ├── data/               # Single source of truth data maps
 │   │   ├── locations.js     # Master list of locations & program routes
 │   │   ├── locationDataMap.js # Centralized course details & hero content
-│   │   ├── bali/           # Bali specific pricing matrices
+│   │   ├── bali/           # Bali specific pricing matrices & activities
 │   │   ├── mysore/         # Mysore specific pricing matrices
 │   │   └── rishikesh/      # Rishikesh specific pricing matrices
 │   ├── pages/              # Application views & pages
@@ -160,9 +161,10 @@ Baliyoga/
 │   │   ├── Checkout/       # Inquiry & Checkout workflow
 │   │   ├── gallery/        # Photo & Video galleries
 │   │   ├── contact/        # Contact form & location sections
-│   │   └── founder/        # Founder bio & story
-│   ├── utils/              # Helper utilities & local storage cart management
-│   ├── App.jsx             # React Router route definitions
+│   │   ├── founder/        # Founder bio & story
+│   │   └── activities/     # Sacred Bali activities & excursions pages
+│   ├── utils/              # Helper utilities & dynamic pricing from Google Sheets
+│   ├── App.jsx             # React Router route definitions & sheet fetching hook
 │   ├── main.jsx            # Application root entry point
 │   └── index.css           # Tailwind CSS directives & global styling
 ├── eslint.config.js        # ESLint code quality rules
@@ -184,12 +186,21 @@ git clone https://github.com/your-username/baliyoga.git
 cd baliyoga
 ```
 
-### 2. Install Dependencies
+### 2. Configure Environment Variables
+Create a `.env` file in the root directory and configure the Google Sheet CSV export URLs:
+```env
+# Google Sheet CSV Integration Endpoints
+VITE_SPREADSHEET_ID_PROGRAM=https://docs.google.com/spreadsheets/d/e/.../pub?output=csv&gid=905979125
+VITE_SPREADSHEET_ID_ROOM=https://docs.google.com/spreadsheets/d/e/.../pub?output=csv&gid=396782719
+VITE_SPREADSHEET_ID_BATCHES=https://docs.google.com/spreadsheets/d/e/.../pub?output=csv&gid=1930415554
+```
+
+### 3. Install Dependencies
 ```bash
 npm install
 ```
 
-### 3. Run Development Server
+### 4. Run Development Server
 ```bash
 npm run dev
 ```

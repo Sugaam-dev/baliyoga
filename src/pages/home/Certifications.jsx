@@ -8,17 +8,17 @@ import founderImg from "../../assets/images/home/balitemple.JPEG";
 
 const leadershipCards = [
   {
-    icon: <Sparkles className="w-7 h-7 text-[#c38b5f]" />,
+    icon: <Sparkles className="w-7 h-7 text-[#854417]" />,
     title: "Visionary Leader",
     description: "Inspiring conscious growth through authentic, time-tested yoga guidance.",
   },
   {
-    icon: <Users className="w-7 h-7 text-[#c38b5f]" />,
+    icon: <Users className="w-7 h-7 text-[#854417]" />,
     title: "Community Builder",
     description: "Creating warm, supportive spaces that uplift students on a global scale.",
   },
   {
-    icon: <Compass className="w-7 h-7 text-[#c38b5f]" />,
+    icon: <Compass className="w-7 h-7 text-[#854417]" />,
     title: "Yoga Practitioner",
     description: "Embodies the profound truths of yogic wisdom in every class, retreat, and breath.",
   },
@@ -26,7 +26,7 @@ const leadershipCards = [
 
 const Certifications = () => {
   return (
-    <div className="w-full bg-[#faf8f5] text-stone-850 antialiased selection:bg-[#c38b5f]/10 selection:text-[#c38b5f]">
+    <div className="w-full bg-[#faf8f5] text-stone-850 antialiased selection:bg-[#854417]/10 selection:text-[#854417]">
       <div className="w-full max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12 py-6 md:py-10">
         
         {/* SECTION 1: MEET THE FOUNDER */}
@@ -52,13 +52,13 @@ const Certifications = () => {
             {/* Right Column: Founder Bio Content */}
             <div className="lg:col-span-7 flex flex-col justify-center">
               <ScrollReveal delay={0.15}>
-                <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">
+                <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3 inline-block">
                   Meet The Founder ✦
                 </span>
                 <h2 className="text-4xl sm:text-5xl font-serif font-semibold text-stone-900 tracking-tight leading-none mb-3">
                   Yogi Ranjan
                 </h2>
-                <p className="text-[#a6734c] text-sm font-semibold tracking-wider uppercase mb-6">
+                <p className="text-[#7A3B0F] text-sm font-semibold tracking-wider uppercase mb-6">
                   Founder, Bali Yoga Kendra
                 </p>
                 
@@ -78,7 +78,7 @@ const Certifications = () => {
                     "Specialist in Pranayama & Breathwork Healing",
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <span className="text-[#c38b5f] text-xs mt-1.5 flex-shrink-0">✦</span>
+                      <span className="text-[#854417] text-xs mt-1.5 flex-shrink-0">✦</span>
                       <p className="text-sm sm:text-base text-stone-700 leading-snug">
                         {item}
                       </p>
@@ -90,13 +90,15 @@ const Certifications = () => {
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                   <Link 
                     to="/contact" 
+                    aria-label="Contact Yogi Ranjan and admissions"
                     className="bg-[#1c2e24] hover:bg-stone-850 text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 text-center no-underline"
                   >
                     Learn From The Founder
                   </Link>
                   <Link 
                     to="/founder" 
-                    className="border border-[#c38b5f] text-[#c38b5f] hover:bg-[#c38b5f] hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 text-center no-underline"
+                    aria-label="View Yogi Ranjan full journey and certifications"
+                    className="border-2 border-[#854417] text-[#854417] hover:bg-[#854417] hover:text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 text-center no-underline"
                   >
                     View Full Journey
                   </Link>
@@ -126,7 +128,7 @@ const Certifications = () => {
                   key={index}
                   className="bg-white border border-stone-200/40 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col items-center text-center group h-full"
                 >
-                  <div className="w-16 h-16 bg-[#faf8f5] border border-stone-200/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-[#c38b5f]/10 group-hover:border-[#c38b5f] transition-all duration-500">
+                  <div className="w-16 h-16 bg-[#faf8f5] border border-stone-200/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:bg-[#854417]/10 group-hover:border-[#854417] transition-all duration-500">
                     {card.icon}
                   </div>
                   

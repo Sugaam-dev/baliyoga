@@ -38,82 +38,146 @@ const FooterNavigation = () => {
 
         {/* QUICK LINKS */}
         <div>
-          <h4 className="font-semibold text-lg mb-5 tracking-wide">
+          <h3 className="font-semibold text-lg mb-5 tracking-wide text-white font-serif">
             QUICK LINKS
-          </h4>
+          </h3>
 
-          <ul className="text-sm text-gray-300 space-y-4">
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              TTC Programs
+          <ul className="text-sm text-stone-200 space-y-4 list-none p-0 m-0">
+            <li>
+              <Link to="/yoga-teacher-training" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Yoga Teacher Training (TTC)
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              Retreats
+            <li>
+              <Link to="/wellness-retreats" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Wellness Retreats
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              About Us
+            <li>
+              <Link to="/about" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                About Us
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              Contact
+            <li>
+              <Link to="/contact" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Contact &amp; Admissions
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* RESOURCES */}
         <div>
-          <h4 className="font-semibold text-lg mb-5 tracking-wide">
+          <h3 className="font-semibold text-lg mb-5 tracking-wide text-white font-serif">
             RESOURCES
-          </h4>
+          </h3>
 
-          <ul className="text-sm text-gray-300 space-y-4">
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              Blog
+          <ul className="text-sm text-stone-200 space-y-4 list-none p-0 m-0">
+            <li>
+              <Link to="/about" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Our Story &amp; Philosophy
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              FAQ
+            <li>
+              <Link to="/bali-activities" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Bali Excursions &amp; Activities
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              Student Reviews
+            <li>
+              <Link to="/founder" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Meet Our Founder
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              Yoga Alliance
+            <li>
+              <Link to="/yoga-teacher-training" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Yoga Alliance Certification
+              </Link>
             </li>
-            <li className="hover:text-orange-300 transition cursor-pointer">
-              Sitemap
+            <li>
+              <Link to="/terms-and-conditions" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Terms &amp; Conditions
+              </Link>
             </li>
           </ul>
         </div>
 
         {/* CONTACT */}
         <div>
-          <h4 className="font-semibold text-lg mb-5 tracking-wide">
+          <h3 className="font-semibold text-lg mb-5 tracking-wide text-white font-serif">
             CONNECT
-          </h4>
+          </h3>
 
-          <div className="space-y-3 text-sm text-gray-300">
-            <p>info@baliyoga.com</p>
-            <p>+91 98765 43210</p>
+          <div className="space-y-3 text-sm text-stone-200">
+            <p>
+              <a href="mailto:info@baliyoga.com" className="text-stone-200 hover:text-orange-300 transition-colors no-underline" aria-label="Send email to info@baliyoga.com">
+                info@baliyoga.com
+              </a>
+            </p>
+            <p>
+              <a href="https://wa.me/917483987568" target="_blank" rel="noopener noreferrer" className="text-stone-200 hover:text-orange-300 transition-colors no-underline" aria-label="WhatsApp phone support">
+                +91 74839 87568
+              </a>
+            </p>
           </div>
 
           {/* SOCIAL ICONS */}
           <div className="flex flex-wrap gap-3 mt-6">
-            <FaInstagram className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
-            <FaFacebookF className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
-            <FaTwitter className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
-            <FaYoutube className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
-            <MdEmail className="cursor-pointer h-10 w-10 p-2.5 rounded-full bg-white/10 hover:bg-orange-400 transition duration-300" />
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Bali Yoga Kendra on Instagram"
+              className="flex items-center justify-center h-10 w-10 p-2.5 rounded-full bg-white/10 text-white hover:bg-orange-400 hover:text-white transition duration-300"
+            >
+              <FaInstagram size={18} />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Bali Yoga Kendra on Facebook"
+              className="flex items-center justify-center h-10 w-10 p-2.5 rounded-full bg-white/10 text-white hover:bg-orange-400 hover:text-white transition duration-300"
+            >
+              <FaFacebookF size={18} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Bali Yoga Kendra on Twitter"
+              className="flex items-center justify-center h-10 w-10 p-2.5 rounded-full bg-white/10 text-white hover:bg-orange-400 hover:text-white transition duration-300"
+            >
+              <FaTwitter size={18} />
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Bali Yoga Kendra on YouTube"
+              className="flex items-center justify-center h-10 w-10 p-2.5 rounded-full bg-white/10 text-white hover:bg-orange-400 hover:text-white transition duration-300"
+            >
+              <FaYoutube size={18} />
+            </a>
+            <a
+              href="mailto:info@baliyoga.com"
+              aria-label="Send email to Bali Yoga Kendra"
+              className="flex items-center justify-center h-10 w-10 p-2.5 rounded-full bg-white/10 text-white hover:bg-orange-400 hover:text-white transition duration-300"
+            >
+              <MdEmail size={18} />
+            </a>
           </div>
         </div>
 
       </div>
 
       {/* BOTTOM */}
-      <div className="relative z-10 text-center text-xs sm:text-sm text-gray-400 mt-14 border-t border-white/10 pt-6">
-        © 2026 Bali Yoga. All rights reserved.
+      <div className="relative z-10 text-center text-xs sm:text-sm text-stone-300 mt-14 border-t border-white/10 pt-6">
+        © 2026 Bali Yoga Kendra. All rights reserved.
       </div>
-      <div className="relative z-10 text-center text-xs sm:text-sm text-gray-400 mt-2">
+      <div className="relative z-10 text-center text-xs sm:text-sm text-stone-300 mt-2">
         <Link
           to="/terms-and-conditions"
-          className="text-orange-400 hover:text-orange-300 transition duration-300 underline"
+          className="text-orange-300 hover:text-orange-200 transition duration-300 underline"
         >
           Terms and Conditions
         </Link>

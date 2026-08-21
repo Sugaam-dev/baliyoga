@@ -19,9 +19,9 @@ export default function OurStory({ ourImg }) {
               </div>
             </div>
             <div className="lg:col-span-7 flex flex-col justify-center">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">Welcome to Bali Yoga Kendra ✦</span>
+              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3 inline-block">Welcome to Bali Yoga Kendra ✦</span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-stone-900 leading-tight mb-6">
-                Welcome to <span className="text-[#c38b5f]">Bali Yoga Kendra</span>
+                Welcome to <span className="text-[#854417]">Bali Yoga Kendra</span>
               </h2>
               <p className="text-stone-600 text-base sm:text-lg leading-relaxed mb-4">
                 Bali Yoga Kendra is a premier Yoga Alliance Certified Yoga School in Bali, Indonesia, offering authentic Yoga Teacher Training Courses, Meditation Retreats, Wellness Programs, and Spiritual Immersion Experiences for students from around the world. Situated amidst the breathtaking beauty and sacred energy of Bali, our school provides a transformative environment where individuals can deepen their yoga practice, become certified yoga teachers, and embark on a journey of self-discovery.
@@ -40,11 +40,11 @@ export default function OurStory({ ourImg }) {
         <ScrollReveal delay={0.1}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-7 flex flex-col justify-center order-2 lg:order-1">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3 inline-block">
+              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3 inline-block">
                 The Inspiration Behind Bali Yoga Kendra ✦
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-stone-900 leading-tight mb-6">
-                Every great yoga school <span className="text-[#c38b5f]">begins with a vision.</span>
+                Every great yoga school <span className="text-[#854417]">begins with a vision.</span>
               </h2>
               <p className="text-stone-600 text-base leading-relaxed mb-4">
                 Bali Yoga Kendra was founded by Dr. Yogi Ranjan, a highly respected Yoga Teacher, Spiritual Healer, Meditation Practitioner, and Yog Acharya whose life has been dedicated to exploring the profound depths of yogic science and spiritual transformation.
@@ -71,7 +71,7 @@ export default function OurStory({ ourImg }) {
               {/* Bio below image */}
               <div className="mt-4 px-1">
                 <h3 className="text-stone-900 font-serif text-lg font-semibold">Dr. Yogi Ranjan</h3>
-                <p className="text-[#c38b5f] text-xs font-bold uppercase tracking-wider mt-0.5 mb-2">Founder & Head Teacher, Bali Yoga Kendra</p>
+                <p className="text-[#854417] text-xs font-bold uppercase tracking-wider mt-0.5 mb-2">Founder & Head Teacher, Bali Yoga Kendra</p>
                 <p className="text-stone-500 text-sm leading-relaxed">
                   E-RYT 500 · YACEP · Master in Yoga & Conscious Meditation · Specialist in Pranayama, Breathwork & Vedantic Philosophy.
                 </p>

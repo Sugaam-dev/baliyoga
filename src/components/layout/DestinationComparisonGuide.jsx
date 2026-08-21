@@ -24,7 +24,7 @@ const DestinationComparisonGuide = () => {
 
             {/* Content Details */}
             <div className="flex-grow">
-              <span className="text-[10px] sm:text-xs text-orange-500 font-bold tracking-[0.2em] uppercase">
+              <span className="text-[10px] sm:text-xs text-[#854417] font-bold tracking-[0.2em] uppercase">
                 Free Destination Guide ✦
               </span>
 
@@ -32,11 +32,11 @@ const DestinationComparisonGuide = () => {
                 Bali vs Rishikesh vs Mysore
               </h3>
 
-              <p className="text-[#a6734c] text-sm sm:text-base font-semibold mt-1">
+              <p className="text-[#7A3B0F] text-sm sm:text-base font-semibold mt-1">
                 Which Yoga TTC is Right for You?
               </p>
 
-              <p className="text-stone-500 text-xs sm:text-sm mt-3.5 leading-relaxed max-w-xl mx-auto sm:mx-0">
+              <p className="text-stone-600 text-xs sm:text-sm mt-3.5 leading-relaxed max-w-xl mx-auto sm:mx-0">
                 Download our detailed comparison guide and discover which yoga
                 destination perfectly matches your training goals, budget, and spiritual journey.
               </p>
@@ -52,7 +52,8 @@ const DestinationComparisonGuide = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm text-stone-800 placeholder-stone-400 outline-none focus:ring-2 focus:ring-[#c38b5f] transition-all duration-300 shadow-sm"
+                aria-label="Your Name"
+                className="w-full px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm text-stone-800 placeholder-stone-400 outline-none focus:ring-2 focus:ring-[#854417] transition-all duration-300 shadow-sm"
                 required
               />
 
@@ -60,7 +61,8 @@ const DestinationComparisonGuide = () => {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm text-stone-800 placeholder-stone-400 outline-none focus:ring-2 focus:ring-[#c38b5f] transition-all duration-300 shadow-sm"
+                aria-label="Email Address"
+                className="w-full px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm text-stone-800 placeholder-stone-400 outline-none focus:ring-2 focus:ring-[#854417] transition-all duration-300 shadow-sm"
                 required
               />
 
@@ -68,7 +70,8 @@ const DestinationComparisonGuide = () => {
               <input
                 type="tel"
                 placeholder="WhatsApp Number"
-                className="w-full px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm text-stone-800 placeholder-stone-400 outline-none focus:ring-2 focus:ring-[#c38b5f] transition-all duration-300 shadow-sm"
+                aria-label="WhatsApp Number"
+                className="w-full px-5 py-3 rounded-full border border-[#e0d6c8] bg-white text-sm text-stone-800 placeholder-stone-400 outline-none focus:ring-2 focus:ring-[#854417] transition-all duration-300 shadow-sm"
                 required
               />
 

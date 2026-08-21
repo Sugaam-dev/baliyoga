@@ -29,7 +29,7 @@ export default function Programs({
 
         {/* ── Section heading ── */}
         <ScrollReveal>
-          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] mb-3">
+          <span className="flex justify-center uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] mb-3">
             Yoga Alliance Certified Teacher Training in Bali ✦
           </span>
           <SectionHeading
@@ -43,10 +43,18 @@ export default function Programs({
         <div className="relative mt-8 xl:mt-12 px-0 xl:px-4">
 
           {/* Prev / Next arrows (desktop only) */}
-          <button className="programs-prev absolute left-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#c38b5f] hover:text-white hover:border-[#c38b5f] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer">
+          <button
+            type="button"
+            aria-label="Previous Program"
+            className="programs-prev absolute left-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#854417] hover:text-white hover:border-[#854417] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer"
+          >
             <ChevronLeft size={20} />
           </button>
-          <button className="programs-next absolute right-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#c38b5f] hover:text-white hover:border-[#c38b5f] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer">
+          <button
+            type="button"
+            aria-label="Next Program"
+            className="programs-next absolute right-[-56px] top-[40%] -translate-y-1/2 hidden xl:flex w-11 h-11 rounded-full border border-stone-200/80 bg-white text-stone-700 hover:bg-[#854417] hover:text-white hover:border-[#854417] items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md z-30 cursor-pointer"
+          >
             <ChevronRight size={20} />
           </button>
 
@@ -79,10 +87,10 @@ export default function Programs({
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/35 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent" />
                     {/* Price badge on image */}
                     {p.price && (
-                      <div className="absolute top-3 right-3 bg-[#c38b5f] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md tracking-wide">
+                      <div className="absolute top-3 right-3 bg-[#854417] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-md tracking-wide">
                         From {p.price}
                       </div>
                     )}
@@ -91,24 +99,25 @@ export default function Programs({
                   {/* Card body */}
                   <div className="p-6 flex flex-col justify-between flex-grow">
                     <div>
-                      <h3 className="text-stone-900 text-lg font-serif font-bold leading-snug group-hover:text-[#c38b5f] transition-colors duration-300 min-h-[52px]">
+                      <h3 className="text-stone-900 text-lg font-serif font-bold leading-snug group-hover:text-[#854417] transition-colors duration-300 min-h-[52px]">
                         {p.title}
                       </h3>
-                      <p className="text-stone-500 text-sm leading-relaxed mt-3 mb-6">
+                      <p className="text-stone-600 text-sm leading-relaxed mt-3 mb-6">
                         {p.desc}
                       </p>
                     </div>
                     <Link
                       to={p.link}
-                      className="inline-flex items-center gap-2 text-stone-700 text-xs font-bold uppercase tracking-wider hover:gap-3 hover:text-[#c38b5f] transition-all duration-300 no-underline self-start"
+                      aria-label={`Read more about ${p.title}`}
+                      className="inline-flex items-center gap-2 text-stone-700 text-xs font-bold uppercase tracking-wider hover:gap-3 hover:text-[#854417] transition-all duration-300 no-underline self-start"
                     >
                       Read More
-                      <ArrowRight size={14} className="text-[#c38b5f]" />
+                      <ArrowRight size={14} className="text-[#854417]" />
                     </Link>
                   </div>
 
                   {/* Bottom hover bar */}
-                  <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#c38b5f] group-hover:w-full transition-all duration-500" />
+                  <div className="h-[3px] w-0 bg-gradient-to-r from-[#1c2e24] to-[#854417] group-hover:w-full transition-all duration-500" />
                 </div>
 
               </SwiperSlide>
@@ -116,7 +125,7 @@ export default function Programs({
           </Swiper>
 
           {/* Pagination dots */}
-          <div className="programs-pagination flex justify-center gap-2 mt-8 [--swiper-pagination-color:#c38b5f]" />
+          <div className="programs-pagination flex justify-center gap-2 mt-8 [--swiper-pagination-color:#854417]" />
         </div>
 
       </div>

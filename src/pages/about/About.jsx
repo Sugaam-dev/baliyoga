@@ -3,7 +3,7 @@ import React from "react";
 import AboutHero from "./components/AboutHero";
 import OurStory from "./components/OurStory";
 import Teachers from "./components/Teachers";
-import Philosophy from "./components/Philosophy";
+import Programs from "./components/Programs";
 import WhyChoose from "./components/WhyChoose";
 import SacredDestinations from "./components/SacredDestinations";
 import Lifestyle from "./components/Lifestyle";
@@ -86,7 +86,7 @@ export default function About() {
       <Teachers teachers={teachers} />
 
       {/* 4. Programs with Swiper */}
-      <Philosophy />
+      <Programs />
 
       {/* 5. Why Choose BYK */}
       <WhyChoose />

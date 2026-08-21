@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, MapPin } from "lucide-react";
 import SectionHeading from "../../components/shared/SectionHeading";
 import MobileCarousel from "../../components/shared/MobileCarousel";
@@ -54,7 +55,7 @@ const UpcomingBatches = () => {
         <ScrollReveal>
           <div className="relative">
             <div className="flex justify-center mb-6">
-              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#c38b5f] inline-block">
+              <span className="uppercase tracking-[0.2em] text-[11px] font-bold text-[#854417] inline-block">
                 Upcoming Yoga Programs ✦
               </span>
             </div>
@@ -99,7 +100,7 @@ const UpcomingBatches = () => {
                   
                   {/* Location */}
                   <div className="flex items-center gap-1.5 text-orange-200 text-[10px] font-bold uppercase tracking-wider mb-2">
-                    <MapPin size={12} className="text-[#c38b5f] flex-shrink-0" />
+                    <MapPin size={12} className="text-[#854417] flex-shrink-0" />
                     <span>{item.location}</span>
                   </div>
 
@@ -113,16 +114,17 @@ const UpcomingBatches = () => {
                     <p className="text-xs sm:text-sm text-stone-300 font-semibold tracking-wide">
                       Starts: {item.date}
                     </p>
-                    <div className="w-8 h-[2px] bg-[#c38b5f] rounded-full" />
+                    <div className="w-8 h-[2px] bg-[#854417] rounded-full" />
                   </div>
 
                   {/* CTA Button */}
-                  <a 
-                    href="/contact"
-                    className="w-full bg-[#493c28] text-stone-850 hover:bg-[#c38b5f] hover:text-[#FAF8F5] font-bold text-xs uppercase tracking-wider py-3.5 rounded-full transition-all duration-300 shadow-sm block text-center no-underline"
+                  <Link 
+                    to="/contact"
+                    aria-label={`Reserve your seat for ${item.title}`}
+                    className="w-full bg-[#FAF8F5] text-stone-900 hover:bg-[#854417] hover:text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-full transition-all duration-300 shadow-sm block text-center no-underline"
                   >
                     Reserve Your Seat
-                  </a>
+                  </Link>
                 </div>
               </div>
             )}

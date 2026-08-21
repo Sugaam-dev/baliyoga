@@ -65,8 +65,6 @@ function App() {
                      <Route path="/programs/:location" element={<LocationLandingPageWrapper />} />
                       <Route path="/programs/:location/:course" element={<ProgramPageWrapper />} />
                       <Route path="/retreats/:location/:course" element={<ProgramPageWrapper />} />
-                    {/* <Route path='6-days-50-hour-multi-style-yoga-training-in-bali' element={<YogaTeacherTraining/>} /> */}
-                    {/* <Route path='ytt/6-days-50hr-multi-style' element={<YogaTeacherTraining/>} /> */}
 
           </Route>
         </Routes>
