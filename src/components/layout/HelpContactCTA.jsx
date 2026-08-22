@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { FaUserTie, FaWhatsapp, FaPassport, FaCreditCard } from "react-icons/fa";
 import bgImg from "../../assets/guide.webp";
 
@@ -38,7 +38,7 @@ const HelpContactCTA = () => {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
               <a
-                href="https://wa.me/917483987568"
+                href="https://wa.me/917829997007"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with Bali Yoga Kendra on WhatsApp"

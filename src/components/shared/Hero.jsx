@@ -31,7 +31,7 @@ function HeroSection() {
   }, []);
 
   const desktopImages = [
-    { url: yoga1, alt: "Yoga Retreat Bali Desktop 1" },
+    { url: "/hero-desktop.webp", alt: "Yoga Retreat Bali Desktop 1" },
     { url: yoga2, alt: "Yoga Meditation Bali Desktop 2" },
     { url: yoga3, alt: "Yoga Retreat Bali Desktop 3" },
     { url: yoga4, alt: "Yoga Meditation Bali Desktop 4" },
@@ -55,7 +55,7 @@ function HeroSection() {
             <div className="relative h-[86vh] min-h-[600px] max-h-[820px] w-full">
               <div className="absolute inset-0 z-0">
                 <img
-                  src={yoga1}
+                  src="/hero-desktop.webp"
                   alt="Yoga Retreat Bali Desktop 1"
                   loading="eager"
                   fetchpriority="high"

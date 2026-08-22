@@ -4,7 +4,7 @@ import { X, Plus } from "lucide-react";
 
 const links = [
   {
-    href: "https://wa.me/917483987568",
+    href: "https://wa.me/917829997007",
     icon: <FaWhatsapp size={20} />,
     color: "text-green-500",
     bg: "hover:bg-green-50",

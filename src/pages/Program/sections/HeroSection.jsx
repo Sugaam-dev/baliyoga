@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -67,14 +67,18 @@ const HeroSection = ({ data, onBookClick }) => {
           </p>
 
           {/* Price */}
-          <div className="text-5xl md:text-6xl font-semibold leading-tight mb-2">{hero.price}</div>
-          <p className="text-sm text-white/80 mb-8">{hero.priceNote}</p>
+          {hero.price && (
+            <div className="text-3xl md:text-5xl font-semibold leading-tight mb-10">
+              <span className="text-base md:text-lg font-normal opacity-85 mr-2">Starting from</span>
+              {hero.price}
+            </div>
+          )}
 
           {/* CTA */}
           {onBookClick ? (
             <button
               onClick={onBookClick}
-              className="inline-flex items-center gap-2 bg-gradient-to-br from-green-600 via-green-700 to-green-900 text-white font-semibold px-8 py-4 rounded-full text-sm hover:-translate-y-2 hover:scale-105 hover:shadow-[0_15px_35px_rgba(11,78,53,0.6)] transition-all duration-300 border-0 cursor-pointer animate-[floatingGlow_3.5s_ease-in-out_infinite]"
+              className="inline-flex items-center gap-2 bg-gradient-to-br from-green-600 via-green-700 to-green-900 text-white font-semibold px-8 py-4 rounded-full text-sm hover:-translate-y-2 hover:scale-105 hover:shadow-[0_15px_35px_rgba(11,78,53,0.6)] transition-all duration-300 border-0 cursor-pointer animate-[floatingGlow_3.5s_ease-in-out_infinite] mt-2"
             >
               {hero.buttonText || "Book Now"} <ArrowRight size={18} />
             </button>

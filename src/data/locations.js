@@ -9,8 +9,6 @@ export const LOCATIONS = [
   { slug: "mysuru",       label: "Mysuru" },
   { slug: "bali",         label: "Bali" },
   { slug: "rishikesh",    label: "Rishikesh" },
-  { slug: "chiang-mai",   label: "Chiang Mai" },
-  { slug: "dharamshala",  label: "Dharamshala" },
 ];
 
 // Quick lookup helpers
@@ -101,54 +99,6 @@ export const PROGRAM_LINKS = {
       { path: "rishikesh18daysyogatherapywellness", label: "Yoga Therapy & Wellness Teacher Training Course" }
     ],
   },
-
-  "chiang-mai": {
-    multiStyle: [
-      { path: "50hr",  label: "6 Days 50 Hours Multi-Style Yoga Course" },
-      { path: "100hr", label: "10 Days 100 Hours Nature Calm Course" },
-      { path: "200hr", label: "20 Days 200 Hours Lanna Highland YTTC" },
-      { path: "300hr", label: "26 Days 300 Hours Advanced Multi-Style YTTC" },
-      { path: "500hr", label: "56 Days 500 Hours Advanced Multi-Style YTTC" }
-    ],
-    kundalini: [
-      { path: "kundalini50hr",  label: "6 Days 50 Hours Kundalini Yoga Course" },
-      { path: "kundalini100hr", label: "10 Days 100 Hours Kundalini YTTC" },
-      { path: "kundalini200hr", label: "20 Days 200 Hours Kundalini YTTC" },
-      { path: "kundalini300hr", label: "30 Days 300 Hours Kundalini YTTC" },
-      { path: "kundalini500hr", label: "56 Days 500 Hours Kundalini YTTC" }
-    ],
-    shortCourses: [
-      { path: "yinyoga",      label: "6 Days 50 Hours Zen Yin Yoga" },
-      { path: "prenatalyoga", label: "Sacred Prenatal Yoga TTC" },
-      { path: "aerialyoga",   label: "5 Days Aerial Yoga Course" },
-      { path: "acroyoga",     label: "5 Days Acro Yoga Course" }
-    ],
-    specialization: [
-      { path: "soundhealing", label: "Sound Healing Course" },
-      { path: "100houryogatherapyayurve", label: "Bali 100Hours Yoga Therapy Ayurveda" },
-      { path: "ayurvedictreatmentttc", label: "Ayurvedic Treatment In Chiang Mai" },
-      { path: "ayurveda5hoursabhyangam", label: "Ayurveda Massage Course In Chiang Mai" },
-      { path: "wellness-retreat", label: "Monastery Meditation & Wellness Retreat" }
-    ],
-  },
-
-  dharamshala: {
-    multiStyle: [
-      { path: "100hr", label: "10 Days 100 Hours Mountain Meditation" },
-      { path: "200hr", label: "20 Days 200 Hours Himalayan Zen YTTC" },
-      { path: "300hr", label: "26 Days 300 Hours Advanced Masters Path" },
-      { path: "500hr", label: "56 Days 500 Hours Master Multi-Style Training" }
-    ],
-    kundalini: [
-      { path: "kundalini50hr", label: "5 Days 50 Hours Kundalini YTTC" },
-      { path: "kundalini100hr", label: "10 Days 100 Hours Kundalini YTTC" },
-      { path: "kundalini200hr", label: "25 Days 200 Hours Kundalini YTTC" },
-      { path: "kundalini300hr", label: "29 Days 300 Hours Kundalini YTTC" },
-      { path: "kundalini500hr", label: "59 Days 500 Hours Kundalini YTTC" }
-    ],
-    shortCourses: [],
-    specialization: [],
-  },
 };
 
 // ─────────────────────────────────────────────
@@ -174,18 +124,6 @@ export const RETREAT_LINKS = {
     { path: "rishikesh15daysyogaretreat", label: "15-Day Multi-Style Yoga Retreat" },
     { path: "rishikesh5daysacupressure", label: "5-Day Acupressure Healing Course" },
     { path: "rishikesh10dayspanchakarma", label: "10-Day Panchakarma Therapy Program" },
-  ],
-  "chiang-mai": [
-    { path: "chiangmairetreats6days", label: "6-Day Yoga and Detox Retreat" },
-    { path: "VipassanaRetreat", label: "Vipassana Retreat" },
-    { path: "YogaMeditationWellnessRetreat", label: "Yoga, Meditation & Wellness Retreat" },
-    { path: "KundaliniSadhanaRetreat", label: "Kundalini Sadhana Retreat" },
-    { path: "SeniorCitizenWellnessRetreat", label: "Senior Citizen Wellness Retreat" },
-    { path: "WomensHealthWellnessRetreat", label: "Women's Health & Wellness Retreat" },
-  ],
-  dharamshala: [
-    { path: "host-your-retreat",   label: "Host Your Retreat" },
-    { path: "make-your-own-combo", label: "Make Your Own Combo" },
   ],
 };
 

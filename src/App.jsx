@@ -19,6 +19,8 @@ const LocationLandingPage = React.lazy(() => import('./pages/programsCard/Locati
 const BaliActivitiesPage = React.lazy(() => import('./pages/activities/BaliActivitiesPage'));
 const BaliActivityDetailPage = React.lazy(() => import('./pages/activities/BaliActivityDetailPage'));
 
+import { fetchAndApplyDynamicPrices } from './utils/dynamicPrices';
+
 function ProgramPageWrapper() {
   const { pathname } = useLocation();
   return <ProgramPage key={pathname.toLowerCase()} />;
@@ -30,6 +32,10 @@ function LocationLandingPageWrapper() {
 }
 
 function App() {
+  useEffect(() => {
+    fetchAndApplyDynamicPrices();
+  }, []);
+
   return (
     <>
       <BrowserRouter>

@@ -3,6 +3,7 @@ import { Send, CheckCircle2, User, Mail, Phone, BookOpen, MessageSquare, MapPin,
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { isValidPhoneNumber } from "libphonenumber-js";
+import { submitToWeb3Forms } from "../../../utils/web3forms";
 
 export default function InquiryForm() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ export default function InquiryForm() {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
   const [isSubjectDropdownOpen, setIsSubjectDropdownOpen] = useState(false);
@@ -38,7 +41,7 @@ export default function InquiryForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
@@ -59,7 +62,33 @@ export default function InquiryForm() {
     }
 
     setErrors({});
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const res = await submitToWeb3Forms(
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          location: formData.location,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        `Bali Yoga Kendra Inquiry - ${formData.subject}`
+      );
+
+      if (res.success) {
+        setIsSubmitted(true);
+      } else {
+        setSubmitError(res.message || "Failed to submit. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setSubmitError("Failed to submit. Please try again or message on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -324,13 +353,29 @@ export default function InquiryForm() {
                 </div>
               </div>
 
+              {submitError && (
+                <div className="p-3.5 bg-red-50 border border-red-200 rounded-xl text-red-700 text-xs font-semibold text-center">
+                  {submitError}
+                </div>
+              )}
+
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#854417] text-white py-4 rounded-xl font-extrabold text-xs tracking-[0.15em] uppercase hover:bg-[#6e3712] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full bg-[#854417] text-white py-4 rounded-xl font-extrabold text-xs tracking-[0.15em] uppercase hover:bg-[#6e3712] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <span>Submit Inquiry</span>
-                <Send className="w-4 h-4" />
+                {isSubmitting ? (
+                  <>
+                    <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                    <span>Sending Inquiry...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Inquiry</span>
+                    <Send className="w-4 h-4" />
+                  </>
+                )}
               </button>
 
             </form>

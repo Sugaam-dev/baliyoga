@@ -170,7 +170,11 @@ const TrustBanner = () => {
                     <img
                       src={cert.src}
                       alt={cert.name}
-                      className="h-full w-auto object-contain mix-blend-multiply opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer"
+                      width="56"
+                      height="56"
+                      loading="lazy"
+                      style={{ width: "56px", height: "56px", aspectRatio: "1 / 1", display: "inline-block" }}
+                      className="w-14 h-14 aspect-square object-contain mix-blend-multiply opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer"
                       onError={() => handleImageError(cert.id)}
                     />
                   )}

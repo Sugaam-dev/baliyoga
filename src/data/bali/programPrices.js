@@ -3,32 +3,39 @@ export const PROGRAM_PRICES = {
     "50hr": "$650",
     "100hr": "$999",
     "200hr": "$1,299",
-    "300hr": "$2,099",
-    "500hr": "$3,599",
+    "300hr": "$1,499",
+    "500hr": "$2,999",
   },
 
   kundalini: {
     "50hr": "$650",
     "100hr": "$999",
     "200hr": "$1,299",
-    "300hr": "$2,199",
-    "500hr": "$3,699",
+    "300hr": "$1,599",
+    "500hr": "$2,599",
   },
   shortcourses: {
-    "yinyoga": "$650",
-    "prenatalyoga": "$650",
-    "aerialyoga": "$550",
-    "acroyoga": "$799",
+    "yinyoga": "$499",
+    "prenatalyoga": "$499",
+    "aerialyoga": "$399",
+    "acroyoga": "$599",
   },
   specializations: {
-    "soundhealing": "$400",
-    "BaliAyurvedicTreatmentTTCData": "$1450",
+    "soundhealing": "$350",
+    "BaliAyurvedicTreatmentTTCData": "$1,250",
+    "ayurvedictreatmentttc": "$1,250",
     "BaliAyurveda5HoursAbhyangamData": "$250",
-    "Bali100HourYogaTherapyAyurvedaData": "$1299",
-    "wellnessretreat": "$0",
+    "ayurveda5hoursabhyangam": "$250",
+    "Bali100HourYogaTherapyAyurvedaData": "$899",
+    "100houryogatherapyayurve": "$899",
     "retreats6days": "$650",
+    "vipassanameditation": "$99",
+    "3daywellness": "$350",
+    "adventureyoga": "$1,099",
+    "multistylemeditation": "$999",
   },
 };
+
 
 export const ROOM_PRICES_BALI = {
   "50hr": {
@@ -209,28 +216,6 @@ export const ROOM_PRICES_BALI = {
     rooms: [
       { type: "2 Sharing Room", current: 999, original: 1099, popular: true },
       { type: "Private Room", current: 1099, original: 1299, popular: false }
-    ]
-  },
-  "100houryogatherapyayurve": {
-    durationDays: 18,
-    rooms: [
-      { type: "4/6 Sharing Room", current: 899, original: 1299, popular: false },
-      { type: "2 Sharing Room", current: 1299, original: 1799, popular: true },
-      { type: "Private Room", current: 1499, original: 1999, popular: false }
-    ]
-  },
-  "ayurveda5hoursabhyangam": {
-    durationDays: 2,
-    rooms: [
-      { type: "Course Fee", current: 250, original: 500, popular: true }
-    ]
-  },
-  "ayurvedictreatmentttc": {
-    durationDays: 10,
-    rooms: [
-      { type: "Without Food & Stay", current: 599, original: 999, popular: false },
-      { type: "2 Sharing Room", current: 799, original: 1199, popular: true },
-      { type: "Private Room", current: 999, original: 1399, popular: false }
     ]
   }
 };

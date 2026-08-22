@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -114,8 +114,8 @@ const FooterNavigation = () => {
               </a>
             </p>
             <p>
-              <a href="https://wa.me/917483987568" target="_blank" rel="noopener noreferrer" className="text-stone-200 hover:text-orange-300 transition-colors no-underline" aria-label="WhatsApp phone support">
-                +91 74839 87568
+              <a href="https://wa.me/917829997007" target="_blank" rel="noopener noreferrer" className="text-stone-200 hover:text-orange-300 transition-colors no-underline" aria-label="WhatsApp phone support">
+                +91 78299 97007
               </a>
             </p>
           </div>

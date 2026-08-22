@@ -14,6 +14,8 @@ import BaliYogaGallery from "./BaliYogaGallery";
 import TestimonialsSection from "./TestimonialsSection";
 import UpcomingBatches from "./UpcomingBatches";
 import WhereToTrain from "./WhereToTrain";
+import LazySection from "../../components/shared/LazySection";
+
 export default function Home() {
   return (
     <div className="bg-[#FAF8F5]">
@@ -22,50 +24,73 @@ export default function Home() {
       
       {/* 2. Trust Seals & Ratings Banner */}
       <TrustBanner />
-      {/* Introduction Section */}
-      <BYKIntroduction />
-  {/* 4. Yoga Teacher Training Courses Slider */}
-      <Programs
-        title="Yoga Teacher Training"
-        highlight="Courses in Bali"
-        subtitle="Deepen your practice and obtain an internationally recognized certification in the heart of paradise."
-      />
-      
-      
-      {/* 3. Founder Details & Core Pillars */}
-      <Certifications />
 
-      {/* Where To Train */}
-      <WhereToTrain />
+      {/* 3. Introduction Section */}
+      <BYKIntroduction />
+
+      {/* 4. Yoga Teacher Training Courses Slider */}
+      <LazySection minHeight="400px">
+        <Programs
+          title="Yoga Teacher Training"
+          highlight="Courses in Bali"
+          subtitle="Deepen your practice and obtain an internationally recognized certification in the heart of paradise."
+        />
+      </LazySection>
       
-      
+      {/* 5. Founder Details & Core Pillars */}
+      <LazySection minHeight="400px">
+        <Certifications />
+      </LazySection>
+
+      {/* 6. Where To Train */}
+      <LazySection minHeight="400px">
+        <WhereToTrain />
+      </LazySection>
     
-      {/* 5. Additional Activities (Excursions & Healing) */}
-      <AdditionalActivities />
+      {/* 7. Additional Activities (Excursions & Healing) */}
+      <LazySection minHeight="400px">
+        <AdditionalActivities />
+      </LazySection>
       
-      {/* 6. Magic of Bali Kendra Experience */}
-      <BaliYogaKendraExperience />
+      {/* 8. Magic of Bali Kendra Experience */}
+      <LazySection minHeight="400px">
+        <BaliYogaKendraExperience />
+      </LazySection>
       
-      {/* 7. Essence of Bali Yoga Carousel Slider */}
-      <BaliYogaEssenceSlider />
+      {/* 9. Essence of Bali Yoga Carousel Slider */}
+      <LazySection minHeight="400px">
+        <BaliYogaEssenceSlider />
+      </LazySection>
       
-      {/* 8. Bali Yoga Retreats & Courses Grid */}
-      <BaliYogaRetreatsGrid />
+      {/* 10. Bali Yoga Retreats & Courses Grid */}
+      <LazySection minHeight="400px">
+        <BaliYogaRetreatsGrid />
+      </LazySection>
       
-      {/* 9. Retreat Center Locations */}
-      <RetreatCenters />
+      {/* 11. Retreat Center Locations */}
+      <LazySection minHeight="400px">
+        <RetreatCenters />
+      </LazySection>
       
-      {/* 10. Special Discount Offers */}
-      <BaliYogaOffers />
+      {/* 12. Special Discount Offers */}
+      <LazySection minHeight="400px">
+        <BaliYogaOffers />
+      </LazySection>
       
-      {/* 12. Picture Gallery Grid */}
-      <BaliYogaGallery />
+      {/* 13. Picture Gallery Grid */}
+      <LazySection minHeight="400px">
+        <BaliYogaGallery />
+      </LazySection>
       
-      {/* 13. Student Testimonials */}
-      <TestimonialsSection />
+      {/* 14. Student Testimonials */}
+      <LazySection minHeight="400px">
+        <TestimonialsSection />
+      </LazySection>
       
-      {/* 14. Upcoming Course Batches */}
-      <UpcomingBatches />
+      {/* 15. Upcoming Course Batches */}
+      <LazySection minHeight="400px">
+        <UpcomingBatches />
+      </LazySection>
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function SocialLinksSection() {
       name: "Community",
       handle: "Yogis Circle",
       icon: MessageCircle,
-      link: "https://wa.me/6281234567890",
+      link: "https://wa.me/917829997007",
       color: "hover:bg-emerald-600 hover:text-white",
     },
   ];

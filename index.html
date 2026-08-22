@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#1b3328" />
 
-    <!-- Preload Critical Above-the-Fold Mobile Hero Image -->
+    <!-- Preload Critical Above-the-Fold Hero Images -->
     <link
       rel="preload"
       as="image"
@@ -14,6 +14,14 @@
       type="image/webp"
       fetchpriority="high"
       media="(max-width: 1023px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/hero-desktop.webp"
+      type="image/webp"
+      fetchpriority="high"
+      media="(min-width: 1024px)"
     />
 
     <!-- Preconnect to Google Fonts -->
@@ -26,11 +34,30 @@
         margin: 0;
         background-color: #faf8f5;
         color: #2c2520;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       }
       #root {
         min-height: 100vh;
         background-color: #faf8f5;
+      }
+      .hero-placeholder-mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: #faf8f5;
+      }
+      .hero-placeholder-desktop {
+        display: none;
+      }
+      @media (min-width: 1024px) {
+        .hero-placeholder-mobile {
+          display: none;
+        }
+        .hero-placeholder-desktop {
+          display: block;
+          position: relative;
+          width: 100%;
+          background-color: #faf8f5;
+        }
       }
     </style>
 
@@ -57,48 +84,87 @@
       name="keywords"
       content="Yoga Teacher Training Bali, 200 Hour Yoga Teacher Training Bali, 300 Hour Yoga Teacher Training Bali, 500 Hour Yoga Teacher Training Bali, Yoga Retreats Bali, Ubud Yoga Teacher Training, Yoga Alliance Bali"
     />
-    <link rel="canonical" href="https://baliyoga.vercel.app/" />
+    <link rel="canonical" href="https://baliyogakendra.com/" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://baliyoga.vercel.app/" />
+    <meta property="og:url" content="https://baliyogakendra.com/" />
     <meta property="og:title" content="Bali Yoga Kendra | Certified Yoga Teacher Training &amp; Retreats in Bali" />
     <meta property="og:description" content="Transform your life with Yoga Alliance certified 100h, 200h, 300h, and 500h Yoga Teacher Training courses and spiritual wellness retreats in Bali." />
-    <meta property="og:image" content="https://baliyoga.vercel.app/logo.webp" />
+    <meta property="og:image" content="https://baliyogakendra.com/logo.webp" />
     <meta property="og:site_name" content="Bali Yoga Kendra" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Bali Yoga Kendra | Certified Yoga Teacher Training &amp; Retreats in Bali" />
     <meta name="twitter:description" content="Transform your life with Yoga Alliance certified 100h, 200h, 300h, and 500h Yoga Teacher Training courses and spiritual wellness retreats in Bali." />
-    <meta name="twitter:image" content="https://baliyoga.vercel.app/logo.webp" />
+    <meta name="twitter:image" content="https://baliyogakendra.com/logo.webp" />
   </head>
   <body>
     <div id="root">
-      <section style="background-color: #faf8f5; min-height: 100vh; width: 100%; display: flex; flex-direction: column;">
-        <div style="background-color: #faf8f5; padding: 96px 24px 48px; max-width: 1440px; margin: 0 auto; width: 100%; box-sizing: border-box;">
-          <div style="color: #854417; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">
-            ★ A JOURNEY THAT TRANSFORMS YOU
+      <section style="position: relative; width: 100%; overflow: hidden; background-color: #faf8f5; padding: 0; margin: 0;">
+        <!-- Desktop Static Placeholder -->
+        <div class="hero-placeholder-desktop">
+          <div style="position: relative; height: 86vh; min-height: 600px; max-height: 820px; width: 100%;">
+            <div style="position: absolute; inset: 0; z-index: 0;">
+              <img
+                src="/hero-desktop.webp"
+                alt="Yoga Retreat Bali Desktop 1"
+                loading="eager"
+                fetchpriority="high"
+                width="1400"
+                height="820"
+                style="width: 100%; height: 100%; object-fit: cover; display: block;"
+              />
+              <div
+                style="position: absolute; inset: 0; background: linear-gradient(to right, #FAF8F5 0%, #FAF8F5 30%, rgba(250, 248, 245, 0.95) 38%, rgba(250, 248, 245, 0.6) 50%, rgba(250, 248, 245, 0) 65%);"
+              ></div>
+            </div>
+            <div style="position: relative; z-index: 10; height: 100%; max-width: 1440px; margin: 0 auto; width: 100%; padding: 0 24px; display: flex; align-items: center; box-sizing: border-box;">
+              <div style="width: 40%; display: flex; flex-direction: column; justify-content: center; padding-top: 96px; padding-bottom: 96px; padding-right: 16px; box-sizing: border-box;">
+                <div style="display: flex; align-items: center; gap: 8px; color: #854417; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                  ★ A JOURNEY THAT TRANSFORMS YOU
+                </div>
+                <h1 style="margin-top: 16px; margin-bottom: 0; font-family: 'Montserrat', sans-serif; font-size: 3.2rem; line-height: 1.15; font-weight: 800; color: #1f3528; letter-spacing: -0.025em;">
+                  Become a <br />
+                  <span style="font-weight: 800;">Certified Yoga</span> <br />
+                  Teacher in <span style="color: #854417; font-weight: 800;">Bali</span>
+                </h1>
+                <p style="margin-top: 28px; margin-bottom: 0; color: #292524; font-weight: 700; font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px;">
+                  Transform Your Life. Inspire the World.
+                </p>
+              </div>
+            </div>
           </div>
-          <h1 style="font-size: 2.2rem; font-weight: 800; color: #1f3528; line-height: 1.15; margin: 0 0 16px 0; font-family: 'Montserrat', sans-serif;">
-            Become a <br />
-            Certified Yoga <br />
-            Teacher in <span style="color: #854417;">Bali</span>
-          </h1>
-          <p style="font-size: 18px; font-weight: 700; font-style: italic; color: #292524; margin: 0; font-family: 'Playfair Display', serif;">
-            Transform Your Life. Inspire the World.
-          </p>
         </div>
-        <div style="width: 100%; overflow: hidden; position: relative;">
-          <img
-            src="/hero-mobile.webp"
-            alt="Yoga Retreat Bali Mobile 1"
-            width="900"
-            height="1093"
-            fetchpriority="high"
-            loading="eager"
-            style="width: 100%; height: 45vw; min-height: 500px; max-height: 900px; object-fit: cover; display: block;"
-          />
+
+        <!-- Mobile Static Placeholder -->
+        <div class="hero-placeholder-mobile">
+          <div style="background-color: #faf8f5; padding: 96px 24px 48px; max-width: 1440px; margin: 0 auto; width: 100%; box-sizing: border-box;">
+            <div style="color: #854417; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">
+              ★ A JOURNEY THAT TRANSFORMS YOU
+            </div>
+            <h1 style="font-size: 2.2rem; font-weight: 800; color: #1f3528; line-height: 1.15; margin: 0 0 16px 0; font-family: 'Montserrat', sans-serif;">
+              Become a <br />
+              Certified Yoga <br />
+              Teacher in <span style="color: #854417;">Bali</span>
+            </h1>
+            <p style="font-size: 18px; font-weight: 700; font-style: italic; color: #292524; margin: 0; font-family: 'Playfair Display', serif;">
+              Transform Your Life. Inspire the World.
+            </p>
+          </div>
+          <div style="width: 100%; overflow: hidden; position: relative;">
+            <img
+              src="/hero-mobile.webp"
+              alt="Yoga Retreat Bali Mobile 1"
+              width="900"
+              height="1093"
+              fetchpriority="high"
+              loading="eager"
+              style="width: 100%; height: 45vw; min-height: 500px; max-height: 900px; object-fit: cover; display: block;"
+            />
+            <div style="position: absolute; inset: 0; background-color: rgba(0,0,0,0.05);"></div>
+          </div>
         </div>
       </section>
     </div>
