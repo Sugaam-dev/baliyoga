@@ -76,6 +76,36 @@ const generateBatches = (durationDays, locationKey, courseKey) => {
     .map(batch => formatBatch(batch.startDate, batch.endDate));
 };
 
+// Helper to resolve a complete, human-readable program title
+const resolveProgramTitle = (programData, state) => {
+  if (state?.programName && state.programName !== "Yoga Program") return state.programName;
+  if (state?.title && state.title !== "Yoga Program") return state.title;
+  
+  if (programData) {
+    const heroInfo = programData.heroSection?.hero || programData.hero || {};
+    const highlight = (heroInfo.highlight || "").trim();
+    const title = (heroInfo.title || programData.title || "").trim();
+
+    if (highlight && title) {
+      if (title.toLowerCase().startsWith(highlight.toLowerCase())) {
+        return title;
+      }
+      return `${highlight} ${title}`;
+    }
+    if (title) return title;
+    if (heroInfo.subtitle) return heroInfo.subtitle;
+  }
+
+  if (state?.slug) {
+    return state.slug
+      .replace(/([0-9]+)hr/i, '$1-Hour YTTC')
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  return "Yoga Program";
+};
+
 export default function CheckoutPage() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -116,7 +146,7 @@ export default function CheckoutPage() {
   // Initialize checkout modes
   useEffect(() => {
     let state = location.state;
-    if (state && state.slug) {
+    if (state && (state.slug || state.programName || state.title)) {
       try {
         sessionStorage.setItem("baliyoga_checkout_state", JSON.stringify(state));
       } catch (e) {}
@@ -130,10 +160,11 @@ export default function CheckoutPage() {
     }
     state = state || {};
     
-    if (state.slug) {
+    if (state.slug || state.programName || state.title) {
       // Find course details
       let programData = null;
       const slugKey = state.slug?.toLowerCase();
+      const rawSlugKey = slugKey?.replace(/-/g, "");
       
       if (state.location && state.type) {
         const locKey = state.location?.toLowerCase();
@@ -142,19 +173,19 @@ export default function CheckoutPage() {
           : ["ytt", "kundalini", "short-courses", "specialization"];
         if (locationDataMap[locKey]) {
           for (const cat of catList) {
-            if (locationDataMap[locKey][cat]?.[slugKey]) {
-              programData = locationDataMap[locKey][cat][slugKey];
+            if (locationDataMap[locKey][cat]?.[slugKey] || (rawSlugKey && locationDataMap[locKey][cat]?.[rawSlugKey])) {
+              programData = locationDataMap[locKey][cat][slugKey] || locationDataMap[locKey][cat][rawSlugKey];
               break;
             }
           }
         }
       }
 
-      if (!programData) {
+      if (!programData && slugKey) {
         for (const loc of Object.keys(locationDataMap)) {
           for (const cat of Object.keys(locationDataMap[loc])) {
-            if (locationDataMap[loc][cat]?.[slugKey]) {
-              programData = locationDataMap[loc][cat][slugKey];
+            if (locationDataMap[loc][cat]?.[slugKey] || (rawSlugKey && locationDataMap[loc][cat]?.[rawSlugKey])) {
+              programData = locationDataMap[loc][cat][slugKey] || locationDataMap[loc][cat][rawSlugKey];
               break;
             }
           }
@@ -162,78 +193,88 @@ export default function CheckoutPage() {
         }
       }
 
-      if (programData) {
-        setIsDirectBooking(true);
-        
-        let rooms = [];
-        const locKey = (state.location || programData.location || "bali").toLowerCase();
-        
-        let sourceRoomPrices = ROOM_PRICES_BALI;
-        if (locKey === "rishikesh") sourceRoomPrices = ROOM_PRICES_RISHIKESH;
-        else if (locKey === "mysore") sourceRoomPrices = ROOM_PRICES_MYSORE;
+      // Even if programData is not matched directly in locationDataMap, direct checkout should work if state info is provided
+      setIsDirectBooking(true);
+      
+      let rooms = [];
+      const locKey = (state.location || programData?.location || "bali").toLowerCase();
+      
+      let sourceRoomPrices = ROOM_PRICES_BALI;
+      if (locKey === "rishikesh") sourceRoomPrices = ROOM_PRICES_RISHIKESH;
+      else if (locKey === "mysore" || locKey === "mysuru") sourceRoomPrices = ROOM_PRICES_MYSORE;
 
-        const pricingInfo = sourceRoomPrices?.[slugKey];
-        if (pricingInfo) {
-          if (Array.isArray(pricingInfo)) {
-            rooms = pricingInfo;
-          } else if (pricingInfo && Array.isArray(pricingInfo.rooms)) {
-            rooms = pricingInfo.rooms.map(r => ({
-              type: r.type,
-              price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
-              popular: r.popular,
-              note: r.note || ""
-            }));
-          }
-        }
-
-        if (rooms.length === 0 && programData.accommodation?.pricing) {
-          rooms = Object.entries(programData.accommodation.pricing).map(([type, price]) => ({
-            type: type.charAt(0).toUpperCase() + type.slice(1).replace(/([A-Z])/g, ' $1'),
-            price: typeof price === "number" ? `$${price.toLocaleString()}` : price
+      const pricingInfo = sourceRoomPrices?.[slugKey] || (rawSlugKey && sourceRoomPrices?.[rawSlugKey]);
+      if (pricingInfo) {
+        if (Array.isArray(pricingInfo)) {
+          rooms = pricingInfo;
+        } else if (pricingInfo && Array.isArray(pricingInfo.rooms)) {
+          rooms = pricingInfo.rooms.map(r => ({
+            type: r.type,
+            price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
+            popular: r.popular,
+            note: r.note || ""
           }));
-        } else if (rooms.length === 0 && Array.isArray(programData.rooms)) {
-          rooms = programData.rooms.map(r => (typeof r === "string" ? { type: r, price: programData.price || "$0" } : r));
-        } else if (rooms.length === 0 && programData.price) {
-          rooms = [{ type: "Standard Accommodation", price: programData.price }];
         }
-
-        if (!Array.isArray(rooms) || rooms.length === 0) {
-          rooms = [{ type: "Standard Room", price: programData.price || "$0" }];
-        }
-
-        const initialRoom = state.roomType || (rooms.length > 0 ? rooms[0].type : "Standard Room");
-
-        let durationDays = 20; // Default
-        const lowerSlug = slugKey || "";
-        const lowerTitle = (programData.title || "").toLowerCase();
-        
-        if (lowerSlug.includes("100") || lowerTitle.includes("100")) durationDays = 11;
-        else if (lowerSlug.includes("200") || lowerTitle.includes("200")) durationDays = 20;
-        else if (lowerSlug.includes("300") || lowerTitle.includes("300")) durationDays = 26;
-        else if (lowerSlug.includes("500") || lowerTitle.includes("500")) durationDays = 45;
-        else if (lowerSlug.includes("3-day") || lowerTitle.includes("3-day") || lowerTitle.includes("3 day")) durationDays = 3;
-        else if (lowerSlug.includes("6-day") || lowerTitle.includes("6-day") || lowerTitle.includes("6 day")) durationDays = 6;
-        else if (lowerSlug.includes("7-day") || lowerTitle.includes("7-day") || lowerTitle.includes("7 day")) durationDays = 7;
-        else if (lowerSlug.includes("10-day") || lowerTitle.includes("10-day") || lowerTitle.includes("10 day")) durationDays = 10;
-        else if (lowerSlug.includes("14-day") || lowerTitle.includes("14-day") || lowerTitle.includes("14 day")) durationDays = 14;
-
-        const batches = generateBatches(durationDays, locKey, slugKey);
-        setAvailableBatches(batches);
-        setSelectedDate(batches[0] || "");
-
-        setDirectCourse({
-          id: programData.id || state.slug,
-          slug: state.slug,
-          title: programData.title || "Yoga Program",
-          price: programData.price || "$0",
-          location: programData.location || state.location || "Bali",
-          image: programData.hero?.image || programData.image || "/assets/images/about/home-hero.webp",
-          rooms: rooms
-        });
-        setSelectedRoom(initialRoom);
-      } else {
-        setIsDirectBooking(false);
       }
+
+      if (rooms.length === 0 && programData?.accommodation?.pricing) {
+        rooms = Object.entries(programData.accommodation.pricing).map(([type, price]) => ({
+          type: type.charAt(0).toUpperCase() + type.slice(1).replace(/([A-Z])/g, ' $1'),
+          price: typeof price === "number" ? `$${price.toLocaleString()}` : price
+        }));
+      } else if (rooms.length === 0 && Array.isArray(programData?.rooms)) {
+        rooms = programData.rooms.map(r => (typeof r === "string" ? { type: r, price: programData.price || "$0" } : r));
+      } else if (rooms.length === 0 && programData?.price) {
+        rooms = [{ type: "Standard Accommodation", price: programData.price }];
+      }
+
+      if (!Array.isArray(rooms) || rooms.length === 0) {
+        rooms = [
+          { type: "6 Sharing Room", price: "$999" },
+          { type: "4 Sharing Room", price: "$1,099" },
+          { type: "2 Sharing Room", price: "$1,399" },
+          { type: "Private Room", price: "$1,699" }
+        ];
+      }
+
+      const initialRoom = state.roomType || (rooms.length > 0 ? rooms[0].type : "Standard Room");
+
+      let durationDays = pricingInfo?.durationDays || 20; // Default
+      const lowerSlug = slugKey || "";
+      const heroInfo = programData?.heroSection?.hero || programData?.hero || {};
+      const lowerTitle = ((heroInfo.title || "") + " " + (heroInfo.subtitle || "")).toLowerCase();
+      
+      if (lowerSlug.includes("100") || lowerTitle.includes("100")) durationDays = 11;
+      else if (lowerSlug.includes("200") || lowerTitle.includes("200")) durationDays = 20;
+      else if (lowerSlug.includes("300") || lowerTitle.includes("300")) durationDays = 26;
+      else if (lowerSlug.includes("500") || lowerTitle.includes("500")) durationDays = 45;
+      else if (lowerSlug.includes("3-day") || lowerTitle.includes("3-day") || lowerTitle.includes("3 day")) durationDays = 3;
+      else if (lowerSlug.includes("6-day") || lowerTitle.includes("6-day") || lowerTitle.includes("6 day")) durationDays = 6;
+      else if (lowerSlug.includes("7-day") || lowerTitle.includes("7-day") || lowerTitle.includes("7 day")) durationDays = 7;
+      else if (lowerSlug.includes("10-day") || lowerTitle.includes("10-day") || lowerTitle.includes("10 day")) durationDays = 10;
+      else if (lowerSlug.includes("14-day") || lowerTitle.includes("14-day") || lowerTitle.includes("14 day")) durationDays = 14;
+
+      const batches = generateBatches(durationDays, locKey, slugKey);
+      setAvailableBatches(batches);
+      
+      const resolvedDate = (state.selectedDate && state.selectedDate !== "Select on arrival")
+        ? state.selectedDate
+        : (batches[0] || "Select on arrival");
+      setSelectedDate(resolvedDate);
+
+      const resolvedTitle = resolveProgramTitle(programData, state);
+      const resolvedLocation = programData?.location || heroInfo.location || (state.location ? (state.location.charAt(0).toUpperCase() + state.location.slice(1)) : "Bali");
+
+      setDirectCourse({
+        id: programData?.id || state.slug || "course",
+        slug: state.slug || "course",
+        title: resolvedTitle,
+        price: programData?.price || heroInfo.price || rooms[0]?.price || "$0",
+        location: resolvedLocation,
+        image: heroInfo.bgImage || programData?.image || "/assets/images/about/home-hero.webp",
+        rooms: rooms
+      });
+      setSelectedRoom(initialRoom);
     } else {
       setIsDirectBooking(false);
     }
@@ -297,7 +338,7 @@ export default function CheckoutPage() {
     const pricing = getPricing();
     let summaryStr = "";
     if (isDirectBooking && directCourse) {
-      summaryStr = `Course/Retreat: ${directCourse.title}\n- Location: ${directCourse.location || "Not Specified"}\n- Accommodation: ${selectedRoom}\n- Batch Dates: ${selectedDate || "Not Specified"}\n- Price: ${pricing.totalStr}\n`;
+      summaryStr = `Program/Course: ${directCourse.title}\n- Location: ${directCourse.location || "Bali"}\n- Accommodation: ${selectedRoom}\n- Batch Dates: ${selectedDate || "Not Specified"}\n- Price: ${pricing.totalStr}\n`;
     } else {
       cart.forEach((item, idx) => {
         summaryStr += `${idx + 1}. ${item.title}\n`;
@@ -327,16 +368,39 @@ export default function CheckoutPage() {
       const pricing = getPricing();
       const summaryText = getSummaryText();
 
+      const resolvedProgramName = isDirectBooking 
+        ? (directCourse?.title || "Yoga Program") 
+        : cart.map(i => i.title).join(", ");
+      
+      const resolvedLocation = isDirectBooking 
+        ? (directCourse?.location || "Bali") 
+        : "Multi-Program Cart";
+
+      const resolvedAccommodation = isDirectBooking 
+        ? (selectedRoom || "Standard Accommodation") 
+        : cart.map(i => `${i.title}: ${i.selectedRoom || i.roomType || "Standard"}`).join("; ");
+
+      const resolvedBatchDates = isDirectBooking 
+        ? (selectedDate || "Not Specified") 
+        : cart.map(i => `${i.title}: ${i.selectedDate || "Not Specified"}`).join("; ");
+
       const bookingData = {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         booking_type: isDirectBooking ? "Direct Course Booking" : "Cart Booking",
-        location: isDirectBooking ? (directCourse?.location || "Not Specified") : "Multi-Program Cart",
-        program_name: isDirectBooking ? directCourse?.title : cart.map(i => i.title).join(", "),
-        accommodation: isDirectBooking ? selectedRoom : cart.map(i => `${i.title}: ${i.selectedRoom || i.roomType || "Standard"}`).join("; "),
-        batch_dates: isDirectBooking ? selectedDate : cart.map(i => `${i.title}: ${i.selectedDate || "Not Specified"}`).join("; "),
+        program_name: resolvedProgramName,
+        program: resolvedProgramName,
+        course_name: resolvedProgramName,
+        location: resolvedLocation,
+        accommodation: resolvedAccommodation,
+        batch_dates: resolvedBatchDates,
         total_price: pricing.totalStr || `$${pricing.subtotal}`,
+        "Program Name": resolvedProgramName,
+        "Campus Location": resolvedLocation,
+        "Accommodation Option": resolvedAccommodation,
+        "Selected Batch Dates": resolvedBatchDates,
+        "Estimated Total": pricing.totalStr || `$${pricing.subtotal}`,
         message: `
 New Booking Inquiry received from Bali Yoga Kendra Checkout Page:
 
@@ -345,16 +409,22 @@ GUEST DETAILS:
 - Email: ${formData.email}
 - Phone: ${formData.phone}
 
-BOOKING DETAILS:
-${summaryText}
+PROGRAM DETAILS:
+- Program Name: ${resolvedProgramName}
+- Location: ${resolvedLocation}
+- Accommodation: ${resolvedAccommodation}
+- Selected Batch / Dates: ${resolvedBatchDates}
+- Estimated Total: ${pricing.totalStr || `$${pricing.subtotal}`}
 
-Grand Total: ${pricing.totalStr || `$${pricing.subtotal}`}
-        `
+FULL BOOKING BREAKDOWN:
+${summaryText}
+        `.trim()
       };
 
       if (sendEmail) {
         try {
-          const result = await submitToWeb3Forms(bookingData, `Bali Yoga Kendra - Booking from ${formData.name}`, "checkout");
+          const emailSubject = `Bali Yoga Kendra - Booking for ${resolvedProgramName} (${formData.name})`;
+          const result = await submitToWeb3Forms(bookingData, emailSubject, "checkout");
           if (result.success) {
             setIsSubmitting(false);
             if (sendWhatsApp) {
@@ -426,9 +496,13 @@ Grand Total: ${pricing.totalStr || `$${pricing.subtotal}`}
     const phoneNumber = "917829997007"; // Bali Yoga Kendra Booking WhatsApp Number
     let summaryStr = summaryStrOverride || "";
 
+    const resolvedProgramName = isDirectBooking 
+      ? (directCourse?.title || "Yoga Program") 
+      : cart.map(i => i.title).join(", ");
+
     if (!summaryStr) {
       if (isDirectBooking && directCourse) {
-        summaryStr = `*Course/Retreat*: ${directCourse.title}\n- *Location*: ${directCourse.location || "Not Specified"}\n- *Accommodation Option*: ${selectedRoom}\n- *Selected Dates*: ${selectedDate || "Not Specified"}\n- *Price Info*: ${totalStr}\n`;
+        summaryStr = `*Program*: ${directCourse.title}\n- *Location*: ${directCourse.location || "Bali"}\n- *Accommodation Option*: ${selectedRoom}\n- *Selected Dates*: ${selectedDate || "Not Specified"}\n- *Price Info*: ${totalStr}\n`;
       } else {
         cart.forEach((item, idx) => {
           summaryStr += `${idx + 1}. *${item.title}*\n`;
@@ -442,8 +516,13 @@ Grand Total: ${pricing.totalStr || `$${pricing.subtotal}`}
 
     const message = `Hello Bali Yoga Kendra! I would like to inquire about booking details and information for the following program:
 
-*PROGRAM INTERESTED*
-${summaryStr.replace(/\n- /g, "\n- *").replace(/: /g, "*: ")}
+*PROGRAM DETAILS*
+- *Program*: ${resolvedProgramName}
+- *Location*: ${isDirectBooking ? (directCourse?.location || "Bali") : "Multi-Program"}
+- *Accommodation*: ${isDirectBooking ? selectedRoom : "Selected in cart"}
+- *Selected Batch / Dates*: ${isDirectBooking ? (selectedDate || "Not Specified") : "Selected in cart"}
+- *Estimated Price*: ${totalStr}
+
 *MY CONTACT DETAILS*
 - *Name*: ${formData.name}
 - *Email*: ${formData.email}
@@ -533,6 +612,24 @@ Please share the schedule, payment options, and general availability details. Th
             </div>
 
             <div className="bg-stone-50 p-4 rounded-2xl border border-stone-100 text-left text-xs text-stone-600 space-y-2">
+              <div className="flex justify-between border-b border-stone-200/50 pb-2">
+                <span className="text-stone-400">Program:</span>
+                <span className="font-semibold text-[#1A2456] text-right">
+                  {isDirectBooking && directCourse ? directCourse.title : (cart.length > 0 ? cart.map(i => i.title).join(", ") : "Yoga Program")}
+                </span>
+              </div>
+              {isDirectBooking && selectedRoom && (
+                <div className="flex justify-between border-b border-stone-200/50 pb-2">
+                  <span className="text-stone-400">Accommodation:</span>
+                  <span className="font-semibold text-stone-800">{selectedRoom}</span>
+                </div>
+              )}
+              {isDirectBooking && selectedDate && (
+                <div className="flex justify-between border-b border-stone-200/50 pb-2">
+                  <span className="text-stone-400">Batch Dates:</span>
+                  <span className="font-semibold text-stone-800">{selectedDate}</span>
+                </div>
+              )}
               <div className="flex justify-between border-b border-stone-200/50 pb-2">
                 <span className="text-stone-400">Email:</span>
                 <span className="font-semibold text-stone-800">{formData.email}</span>
@@ -737,7 +834,31 @@ Please share the schedule, payment options, and general availability details. Th
 
               {/* Guest Checkout Information Form */}
               <form onSubmit={handleFormSubmit} className="bg-white rounded-3xl p-6 md:p-8 border border-stone-200/60 shadow-md space-y-4">
-                <h3 className="font-bold text-[#1A2456] text-base mb-2">Guest Details</h3>
+                <div className="flex items-center justify-between border-b border-stone-100 pb-3">
+                  <h3 className="font-bold text-[#1A2456] text-base">Guest Details</h3>
+                  <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200/40">
+                    Step 2 of 2
+                  </span>
+                </div>
+
+                {/* Selected Program Indicator Banner in Form */}
+                <div className="bg-[#FAF8F5] border border-stone-200/80 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#C8A96A] block">Selected Program</span>
+                    <span className="text-sm font-bold text-[#1A2456] block mt-0.5 leading-snug">
+                      {isDirectBooking && directCourse ? directCourse.title : (cart.length > 0 ? `${cart.length} Courses in Cart` : "Yoga Program")}
+                    </span>
+                    {isDirectBooking && (
+                      <span className="text-xs text-stone-500 block mt-1">
+                        {selectedRoom} {selectedDate ? `· ${selectedDate}` : ""} {directCourse?.location ? `· ${directCourse.location}` : ""}
+                      </span>
+                    )}
+                  </div>
+                  <div className="text-left sm:text-right sm:border-l sm:border-stone-200 sm:pl-4 flex-shrink-0">
+                    <span className="text-[10px] text-stone-400 font-bold uppercase tracking-wider block">Estimated Fee</span>
+                    <span className="text-base font-bold text-emerald-600 block">{totalStr}</span>
+                  </div>
+                </div>
 
                 {/* Full Name */}
                 <div className="space-y-1">

@@ -142,12 +142,21 @@ const ProgramPage = ({ data }) => {
 
   const handleOpenCheckout = (roomType) => {
     const isRetreat = locationPath.toLowerCase().startsWith("/retreats/");
+    const heroInfo = pageData?.heroSection?.hero || pageData?.hero || {};
+    const highlight = (heroInfo.highlight || "").trim();
+    const rawTitle = (heroInfo.title || pageData?.title || courseParam || "").trim();
+    const resolvedTitle = highlight && rawTitle && !rawTitle.toLowerCase().startsWith(highlight.toLowerCase())
+      ? `${highlight} ${rawTitle}`
+      : (rawTitle || "Yoga Program");
+
     navigate("/checkout", { 
       state: { 
         location: locParam, 
         slug: courseParam, 
         type: isRetreat ? "retreats" : "programs", 
-        roomType,
+        programName: resolvedTitle,
+        title: resolvedTitle,
+        roomType: roomType || pricingInfo?.rooms?.[0]?.type || "Standard Room",
         selectedDate: batches[selectedBatch] || "Select on arrival"
       } 
     });
