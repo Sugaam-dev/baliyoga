@@ -111,13 +111,14 @@ function normalizeHeaders(headers) {
     if (!h) return "";
     const lower = h.toLowerCase();
     if (lower.includes("location")) return "location";
-    if (lower.includes("course") || lower.includes("key") || lower.includes("code") || lower.includes("id")) return "coursekey";
-    if (lower.includes("program name") || lower.includes("title")) return "programname";
+    if (lower.includes("program name") || lower.includes("activity name") || lower.includes("title")) return "programname";
+    if (lower.includes("activity") || lower.includes("course") || lower.includes("key") || lower.includes("code") || lower.includes("id") || lower.includes("slug")) return "coursekey";
     if (lower.includes("duration")) return "durationdays";
     if (lower.includes("room type")) return "roomtype";
     if (lower.includes("current") || lower.includes("discounted")) return "current";
     if (lower.includes("original") || lower.includes("strike")) return "original";
-    if (lower.includes("base price") || lower.includes("program price") || lower.includes("price")) return "price";
+    if (lower.includes("base price") || lower.includes("program price") || lower.includes("activity price") || lower.includes("price")) return "price";
+    if (lower.includes("currency")) return "currency";
     if (lower.includes("note")) return "note";
     if (lower.includes("popular")) return "popular";
     if (lower.includes("start date") || lower.includes("startdate")) return "startdate";
@@ -272,7 +273,8 @@ async function fetchLocalExcelRows() {
   return {
     programRows: parseSheet("Program Prices"),
     roomRows: parseSheet("Room Prices"),
-    batchRows: parseSheet("Batches")
+    batchRows: parseSheet("Batches"),
+    activityRows: parseSheet("Activity Prices").length > 0 ? parseSheet("Activity Prices") : parseSheet("Activities")
   };
 }
 
@@ -366,7 +368,7 @@ export async function fetchAndApplyDynamicPrices() {
 
   console.log(`[Dynamic Pricing] Source Mode: ${useGoogleSheets ? "GOOGLE SHEETS (Live)" : "LOCAL EXCEL FILE (ombreathe_config_template_new.xlsx)"}`);
 
-  let programRows = [], roomRows = [], batchRows = [];
+  let programRows = [], roomRows = [], batchRows = [], activityRows = [];
 
   try {
     if (useGoogleSheets) {
@@ -374,30 +376,35 @@ export async function fetchAndApplyDynamicPrices() {
       const programSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_PROGRAM;
       const roomSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_ROOM;
       const batchesSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_BATCHES;
+      const activitiesSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_ACTIVITIES;
 
-      if (spreadsheetId || programSpreadsheetId || roomSpreadsheetId || batchesSpreadsheetId) {
+      if (spreadsheetId || programSpreadsheetId || roomSpreadsheetId || batchesSpreadsheetId || activitiesSpreadsheetId) {
         try {
           const isSingleSheet = !!spreadsheetId && !spreadsheetId.includes("2PACX-") && !spreadsheetId.includes("/d/e/");
           if (isSingleSheet) {
-            [programRows, roomRows, batchRows] = await Promise.all([
+            [programRows, roomRows, batchRows, activityRows] = await Promise.all([
               fetchGoogleSheetRows(spreadsheetId, "Program Prices").catch(() => []),
               fetchGoogleSheetRows(spreadsheetId, "Room Prices").catch(() => []),
-              fetchGoogleSheetRows(spreadsheetId, "Batches").catch(() => [])
+              fetchGoogleSheetRows(spreadsheetId, "Batches").catch(() => []),
+              fetchGoogleSheetRows(spreadsheetId, "Activity Prices").catch(() => fetchGoogleSheetRows(spreadsheetId, "Activities").catch(() => []))
             ]);
           } else {
             const pSrc = programSpreadsheetId || spreadsheetId;
             const rSrc = roomSpreadsheetId || spreadsheetId;
             const bSrc = batchesSpreadsheetId || spreadsheetId;
+            const aSrc = activitiesSpreadsheetId || spreadsheetId;
 
-            const [pRes, rRes, bRes] = await Promise.all([
+            const [pRes, rRes, bRes, aRes] = await Promise.all([
               pSrc ? fetchGoogleSheetRows(pSrc, "Program Prices").catch(() => []) : [],
               rSrc ? fetchGoogleSheetRows(rSrc, "Room Prices").catch(() => []) : [],
-              bSrc ? fetchGoogleSheetRows(bSrc, "Batches").catch(() => []) : []
+              bSrc ? fetchGoogleSheetRows(bSrc, "Batches").catch(() => []) : [],
+              aSrc ? fetchGoogleSheetRows(aSrc, "Activity Prices").catch(() => fetchGoogleSheetRows(aSrc, "Activities").catch(() => [])) : []
             ]);
 
             programRows = pRes;
             roomRows = rRes;
             batchRows = bRes;
+            activityRows = aRes;
           }
         } catch (err) {
           console.warn("[Dynamic Pricing] Error fetching Google Sheets:", err);
@@ -413,7 +420,8 @@ export async function fetchAndApplyDynamicPrices() {
         programRows = localData.programRows;
         roomRows = localData.roomRows;
         batchRows = localData.batchRows;
-        console.log(`[Dynamic Pricing] Successfully loaded from Excel: ${programRows.length} programs, ${roomRows.length} room rows, ${batchRows.length} batch rows.`);
+        activityRows = localData.activityRows || [];
+        console.log(`[Dynamic Pricing] Successfully loaded from Excel: ${programRows.length} programs, ${roomRows.length} room rows, ${batchRows.length} batch rows, ${activityRows.length} activity rows.`);
       } catch (err) {
         console.warn("[Dynamic Pricing] Failed to load local Excel file, falling back to static defaults:", err);
         return false;
@@ -571,6 +579,50 @@ export async function fetchAndApplyDynamicPrices() {
     // Sort batches chronologically
     for (const key of Object.keys(DYNAMIC_BATCHES)) {
       DYNAMIC_BATCHES[key].sort((a, b) => a.startDate - b.startDate);
+    }
+
+    // 4. Group and apply Activity Prices (Bali Activities)
+    if (activityRows && activityRows.length > 0) {
+      try {
+        const activitiesModule = await import("../data/bali/activities");
+        const actList = activitiesModule.activitiesData || [];
+        
+        for (const row of activityRows) {
+          const loc = row.location ? String(row.location).toLowerCase().trim() : "";
+          if (loc && loc !== "bali") continue; // only for Bali
+
+          const courseKey = (row.coursekey || row.slug || row.key || "").trim().toLowerCase();
+          const rawPrice = row.price ? String(row.price).trim() : "";
+          if (!courseKey || !rawPrice) continue;
+
+          // Find activity in actList
+          const activity = actList.find(act => 
+            act && act.slug && (
+              act.slug.toLowerCase() === courseKey || 
+              act.slug.toLowerCase().replace(/[-_\s]/g, '') === courseKey.replace(/[-_\s]/g, '')
+            )
+          );
+
+          if (activity) {
+            const numericVal = parseFloat(rawPrice.replace(/[^0-9.]/g, ""));
+            if (!isNaN(numericVal)) {
+              activity.price = numericVal;
+            } else {
+              activity.price = rawPrice;
+            }
+
+            if (row.currency) {
+              activity.currency = String(row.currency).trim();
+            } else if (rawPrice.includes("$")) {
+              activity.currency = "USD";
+            } else if (rawPrice.includes("₹")) {
+              activity.currency = "INR";
+            }
+          }
+        }
+      } catch (actErr) {
+        console.warn("[Dynamic Pricing] Error updating activity prices:", actErr);
+      }
     }
 
     // Propagate updated prices into static maps

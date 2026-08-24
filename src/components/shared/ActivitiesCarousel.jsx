@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Star, MapPin, ArrowRight, ChevronLeft, ChevronRight, Calendar } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import SectionHeading from "./SectionHeading";
 import { activitiesData } from "../../data/bali/activities";
+import { fetchAndApplyDynamicPrices } from "../../utils/dynamicPrices";
 
 // Swiper CSS
 import "swiper/css";
@@ -17,6 +18,13 @@ const ActivitiesCarousel = ({
   highlight = "Activities",
   subtitle = "Immerse yourself in Balinese culture, spiritual adventures, and breathtaking excursions during your journey."
 }) => {
+  const [, setTick] = useState(0);
+
+  useEffect(() => {
+    fetchAndApplyDynamicPrices().then(success => {
+      if (success) setTick(prev => prev + 1);
+    });
+  }, []);
   return (
     <div className="bg-[#FAF8F5] py-6 md:py-10">
       <div className="max-w-7xl min-[1600px]:max-w-[1440px] min-[1920px]:max-w-[1720px] min-[2500px]:max-w-[2200px] mx-auto px-6 md:px-12">
@@ -89,7 +97,9 @@ const ActivitiesCarousel = ({
                     {/* Price Badge */}
                     {item.price && (
                       <div className="absolute bottom-4 right-4 bg-[#1A2456] text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
-                        From ₹{item.price}
+                        From {typeof item.price === "string" && (item.price.startsWith("₹") || item.price.startsWith("$"))
+                          ? item.price
+                          : `${item.currency === "USD" ? "$" : "₹"}${typeof item.price === "number" ? item.price.toLocaleString() : item.price}`}
                       </div>
                     )}
                   </div>

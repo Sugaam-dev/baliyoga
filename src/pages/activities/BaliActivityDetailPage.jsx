@@ -2,9 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Star, MapPin, CheckCircle, ShieldCheck, ExternalLink, Calendar, Compass, ShieldAlert } from "lucide-react";
 import { activitiesData } from "../../data/bali/activities";
+import { fetchAndApplyDynamicPrices } from "../../utils/dynamicPrices";
 
 export default function BaliActivityDetailPage() {
   const { slug } = useParams();
+  const [, setTick] = useState(0);
+
+  useEffect(() => {
+    fetchAndApplyDynamicPrices().then(success => {
+      if (success) setTick(prev => prev + 1);
+    });
+  }, [slug]);
   
   // Find matching activity
   const activity = activitiesData.find(act => act.slug === slug);
@@ -167,7 +175,9 @@ export default function BaliActivityDetailPage() {
                 {activity.price ? (
                   <>
                     <span className="text-4xl font-extrabold text-[#1A2456] font-serif">
-                      ₹{activity.price}
+                      {typeof activity.price === "string" && (activity.price.startsWith("₹") || activity.price.startsWith("$"))
+                        ? activity.price
+                        : `${activity.currency === "USD" ? "$" : "₹"}${typeof activity.price === "number" ? activity.price.toLocaleString() : activity.price}`}
                     </span>
                     <span className="text-stone-500 text-xs font-semibold">/ person</span>
                   </>

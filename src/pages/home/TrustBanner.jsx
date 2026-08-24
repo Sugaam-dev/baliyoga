@@ -147,9 +147,9 @@ const TrustBanner = () => {
 
         </div>
 
-        {/* Right Side: Certified Badges (Grid layout to prevent overflow on mobile) */}
+        {/* Right Side: Certified Badges */}
         <div className="w-full lg:w-auto mt-4 lg:mt-0">
-          <div className="grid grid-cols-3 sm:flex sm:flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-3 sm:flex sm:flex-wrap items-center justify-center gap-y-5 gap-x-4 sm:gap-6 md:gap-8">
             {certificates.map((cert, index) => {
               const delayClass = [
                 'delay-150', 'delay-200', 'delay-300', 'delay-400', 'delay-500', 'delay-700'
@@ -158,7 +158,7 @@ const TrustBanner = () => {
               return (
                 <div 
                   key={cert.id} 
-                  className={`h-9 sm:h-12 md:h-14 flex items-center justify-center transition-all duration-700 transform hover:-translate-y-1 ${
+                  className={`flex items-center justify-center transition-all duration-700 transform hover:-translate-y-1 ${
                     isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   } ${delayClass}`}
                 >
@@ -173,8 +173,7 @@ const TrustBanner = () => {
                       width="56"
                       height="56"
                       loading="lazy"
-                      style={{ width: "56px", height: "56px", aspectRatio: "1 / 1", display: "inline-block" }}
-                      className="w-14 h-14 aspect-square object-contain mix-blend-multiply opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer"
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 aspect-square object-contain mix-blend-multiply opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500 cursor-pointer"
                       onError={() => handleImageError(cert.id)}
                     />
                   )}

@@ -128,7 +128,7 @@ function HeroSection() {
       <div className="block lg:hidden w-full h-full">
         {!mounted ? (
           <div className="flex flex-col">
-            <div className="bg-[#FAF8F5] px-6 sm:px-12 pt-24 pb-12">
+            <div className="bg-[#FAF8F5] px-5 sm:px-10 md:px-12 pt-[58px] sm:pt-[68px] pb-6 sm:pb-8">
               <LeftContent />
             </div>
             <div className="relative w-full overflow-hidden">
@@ -165,7 +165,7 @@ function HeroSection() {
             {mobileImages.map((image, index) => (
               <SwiperSlide key={index}>
                 <div className="flex flex-col">
-                  <div className="bg-[#FAF8F5] px-6 sm:px-12 pt-24 pb-12">
+                  <div className="bg-[#FAF8F5] px-5 sm:px-10 md:px-12 pt-[58px] sm:pt-[68px] pb-6 sm:pb-8">
                     <LeftContent />
                   </div>
                   <div className="relative w-full overflow-hidden">
