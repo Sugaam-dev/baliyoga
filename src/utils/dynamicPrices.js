@@ -1,14 +1,15 @@
 // src/utils/dynamicPrices.js
 
-import { PROGRAM_PRICES, ROOM_PRICES_BALI } from "../data/bali/programPrices";
-import { PROGRAM_PRICES_RISHIKESH, ROOM_PRICES_RISHIKESH } from "../data/rishikesh/programPricesRishikesh";
-import { PROGRAM_PRICES_MYSORE, ROOM_PRICES_MYSORE } from "../data/mysore/programPricesMysore";
+import { PROGRAM_PRICES, ROOM_PRICES_BALI } from "../data/bali/programPrices.js";
+import { PROGRAM_PRICES_RISHIKESH, ROOM_PRICES_RISHIKESH } from "../data/rishikesh/programPricesRishikesh.js";
+import { PROGRAM_PRICES_MYSORE, ROOM_PRICES_MYSORE } from "../data/mysore/programPricesMysore.js";
+import generatedPrices from "../data/generated-prices.js";
 
 // ============================================================================
-// ⚙️ SOURCE CONFIGURATION TOGGLE (Line 10)
+// ⚙️ SOURCE CONFIGURATION TOGGLE
 // ============================================================================
-// Set to false to read directly from local Excel file (ombreathe_config_template_new.xlsx)
-// Set to true  to read live in real-time from Google Spreadsheets
+// Set to false to read directly from pre-compiled local Excel data (generated-prices.json)
+// Set to true  or provide VITE_SPREADSHEET_ID in .env to read live in real-time from Google Spreadsheets
 export const USE_GOOGLE_SHEETS = false; 
 // ============================================================================
 
@@ -109,7 +110,7 @@ export const DYNAMIC_TESTIMONIALS = [
 function normalizeHeaders(headers) {
   return headers.map(h => {
     if (!h) return "";
-    const lower = h.toLowerCase();
+    const lower = String(h).toLowerCase();
     if (lower.includes("location")) return "location";
     if (lower.includes("program name") || lower.includes("activity name") || lower.includes("title")) return "programname";
     if (lower.includes("activity") || lower.includes("course") || lower.includes("key") || lower.includes("code") || lower.includes("id") || lower.includes("slug")) return "coursekey";
@@ -234,50 +235,6 @@ async function fetchGoogleSheetRows(spreadsheetId, sheetName) {
   return rows;
 }
 
-/**
- * Reads and parses rows from the local Excel file inside the project (ombreathe_config_template_new.xlsx).
- */
-async function fetchLocalExcelRows() {
-  const XLSX = await import("xlsx");
-  const res = await fetch("/ombreathe_config_template_new.xlsx");
-  if (!res.ok) {
-    throw new Error(`Failed to load local Excel file: HTTP status ${res.status}`);
-  }
-  const arrayBuffer = await res.arrayBuffer();
-  const workbook = XLSX.read(arrayBuffer, { type: "array" });
-
-  const parseSheet = (sheetName) => {
-    const sheet = workbook.Sheets[sheetName];
-    if (!sheet) return [];
-    const json = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" });
-    if (json.length === 0) return [];
-    
-    const rawHeaders = json[0].map(h => String(h || "").trim());
-    const headers = normalizeHeaders(rawHeaders);
-    
-    const rows = [];
-    for (let i = 1; i < json.length; i++) {
-      const rowArr = json[i];
-      if (!rowArr || rowArr.every(c => c === "" || c === null || c === undefined)) continue;
-      const obj = {};
-      headers.forEach((header, idx) => {
-        if (header) {
-          obj[header] = rowArr[idx] !== undefined && rowArr[idx] !== null ? String(rowArr[idx]).trim() : null;
-        }
-      });
-      rows.push(obj);
-    }
-    return rows;
-  };
-
-  return {
-    programRows: parseSheet("Program Prices"),
-    roomRows: parseSheet("Room Prices"),
-    batchRows: parseSheet("Batches"),
-    activityRows: parseSheet("Activity Prices").length > 0 ? parseSheet("Activity Prices") : parseSheet("Activities")
-  };
-}
-
 function getUpdatedProgramPrice(mappedLoc, key) {
   const program = {
     bali: PROGRAM_PRICES,
@@ -313,6 +270,215 @@ function getUpdatedProgramPrice(mappedLoc, key) {
   }
 
   return null;
+}
+
+// Helper to parse price string to number
+const parsePriceValue = (str) => {
+  if (!str) return 0;
+  const clean = String(str).replace(/[^0-9.]/g, "");
+  return parseFloat(clean) || 0;
+};
+
+/**
+ * Applies normalized rows data to PROGRAM_PRICES, ROOM_PRICES, DYNAMIC_BATCHES, etc.
+ */
+function applyPriceData(data) {
+  if (!data) return;
+  const { programRows = [], roomRows = [], batchRows = [] } = data;
+
+  // 1. Group and apply Program Prices
+  const sheetProgramPrices = {
+    bali: { multiStyle: {}, kundalini: {}, shortcourses: {}, specializations: {} },
+    rishikesh: { multiStyle: {}, kundalini: {}, shortcourses: {}, specializations: {} },
+    mysore: { multiStyle: {}, kundalini: {}, shortcourses: {}, specializations: {} },
+  };
+
+  for (const row of programRows) {
+    const loc = row.location?.toLowerCase().trim();
+    let mappedLoc = loc;
+    if (loc === "mysuru") mappedLoc = "mysore";
+
+    if (!mappedLoc || !sheetProgramPrices[mappedLoc]) continue;
+
+    const courseKey = row.coursekey?.trim();
+    const rawPrice = row.price ? String(row.price).trim() : "";
+    if (!courseKey || !rawPrice) continue;
+
+    const formattedPrice = rawPrice.startsWith("$") ? rawPrice : `$${rawPrice}`;
+
+    const mapping = UNIFIED_PRICE_MAP[mappedLoc]?.[courseKey];
+    if (mapping) {
+      sheetProgramPrices[mappedLoc][mapping.cat][mapping.key] = formattedPrice;
+    } else {
+      if (courseKey.startsWith("kundalini")) {
+        const dur = courseKey.replace("kundalini", "");
+        sheetProgramPrices[mappedLoc].kundalini[dur] = formattedPrice;
+      } else if (["50hr", "100hr", "200hr", "300hr", "500hr"].includes(courseKey)) {
+        sheetProgramPrices[mappedLoc].multiStyle[courseKey] = formattedPrice;
+      } else {
+        sheetProgramPrices[mappedLoc].specializations[courseKey] = formattedPrice;
+      }
+    }
+  }
+
+  // Merge into static dictionaries
+  const mergePrices = (target, source) => {
+    for (const cat of Object.keys(source)) {
+      if (!target[cat]) target[cat] = {};
+      for (const [k, v] of Object.entries(source[cat])) {
+        target[cat][k] = v;
+      }
+    }
+  };
+
+  mergePrices(PROGRAM_PRICES, sheetProgramPrices.bali);
+  mergePrices(PROGRAM_PRICES_RISHIKESH, sheetProgramPrices.rishikesh);
+  mergePrices(PROGRAM_PRICES_MYSORE, sheetProgramPrices.mysore);
+
+  // 2. Group and apply Room Prices
+  const sheetRoomPrices = {
+    bali: {},
+    rishikesh: {},
+    mysore: {},
+  };
+
+  for (const row of roomRows) {
+    const loc = row.location?.toLowerCase().trim();
+    let mappedLoc = loc;
+    if (loc === "mysuru") mappedLoc = "mysore";
+
+    if (!mappedLoc || !sheetRoomPrices[mappedLoc]) continue;
+
+    const courseKey = row.coursekey?.trim();
+    if (!courseKey) continue;
+
+    if (!sheetRoomPrices[mappedLoc][courseKey]) {
+      sheetRoomPrices[mappedLoc][courseKey] = {
+        durationDays: parseInt(row.durationdays) || 0,
+        rooms: []
+      };
+    }
+
+    const basePriceStr = getUpdatedProgramPrice(mappedLoc, courseKey);
+    const basePrice = parsePriceValue(basePriceStr);
+
+    const rawCurrent = parseFloat(row.current) || 0;
+    const rawOriginal = parseFloat(row.original) || 0;
+
+    const currentPrice = basePrice + rawCurrent;
+    const originalPrice = basePrice + rawOriginal;
+
+    sheetRoomPrices[mappedLoc][courseKey].rooms.push({
+      type: row.roomtype || "",
+      current: currentPrice,
+      original: originalPrice,
+      note: row.note || "",
+      popular: String(row.popular).toLowerCase() === "true"
+    });
+  }
+
+  for (const [key, val] of Object.entries(sheetRoomPrices.bali)) {
+    ROOM_PRICES_BALI[key] = val;
+  }
+  for (const [key, val] of Object.entries(sheetRoomPrices.rishikesh)) {
+    ROOM_PRICES_RISHIKESH[key] = val;
+  }
+  for (const [key, val] of Object.entries(sheetRoomPrices.mysore)) {
+    ROOM_PRICES_MYSORE[key] = val;
+  }
+
+  // 3. Process and apply Batches
+  for (const row of batchRows) {
+    const loc = row.location?.toLowerCase().trim();
+    let mappedLoc = loc;
+    if (loc === "mysuru") mappedLoc = "mysore";
+
+    const courseKey = row.coursekey?.trim();
+    const startStr = row.startdate ? String(row.startdate).trim() : "";
+    const endStr = row.enddate ? String(row.enddate).trim() : "";
+    const dateText = row.datetext ? String(row.datetext).trim() : "";
+
+    if (mappedLoc && courseKey && (startStr || dateText)) {
+      const batchKey = `${mappedLoc}_${courseKey}`;
+      if (!DYNAMIC_BATCHES[batchKey]) {
+        DYNAMIC_BATCHES[batchKey] = [];
+      }
+
+      const parseDate = (str) => {
+        if (!str) return new Date(NaN);
+        const parts = str.split("-");
+        if (parts.length === 3) {
+          return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+        }
+        return new Date(str);
+      };
+
+      const startDate = parseDate(startStr);
+      const endDate = parseDate(endStr);
+
+      if (dateText || (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime()))) {
+        DYNAMIC_BATCHES[batchKey].push({
+          startDate: !isNaN(startDate.getTime()) ? startDate : new Date(),
+          endDate: !isNaN(endDate.getTime()) ? endDate : new Date(),
+          dateText,
+          seatsLeft: parseInt(row.seatsleft) || 3
+        });
+      }
+    }
+  }
+
+  // Sort batches chronologically
+  for (const key of Object.keys(DYNAMIC_BATCHES)) {
+    DYNAMIC_BATCHES[key].sort((a, b) => a.startDate - b.startDate);
+  }
+
+  return true;
+}
+
+// Synchronously apply precompiled prices on initial module load
+applyPriceData(generatedPrices);
+
+async function applyActivitiesPriceData(activityRows) {
+  if (!activityRows || activityRows.length === 0) return;
+  try {
+    const activitiesModule = await import("../data/bali/activities");
+    const actList = activitiesModule.activitiesData || [];
+    
+    for (const row of activityRows) {
+      const loc = row.location ? String(row.location).toLowerCase().trim() : "";
+      if (loc && loc !== "bali") continue; // only for Bali
+
+      const courseKey = (row.coursekey || row.slug || row.key || "").trim().toLowerCase();
+      const rawPrice = row.price ? String(row.price).trim() : "";
+      if (!courseKey || !rawPrice) continue;
+
+      const activity = actList.find(act => 
+        act && act.slug && (
+          act.slug.toLowerCase() === courseKey || 
+          act.slug.toLowerCase().replace(/[-_\s]/g, '') === courseKey.replace(/[-_\s]/g, '')
+        )
+      );
+
+      if (activity) {
+        const numericVal = parseFloat(rawPrice.replace(/[^0-9.]/g, ""));
+        if (!isNaN(numericVal)) {
+          activity.price = numericVal;
+        } else {
+          activity.price = rawPrice;
+        }
+
+        if (row.currency) {
+          activity.currency = String(row.currency).trim();
+        } else if (rawPrice.includes("$")) {
+          activity.currency = "USD";
+        } else if (rawPrice.includes("₹")) {
+          activity.currency = "INR";
+        }
+      }
+    }
+  } catch (actErr) {
+    console.warn("[Dynamic Pricing] Error updating activity prices:", actErr);
+  }
 }
 
 async function applyDynamicPricesToDataMaps() {
@@ -364,269 +530,75 @@ async function applyDynamicPricesToDataMaps() {
  * Main execution function to fetch and apply dynamic prices.
  */
 export async function fetchAndApplyDynamicPrices() {
-  const useGoogleSheets = USE_GOOGLE_SHEETS || import.meta.env.VITE_USE_GOOGLE_SHEETS === "true";
+  const env = (typeof import.meta !== "undefined" && import.meta?.env) ? import.meta.env : {};
+  const spreadsheetId = env.VITE_SPREADSHEET_ID;
+  const programSpreadsheetId = env.VITE_SPREADSHEET_ID_PROGRAM;
+  const roomSpreadsheetId = env.VITE_SPREADSHEET_ID_ROOM;
+  const batchesSpreadsheetId = env.VITE_SPREADSHEET_ID_BATCHES;
+  const activitiesSpreadsheetId = env.VITE_SPREADSHEET_ID_ACTIVITIES;
 
-  console.log(`[Dynamic Pricing] Source Mode: ${useGoogleSheets ? "GOOGLE SHEETS (Live)" : "LOCAL EXCEL FILE (ombreathe_config_template_new.xlsx)"}`);
+  const hasGoogleSheetConfig = !!(spreadsheetId || programSpreadsheetId || roomSpreadsheetId || batchesSpreadsheetId || activitiesSpreadsheetId);
+  const useGoogleSheets = USE_GOOGLE_SHEETS || env.VITE_USE_GOOGLE_SHEETS === "true" || hasGoogleSheetConfig;
+
+  console.log(`[Dynamic Pricing] Source Mode: ${useGoogleSheets && hasGoogleSheetConfig ? "GOOGLE SHEETS (Live)" : "PRE-COMPILED LOCAL JSON (Zero Bundle/CPU Overhead)"}`);
 
   let programRows = [], roomRows = [], batchRows = [], activityRows = [];
 
   try {
-    if (useGoogleSheets) {
-      const spreadsheetId = import.meta.env.VITE_SPREADSHEET_ID;
-      const programSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_PROGRAM;
-      const roomSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_ROOM;
-      const batchesSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_BATCHES;
-      const activitiesSpreadsheetId = import.meta.env.VITE_SPREADSHEET_ID_ACTIVITIES;
-
-      if (spreadsheetId || programSpreadsheetId || roomSpreadsheetId || batchesSpreadsheetId || activitiesSpreadsheetId) {
-        try {
-          const isSingleSheet = !!spreadsheetId && !spreadsheetId.includes("2PACX-") && !spreadsheetId.includes("/d/e/");
-          if (isSingleSheet) {
-            [programRows, roomRows, batchRows, activityRows] = await Promise.all([
-              fetchGoogleSheetRows(spreadsheetId, "Program Prices").catch(() => []),
-              fetchGoogleSheetRows(spreadsheetId, "Room Prices").catch(() => []),
-              fetchGoogleSheetRows(spreadsheetId, "Batches").catch(() => []),
-              fetchGoogleSheetRows(spreadsheetId, "Activity Prices").catch(() => fetchGoogleSheetRows(spreadsheetId, "Activities").catch(() => []))
-            ]);
-          } else {
-            const pSrc = programSpreadsheetId || spreadsheetId;
-            const rSrc = roomSpreadsheetId || spreadsheetId;
-            const bSrc = batchesSpreadsheetId || spreadsheetId;
-            const aSrc = activitiesSpreadsheetId || spreadsheetId;
-
-            const [pRes, rRes, bRes, aRes] = await Promise.all([
-              pSrc ? fetchGoogleSheetRows(pSrc, "Program Prices").catch(() => []) : [],
-              rSrc ? fetchGoogleSheetRows(rSrc, "Room Prices").catch(() => []) : [],
-              bSrc ? fetchGoogleSheetRows(bSrc, "Batches").catch(() => []) : [],
-              aSrc ? fetchGoogleSheetRows(aSrc, "Activity Prices").catch(() => fetchGoogleSheetRows(aSrc, "Activities").catch(() => [])) : []
-            ]);
-
-            programRows = pRes;
-            roomRows = rRes;
-            batchRows = bRes;
-            activityRows = aRes;
-          }
-        } catch (err) {
-          console.warn("[Dynamic Pricing] Error fetching Google Sheets:", err);
-        }
-      }
-    }
-
-    // If not using Google Sheets or if fetch returned empty, read directly from local Excel file
-    if (!useGoogleSheets || (programRows.length === 0 && roomRows.length === 0)) {
+    if (useGoogleSheets && hasGoogleSheetConfig) {
       try {
-        console.log("[Dynamic Pricing] Reading data from local project Excel file (ombreathe_config_template_new.xlsx)...");
-        const localData = await fetchLocalExcelRows();
-        programRows = localData.programRows;
-        roomRows = localData.roomRows;
-        batchRows = localData.batchRows;
-        activityRows = localData.activityRows || [];
-        console.log(`[Dynamic Pricing] Successfully loaded from Excel: ${programRows.length} programs, ${roomRows.length} room rows, ${batchRows.length} batch rows, ${activityRows.length} activity rows.`);
-      } catch (err) {
-        console.warn("[Dynamic Pricing] Failed to load local Excel file, falling back to static defaults:", err);
-        return false;
-      }
-    }
-
-    // 1. Group and apply Program Prices first
-    const sheetProgramPrices = {
-      bali: { multiStyle: {}, kundalini: {}, shortcourses: {}, specializations: {} },
-      rishikesh: { multiStyle: {}, kundalini: {}, shortcourses: {}, specializations: {} },
-      mysore: { multiStyle: {}, kundalini: {}, shortcourses: {}, specializations: {} },
-    };
-
-    for (const row of programRows) {
-      const loc = row.location?.toLowerCase().trim();
-      let mappedLoc = loc;
-      if (loc === "mysuru") mappedLoc = "mysore";
-
-      if (!mappedLoc || !sheetProgramPrices[mappedLoc]) continue;
-
-      const courseKey = row.coursekey?.trim();
-      const rawPrice = row.price ? String(row.price).trim() : "";
-      if (!courseKey || !rawPrice) continue;
-
-      const formattedPrice = rawPrice.startsWith("$") ? rawPrice : `$${rawPrice}`;
-
-      const mapping = UNIFIED_PRICE_MAP[mappedLoc]?.[courseKey];
-      if (mapping) {
-        sheetProgramPrices[mappedLoc][mapping.cat][mapping.key] = formattedPrice;
-      } else {
-        if (courseKey.startsWith("kundalini")) {
-          const dur = courseKey.replace("kundalini", "");
-          sheetProgramPrices[mappedLoc].kundalini[dur] = formattedPrice;
-        } else if (["50hr", "100hr", "200hr", "300hr", "500hr"].includes(courseKey)) {
-          sheetProgramPrices[mappedLoc].multiStyle[courseKey] = formattedPrice;
+        const isSingleSheet = !!spreadsheetId && !spreadsheetId.includes("2PACX-") && !spreadsheetId.includes("/d/e/");
+        if (isSingleSheet) {
+          [programRows, roomRows, batchRows, activityRows] = await Promise.all([
+            fetchGoogleSheetRows(spreadsheetId, "Program Prices").catch(() => []),
+            fetchGoogleSheetRows(spreadsheetId, "Room Prices").catch(() => []),
+            fetchGoogleSheetRows(spreadsheetId, "Batches").catch(() => []),
+            fetchGoogleSheetRows(spreadsheetId, "Activity Prices").catch(() => fetchGoogleSheetRows(spreadsheetId, "Activities").catch(() => []))
+          ]);
         } else {
-          sheetProgramPrices[mappedLoc].specializations[courseKey] = formattedPrice;
+          const pSrc = programSpreadsheetId || spreadsheetId;
+          const rSrc = roomSpreadsheetId || spreadsheetId;
+          const bSrc = batchesSpreadsheetId || spreadsheetId;
+          const aSrc = activitiesSpreadsheetId || spreadsheetId;
+
+          const [pRes, rRes, bRes, aRes] = await Promise.all([
+            pSrc ? fetchGoogleSheetRows(pSrc, "Program Prices").catch(() => []) : [],
+            rSrc ? fetchGoogleSheetRows(rSrc, "Room Prices").catch(() => []) : [],
+            bSrc ? fetchGoogleSheetRows(bSrc, "Batches").catch(() => []) : [],
+            aSrc ? fetchGoogleSheetRows(aSrc, "Activity Prices").catch(() => fetchGoogleSheetRows(aSrc, "Activities").catch(() => [])) : []
+          ]);
+
+          programRows = pRes;
+          roomRows = rRes;
+          batchRows = bRes;
+          activityRows = aRes;
         }
+
+        if (programRows.length > 0 || roomRows.length > 0 || batchRows.length > 0) {
+          applyPriceData({ programRows, roomRows, batchRows, activityRows });
+          await applyActivitiesPriceData(activityRows);
+          console.log(`[Dynamic Pricing] Successfully updated from Google Sheets: ${programRows.length} programs, ${roomRows.length} room rows, ${batchRows.length} batch rows.`);
+        }
+      } catch (err) {
+        console.warn("[Dynamic Pricing] Error fetching Google Sheets, falling back to precompiled JSON:", err);
       }
     }
 
-    // Merge into static dictionaries
-    const mergePrices = (target, source) => {
-      for (const cat of Object.keys(source)) {
-        if (!target[cat]) target[cat] = {};
-        for (const [k, v] of Object.entries(source[cat])) {
-          target[cat][k] = v;
-        }
-      }
-    };
-
-    mergePrices(PROGRAM_PRICES, sheetProgramPrices.bali);
-    mergePrices(PROGRAM_PRICES_RISHIKESH, sheetProgramPrices.rishikesh);
-    mergePrices(PROGRAM_PRICES_MYSORE, sheetProgramPrices.mysore);
-
-    // Helper to parse price string to number
-    const parsePriceValue = (str) => {
-      if (!str) return 0;
-      const clean = String(str).replace(/[^0-9.]/g, "");
-      return parseFloat(clean) || 0;
-    };
-
-    // 2. Group and apply Room Prices
-    const sheetRoomPrices = {
-      bali: {},
-      rishikesh: {},
-      mysore: {},
-    };
-
-    for (const row of roomRows) {
-      const loc = row.location?.toLowerCase().trim();
-      let mappedLoc = loc;
-      if (loc === "mysuru") mappedLoc = "mysore";
-
-      if (!mappedLoc || !sheetRoomPrices[mappedLoc]) continue;
-
-      const courseKey = row.coursekey?.trim();
-      if (!courseKey) continue;
-
-      if (!sheetRoomPrices[mappedLoc][courseKey]) {
-        sheetRoomPrices[mappedLoc][courseKey] = {
-          durationDays: parseInt(row.durationdays) || 0,
-          rooms: []
-        };
-      }
-
-      const basePriceStr = getUpdatedProgramPrice(mappedLoc, courseKey);
-      const basePrice = parsePriceValue(basePriceStr);
-
-      const rawCurrent = parseFloat(row.current) || 0;
-      const rawOriginal = parseFloat(row.original) || 0;
-
-      const currentPrice = basePrice + rawCurrent;
-      const originalPrice = basePrice + rawOriginal;
-
-      sheetRoomPrices[mappedLoc][courseKey].rooms.push({
-        type: row.roomtype || "",
-        current: currentPrice,
-        original: originalPrice,
-        note: row.note || "",
-        popular: String(row.popular).toLowerCase() === "true"
-      });
-    }
-
-    for (const [key, val] of Object.entries(sheetRoomPrices.bali)) {
-      ROOM_PRICES_BALI[key] = val;
-    }
-    for (const [key, val] of Object.entries(sheetRoomPrices.rishikesh)) {
-      ROOM_PRICES_RISHIKESH[key] = val;
-    }
-    for (const [key, val] of Object.entries(sheetRoomPrices.mysore)) {
-      ROOM_PRICES_MYSORE[key] = val;
-    }
-
-    // 3. Process and apply Batches
-    for (const row of batchRows) {
-      const loc = row.location?.toLowerCase().trim();
-      let mappedLoc = loc;
-      if (loc === "mysuru") mappedLoc = "mysore";
-
-      const courseKey = row.coursekey?.trim();
-      const startStr = row.startdate ? String(row.startdate).trim() : "";
-      const endStr = row.enddate ? String(row.enddate).trim() : "";
-      const dateText = row.datetext ? String(row.datetext).trim() : "";
-
-      if (mappedLoc && courseKey && (startStr || dateText)) {
-        const batchKey = `${mappedLoc}_${courseKey}`;
-        if (!DYNAMIC_BATCHES[batchKey]) {
-          DYNAMIC_BATCHES[batchKey] = [];
-        }
-
-        const parseDate = (str) => {
-          if (!str) return new Date(NaN);
-          const parts = str.split("-");
-          if (parts.length === 3) {
-            return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
-          }
-          return new Date(str);
-        };
-
-        const startDate = parseDate(startStr);
-        const endDate = parseDate(endStr);
-
-        if (dateText || (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime()))) {
-          DYNAMIC_BATCHES[batchKey].push({
-            startDate: !isNaN(startDate.getTime()) ? startDate : new Date(),
-            endDate: !isNaN(endDate.getTime()) ? endDate : new Date(),
-            dateText,
-            seatsLeft: parseInt(row.seatsleft) || 3
-          });
-        }
-      }
-    }
-
-    // Sort batches chronologically
-    for (const key of Object.keys(DYNAMIC_BATCHES)) {
-      DYNAMIC_BATCHES[key].sort((a, b) => a.startDate - b.startDate);
-    }
-
-    // 4. Group and apply Activity Prices (Bali Activities)
-    if (activityRows && activityRows.length > 0) {
+    // Apply activity prices from generated-prices.js if not updated from Google Sheets
+    if (activityRows.length === 0 && generatedPrices.activityRows) {
       try {
-        const activitiesModule = await import("../data/bali/activities");
-        const actList = activitiesModule.activitiesData || [];
-        
-        for (const row of activityRows) {
-          const loc = row.location ? String(row.location).toLowerCase().trim() : "";
-          if (loc && loc !== "bali") continue; // only for Bali
-
-          const courseKey = (row.coursekey || row.slug || row.key || "").trim().toLowerCase();
-          const rawPrice = row.price ? String(row.price).trim() : "";
-          if (!courseKey || !rawPrice) continue;
-
-          // Find activity in actList
-          const activity = actList.find(act => 
-            act && act.slug && (
-              act.slug.toLowerCase() === courseKey || 
-              act.slug.toLowerCase().replace(/[-_\s]/g, '') === courseKey.replace(/[-_\s]/g, '')
-            )
-          );
-
-          if (activity) {
-            const numericVal = parseFloat(rawPrice.replace(/[^0-9.]/g, ""));
-            if (!isNaN(numericVal)) {
-              activity.price = numericVal;
-            } else {
-              activity.price = rawPrice;
-            }
-
-            if (row.currency) {
-              activity.currency = String(row.currency).trim();
-            } else if (rawPrice.includes("$")) {
-              activity.currency = "USD";
-            } else if (rawPrice.includes("₹")) {
-              activity.currency = "INR";
-            }
-          }
-        }
-      } catch (actErr) {
-        console.warn("[Dynamic Pricing] Error updating activity prices:", actErr);
+        await applyActivitiesPriceData(generatedPrices.activityRows);
+      } catch (err) {
+        console.warn("[Dynamic Pricing] Activities update note:", err?.message);
       }
     }
 
     // Propagate updated prices into static maps
-    await applyDynamicPricesToDataMaps();
+    try {
+      await applyDynamicPricesToDataMaps();
+    } catch (err) {
+      console.warn("[Dynamic Pricing] Static maps update note:", err?.message);
+    }
 
     console.log("[Dynamic Pricing] Dynamic price calculations populated successfully.");
     return true;
