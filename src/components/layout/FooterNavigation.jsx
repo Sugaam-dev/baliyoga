@@ -44,18 +44,18 @@ const FooterNavigation = () => {
 
           <ul className="text-sm text-stone-200 space-y-4 list-none p-0 m-0">
             <li>
-              <Link to="/yoga-teacher-training" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Yoga Teacher Training (TTC)
-              </Link>
-            </li>
-            <li>
-              <Link to="/wellness-retreats" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Wellness Retreats
-              </Link>
-            </li>
-            <li>
               <Link to="/about" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
                 About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/online" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Online Programs
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Photo &amp; Video Gallery
               </Link>
             </li>
             <li>
@@ -89,13 +89,8 @@ const FooterNavigation = () => {
               </Link>
             </li>
             <li>
-              <Link to="/yoga-teacher-training" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Yoga Alliance Certification
-              </Link>
-            </li>
-            <li>
-              <Link to="/terms-and-conditions" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Terms &amp; Conditions
+              <Link to="/facilities" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
+                Facilities &amp; Amenities
               </Link>
             </li>
           </ul>
