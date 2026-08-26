@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { ArrowLeft, Award, Globe, Heart, Star, BookOpen, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "../../components/shared/ScrollReveal";
@@ -483,7 +483,7 @@ const FounderPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                to="/course"
+                to="/about"
                 className="bg-[#c38b5f] hover:bg-[#a6734c] text-white px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-300 no-underline"
               >
                 View All Programs

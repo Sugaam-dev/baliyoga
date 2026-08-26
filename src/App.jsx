@@ -5,14 +5,9 @@ import Home from "./pages/home/Home";
 import ScrollToTop from './components/shared/ScrollToTop';
 
 const About = React.lazy(() => import('./pages/about/About'));
-const Course = React.lazy(() => import('./pages/course/course'));
-const Gallery = React.lazy(() => import('./pages/gallery/gallery'));
-const Retreat = React.lazy(() => import('./pages/retreat/retreat'));
 const Contact = React.lazy(() => import('./pages/contact/Contact'));
-const OnlinePage = React.lazy(() => import('./pages/online/OnlinePage'));
 const ProgramPage = React.lazy(() => import('./pages/Program/ProgramPage'));
 const CheckoutPage = React.lazy(() => import('./pages/Checkout/CheckoutPage'));
-const Facilities = React.lazy(() => import('./pages/meditation/Facilities'));
 const TermsAndConditions = React.lazy(() => import('./pages/term&condition/term-condition'));
 const FounderPage = React.lazy(() => import('./pages/founder/FounderPage'));
 const LocationLandingPage = React.lazy(() => import('./pages/programsCard/LocationLandingPage'));
@@ -44,14 +39,8 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route index element={<Home />} />
                    <Route path='about' element={<About/>} />
-                   <Route path='course' element={<Course/>} />
-                   <Route path='gallery' element={<Gallery/>} />
-                   <Route path='retreat'  element={<Retreat/>} />
-                   <Route path='online' element={<OnlinePage/>} />
-                   <Route path='facilities' element={<Facilities/>} />                    
                    <Route path='contact' element={<Contact/>} /> 
                    <Route path='checkout' element={<CheckoutPage />} />
-                   <Route path='holiday-packages' element={<Retreat />} />
                    <Route path='bali-activities' element={<BaliActivitiesPage />} />
                    <Route path='bali-activities/:slug' element={<BaliActivityDetailPage />} />
                     

@@ -49,16 +49,6 @@ const FooterNavigation = () => {
               </Link>
             </li>
             <li>
-              <Link to="/online" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Online Programs
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Photo &amp; Video Gallery
-              </Link>
-            </li>
-            <li>
               <Link to="/contact" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
                 Contact &amp; Admissions
               </Link>
@@ -86,11 +76,6 @@ const FooterNavigation = () => {
             <li>
               <Link to="/founder" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
                 Meet Our Founder
-              </Link>
-            </li>
-            <li>
-              <Link to="/facilities" className="text-stone-200 hover:text-orange-300 transition-colors no-underline">
-                Facilities &amp; Amenities
               </Link>
             </li>
           </ul>
