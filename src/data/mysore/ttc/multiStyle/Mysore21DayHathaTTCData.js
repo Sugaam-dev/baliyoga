@@ -512,7 +512,7 @@ export const Mysore21DayHathaTTCData = {
           stats: [
             { label: "Center Settings", value: "Gokulam 3rd Stage", icon: "globe" },
             { label: "Operational Window", value: "Mon-Sat Service", icon: "map" },
-            { label: "Communication Gate", value: "info@yogawithsrinatha.com", icon: "mountain" },
+            { label: "Communication Gate", value: "info@baliyogakendra.com", icon: "mountain" },
             { label: "Graduation Status", value: "RYT-200 Approved", icon: "sun" },
           ],
         },

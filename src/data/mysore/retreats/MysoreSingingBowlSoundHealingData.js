@@ -503,7 +503,7 @@ export const MysoreSingingBowlSoundHealingData = {
           stats: [
             { label: "Center Settings", value: "Gokulam District", icon: "globe" },
             { label: "Operational Window", value: "Mon-Sat Service", icon: "map" },
-            { label: "Communication Gate", value: "info@yogawithsrinatha.com", icon: "mountain" },
+            { label: "Communication Gate", value: "info@baliyogakendra.com", icon: "mountain" },
             { label: "Graduation Status", value: "YACEP Approved", icon: "sun" },
           ],
         },

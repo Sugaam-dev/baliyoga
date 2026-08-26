@@ -25,7 +25,7 @@ const links = [
     label: "YouTube",
   },
   {
-    href: "mailto:your@email.com",
+    href: "mailto:info@baliyogakendra.com",
     icon: <FaEnvelope size={19} />,
     color: "text-gray-600",
     bg: "hover:bg-gray-50",

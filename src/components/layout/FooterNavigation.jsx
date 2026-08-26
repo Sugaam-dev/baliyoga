@@ -109,8 +109,8 @@ const FooterNavigation = () => {
 
           <div className="space-y-3 text-sm text-stone-200">
             <p>
-              <a href="mailto:info@baliyoga.com" className="text-stone-200 hover:text-orange-300 transition-colors no-underline" aria-label="Send email to info@baliyoga.com">
-                info@baliyoga.com
+              <a href="mailto:info@baliyogakendra.com" className="text-stone-200 hover:text-orange-300 transition-colors no-underline" aria-label="Send email to info@baliyogakendra.com">
+                info@baliyogakendra.com
               </a>
             </p>
             <p>
@@ -159,7 +159,7 @@ const FooterNavigation = () => {
               <FaYoutube size={18} />
             </a>
             <a
-              href="mailto:info@baliyoga.com"
+              href="mailto:info@baliyogakendra.com"
               aria-label="Send email to Bali Yoga Kendra"
               className="flex items-center justify-center h-10 w-10 p-2.5 rounded-full bg-white/10 text-white hover:bg-orange-400 hover:text-white transition duration-300"
             >

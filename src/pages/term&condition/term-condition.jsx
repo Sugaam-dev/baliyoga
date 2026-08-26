@@ -123,9 +123,9 @@ const TermsAndConditions = () => {
       </p>
 
       <p style={styles.paragraph}>
-        <strong>Email:</strong> info@ombreathyoga.com <br />
-        <strong>Phone:</strong> +91 XXXXX XXXXX <br />
-        <strong>Address:</strong> Rishikesh, Uttarakhand, India
+        <strong>Email:</strong> info@baliyogakendra.com <br />
+        <strong>Phone:</strong> +91 78299 97007 <br />
+        <strong>Location:</strong> Ubud, Bali, Indonesia
       </p>
 
       <div style={styles.footer}>
