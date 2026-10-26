@@ -591,8 +591,6 @@ export async function fetchAndApplyDynamicPrices() {
   const hasGoogleSheetConfig = !!(spreadsheetId || programSpreadsheetId || roomSpreadsheetId || batchesSpreadsheetId || activitiesSpreadsheetId);
   const useGoogleSheets = isStrictGoogleSheets || USE_GOOGLE_SHEETS || env.VITE_USE_GOOGLE_SHEETS === "true" || hasGoogleSheetConfig;
 
-  console.log(`[Dynamic Pricing] Source Mode: ${isStrictGoogleSheets ? "GOOGLE SHEETS ONLY (Strict - Local Files Disabled)" : (useGoogleSheets && hasGoogleSheetConfig ? "GOOGLE SHEETS (Live)" : "PRE-COMPILED LOCAL JSON")}`);
-
   let programRows = [], roomRows = [], batchRows = [], activityRows = [];
 
   try {
@@ -628,7 +626,6 @@ export async function fetchAndApplyDynamicPrices() {
         if (programRows.length > 0 || roomRows.length > 0 || batchRows.length > 0) {
           applyPriceData({ programRows, roomRows, batchRows, activityRows }, isStrictGoogleSheets);
           await applyActivitiesPriceData(activityRows);
-          console.log(`[Dynamic Pricing] Successfully updated from Google Sheets: ${programRows.length} programs, ${roomRows.length} room rows, ${batchRows.length} batch rows.`);
         }
       } catch (err) {
         if (!isStrictGoogleSheets) {
@@ -655,7 +652,6 @@ export async function fetchAndApplyDynamicPrices() {
       console.warn("[Dynamic Pricing] Static maps update note:", err?.message);
     }
 
-    console.log("[Dynamic Pricing] Dynamic price calculations populated successfully.");
     if (typeof window !== "undefined") {
       window.dispatchEvent(new CustomEvent("dynamicPricesUpdated"));
     }

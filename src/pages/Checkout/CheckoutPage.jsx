@@ -206,28 +206,28 @@ export default function CheckoutPage() {
       setIsDirectBooking(true);
       
       let rooms = [];
+      let pricingInfo = null;
+      const locKey = (state.location || programData?.location || "bali").toLowerCase();
+      
+      let sourceRoomPrices = ROOM_PRICES_BALI;
+      if (locKey === "rishikesh") sourceRoomPrices = ROOM_PRICES_RISHIKESH;
+      else if (locKey === "mysore" || locKey === "mysuru") sourceRoomPrices = ROOM_PRICES_MYSORE;
+
+      pricingInfo = sourceRoomPrices?.[slugKey] || (rawSlugKey && sourceRoomPrices?.[rawSlugKey]);
+
       // 🔒 Price Lock: prioritize lockedRooms saved from initial click
       if (Array.isArray(state.lockedRooms) && state.lockedRooms.length > 0) {
         rooms = state.lockedRooms;
-      } else {
-        const locKey = (state.location || programData?.location || "bali").toLowerCase();
-        
-        let sourceRoomPrices = ROOM_PRICES_BALI;
-        if (locKey === "rishikesh") sourceRoomPrices = ROOM_PRICES_RISHIKESH;
-        else if (locKey === "mysore" || locKey === "mysuru") sourceRoomPrices = ROOM_PRICES_MYSORE;
-
-        const pricingInfo = sourceRoomPrices?.[slugKey] || (rawSlugKey && sourceRoomPrices?.[rawSlugKey]);
-        if (pricingInfo) {
-          if (Array.isArray(pricingInfo)) {
-            rooms = pricingInfo;
-          } else if (pricingInfo && Array.isArray(pricingInfo.rooms)) {
-            rooms = pricingInfo.rooms.map(r => ({
-              type: r.type,
-              price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
-              popular: r.popular,
-              note: r.note || ""
-            }));
-          }
+      } else if (pricingInfo) {
+        if (Array.isArray(pricingInfo)) {
+          rooms = pricingInfo;
+        } else if (pricingInfo && Array.isArray(pricingInfo.rooms)) {
+          rooms = pricingInfo.rooms.map(r => ({
+            type: r.type,
+            price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
+            popular: r.popular,
+            note: r.note || ""
+          }));
         }
       }
 
