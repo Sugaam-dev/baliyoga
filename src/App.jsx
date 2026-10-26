@@ -14,7 +14,7 @@ const LocationLandingPage = React.lazy(() => import('./pages/programsCard/Locati
 const BaliActivitiesPage = React.lazy(() => import('./pages/activities/BaliActivitiesPage'));
 const BaliActivityDetailPage = React.lazy(() => import('./pages/activities/BaliActivityDetailPage'));
 
-import { fetchAndApplyDynamicPrices } from './utils/dynamicPrices';
+import { fetchAndApplyDynamicPrices, startSmartPolling } from './utils/dynamicPrices';
 
 function ProgramPageWrapper() {
   const { pathname } = useLocation();
@@ -29,6 +29,10 @@ function LocationLandingPageWrapper() {
 function App() {
   useEffect(() => {
     fetchAndApplyDynamicPrices();
+    const stopPolling = startSmartPolling(60000);
+    return () => {
+      if (stopPolling) stopPolling();
+    };
   }, []);
 
   return (
@@ -41,6 +45,7 @@ function App() {
                    <Route path='about' element={<About/>} />
                    <Route path='contact' element={<Contact/>} /> 
                    <Route path='checkout' element={<CheckoutPage />} />
+
                    <Route path='bali-activities' element={<BaliActivitiesPage />} />
                    <Route path='bali-activities/:slug' element={<BaliActivityDetailPage />} />
                     

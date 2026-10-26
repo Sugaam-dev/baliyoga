@@ -91,6 +91,12 @@ const ProgramPage = ({ data }) => {
     fetchAndApplyDynamicPrices().then((success) => {
       if (success) setBatchesUpdated((prev) => prev + 1);
     });
+
+    const handleUpdate = () => {
+      setBatchesUpdated((prev) => prev + 1);
+    };
+    window.addEventListener("dynamicPricesUpdated", handleUpdate);
+    return () => window.removeEventListener("dynamicPricesUpdated", handleUpdate);
   }, [locParam, courseParam]);
 
   let pageData = data;
@@ -122,8 +128,6 @@ const ProgramPage = ({ data }) => {
     );
   }
 
-
-
   // Resolve dynamic pricing rooms info
   const locKey = locParam?.toLowerCase();
   const slugKey = courseParam?.toLowerCase();
@@ -149,6 +153,17 @@ const ProgramPage = ({ data }) => {
       ? `${highlight} ${rawTitle}`
       : (rawTitle || "Yoga Program");
 
+    const lockedRooms = pricingInfo?.rooms && Array.isArray(pricingInfo.rooms)
+      ? pricingInfo.rooms.map(r => ({
+          type: r.type,
+          price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
+          current: r.current,
+          original: r.original,
+          popular: r.popular,
+          note: r.note || ""
+        }))
+      : [];
+
     navigate("/checkout", { 
       state: { 
         location: locParam, 
@@ -157,7 +172,9 @@ const ProgramPage = ({ data }) => {
         programName: resolvedTitle,
         title: resolvedTitle,
         roomType: roomType || pricingInfo?.rooms?.[0]?.type || "Standard Room",
-        selectedDate: batches[selectedBatch] || "Select on arrival"
+        selectedDate: batches[selectedBatch] || "Select on arrival",
+        lockedRooms: lockedRooms,
+        lockedAt: Date.now()
       } 
     });
   };

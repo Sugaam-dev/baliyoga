@@ -112,6 +112,15 @@ export default function CheckoutPage() {
   const [pricesLoaded, setPricesLoaded] = useState(0);
 
   useEffect(() => {
+    // Only fetch if session does not already have a locked state
+    try {
+      const saved = sessionStorage.getItem("baliyoga_checkout_state");
+      const parsed = saved ? JSON.parse(saved) : null;
+      if (location.state?.lockedRooms || parsed?.lockedRooms) {
+        return; // Session is price-locked
+      }
+    } catch (e) {}
+
     fetchAndApplyDynamicPrices().then((success) => {
       if (success) setPricesLoaded((prev) => prev + 1);
     });
@@ -197,23 +206,28 @@ export default function CheckoutPage() {
       setIsDirectBooking(true);
       
       let rooms = [];
-      const locKey = (state.location || programData?.location || "bali").toLowerCase();
-      
-      let sourceRoomPrices = ROOM_PRICES_BALI;
-      if (locKey === "rishikesh") sourceRoomPrices = ROOM_PRICES_RISHIKESH;
-      else if (locKey === "mysore" || locKey === "mysuru") sourceRoomPrices = ROOM_PRICES_MYSORE;
+      // 🔒 Price Lock: prioritize lockedRooms saved from initial click
+      if (Array.isArray(state.lockedRooms) && state.lockedRooms.length > 0) {
+        rooms = state.lockedRooms;
+      } else {
+        const locKey = (state.location || programData?.location || "bali").toLowerCase();
+        
+        let sourceRoomPrices = ROOM_PRICES_BALI;
+        if (locKey === "rishikesh") sourceRoomPrices = ROOM_PRICES_RISHIKESH;
+        else if (locKey === "mysore" || locKey === "mysuru") sourceRoomPrices = ROOM_PRICES_MYSORE;
 
-      const pricingInfo = sourceRoomPrices?.[slugKey] || (rawSlugKey && sourceRoomPrices?.[rawSlugKey]);
-      if (pricingInfo) {
-        if (Array.isArray(pricingInfo)) {
-          rooms = pricingInfo;
-        } else if (pricingInfo && Array.isArray(pricingInfo.rooms)) {
-          rooms = pricingInfo.rooms.map(r => ({
-            type: r.type,
-            price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
-            popular: r.popular,
-            note: r.note || ""
-          }));
+        const pricingInfo = sourceRoomPrices?.[slugKey] || (rawSlugKey && sourceRoomPrices?.[rawSlugKey]);
+        if (pricingInfo) {
+          if (Array.isArray(pricingInfo)) {
+            rooms = pricingInfo;
+          } else if (pricingInfo && Array.isArray(pricingInfo.rooms)) {
+            rooms = pricingInfo.rooms.map(r => ({
+              type: r.type,
+              price: typeof r.current === "number" ? `$${r.current.toLocaleString()}` : (r.price || `$${r.current || 0}`),
+              popular: r.popular,
+              note: r.note || ""
+            }));
+          }
         }
       }
 
@@ -857,6 +871,9 @@ Please share the schedule, payment options, and general availability details. Th
                   <div className="text-left sm:text-right sm:border-l sm:border-stone-200 sm:pl-4 flex-shrink-0">
                     <span className="text-[10px] text-stone-400 font-bold uppercase tracking-wider block">Estimated Fee</span>
                     <span className="text-base font-bold text-emerald-600 block">{totalStr}</span>
+                    <span className="text-[10px] text-emerald-700 font-medium flex items-center gap-1 sm:justify-end mt-0.5">
+                      🔒 Price locked for session
+                    </span>
                   </div>
                 </div>
 

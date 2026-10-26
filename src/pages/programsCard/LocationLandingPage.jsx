@@ -108,6 +108,14 @@ const LocationLandingPage = () => {
     return Object.keys(data.programsByCategoryId || {})[0] || "ytt";
   });
 
+  const [, setPricesTick] = useState(0);
+
+  useEffect(() => {
+    const handleUpdate = () => setPricesTick(prev => prev + 1);
+    window.addEventListener("dynamicPricesUpdated", handleUpdate);
+    return () => window.removeEventListener("dynamicPricesUpdated", handleUpdate);
+  }, []);
+
   const activeLocationPrograms = data.programsByCategoryId?.[activeCategory] || [];
   const selectedCategoryMeta = LANDING_PROGRAM_CATEGORIES.find((c) => c.id === activeCategory);
 

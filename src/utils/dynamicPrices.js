@@ -11,6 +11,14 @@ import generatedPrices from "../data/generated-prices.js";
 // Set to false to read directly from pre-compiled local Excel data (generated-prices.json)
 // Set to true  or provide VITE_SPREADSHEET_ID in .env to read live in real-time from Google Spreadsheets
 export const USE_GOOGLE_SHEETS = false; 
+
+// When true (or VITE_GOOGLE_SHEETS_ONLY=true in .env), ONLY Google Sheet data is displayed (no local file preloading or fallbacks)
+export const GOOGLE_SHEETS_ONLY = false;
+
+export function isGoogleSheetsOnlyMode() {
+  const env = (typeof import.meta !== "undefined" && import.meta?.env) ? import.meta.env : {};
+  return GOOGLE_SHEETS_ONLY || env.VITE_GOOGLE_SHEETS_ONLY === "true";
+}
 // ============================================================================
 
 const UNIFIED_PRICE_MAP = {
@@ -184,14 +192,14 @@ async function fetchGoogleSheetRows(spreadsheetId, sheetName) {
       const publishedId = match ? match[1] : spreadsheetId;
       const gidMatch = spreadsheetId.match(/[&?]gid=([0-9]+)/);
       const gidParam = gidMatch ? `&gid=${gidMatch[1]}` : "";
-      url = `https://docs.google.com/spreadsheets/d/e/${publishedId}/pub?output=csv${gidParam}`;
+      url = `https://docs.google.com/spreadsheets/d/e/${publishedId}/pub?output=csv${gidParam}&_t=${Date.now()}`;
     }
   } else {
     const sheetParam = sheetName ? `&sheet=${encodeURIComponent(sheetName)}` : "";
-    url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json${sheetParam}`;
+    url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json${sheetParam}&_t=${Date.now()}`;
   }
 
-  const res = await fetch(url);
+  const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) {
     throw new Error(`Failed to fetch sheet: HTTP status ${res.status}`);
   }
@@ -214,12 +222,26 @@ async function fetchGoogleSheetRows(spreadsheetId, sheetName) {
     throw new Error(`Google Sheets API status is not OK`);
   }
   
-  const rawCols = data.table.cols.map((col, idx) => {
+  let rawCols = data.table.cols.map((col, idx) => {
     return col.label ? col.label.trim() : `col${idx}`;
   });
+  
+  let rowsData = data.table.rows || [];
+  
+  // If cols are generic (col0, col1...), check if row 0 has the actual column headers
+  const isGenericCols = rawCols.every(c => /^col\d+$/i.test(c));
+  if (isGenericCols && rowsData.length > 0 && rowsData[0]?.c) {
+    const row0Vals = rowsData[0].c.map(cell => (cell ? (cell.f !== undefined ? cell.f : cell.v) : "") || "");
+    const normalizedRow0 = normalizeHeaders(row0Vals);
+    if (normalizedRow0.some(h => h && h.length > 0)) {
+      rawCols = row0Vals;
+      rowsData = rowsData.slice(1);
+    }
+  }
+
   const cols = normalizeHeaders(rawCols);
   
-  const rows = data.table.rows.map(row => {
+  const rows = rowsData.map(row => {
     const obj = {};
     if (row && row.c) {
       row.c.forEach((cell, idx) => {
@@ -282,9 +304,35 @@ const parsePriceValue = (str) => {
 /**
  * Applies normalized rows data to PROGRAM_PRICES, ROOM_PRICES, DYNAMIC_BATCHES, etc.
  */
-function applyPriceData(data) {
+function applyPriceData(data, isStrictMode = false) {
   if (!data) return;
   const { programRows = [], roomRows = [], batchRows = [] } = data;
+
+  if (isStrictMode) {
+    const clearObj = (obj) => {
+      if (!obj) return;
+      for (const k of Object.keys(obj)) delete obj[k];
+    };
+    clearObj(PROGRAM_PRICES.multiStyle);
+    clearObj(PROGRAM_PRICES.kundalini);
+    clearObj(PROGRAM_PRICES.shortcourses);
+    clearObj(PROGRAM_PRICES.specializations);
+
+    clearObj(PROGRAM_PRICES_RISHIKESH.multiStyle);
+    clearObj(PROGRAM_PRICES_RISHIKESH.kundalini);
+    clearObj(PROGRAM_PRICES_RISHIKESH.shortcourses);
+    clearObj(PROGRAM_PRICES_RISHIKESH.specializations);
+
+    clearObj(PROGRAM_PRICES_MYSORE.multiStyle);
+    clearObj(PROGRAM_PRICES_MYSORE.kundalini);
+    clearObj(PROGRAM_PRICES_MYSORE.shortcourses);
+    clearObj(PROGRAM_PRICES_MYSORE.specializations);
+
+    clearObj(ROOM_PRICES_BALI);
+    clearObj(ROOM_PRICES_RISHIKESH);
+    clearObj(ROOM_PRICES_MYSORE);
+    clearObj(DYNAMIC_BATCHES);
+  }
 
   // 1. Group and apply Program Prices
   const sheetProgramPrices = {
@@ -435,8 +483,10 @@ function applyPriceData(data) {
   return true;
 }
 
-// Synchronously apply precompiled prices on initial module load
-applyPriceData(generatedPrices);
+// Synchronously apply precompiled prices on initial module load only if NOT in Google Sheets Only mode
+if (!isGoogleSheetsOnlyMode()) {
+  applyPriceData(generatedPrices);
+}
 
 async function applyActivitiesPriceData(activityRows) {
   if (!activityRows || activityRows.length === 0) return;
@@ -531,6 +581,7 @@ async function applyDynamicPricesToDataMaps() {
  */
 export async function fetchAndApplyDynamicPrices() {
   const env = (typeof import.meta !== "undefined" && import.meta?.env) ? import.meta.env : {};
+  const isStrictGoogleSheets = isGoogleSheetsOnlyMode();
   const spreadsheetId = env.VITE_SPREADSHEET_ID;
   const programSpreadsheetId = env.VITE_SPREADSHEET_ID_PROGRAM;
   const roomSpreadsheetId = env.VITE_SPREADSHEET_ID_ROOM;
@@ -538,9 +589,9 @@ export async function fetchAndApplyDynamicPrices() {
   const activitiesSpreadsheetId = env.VITE_SPREADSHEET_ID_ACTIVITIES;
 
   const hasGoogleSheetConfig = !!(spreadsheetId || programSpreadsheetId || roomSpreadsheetId || batchesSpreadsheetId || activitiesSpreadsheetId);
-  const useGoogleSheets = USE_GOOGLE_SHEETS || env.VITE_USE_GOOGLE_SHEETS === "true" || hasGoogleSheetConfig;
+  const useGoogleSheets = isStrictGoogleSheets || USE_GOOGLE_SHEETS || env.VITE_USE_GOOGLE_SHEETS === "true" || hasGoogleSheetConfig;
 
-  console.log(`[Dynamic Pricing] Source Mode: ${useGoogleSheets && hasGoogleSheetConfig ? "GOOGLE SHEETS (Live)" : "PRE-COMPILED LOCAL JSON (Zero Bundle/CPU Overhead)"}`);
+  console.log(`[Dynamic Pricing] Source Mode: ${isStrictGoogleSheets ? "GOOGLE SHEETS ONLY (Strict - Local Files Disabled)" : (useGoogleSheets && hasGoogleSheetConfig ? "GOOGLE SHEETS (Live)" : "PRE-COMPILED LOCAL JSON")}`);
 
   let programRows = [], roomRows = [], batchRows = [], activityRows = [];
 
@@ -575,17 +626,21 @@ export async function fetchAndApplyDynamicPrices() {
         }
 
         if (programRows.length > 0 || roomRows.length > 0 || batchRows.length > 0) {
-          applyPriceData({ programRows, roomRows, batchRows, activityRows });
+          applyPriceData({ programRows, roomRows, batchRows, activityRows }, isStrictGoogleSheets);
           await applyActivitiesPriceData(activityRows);
           console.log(`[Dynamic Pricing] Successfully updated from Google Sheets: ${programRows.length} programs, ${roomRows.length} room rows, ${batchRows.length} batch rows.`);
         }
       } catch (err) {
-        console.warn("[Dynamic Pricing] Error fetching Google Sheets, falling back to precompiled JSON:", err);
+        if (!isStrictGoogleSheets) {
+          console.warn("[Dynamic Pricing] Error fetching Google Sheets, falling back to precompiled JSON:", err);
+        } else {
+          console.error("[Dynamic Pricing] Strict Google Sheets mode error: Failed to fetch, local fallback disabled.", err);
+        }
       }
     }
 
-    // Apply activity prices from generated-prices.js if not updated from Google Sheets
-    if (activityRows.length === 0 && generatedPrices.activityRows) {
+    // Apply activity prices from generated-prices.js only if NOT in strict Google Sheets mode
+    if (!isStrictGoogleSheets && activityRows.length === 0 && generatedPrices.activityRows) {
       try {
         await applyActivitiesPriceData(generatedPrices.activityRows);
       } catch (err) {
@@ -601,9 +656,69 @@ export async function fetchAndApplyDynamicPrices() {
     }
 
     console.log("[Dynamic Pricing] Dynamic price calculations populated successfully.");
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("dynamicPricesUpdated"));
+    }
     return true;
   } catch (err) {
     console.error("[Dynamic Pricing] Fetching error:", err);
     return false;
   }
+}
+
+let smartPollingTimer = null;
+let lastFetchTime = Date.now();
+const DEFAULT_POLLING_INTERVAL_MS = 60000; // Safe 60 seconds
+
+/**
+ * Starts Smart Polling:
+ * 1. Checks every 60s without CPU/battery drain.
+ * 2. Pauses automatically if the browser tab is hidden/inactive.
+ * 3. Never modifies active /checkout screens.
+ * 4. Refreshes immediately when the user tabs back to the website.
+ */
+export function startSmartPolling(intervalMs = DEFAULT_POLLING_INTERVAL_MS) {
+  if (typeof window === "undefined") return () => {};
+
+  if (smartPollingTimer) {
+    clearInterval(smartPollingTimer);
+    smartPollingTimer = null;
+  }
+
+  const triggerPoll = () => {
+    // 1. Only poll if tab is active and visible
+    if (document.visibilityState !== "visible") return;
+
+    // 2. Never disrupt an active checkout session
+    if (window.location.pathname.toLowerCase().includes("/checkout")) return;
+
+    fetchAndApplyDynamicPrices().then((success) => {
+      if (success) {
+        lastFetchTime = Date.now();
+      }
+    });
+  };
+
+  smartPollingTimer = setInterval(triggerPoll, intervalMs);
+
+  // When user returns to tab, refresh immediately if >45s passed
+  const handleVisibilityChange = () => {
+    if (document.visibilityState === "visible") {
+      if (window.location.pathname.toLowerCase().includes("/checkout")) return;
+      const elapsed = Date.now() - lastFetchTime;
+      if (elapsed > 45000) {
+        triggerPoll();
+      }
+    }
+  };
+
+  document.addEventListener("visibilitychange", handleVisibilityChange);
+
+  return () => {
+    if (smartPollingTimer) {
+      clearInterval(smartPollingTimer);
+      smartPollingTimer = null;
+    }
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
+  };
 }
